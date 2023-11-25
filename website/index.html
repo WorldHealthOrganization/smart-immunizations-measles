@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART Guidelines FHIR Implementation Guides</title>
+    <!-- Link to your custom CSS file for styling -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <!-- Add the link to your left and right logos -->
+    <link rel="icon" href="assets/leftlogo.png" type="image/png">
+    <!-- Customizable left logo -->
+    <link rel="apple-touch-icon" href="assets/rightlogo.png">
+    <!-- Customizable right logo -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.5/datatables.min.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.5/datatables.min.js"></script>
+    <!-- Copyright and License Information -->
+    <!-- Replace "John Doe" with the actual creator's name and "MySquare and OpenMine" with the relevant organizations -->
+    <!-- Include a link to the license file (e.g., license.md) if available -->
+    <meta name="copyright" content="Created by Digital Square for The Global Goods Community - please see license.md">
+    <meta name="version" content="First Version">
+    <meta name="author" content="José Costa Teixeira">
+    <meta name="date" content="2023-09">
+    <link rel="canonical" href="https://github.com/DigitalSQR/fhir-ig-landingpage">
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="semi-transparent">
+        <div class="d-flex justify-content-between align-items-start">
+            <!-- Customizable left logo -->
+            <a href="http://https://www.who.int">
+            <img src="assets/leftlogo.png" alt="Left Link" height="100" />
+            </a>
+            <!-- Customizable right logo -->
+            <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">
+            <img src="assets/rightlogo.png" alt="Right Link" height="100" />
+            </a>
+        </div>
+        <div class="text-center mt-3">
+            <!-- Customizable heading -->
+            <h3>SMART Guidelines</h3>
+            <!-- Customizable introductory text -->
+            <p> This is a list of the FHIR Implementation Guides published here. </p>
+            <br />
+            <!-- Customizable subheading -->
+            <h2 style="text-align: left;">FHIR Specifications</h2>
+        </div>
+        <!-- Tab navigation -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+            <!-- Customizable tab name and ID -->
+            <a class="nav-link active nav-tab custom-nav-tab" id="ig-list-tab" data-target="packageInfo">Listing</a>
+            </li>
+            <li class="nav-item">
+            <!-- Customizable tab name and ID -->
+            <a class="nav-link nav-tab custom-nav-tab" id="artifacts-tab" data-target="artifacts">Artifacts</a>
+            </li>
+        </ul>
+        <!-- Tab content -->
+        <div class="tab-content">
+            <!-- Package Information -->
+            <div id="packageInfo" class="row row-cols-1 row-cols-md-1 gx-4"></div>
+            <!-- Artifacts -->
+            <div id="artifacts" class="d-none">
+            <br />
+            <!-- Customizable text -->
+            <p> This is a list of all artifacts published across all Implementation Guides:</p>
+            <br />
+            <table id="artifacts-table" class="display">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Version</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha256-3jOxLI54oGxS0Jpay+dHb/IyKbRloIzKq6/VBLBVc+A=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        async function fetchJSON(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+        }
+        const showTable = getComputedStyle(document.documentElement).getPropertyValue('--show-table').trim();
+        if (showTable === 'true') {
+        document.body.classList.add('show-table');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.nav-tab');
+        const tabContent = document.querySelectorAll('.tab-content > div');
+
+        function changeTab(e) {
+            e.preventDefault();
+            tabs.forEach(tab => {
+            tab.classList.remove('active');
+            });
+            e.target.classList.add('active');
+            const targetContent = e.target.getAttribute('data-target');
+            tabContent.forEach(content => {
+            if (content.id === targetContent) {
+                content.classList.remove('d-none');
+            } else {
+                content.classList.add('d-none');
+            }
+            });
+        }
+        tabs.forEach(tab => {
+            tab.addEventListener('click', changeTab);
+        });
+        // Initialize the DataTable with search enabled
+        $('#artifacts-table').DataTable({
+            searching: true,
+        });
+        // Initialize the DataTable with search enabled and custom data loading
+        const artifactsTable = $('#artifacts-table').DataTable({
+            destroy: true,
+            searching: true,
+            columns: [{
+            data: 'id',
+            render: (data, type, row) => `
+                                                    <a href="${row.url}">${data}</a>`
+            }, {
+            data: 'type'
+            }, {
+            data: 'name'
+            }, {
+            data: 'version'
+            }, ],
+        });
+        (async function() {
+            const publishSetup = await fetchJSON('publish-setup.json');
+            const websiteUrl = publishSetup.website.url;
+            // Fetch and load the package information
+            async function loadPackageInfo() {
+            try {
+                const packageRegistry = await fetchJSON('package-registry.json');
+                const packageInfoContainer = document.getElementById('packageInfo');
+                for (const pkg of packageRegistry.packages) {
+                const packageListURL = getRelativePath(pkg.path, websiteUrl);
+                const packageList = await fetchJSON(packageListURL);
+                const title = packageList.title.trim();
+                const description = packageList.introduction.trim();
+                const latestEntry = packageList.list.find(entry => entry.status !== 'ci-build' && entry.current === true);
+                const ciEntry = packageList.list.find(item => item.status === 'ci-build');
+                const repo = ciEntry.path.substring(ciEntry.path.lastIndexOf("/") + 1);
+                const org = ciEntry.path.split("/")[ciEntry.path.split("/").length - 2];
+                const packageDiv = document.createElement('div');
+                packageDiv.classList.add('col');
+                packageDiv.innerHTML = `
+                        
+                                                    <div class="card full-width">
+                                                        <div class="card-body">
+                                                            <h2 class="card-title">${title}</h2>
+                                                            <p class="card-text">${description}</p>
+                                                        </div>
+                                                        <div class="card-footer d-flex justify-content-end">
+                                                            <a href="${packageList.canonical}" class="btn btn-primary me-3 discrete-button">Implementation Guide</a>
+                                                            <a href="${ciEntry.path}" class="btn btn-primary me-3 discrete-button">Current Development Version</a>
+                                                            <!-- New button -->
+                                                            <a href="https://github.com/${org}/${repo}" class="btn btn-primary me-3 discrete-button">GitHub</a>
+                                                            <a href="${packageList.canonical}/history.html" class="btn btn-primary discrete-button">Publication History</a>
+                                                        </div>
+                                                    </div>
+                    `;
+                packageInfoContainer.appendChild(packageDiv);
+                }
+            } catch (error) {
+                console.error('Error fetching package information:', error);
+            }
+            }
+            // Fetch and load the artifact information
+            async function loadArtifacts() {
+            try {
+                const packageRegistry = await fetchJSON('package-registry.json');
+                const artifactsTable = $('#artifacts-table').DataTable({
+                destroy: true,
+                searching: true,
+                columns: [{
+                    data: 'id',
+                    render: (data, type, row) => `
+                                                    <a href="${row.url}">${data}</a>`
+                }, {
+                    data: 'type'
+                }, {
+                    data: 'name'
+                }, {
+                    data: 'version'
+                }, ],
+                });
+                for (const pkg of packageRegistry.packages) {
+                const packageListURL = getRelativePath(pkg.path, websiteUrl);
+                const packageList = await fetchJSON(packageListURL);
+                const canonicalsURL = packageList.list.find(entry => entry.status !== 'ci-build').path;
+                const relCanonicalsURL = getRelativePath(canonicalsURL, websiteUrl);
+                console.log(relCanonicalsURL);
+                const canonicals = await fetchJSON('.' + relCanonicalsURL + "/canonicals.json");
+                artifactsTable.rows.add(canonicals).draw();
+                }
+            } catch (error) {
+                console.error('Error fetching artifact information:', error);
+            }
+            }
+
+            function getRelativePath(path, websiteUrl) {
+            const cleanedPath = path.replace(/\/$/, ''); // Remove trailing slash
+            const cleanedWebsiteUrl = websiteUrl.replace(/\/$/, ''); // Remove trailing slash
+            const relativePath = cleanedPath.replace(cleanedWebsiteUrl, '');
+            return relativePath;
+            }
+            // Call the functions
+            loadPackageInfo();
+            loadArtifacts();
+        })();
+        });
+    </script>
+    </body>
+</html>
