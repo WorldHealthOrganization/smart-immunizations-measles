@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE1> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZ.D1.DE1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE1</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE2<a name=\"IMMZ.D1.DE1-IMMZ.46D.46DE2\"> </a></td><td>Completed</td><td>The immunization event was successfully carried out as intended</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE3<a name=\"IMMZ.D1.DE1-IMMZ.46D.46DE3\"> </a></td><td>Entered in error</td><td>Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE4<a name=\"IMMZ.D1.DE1-IMMZ.46D.46DE4\"> </a></td><td>Not Done</td><td>Planned immunization event was not carried out for some reason</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE1"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZ_D1"] ; # 
+  fhir:title [ fhir:v "IMMZ.D1.DE1 CodeSystem for Immunization status"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-24T11:42:42+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem for IMMZ.D1.DE1 Immunization status"] ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "IMMZ.D.DE2" ] ;
+     fhir:display [ fhir:v "Completed" ] ;
+     fhir:definition [ fhir:v "The immunization event was successfully carried out as intended" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE3" ] ;
+     fhir:display [ fhir:v "Entered in error" ] ;
+     fhir:definition [ fhir:v "Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE4" ] ;
+     fhir:display [ fhir:v "Not Done" ] ;
+     fhir:definition [ fhir:v "Planned immunization event was not carried out for some reason" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

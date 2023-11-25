@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="IMMZ-C-QRToPatient"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+  </text>
+  <url value="http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-QRToPatient"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ-C-QRToPatient"/>
+  <status value="draft"/>
+  <date value="2023-09-27T18:14:03+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+    <mode value="source"/>
+    <alias value="QResp"/>
+  </structure>
+  <structure>
+    <url value="http://worldhealthorganization.github.io/smart-immunizations-mini/StructureDefinition/IMMZ-C-register-client"/>
+    <mode value="source"/>
+    <alias value="IMMZC"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <mode value="target"/>
+    <alias value="Patient"/>
+  </structure>
+  <import value="http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-QRToLM"/>
+  <import value="http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-LMToPatient"/>
+  <group>
+    <name value="QRestToIMMZC"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="qr"/>
+      <type value="QResp"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="patient"/>
+      <type value="Patient"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="QRtoPatient"/>
+      <source>
+        <context value="qr"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <variable value="model"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="http://worldhealthorganization.github.io/smart-immunizations-mini/StructureDefinition/IMMZ-C-register-client"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="QRtoLM"/>
+        <source>
+          <context value="qr"/>
+        </source>
+        <target>
+          <contextType value="variable"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="model"/>
+          </parameter>
+        </target>
+        <dependent>
+          <name value="QRespToIMMZC"/>
+          <variable value="qr"/>
+          <variable value="model"/>
+        </dependent>
+      </rule>
+      <rule>
+        <name value="LMtoPatient"/>
+        <source>
+          <context value="qr"/>
+        </source>
+        <target>
+          <contextType value="variable"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="patient"/>
+          </parameter>
+        </target>
+        <dependent>
+          <name value="IMMZCToPatient"/>
+          <variable value="model"/>
+          <variable value="patient"/>
+        </dependent>
+      </rule>
+    </rule>
+  </group>
+</StructureMap>

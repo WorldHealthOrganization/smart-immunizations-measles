@@ -1,0 +1,145 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/ICD11> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ICD11"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://id.who.int/icd11/mms</code> defines the following codes in an undefined heirarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM28X5<a name=\"ICD11-XM28X5\"> </a></td><td>Measles vaccines</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  XM8L15<a name=\"ICD11-XM8L15\"> </a></td><td>Measles, live attenuated</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  XM9439<a name=\"ICD11-XM9439\"> </a></td><td>Measles, combinations with mumps, live attenuated</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  XM8TF3<a name=\"ICD11-XM8TF3\"> </a></td><td>Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  XM21H2<a name=\"ICD11-XM21H2\"> </a></td><td>Measles, combinations with rubella, live attenuated</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  XM4AJ8<a name=\"ICD11-XM4AJ8\"> </a></td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM1131<a name=\"ICD11-XM1131\"> </a></td><td>Mumps vaccines</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  XM2340<a name=\"ICD11-XM2340\"> </a></td><td>Mumps, live attenuated</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XX45B7<a name=\"ICD11-XX45B7\"> </a></td><td>Intersex</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XX2PX3<a name=\"ICD11-XX2PX3\"> </a></td><td>Biological sex not specified</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XX2V25<a name=\"ICD11-XX2V25\"> </a></td><td>Female</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XX2UQ8<a name=\"ICD11-XX2UQ8\"> </a></td><td>Male</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1B1Z<a name=\"ICD11-1B1Z\"> </a></td><td>Tuberculosis</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1C62.Z<a name=\"ICD11-1C62.46Z\"> </a></td><td>Human immunodeficiency virus disease without mention of tuberculosis or malaria</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1H0Z<a name=\"ICD11-1H0Z\"> </a></td><td>Certain infectious or parasitic diseases</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">3A51<a name=\"ICD11-3A51\"> </a></td><td>Sickle cell disorders or other haemoglobinopathies</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">4B4Z<a name=\"ICD11-4B4Z\"> </a></td><td>Diseases of the immune system</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">KA21.4<a name=\"ICD11-KA21.464\"> </a></td><td>Preterm newborn</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QA02.0<a name=\"ICD11-QA02.460\"> </a></td><td>Observation for suspected tuberculosis, ruled out</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QA02.Y<a name=\"ICD11-QA02.46Y\"> </a></td><td>Medical observation or evaluation for suspected diseases or conditions, ruled out</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QA48.1<a name=\"ICD11-QA48.461\"> </a></td><td>Care or examination of lactating mother</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QC60<a name=\"ICD11-QC60\"> </a></td><td>Family history of infectious diseases</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM18Y8<a name=\"ICD11-XM18Y8\"> </a></td><td>Meningococcus C, purified polysaccharides antigen conjugated vaccines</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM2280<a name=\"ICD11-XM2280\"> </a></td><td>Meningococcus A, purified polysaccharides antigen conjugated vaccines</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM33K4<a name=\"ICD11-XM33K4\"> </a></td><td>Typhoid, oral, live attenuated vaccines</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM3KQ4<a name=\"ICD11-XM3KQ4\"> </a></td><td>Interferon gamma</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM3SF6<a name=\"ICD11-XM3SF6\"> </a></td><td>Typhoid, purified polysaccharide antigen vaccines</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM47S0<a name=\"ICD11-XM47S0\"> </a></td><td>Encephalitis, Japanese, live attenuated</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM5V19<a name=\"ICD11-XM5V19\"> </a></td><td>Poliomyelitis, trivalent, inactivated, whole virus</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM79H3<a name=\"ICD11-XM79H3\"> </a></td><td>Poliomyelitis oral, bivalent, live attenuated</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XM7PF6<a name=\"ICD11-XM7PF6\"> </a></td><td>Tuberculin</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">XT0S<a name=\"ICD11-XT0S\"> </a></td><td>Pregnancy</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QA41<a name=\"ICD11-QA41\"> </a></td><td>Pregnant state</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QC44.0<a name=\"ICD11-QC44.460\"> </a></td><td>Personal history of anaphylaxis</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">QC44.2<a name=\"ICD11-QC44.462\"> </a></td><td>Personal history of allergy to drugs, medicaments or biological substances</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1C62.1<a name=\"ICD11-1C62.461\"> </a></td><td>HIV disease clinical stage 2 without mention of tuberculosis or malaria</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://id.who.int/icd11/mms"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ICD11"] ; # 
+  fhir:title [ fhir:v "ICD-11"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2023-10-18T20:43:12+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ICD-11."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "36"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "XM28X5" ] ;
+     fhir:display [ fhir:v "Measles vaccines" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "XM8L15" ] ;
+       fhir:display [ fhir:v "Measles, live attenuated" ]
+     ] [
+       fhir:code [ fhir:v "XM9439" ] ;
+       fhir:display [ fhir:v "Measles, combinations with mumps, live attenuated" ]
+     ] [
+       fhir:code [ fhir:v "XM8TF3" ] ;
+       fhir:display [ fhir:v "Measles, combinations with mumps and rubella, live attenuated" ]
+     ] [
+       fhir:code [ fhir:v "XM21H2" ] ;
+       fhir:display [ fhir:v "Measles, combinations with rubella, live attenuated" ]
+     ] [
+       fhir:code [ fhir:v "XM4AJ8" ] ;
+       fhir:display [ fhir:v "Measles, combinations with mumps, rubella and varicella, live attenuated" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "XM1131" ] ;
+     fhir:display [ fhir:v "Mumps vaccines" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "XM2340" ] ;
+       fhir:display [ fhir:v "Mumps, live attenuated" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "XX45B7" ] ;
+     fhir:display [ fhir:v "Intersex" ]
+  ] [
+     fhir:code [ fhir:v "XX2PX3" ] ;
+     fhir:display [ fhir:v "Biological sex not specified" ]
+  ] [
+     fhir:code [ fhir:v "XX2V25" ] ;
+     fhir:display [ fhir:v "Female" ]
+  ] [
+     fhir:code [ fhir:v "XX2UQ8" ] ;
+     fhir:display [ fhir:v "Male" ]
+  ] [
+     fhir:code [ fhir:v "1B1Z" ] ;
+     fhir:display [ fhir:v "Tuberculosis" ]
+  ] [
+     fhir:code [ fhir:v "1C62.Z" ] ;
+     fhir:display [ fhir:v "Human immunodeficiency virus disease without mention of tuberculosis or malaria" ]
+  ] [
+     fhir:code [ fhir:v "1H0Z" ] ;
+     fhir:display [ fhir:v "Certain infectious or parasitic diseases" ]
+  ] [
+     fhir:code [ fhir:v "3A51" ] ;
+     fhir:display [ fhir:v "Sickle cell disorders or other haemoglobinopathies" ]
+  ] [
+     fhir:code [ fhir:v "4B4Z" ] ;
+     fhir:display [ fhir:v "Diseases of the immune system" ]
+  ] [
+     fhir:code [ fhir:v "KA21.4" ] ;
+     fhir:display [ fhir:v "Preterm newborn" ]
+  ] [
+     fhir:code [ fhir:v "QA02.0" ] ;
+     fhir:display [ fhir:v "Observation for suspected tuberculosis, ruled out" ]
+  ] [
+     fhir:code [ fhir:v "QA02.Y" ] ;
+     fhir:display [ fhir:v "Medical observation or evaluation for suspected diseases or conditions, ruled out" ]
+  ] [
+     fhir:code [ fhir:v "QA48.1" ] ;
+     fhir:display [ fhir:v "Care or examination of lactating mother" ]
+  ] [
+     fhir:code [ fhir:v "QC60" ] ;
+     fhir:display [ fhir:v "Family history of infectious diseases" ]
+  ] [
+     fhir:code [ fhir:v "XM18Y8" ] ;
+     fhir:display [ fhir:v "Meningococcus C, purified polysaccharides antigen conjugated vaccines" ]
+  ] [
+     fhir:code [ fhir:v "XM2280" ] ;
+     fhir:display [ fhir:v "Meningococcus A, purified polysaccharides antigen conjugated vaccines" ]
+  ] [
+     fhir:code [ fhir:v "XM33K4" ] ;
+     fhir:display [ fhir:v "Typhoid, oral, live attenuated vaccines" ]
+  ] [
+     fhir:code [ fhir:v "XM3KQ4" ] ;
+     fhir:display [ fhir:v "Interferon gamma" ]
+  ] [
+     fhir:code [ fhir:v "XM3SF6" ] ;
+     fhir:display [ fhir:v "Typhoid, purified polysaccharide antigen vaccines" ]
+  ] [
+     fhir:code [ fhir:v "XM47S0" ] ;
+     fhir:display [ fhir:v "Encephalitis, Japanese, live attenuated" ]
+  ] [
+     fhir:code [ fhir:v "XM5V19" ] ;
+     fhir:display [ fhir:v "Poliomyelitis, trivalent, inactivated, whole virus" ]
+  ] [
+     fhir:code [ fhir:v "XM79H3" ] ;
+     fhir:display [ fhir:v "Poliomyelitis oral, bivalent, live attenuated" ]
+  ] [
+     fhir:code [ fhir:v "XM7PF6" ] ;
+     fhir:display [ fhir:v "Tuberculin" ]
+  ] [
+     fhir:code [ fhir:v "XT0S" ] ;
+     fhir:display [ fhir:v "Pregnancy" ]
+  ] [
+     fhir:code [ fhir:v "QA41" ] ;
+     fhir:display [ fhir:v "Pregnant state" ]
+  ] [
+     fhir:code [ fhir:v "QC44.0" ] ;
+     fhir:display [ fhir:v "Personal history of anaphylaxis" ]
+  ] [
+     fhir:code [ fhir:v "QC44.2" ] ;
+     fhir:display [ fhir:v "Personal history of allergy to drugs, medicaments or biological substances" ]
+  ] [
+     fhir:code [ fhir:v "1C62.1" ] ;
+     fhir:display [ fhir:v "HIV disease clinical stage 2 without mention of tuberculosis or malaria" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

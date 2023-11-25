@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/ExampleScenario/Scenario1> a fhir:ExampleScenario ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Scenario1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ExampleScenario</b><a name=\"Scenario1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ExampleScenario &quot;Scenario1&quot; </p></div><p><b>url</b>: <code>http://smart.who.int/ig/smart-immunizations-measles/ExampleScenario/Scenario1</code></p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>date</b>: 2023-10-16 05:32:08+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>purpose</b>: Purpose: this serves to demonstrate the comprehensive usage of the SMART Guidelines for Immunization, by applying to a concrete scenario for Measles.</p><blockquote><p><b>actor</b></p><p><b>actorId</b>: HCW</p><p><b>type</b>: person</p><p><b>name</b>: Healthcare Worker</p><p><b>description</b>: Healthcare Worker</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: FF</p><p><b>type</b>: entity</p><p><b>name</b>: Form Filler</p><p><b>description</b>: Form Filler</p></blockquote><h3>Instances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td><td><b>ResourceType</b></td><td><b>Name</b></td><td><b>Description</b></td></tr><tr><td style=\"display: none\">*</td><td>IMMZCQuestionnaireResponse1</td><td>QuestionnaireResponse</td><td>Client registry details</td><td>Client registry details.</td></tr></table><blockquote><p><b>process</b></p><p><b>title</b>: Measles Immunization Guideline</p><p><b>description</b>: This scenario demonstrates the process of triggering guidance defined by the SMART guidelines.</p><p><b>preConditions</b>: Unvaccinated patient enters facility</p><p><b>postConditions</b>: Patient is vaccinated and records are updated.</p><blockquote><p><b>step</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Number</b></td><td><b>Name</b></td><td><b>Initiator</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td>Gather patient details</td><td>HCW</td><td>FF</td></tr></table></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 2</p><p><b>name</b>: Extract data</p><p><b>initiator</b>: FF</p><p><b>receiver</b>: FF</p><h3>Responses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>IMMZCQuestionnaireResponse1</td></tr></table></blockquote></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/ExampleScenario/Scenario1"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2023-10-16T05:32:08+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "Purpose: this serves to demonstrate the comprehensive usage of the SMART Guidelines for Immunization, by applying to a concrete scenario for Measles."] ; # 
+  fhir:actor ( [
+     fhir:actorId [ fhir:v "HCW" ] ;
+     fhir:type [ fhir:v "person" ] ;
+     fhir:name [ fhir:v "Healthcare Worker" ] ;
+     fhir:description [ fhir:v "Healthcare Worker" ]
+  ] [
+     fhir:actorId [ fhir:v "FF" ] ;
+     fhir:type [ fhir:v "entity" ] ;
+     fhir:name [ fhir:v "Form Filler" ] ;
+     fhir:description [ fhir:v "Form Filler" ]
+  ] ) ; # 
+  fhir:instance ( [
+     fhir:resourceId [ fhir:v "IMMZCQuestionnaireResponse1" ] ;
+     fhir:resourceType [ fhir:v "QuestionnaireResponse" ] ;
+     fhir:name [ fhir:v "Client registry details" ] ;
+     fhir:description [ fhir:v "Client registry details." ]
+  ] ) ; # 
+  fhir:process ( [
+     fhir:title [ fhir:v "Measles Immunization Guideline" ] ;
+     fhir:description [ fhir:v "This scenario demonstrates the process of triggering guidance defined by the SMART guidelines." ] ;
+     fhir:preConditions [ fhir:v "Unvaccinated patient enters facility" ] ;
+     fhir:postConditions [ fhir:v "Patient is vaccinated and records are updated." ] ;
+     fhir:step ( [
+       fhir:operation [
+         fhir:number [ fhir:v "1" ] ;
+         fhir:name [ fhir:v "Gather patient details" ] ;
+         fhir:initiator [ fhir:v "HCW" ] ;
+         fhir:receiver [ fhir:v "FF" ]
+       ]
+     ] [
+       fhir:operation [
+         fhir:number [ fhir:v "2" ] ;
+         fhir:name [ fhir:v "Extract data" ] ;
+         fhir:initiator [ fhir:v "FF" ] ;
+         fhir:receiver [ fhir:v "FF" ] ;
+         fhir:response [
+           fhir:resourceId [ fhir:v "IMMZCQuestionnaireResponse1" ]
+         ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

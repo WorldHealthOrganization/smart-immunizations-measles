@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title> -  v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.19"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.19"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b></b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART, published by WHO. This is not an authorized publication; it is the continuous build for version 0.1.0). This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://worldhealthorganization.github.io/smart-immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureMap-MeaslesLogicalModelToResources.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureMap-MeaslesLogicalModelToResources.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureMap-MeaslesLogicalModelToResources.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">StructureMap: 
+
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://worldhealthorganization.github.io/smart-ot/StructureMap/MeaslesLogicalModelToResources<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://worldhealthorganization.github.io/smart-ot/StructureMap/MeaslesLogicalModelToResources"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://worldhealthorganization.github.io/smart-ot/StructureMap/MeaslesLogicalModelToResources|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2023-09-29
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MeaslesLogicalModelToResources</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="StructureMap-MeaslesLogicalModelToResources.xml.html">XML</a>, <a href="StructureMap-MeaslesLogicalModelToResources.json.html">JSON</a>, <a href="StructureMap-MeaslesLogicalModelToResources.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>http://worldhealthorganization.github.io/smart-ot/StructureMap/MeaslesLogicalModelToResources<span style="color: navy">&quot; = &quot;</span>MeaslesLogicalModelToResources<span style="color: navy">&quot;
+
+</span><b>uses</b><span style="color: navy"> &quot;</span>http://worldhealthorganization.github.io/smart-ot/StructureDefinition/SOTMeasles<span style="color: navy">&quot; </span><b>alias </b>MeaslesLogicalModel <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>MeaslesCIFBundle <b>as </b><b>target</b>
+<b>uses</b><span style="color: navy"> &quot;</span>http://worldhealthorganization.github.io/smart-ot/StructureDefinition/MeaslesCIFComposition<span style="color: navy">&quot; </span><b>alias </b>MeaslesCIFComposition <b>as </b><b>target</b>
+
+<b>group </b>MeaslesLogicalModelToResources<span style="color: navy">(</span><b>source</b> <span style="color: maroon">lm</span><span style="color: navy"> : </span>MeaslesLogicalModel, <b>target</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>MeaslesCIFBundle<span style="color: navy">)</span><span style="color: navy"> {
+</span>  lm<span style="color: navy"><b> -&gt; </b></span>bundle.type = <span style="color: blue">'document'</span> <i>&quot;set bundle type&quot;</i><span style="color: navy">;</span>
+  lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then</b><span style="color: navy"> {
+</span>    reportingSource.DateReportedNational<b> as </b><span style="color: maroon">date</span><span style="color: navy"><b> -&gt; </b></span>bundle.timestamp = <span style="color: maroon">date</span> <i>&quot;set date&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set timestamp&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">bid</span><span style="color: navy">, </span> bundle.id = <span style="color: maroon">bid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">pid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">prid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">oid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">eid</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/MeaslesCIFComposition'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">composition</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">cid</span><span style="color: navy">)</span><b> then</b><span style="color: navy"> {
+</span>      lm<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">lm</span><b> then </b>LmToComposition<span style="color: navy">(</span><span style="color: maroon">lm</span><span style="color: navy">, </span><span style="color: maroon">composition</span><span style="color: navy">, </span><span style="color: maroon">cid</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span> <i>&quot;set&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Patient'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">patient</span><b> then</b><span style="color: navy"> {
+</span>        lm.Demographics<b> as </b><span style="color: maroon">demographics</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">demographics</span><b> then </b>DemographicsToPatient<span style="color: navy">(</span><span style="color: maroon">demographics</span><span style="color: navy">, </span><span style="color: maroon">patient</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;create patient&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">patient</span> <i>&quot;set patient as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map patient resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Practitioner'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">practitioner</span><b> then</b><span style="color: navy"> {
+</span>        lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then </b>ReportingSourceToPractitioner<span style="color: navy">(</span><span style="color: maroon">reportingSource</span><span style="color: navy">, </span><span style="color: maroon">practitioner</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">)</span> <i>&quot;create practitioner&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">practitioner</span> <i>&quot;set practitioner as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map practitioner resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Organization'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">organization</span><b> then</b><span style="color: navy"> {
+</span>        lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then </b>ReportingSourceToOrganization<span style="color: navy">(</span><span style="color: maroon">reportingSource</span><span style="color: navy">, </span><span style="color: maroon">organization</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">)</span> <i>&quot;create organization&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">organization</span> <i>&quot;set organization as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map organization resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Encounter'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">encounter</span><b> then</b><span style="color: navy"> {
+</span>        lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then </b>ReportingSourceToEncounter<span style="color: navy">(</span><span style="color: maroon">reportingSource</span><span style="color: navy">, </span><span style="color: maroon">encounter</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span> <i>&quot;create encounter&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">encounter</span> <i>&quot;set encounter as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map encounter resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">lm</span><b> then </b>mapClinicalToObservations<span style="color: navy">(</span><span style="color: maroon">lm</span><span style="color: navy">, </span><span style="color: maroon">bundle</span><span style="color: navy">, </span><span style="color: maroon">composition</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set clinical data&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;map composition resource&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set entries&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>mapClinicalToObservations<span style="color: navy">(</span><b>source</b> <span style="color: maroon">lm</span><span style="color: navy"> : </span>MeaslesLogicalModel, <b>target</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>Bundle, <b>target</b> <span style="color: maroon">composition</span><span style="color: navy"> : </span>MeaslesCIFComposition, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  lm<span style="color: navy"><b> -&gt; </b></span> composition.section<b> as </b><span style="color: maroon">section</span><span style="color: navy">, </span> section.title = <span style="color: blue">'Clinical Data, Follow up and Treatment'</span><b> then</b><span style="color: navy"> {
+</span>    lm.Clinical<b> as </b><span style="color: maroon">clinical</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">clinical</span><b> then</b><span style="color: navy"> {
+</span>      clinical.Fever<b> as </b><span style="color: maroon">fever</span><span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obsid</span><span style="color: navy">, </span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> section.entry<b> as </b><span style="color: maroon">sectionEntry</span><span style="color: navy">, </span> sectionEntry.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Observation/'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">observation</span><b> then</b><span style="color: navy"> {
+</span>        fever<span style="color: navy"><b> -&gt; </b></span>observation.id = <span style="color: maroon">obsid</span> <i>&quot;set obsid&quot;</i><span style="color: navy">;</span>
+        fever<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Coding'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">coding</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'45701-0'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'https://loinc.org'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'Fever'</span><b> then</b><span style="color: navy"> {
+</span>          fever<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">fever</span><b> then </b>createObservationResource<span style="color: navy">(</span><span style="color: maroon">fever</span><span style="color: navy">, </span><span style="color: maroon">coding</span><span style="color: navy">, </span><span style="color: maroon">observation</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;set fever&quot;</i><span style="color: navy">;</span>
+      clinical.Rash<b> as </b><span style="color: maroon">rash</span><span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obsid</span><span style="color: navy">, </span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> section.entry<b> as </b><span style="color: maroon">sectionEntry</span><span style="color: navy">, </span> sectionEntry.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Observation/'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">observation</span><b> then</b><span style="color: navy"> {
+</span>        rash<span style="color: navy"><b> -&gt; </b></span>observation.id = <span style="color: maroon">obsid</span> <i>&quot;set obsid&quot;</i><span style="color: navy">;</span>
+        rash<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Coding'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">coding</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'45701-0'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'https://loinc.org'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'rash'</span><b> then</b><span style="color: navy"> {
+</span>          rash<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">rash</span><b> then </b>createObservationResource<span style="color: navy">(</span><span style="color: maroon">rash</span><span style="color: navy">, </span><span style="color: maroon">coding</span><span style="color: navy">, </span><span style="color: maroon">observation</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;set rash&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;set clinical&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set sectiom&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>createObservationResource<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span>, <b>source</b> <span style="color: maroon">coding</span><span style="color: navy"> : </span>Coding, <b>target</b> <span style="color: maroon">observation</span><span style="color: navy"> : </span>Observation, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  src<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">code</span><span style="color: navy">, </span> code.coding = <span style="color: maroon">coding</span><span style="color: navy">, </span> observation.code = <span style="color: maroon">code</span> <i>&quot;set code&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>observation.value = <span style="color: maroon">src</span> <i>&quot;set value&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>observation.status = <span style="color: blue">'registered'</span> <i>&quot;set status&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>observation.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Patient/'</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>mapLabsToObservations<span style="color: navy">(</span><b>source</b> <span style="color: maroon">labs</span><span style="color: navy"> : </span>MeaslesLabs, <b>target</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>Bundle, <b>target</b> <span style="color: maroon">section</span><span style="color: navy"> : </span>Section, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span><span style="color: #b36b00" title="This element was not defined prior to R5">// labs -&gt;  uuid() as obsid, bundle.entry as entry, entry.fullUrl = append('urn:uuid:', obsid), section.entry as sectionEntry, sectionEntry.reference =append('Observation/', obsid), create('Observation') as observation then {     labs -&gt; labs then ClinicalToObservationEntries(clinical, observation, obsid, pid) &quot;create observation&quot;;     labs -&gt; entry.resource = observation &quot;set observation as entry&quot;;  }</span>
+<span style="color: navy">}
+
+</span><b>group </b>LmToComposition<span style="color: navy">(</span><b>source</b> <span style="color: maroon">lm</span><span style="color: navy"> : </span>MeaslesLogicalModel, <b>target</b> <span style="color: maroon">composition</span><span style="color: navy"> : </span>MeaslesCIFComposition, <b>source</b> <span style="color: maroon">cid</span>, <b>source</b> <span style="color: maroon">pid</span>, <b>source</b> <span style="color: maroon">prid</span>, <b>source</b> <span style="color: maroon">oid</span>, <b>source</b> <span style="color: maroon">eid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  cid<span style="color: navy"><b> -&gt; </b></span>composition.id = <span style="color: maroon">cid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.status = <span style="color: blue">'final'</span> <i>&quot;set status&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.title = <span style="color: blue">'PAHO Measles Case Investigation Form'</span> <i>&quot;set title&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Coding'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">coding</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'55751-2'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'http://loinc.org'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'Public health Case report'</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">code</span><span style="color: navy">, </span> code.coding = <span style="color: maroon">coding</span><span style="color: navy">, </span> composition.type = <span style="color: maroon">code</span> <i>&quot;set type&quot;</i><span style="color: navy">;</span>
+  lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then</b><span style="color: navy"> {
+</span>    reportingSource.DateReportedLocal<b> as </b><span style="color: maroon">date</span><span style="color: navy"><b> -&gt; </b></span>composition.date = <span style="color: maroon">date</span> <i>&quot;set date&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set date reported local&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Patient/'</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.author<b> as </b><span style="color: maroon">practitioner</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>practitioner.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Practitioner/'</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">)</span> <i>&quot;set author practitioner&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set author practitioner&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.author<b> as </b><span style="color: maroon">institution</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>institution.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Organization/'</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">)</span> <i>&quot;set author institution&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set author org&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.encounter<b> as </b><span style="color: maroon">encounter</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>encounter.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Encounter/'</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span> <i>&quot;set encounter&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set encounter&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>DemographicsToPatient<span style="color: navy">(</span><b>source</b> <span style="color: maroon">demographics</span><span style="color: navy"> : </span>DemographicsLogicalModel, <b>target</b> <span style="color: maroon">patient</span><span style="color: navy"> : </span>MeaslesPatient, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  pid<span style="color: navy"><b> -&gt; </b></span>patient.id = <span style="color: maroon">pid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  demographics.Name<b> as </b><span style="color: maroon">name</span><span style="color: navy"><b> -&gt; </b></span>patient.name = <span style="color: maroon">name</span> <i>&quot;set name&quot;</i><span style="color: navy">;</span>
+  demographics.DateOfBirth<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>patient.birthDate = <span style="color: maroon">dob</span> <i>&quot;set date of birth&quot;</i><span style="color: navy">;</span>
+  demographics.Sex<b> as </b><span style="color: maroon">sex</span><span style="color: navy"><b> -&gt; </b></span>patient.gender = <span style="color: maroon">sex</span> <i>&quot;set sex&quot;</i><span style="color: navy">;</span>
+  demographics.CountryOfBirth<b> as </b><span style="color: maroon">cob</span><span style="color: navy"><b> -&gt; </b></span>patient.CountryOfBirth = <span style="color: maroon">cob</span> <i>&quot;set CountryOfBirth&quot;</i><span style="color: navy">;</span>
+  demographics.Landmark<b> as </b><span style="color: maroon">landmark</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    landmark<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Landmark'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">landmark</span> <i>&quot;set landmark value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set landmark&quot;</i><span style="color: navy">;</span>
+  demographics.Guardian<b> as </b><span style="color: maroon">guardian</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    guardian<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Guardian'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">guardian</span> <i>&quot;set guardian value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set guardian&quot;</i><span style="color: navy">;</span>
+  demographics.Telephone<b> as </b><span style="color: maroon">phone</span><span style="color: navy"><b> -&gt; </b></span>patient.telecom = <span style="color: maroon">phone</span> <i>&quot;set telephone&quot;</i><span style="color: navy">;</span>
+  demographics.PlaceOfResidence<b> as </b><span style="color: maroon">address</span><span style="color: navy"><b> -&gt; </b></span>patient.address = <span style="color: maroon">address</span> <i>&quot;set address&quot;</i><span style="color: navy">;</span>
+  demographics.Occupation<b> as </b><span style="color: maroon">occupation</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    occupation<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Occupation'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">occupation</span> <i>&quot;set occupation value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set occupation&quot;</i><span style="color: navy">;</span>
+  demographics.WorkAddress<b> as </b><span style="color: maroon">workAddress</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    workAddress<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/WorkAddress'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">workAddress</span> <i>&quot;set work address value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set work address&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ReportingSourceToPractitioner<span style="color: navy">(</span><b>source</b> <span style="color: maroon">reportingSource</span><span style="color: navy"> : </span>ReportingSourceLogicalModel, <b>target</b> <span style="color: maroon">practitioner</span><span style="color: navy"> : </span>Practitioner, <b>source</b> <span style="color: maroon">prid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  prid<span style="color: navy"><b> -&gt; </b></span>practitioner.id = <span style="color: maroon">prid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  reportingSource.ReportedBy<b> as </b><span style="color: maroon">name</span><span style="color: navy"><b> -&gt; </b></span> practitioner.name<b> as </b><span style="color: maroon">humanName</span><span style="color: navy">, </span> humanName.text = <span style="color: maroon">name</span> <i>&quot;set name&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ReportingSourceToOrganization<span style="color: navy">(</span><b>source</b> <span style="color: maroon">reportingSource</span><span style="color: navy"> : </span>ReportingSourceLogicalModel, <b>target</b> <span style="color: maroon">organization</span><span style="color: navy"> : </span>MeaslesOrganization, <b>source</b> <span style="color: maroon">oid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  oid<span style="color: navy"><b> -&gt; </b></span>organization.id = <span style="color: maroon">oid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  reportingSource.HealthServiceName<b> as </b><span style="color: maroon">name</span><span style="color: navy"><b> -&gt; </b></span>organization.name = <span style="color: maroon">name</span> <i>&quot;set name&quot;</i><span style="color: navy">;</span>
+  reportingSource.HealthServiceTelephone<b> as </b><span style="color: maroon">phone</span><span style="color: navy"><b> -&gt; </b></span> organization.contact<b> as </b><span style="color: maroon">contactDetails</span><span style="color: navy">, </span> contactDetails.telecom = <span style="color: maroon">phone</span> <i>&quot;set phone&quot;</i><span style="color: navy">;</span>
+  reportingSource.PlaceOfReporting<b> as </b><span style="color: maroon">location</span><span style="color: navy"><b> -&gt; </b></span> organization.contact<b> as </b><span style="color: maroon">contactDetails</span><span style="color: navy">, </span> contactDetails.address = <span style="color: maroon">location</span> <i>&quot;set address&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ReportingSourceToEncounter<span style="color: navy">(</span><b>source</b> <span style="color: maroon">reportingSource</span><span style="color: navy"> : </span>ReportingSourceLogicalModel, <b>target</b> <span style="color: maroon">encounter</span><span style="color: navy"> : </span>MeaslesEncounter, <b>source</b> <span style="color: maroon">eid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  eid<span style="color: navy"><b> -&gt; </b></span>encounter.id = <span style="color: maroon">eid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  reportingSource.DateReportedLocal<b> as </b><span style="color: maroon">date</span><span style="color: navy"><b> -&gt; </b></span> encounter.period<b> as </b><span style="color: maroon">period</span><span style="color: navy">, </span> period.start = <span style="color: maroon">date</span> <i>&quot;set date&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart-immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 29, 2023 18:14+0000">2023-09-29</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://worldhealthorganization.github.io/smart-immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

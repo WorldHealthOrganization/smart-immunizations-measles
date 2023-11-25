@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZ.D1.DE5"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE6<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE6\"> </a></td><td>Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization</td><td/></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE7<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE7\"> </a></td><td>Medical precaution</td><td>The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE8<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE8\"> </a></td><td>Product out of stock</td><td>There was no supply of the product on hand to perform the service</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE9<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE9\"> </a></td><td>Client objection</td><td>The client or their guardian objects to receiving the vaccine</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE10<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE10\"> </a></td><td>Caregiver refusal</td><td>The client's caregiver refused the vaccine</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE11<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE11\"> </a></td><td>Unspecified reason</td><td>The immunization event was not carried out for an unspecified reason</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE12<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE12\"> </a></td><td>Client allergy to vaccine or component</td><td>The immunization event was not carried out because of client allergy to vaccine or component</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE13<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE13\"> </a></td><td>Immunocompromised</td><td>The immunization event was not carried out because the client is immunocompromised</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE14<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE14\"> </a></td><td>Chronic illness or condition</td><td>The immunization event was not carried out due a chronic illness or condition of the client</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE15<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE15\"> </a></td><td>Acute illness</td><td>The immunization event was not carried out due to an acute illness present in the client</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE16<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE16\"> </a></td><td>Had the disease</td><td>The immunization event was not carried out due to the client having had the disease</td></tr><tr><td style=\"white-space:nowrap\">IMMZ.D.DE17<a name=\"IMMZ.D1.DE5-IMMZ.46D.46DE17\"> </a></td><td>Immunization not carried out for other reasons</td><td>The immunization event was not carried out for other reasons</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZ_D1"] ; # 
+  fhir:title [ fhir:v "IMMZ.D1.DE5 CodeSystem for Reason Not Done"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-25T08:05:26+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem for IMMZ.D1.DE5 Reason Not Done"] ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "IMMZ.D.DE6" ] ;
+     fhir:display [ fhir:v "Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE7" ] ;
+     fhir:display [ fhir:v "Medical precaution" ] ;
+     fhir:definition [ fhir:v "The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE8" ] ;
+     fhir:display [ fhir:v "Product out of stock" ] ;
+     fhir:definition [ fhir:v "There was no supply of the product on hand to perform the service" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE9" ] ;
+     fhir:display [ fhir:v "Client objection" ] ;
+     fhir:definition [ fhir:v "The client or their guardian objects to receiving the vaccine" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE10" ] ;
+     fhir:display [ fhir:v "Caregiver refusal" ] ;
+     fhir:definition [ fhir:v "The client's caregiver refused the vaccine" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE11" ] ;
+     fhir:display [ fhir:v "Unspecified reason" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out for an unspecified reason" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE12" ] ;
+     fhir:display [ fhir:v "Client allergy to vaccine or component" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out because of client allergy to vaccine or component" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE13" ] ;
+     fhir:display [ fhir:v "Immunocompromised" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out because the client is immunocompromised" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE14" ] ;
+     fhir:display [ fhir:v "Chronic illness or condition" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out due a chronic illness or condition of the client" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE15" ] ;
+     fhir:display [ fhir:v "Acute illness" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out due to an acute illness present in the client" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE16" ] ;
+     fhir:display [ fhir:v "Had the disease" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out due to the client having had the disease" ]
+  ] [
+     fhir:code [ fhir:v "IMMZ.D.DE17" ] ;
+     fhir:display [ fhir:v "Immunization not carried out for other reasons" ] ;
+     fhir:definition [ fhir:v "The immunization event was not carried out for other reasons" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

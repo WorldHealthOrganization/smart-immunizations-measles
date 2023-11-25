@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="IMMZ.D1.DE5"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-insensitive code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE6<a name="IMMZ.D1.DE5-IMMZ.46D.46DE6"> </a></td><td>Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization</td><td/></tr><tr><td style="white-space:nowrap">IMMZ.D.DE7<a name="IMMZ.D1.DE5-IMMZ.46D.46DE7"> </a></td><td>Medical precaution</td><td>The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE8<a name="IMMZ.D1.DE5-IMMZ.46D.46DE8"> </a></td><td>Product out of stock</td><td>There was no supply of the product on hand to perform the service</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE9<a name="IMMZ.D1.DE5-IMMZ.46D.46DE9"> </a></td><td>Client objection</td><td>The client or their guardian objects to receiving the vaccine</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE10<a name="IMMZ.D1.DE5-IMMZ.46D.46DE10"> </a></td><td>Caregiver refusal</td><td>The client's caregiver refused the vaccine</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE11<a name="IMMZ.D1.DE5-IMMZ.46D.46DE11"> </a></td><td>Unspecified reason</td><td>The immunization event was not carried out for an unspecified reason</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE12<a name="IMMZ.D1.DE5-IMMZ.46D.46DE12"> </a></td><td>Client allergy to vaccine or component</td><td>The immunization event was not carried out because of client allergy to vaccine or component</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE13<a name="IMMZ.D1.DE5-IMMZ.46D.46DE13"> </a></td><td>Immunocompromised</td><td>The immunization event was not carried out because the client is immunocompromised</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE14<a name="IMMZ.D1.DE5-IMMZ.46D.46DE14"> </a></td><td>Chronic illness or condition</td><td>The immunization event was not carried out due a chronic illness or condition of the client</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE15<a name="IMMZ.D1.DE5-IMMZ.46D.46DE15"> </a></td><td>Acute illness</td><td>The immunization event was not carried out due to an acute illness present in the client</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE16<a name="IMMZ.D1.DE5-IMMZ.46D.46DE16"> </a></td><td>Had the disease</td><td>The immunization event was not carried out due to the client having had the disease</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE17<a name="IMMZ.D1.DE5-IMMZ.46D.46DE17"> </a></td><td>Immunization not carried out for other reasons</td><td>The immunization event was not carried out for other reasons</td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ_D1"/>
+  <title value="IMMZ.D1.DE5 CodeSystem for Reason Not Done"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-10-24T07:09:07+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem for IMMZ.D1.DE5 Reason Not Done"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="12"/>
+  <concept>
+    <code value="IMMZ.D.DE6"/>
+    <display value="Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE7"/>
+    <display value="Medical precaution"/>
+    <definition value="The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE8"/>
+    <display value="Product out of stock"/>
+    <definition value="There was no supply of the product on hand to perform the service"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE9"/>
+    <display value="Client objection"/>
+    <definition value="The client or their guardian objects to receiving the vaccine"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE10"/>
+    <display value="Caregiver refusal"/>
+    <definition value="The client's caregiver refused the vaccine"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE11"/>
+    <display value="Unspecified reason"/>
+    <definition value="The immunization event was not carried out for an unspecified reason"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE12"/>
+    <display value="Client allergy to vaccine or component"/>
+    <definition value="The immunization event was not carried out because of client allergy to vaccine or component"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE13"/>
+    <display value="Immunocompromised"/>
+    <definition value="The immunization event was not carried out because the client is immunocompromised"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE14"/>
+    <display value="Chronic illness or condition"/>
+    <definition value="The immunization event was not carried out due a chronic illness or condition of the client"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE15"/>
+    <display value="Acute illness"/>
+    <definition value="The immunization event was not carried out due to an acute illness present in the client"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE16"/>
+    <display value="Had the disease"/>
+    <definition value="The immunization event was not carried out due to the client having had the disease"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE17"/>
+    <display value="Immunization not carried out for other reasons"/>
+    <definition value="The immunization event was not carried out for other reasons"/>
+  </concept>
+</CodeSystem>

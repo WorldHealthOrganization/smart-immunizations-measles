@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="115">
+         <a:s>/*
+ * Library: IMMZ.IND.Measles
+ * Immunization coverage for Measles containing vaccine (Estimated Denominator) 
+ * Compares the administered doses of measles containing vaccines (MCV) with the estimated number of surviving infants (if dose 1) or a country supplied denominator (if dose 2) expressed as a percentage. 
+ * 
+ * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period 
+ * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.Z.DE9) during reporting period
+ * Denominator: Estimated number of surviving infants (for dose 1) and country supplied denominator for dose sequence 2 (see comments)
+ * Denominator Computation: PARAMETER number of surviving infants (if Dose Sequence = 1) or PARAMETER of country supplied denominator (if Dose Sequence = 2)
+ * 
+ * Disaggregation:
+ *   - Dose Sequence (1, 2)
+ *   - Age Group (&lt; 1 year or > 1 year)
+ *   - Geographic Region
+ *   - Administrative Gender (or Biological Sex)
+ * 
+ * References: WHO Immunization Facility Analysis Guide (1), WHO / UNICEF Joint Reporting Form (3 - elements 4240 and 4260 )
+ */
+library IMMZINDMeasles</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZINDMeasles" system="http://smart.who.int/ig/smart-immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="23:1-23:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>// Start Skeleton CQL
+using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="24:1-24:35" localIdentifier="FHIRHelpers" path="http://smart.who.int/ig/smart-immunizations-measles/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="25:1-25:33" localIdentifier="IMMZCom" path="http://smart.who.int/ig/smart-immunizations-measles/IMMZCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZCommon</a:s>
+               </a:s>
+               <a:s> called IMMZCom</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="26:1-26:33" localIdentifier="IMMZc" path="http://smart.who.int/ig/smart-immunizations-measles/IMMZConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConcepts</a:s>
+               </a:s>
+               <a:s> called IMMZc</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="27:1-27:33" localIdentifier="IMMZCon" path="http://smart.who.int/ig/smart-immunizations-measles/IMMZConfig">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConfig</a:s>
+               </a:s>
+               <a:s> called IMMZCon</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="28:1-28:45" localIdentifier="IMMZIndCom" path="http://smart.who.int/ig/smart-immunizations-measles/IMMZIndicatorCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZIndicatorCommon</a:s>
+               </a:s>
+               <a:s> called IMMZIndCom</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="12" locator="30:1-30:115" name="Measurement Period" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>// End Skeleton CQL
+parameter &quot;Measurement Period&quot; </a:s>
+               <a:s r="11">
+                  <a:s>Interval&lt;</a:s>
+                  <a:s r="10">
+                     <a:s>DateTime</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+               <a:s> default </a:s>
+               <a:s r="9">
+                  <a:s r="7">Interval[@2019-03-01T00:00:00.0, @2019-04-01T00:00:00.0 )</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="9" locator="30:59-30:115" lowClosed="true" highClosed="false" xsi:type="Interval">
+            <low localId="7" locator="30:68-30:89" xsi:type="DateTime">
+               <year valueType="t:Integer" value="2019" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="3" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <hour valueType="t:Integer" value="0" xsi:type="Literal"/>
+               <minute valueType="t:Integer" value="0" xsi:type="Literal"/>
+               <second valueType="t:Integer" value="0" xsi:type="Literal"/>
+               <millisecond valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </low>
+            <high localId="8" locator="30:92-30:113" xsi:type="DateTime">
+               <year valueType="t:Integer" value="2019" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="4" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <hour valueType="t:Integer" value="0" xsi:type="Literal"/>
+               <minute valueType="t:Integer" value="0" xsi:type="Literal"/>
+               <second valueType="t:Integer" value="0" xsi:type="Literal"/>
+               <millisecond valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </high>
+         </default>
+         <parameterTypeSpecifier localId="11" locator="30:32-30:49" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="10" locator="30:41-30:48" name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <statements>
+      <def locator="32:1-32:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="32:1-32:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="32" locator="34:1-38:56" name="getPatientImmunisationMeasles" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="32">
+               <a:s>define  getPatientImmunisationMeasles:
+  </a:s>
+               <a:s r="31">
+                  <a:s>
+                     <a:s r="14">
+                        <a:s r="13">
+                           <a:s r="13">
+                              <a:s>[Immunization]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="24">
+                     <a:s>where </a:s>
+                     <a:s r="24">
+                        <a:s r="18">
+                           <a:s r="16">
+                              <a:s r="15">
+                                 <a:s>I</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="16">
+                                 <a:s>status</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> = </a:s>
+                           <a:s r="17">
+                              <a:s>'completed'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+	and  </a:s>
+                        <a:s r="23">
+                           <a:s r="20">
+                              <a:s r="19">
+                                 <a:s>I</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="20">
+                                 <a:s>vaccineCode</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> in </a:s>
+                           <a:s r="22">
+                              <a:s r="21">
+                                 <a:s>IMMZc</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="22">
+                                 <a:s>&quot;MCV Vaccine&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="30">
+                     <a:s>sort by </a:s>
+                     <a:s r="29">
+                        <a:s r="28">
+                           <a:s>date from </a:s>
+                           <a:s r="27">
+                              <a:s>(</a:s>
+                              <a:s r="27">
+                                 <a:s r="25">
+                                    <a:s>occurrence</a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="26">
+                                    <a:s>FHIR.dateTime</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> desc</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="31" locator="35:3-38:56" xsi:type="Query">
+            <source localId="14" locator="35:3-35:18" alias="I">
+               <expression localId="13" locator="35:3-35:16" dataType="fhir:Immunization" templateId="http://hl7.org/fhir/StructureDefinition/Immunization" xsi:type="Retrieve"/>
+            </source>
+            <where localId="24" locator="36:5-37:42" xsi:type="And">
+               <operand localId="18" locator="36:11-36:32" xsi:type="Equal">
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="16" locator="36:11-36:18" path="status" scope="I" xsi:type="Property"/>
+                  </operand>
+                  <operand localId="17" locator="36:22-36:32" valueType="t:String" value="completed" xsi:type="Literal"/>
+               </operand>
+               <operand localId="23" locator="37:7-37:42" xsi:type="InValueSet">
+                  <code name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="20" locator="37:7-37:19" path="vaccineCode" scope="I" xsi:type="Property"/>
+                  </code>
+                  <valueset localId="22" locator="37:24-37:42" name="MCV Vaccine" libraryName="IMMZc"/>
+               </operand>
+            </where>
+            <sort localId="30" locator="38:5-38:56">
+               <by localId="29" locator="38:13-38:56" direction="desc" xsi:type="ByExpression">
+                  <expression localId="28" locator="38:13-38:51" xsi:type="DateFrom">
+                     <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <operand localId="27" locator="38:23-38:51" strict="false" xsi:type="As">
+                           <operand localId="25" locator="38:24-38:33" name="occurrence" xsi:type="IdentifierRef"/>
+                           <asTypeSpecifier localId="26" locator="38:38-38:50" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        </operand>
+                     </operand>
+                  </expression>
+               </by>
+            </sort>
+         </expression>
+      </def>
+      <def localId="57" locator="40:1-43:53" name="getFirstDose" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="57">
+               <a:s>define  getFirstDose:
+  </a:s>
+               <a:s r="56">
+                  <a:s>
+                     <a:s r="34">
+                        <a:s r="33">
+                           <a:s>
+                              <a:s>getPatientImmunisationMeasles</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="49">
+                     <a:s>where </a:s>
+                     <a:s r="49">
+                        <a:s r="47">
+                           <a:s>Coalesce(</a:s>
+                           <a:s r="45">
+                              <a:s r="43">
+                                 <a:s r="42">
+                                    <a:s r="41">
+                                       <a:s>First(</a:s>
+                                       <a:s r="40">
+                                          <a:s>
+                                             <a:s r="36">
+                                                <a:s r="35">
+                                                   <a:s>
+                                                      <a:s>I.protocolApplied</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s> pa</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> </a:s>
+                                          <a:s r="39">
+                                             <a:s>where </a:s>
+                                             <a:s r="39">
+                                                <a:s r="38">
+                                                   <a:s r="37">
+                                                      <a:s>pa</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="38">
+                                                      <a:s>doseNumber</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s> is not null</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="42">
+                                       <a:s>doseNumber</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="43">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> as </a:s>
+                              <a:s r="44">
+                                 <a:s>Integer</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s r="46">,1)</a:s>
+                        </a:s>
+                        <a:s r="48"> = 1</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> 
+	</a:s>
+                  <a:s r="55">
+                     <a:s>sort by </a:s>
+                     <a:s r="54">
+                        <a:s r="53">
+                           <a:s>date from </a:s>
+                           <a:s r="52">
+                              <a:s>(</a:s>
+                              <a:s r="52">
+                                 <a:s r="50">
+                                    <a:s>occurrence</a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="51">
+                                    <a:s>FHIR.dateTime</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> desc</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="56" locator="41:3-43:53" xsi:type="Query">
+            <source localId="34" locator="41:3-41:33" alias="I">
+               <expression localId="33" locator="41:3-41:31" name="getPatientImmunisationMeasles" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="49" locator="42:5-42:113" xsi:type="Equal">
+               <operand localId="47" locator="42:11-42:109" xsi:type="Coalesce">
+                  <operand localId="45" locator="42:20-42:106" strict="false" xsi:type="As">
+                     <operand localId="43" locator="42:20-42:95" path="value" xsi:type="Property">
+                        <source localId="42" locator="42:20-42:89" path="doseNumber" xsi:type="Property">
+                           <source localId="41" locator="42:20-42:78" xsi:type="First">
+                              <source localId="40" locator="42:26-42:77" xsi:type="Query">
+                                 <source localId="36" locator="42:26-42:45" alias="pa">
+                                    <expression localId="35" locator="42:26-42:42" path="protocolApplied" scope="I" xsi:type="Property"/>
+                                 </source>
+                                 <where localId="39" locator="42:47-42:77" xsi:type="Not">
+                                    <operand locator="42:53-42:77" xsi:type="IsNull">
+                                       <operand localId="38" locator="42:53-42:65" path="doseNumber" scope="pa" xsi:type="Property"/>
+                                    </operand>
+                                 </where>
+                              </source>
+                           </source>
+                        </source>
+                     </operand>
+                     <asTypeSpecifier localId="44" locator="42:100-42:106" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  </operand>
+                  <operand localId="46" locator="42:108" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               </operand>
+               <operand localId="48" locator="42:113" valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </where>
+            <sort localId="55" locator="43:2-43:53">
+               <by localId="54" locator="43:10-43:53" direction="desc" xsi:type="ByExpression">
+                  <expression localId="53" locator="43:10-43:48" xsi:type="DateFrom">
+                     <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <operand localId="52" locator="43:20-43:48" strict="false" xsi:type="As">
+                           <operand localId="50" locator="43:21-43:30" name="occurrence" xsi:type="IdentifierRef"/>
+                           <asTypeSpecifier localId="51" locator="43:35-43:47" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        </operand>
+                     </operand>
+                  </expression>
+               </by>
+            </sort>
+         </expression>
+      </def>
+      <def localId="91" locator="45:1-50:53" name="getSecondDose" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="91">
+               <a:s>define getSecondDose:
+  	 
+  </a:s>
+               <a:s r="90">
+                  <a:s>
+                     <a:s r="59">
+                        <a:s r="58">
+                           <a:s>
+                              <a:s>getPatientImmunisationMeasles</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+	 </a:s>
+                  <a:s r="83">
+                     <a:s>where </a:s>
+                     <a:s r="83">
+                        <a:s r="74">
+                           <a:s r="72">
+                              <a:s>Coalesce(</a:s>
+                              <a:s r="70">
+                                 <a:s r="68">
+                                    <a:s r="67">
+                                       <a:s r="66">
+                                          <a:s>First(</a:s>
+                                          <a:s r="65">
+                                             <a:s>
+                                                <a:s r="61">
+                                                   <a:s r="60">
+                                                      <a:s>
+                                                         <a:s>I.protocolApplied</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s> pa</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> </a:s>
+                                             <a:s r="64">
+                                                <a:s>where </a:s>
+                                                <a:s r="64">
+                                                   <a:s r="63">
+                                                      <a:s r="62">
+                                                         <a:s>pa</a:s>
+                                                      </a:s>
+                                                      <a:s>.</a:s>
+                                                      <a:s r="63">
+                                                         <a:s>doseNumber</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s> is not null</a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="67">
+                                          <a:s>doseNumber</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="68">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="69">
+                                    <a:s>Integer</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s r="71">,1)</a:s>
+                           </a:s>
+                           <a:s r="73"> = 2</a:s>
+                        </a:s>
+                        <a:s> 
+	 or </a:s>
+                        <a:s r="82">
+                           <a:s>(   </a:s>
+                           <a:s r="82">
+                              <a:s r="76">
+                                 <a:s r="75">
+                                    <a:s>I</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="76">
+                                    <a:s>occurrence</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s r="82"> after </a:s>
+                              <a:s r="81">
+                                 <a:s>(</a:s>
+                                 <a:s r="81">
+                                    <a:s r="79">
+                                       <a:s r="78">
+                                          <a:s>First(</a:s>
+                                          <a:s r="77">
+                                             <a:s>getFirstDose</a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="79">
+                                          <a:s>occurrence</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="80">
+                                       <a:s>4 weeks</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>  )</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+	</a:s>
+                  <a:s r="89">
+                     <a:s>sort by </a:s>
+                     <a:s r="88">
+                        <a:s r="87">
+                           <a:s>date from </a:s>
+                           <a:s r="86">
+                              <a:s>(</a:s>
+                              <a:s r="86">
+                                 <a:s r="84">
+                                    <a:s>occurrence</a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="85">
+                                    <a:s>FHIR.dateTime</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> desc</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="90" locator="47:3-50:53" xsi:type="Query">
+            <source localId="59" locator="47:3-47:33" alias="I">
+               <expression localId="58" locator="47:3-47:31" name="getPatientImmunisationMeasles" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="83" locator="48:3-49:73" xsi:type="Or">
+               <operand localId="74" locator="48:9-48:111" xsi:type="Equal">
+                  <operand localId="72" locator="48:9-48:107" xsi:type="Coalesce">
+                     <operand localId="70" locator="48:18-48:104" strict="false" xsi:type="As">
+                        <operand localId="68" locator="48:18-48:93" path="value" xsi:type="Property">
+                           <source localId="67" locator="48:18-48:87" path="doseNumber" xsi:type="Property">
+                              <source localId="66" locator="48:18-48:76" xsi:type="First">
+                                 <source localId="65" locator="48:24-48:75" xsi:type="Query">
+                                    <source localId="61" locator="48:24-48:43" alias="pa">
+                                       <expression localId="60" locator="48:24-48:40" path="protocolApplied" scope="I" xsi:type="Property"/>
+                                    </source>
+                                    <where localId="64" locator="48:45-48:75" xsi:type="Not">
+                                       <operand locator="48:51-48:75" xsi:type="IsNull">
+                                          <operand localId="63" locator="48:51-48:63" path="doseNumber" scope="pa" xsi:type="Property"/>
+                                       </operand>
+                                    </where>
+                                 </source>
+                              </source>
+                           </source>
+                        </operand>
+                        <asTypeSpecifier localId="69" locator="48:98-48:104" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                     </operand>
+                     <operand localId="71" locator="48:106" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                  </operand>
+                  <operand localId="73" locator="48:111" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               </operand>
+               <operand localId="82" locator="49:6-49:73" xsi:type="After">
+                  <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand asType="fhir:dateTime" xsi:type="As">
+                        <operand localId="76" locator="49:10-49:21" path="occurrence" scope="I" xsi:type="Property"/>
+                     </operand>
+                  </operand>
+                  <operand localId="81" locator="49:29-49:72" xsi:type="Add">
+                     <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <operand asType="fhir:dateTime" xsi:type="As">
+                           <operand localId="79" locator="49:30-49:59" path="occurrence" xsi:type="Property">
+                              <source localId="78" locator="49:30-49:48" xsi:type="First">
+                                 <source localId="77" locator="49:36-49:47" name="getFirstDose" xsi:type="ExpressionRef"/>
+                              </source>
+                           </operand>
+                        </operand>
+                     </operand>
+                     <operand localId="80" locator="49:63-49:69" value="4" unit="weeks" xsi:type="Quantity"/>
+                  </operand>
+               </operand>
+            </where>
+            <sort localId="89" locator="50:2-50:53">
+               <by localId="88" locator="50:10-50:53" direction="desc" xsi:type="ByExpression">
+                  <expression localId="87" locator="50:10-50:48" xsi:type="DateFrom">
+                     <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <operand localId="86" locator="50:20-50:48" strict="false" xsi:type="As">
+                           <operand localId="84" locator="50:21-50:30" name="occurrence" xsi:type="IdentifierRef"/>
+                           <asTypeSpecifier localId="85" locator="50:35-50:47" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        </operand>
+                     </operand>
+                  </expression>
+               </by>
+            </sort>
+         </expression>
+      </def>
+      <def localId="99" locator="56:1-57:65" name="Measure Population 05" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="99">
+               <a:s>/*
+ * Target population for first dose: Any one over 9 (in high transmission area) or 12 (in low transmission area) months old
+ */
+define &quot;Measure Population 05&quot;:
+	</a:s>
+               <a:s r="98">
+                  <a:s>(</a:s>
+                  <a:s r="98">
+                     <a:s>
+                        <a:s r="93">
+                           <a:s r="92">
+                              <a:s>
+                                 <a:s>getFirstDose</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> I</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> </a:s>
+                     <a:s r="97">
+                        <a:s>where  </a:s>
+                        <a:s r="97">
+                           <a:s r="95">
+                              <a:s r="94">
+                                 <a:s>I</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="95">
+                                 <a:s>occurrence</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s r="97"> during </a:s>
+                           <a:s r="96">
+                              <a:s>&quot;Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="98" locator="57:2-57:65" xsi:type="Query">
+            <source localId="93" locator="57:3-57:16" alias="I">
+               <expression localId="92" locator="57:3-57:14" name="getFirstDose" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="97" locator="57:18-57:64" xsi:type="In">
+               <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand asType="fhir:dateTime" xsi:type="As">
+                     <operand localId="95" locator="57:25-57:36" path="occurrence" scope="I" xsi:type="Property"/>
+                  </operand>
+               </operand>
+               <operand localId="96" locator="57:45-57:64" name="Measurement Period" xsi:type="ParameterRef"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="101" locator="63:1-64:15" name="Initial Population 05" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="101">
+               <a:s>/*
+ * Numerator for first dose: Anyone having received the first dose
+ */
+define &quot;Initial Population 05&quot;:
+	</a:s>
+               <a:s r="100">
+                  <a:s>(</a:s>
+                  <a:s r="100">
+                     <a:s>getFirstDose</a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="100" locator="64:2-64:15" name="getFirstDose" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="103" locator="69:1-70:16" name="Initial Population 40" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="103">
+               <a:s>/*
+ * Target population for second dose: Any one over 15 months
+ */
+define &quot;Initial Population 40&quot;:
+	</a:s>
+               <a:s r="102">
+                  <a:s>(</a:s>
+                  <a:s r="102">
+                     <a:s>getSecondDose</a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="102" locator="70:2-70:16" name="getSecondDose" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="111" locator="75:1-76:68" name="Measure Population 40" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="111">
+               <a:s>/*
+ * Numerator for second dose: Anyone having received the first dose
+ */
+define &quot;Measure Population 40&quot;:
+	</a:s>
+               <a:s r="110">
+                  <a:s>(</a:s>
+                  <a:s r="110">
+                     <a:s>
+                        <a:s r="105">
+                           <a:s r="104">
+                              <a:s>
+                                 <a:s>getSecondDose</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> I</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> </a:s>
+                     <a:s r="109">
+                        <a:s>where </a:s>
+                        <a:s r="109">
+                           <a:s r="107">
+                              <a:s>( </a:s>
+                              <a:s r="107">
+                                 <a:s r="106">
+                                    <a:s>I</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="107">
+                                    <a:s>occurrence</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s r="109"> during </a:s>
+                           <a:s r="108">
+                              <a:s>&quot;Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="110" locator="76:2-76:68" xsi:type="Query">
+            <source localId="105" locator="76:3-76:17" alias="I">
+               <expression localId="104" locator="76:3-76:15" name="getSecondDose" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="109" locator="76:19-76:67" xsi:type="In">
+               <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand asType="fhir:dateTime" xsi:type="As">
+                     <operand localId="107" locator="76:25-76:39" path="occurrence" scope="I" xsi:type="Property"/>
+                  </operand>
+               </operand>
+               <operand localId="108" locator="76:48-76:67" name="Measurement Period" xsi:type="ParameterRef"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="115" locator="82:1-83:22" name="Stratification" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="115">
+               <a:s>/*
+ * Combined stratifiers
+ */
+define &quot;Stratification&quot;:
+		</a:s>
+               <a:s r="114">
+                  <a:s r="113">
+                     <a:s r="112">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="113">
+                        <a:s>gender</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="114">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="114" locator="83:3-83:22" path="value" xsi:type="Property">
+            <source localId="113" locator="83:3-83:16" path="gender" xsi:type="Property">
+               <source localId="112" locator="83:3-83:9" name="Patient" xsi:type="ExpressionRef"/>
+            </source>
+         </expression>
+      </def>
+   </statements>
+</library>

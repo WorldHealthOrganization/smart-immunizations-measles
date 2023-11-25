@@ -1,0 +1,102 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "IMMZ-C-QRToPatient",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url" : "http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-QRToPatient",
+  "version" : "0.1.0",
+  "name" : "IMMZ-C-QRToPatient",
+  "status" : "draft",
+  "date" : "2023-09-27T18:14:03+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "structure" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+    "mode" : "source",
+    "alias" : "QResp"
+  },
+  {
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-mini/StructureDefinition/IMMZ-C-register-client",
+    "mode" : "source",
+    "alias" : "IMMZC"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Patient",
+    "mode" : "target",
+    "alias" : "Patient"
+  }],
+  "import" : ["http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-QRToLM",
+  "http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-LMToPatient"],
+  "group" : [{
+    "name" : "QRestToIMMZC",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "qr",
+      "type" : "QResp",
+      "mode" : "source"
+    },
+    {
+      "name" : "patient",
+      "type" : "Patient",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "QRtoPatient",
+      "source" : [{
+        "context" : "qr"
+      }],
+      "target" : [{
+        "contextType" : "variable",
+        "variable" : "model",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "http://worldhealthorganization.github.io/smart-immunizations-mini/StructureDefinition/IMMZ-C-register-client"
+        }]
+      }],
+      "rule" : [{
+        "name" : "QRtoLM",
+        "source" : [{
+          "context" : "qr"
+        }],
+        "target" : [{
+          "contextType" : "variable",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "model"
+          }]
+        }],
+        "dependent" : [{
+          "name" : "QRespToIMMZC",
+          "variable" : ["qr",
+          "model"]
+        }]
+      },
+      {
+        "name" : "LMtoPatient",
+        "source" : [{
+          "context" : "qr"
+        }],
+        "target" : [{
+          "contextType" : "variable",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "patient"
+          }]
+        }],
+        "dependent" : [{
+          "name" : "IMMZCToPatient",
+          "variable" : ["model",
+          "patient"]
+        }]
+      }]
+    }]
+  }]
+}

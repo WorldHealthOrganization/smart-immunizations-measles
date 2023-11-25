@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Basic xmlns="http://hl7.org/fhir">
+  <id value="immz-e-fxnreq"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table class="grid"><tr><td><b><a name="IMMZ.FXNREQ.087"> </a></b>IMMZ.FXNREQ.087</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want To confirm I have selected the correct record
+so that I know I have the correct record</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.088"> </a></b>IMMZ.FXNREQ.088</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want To enter all necessary registration data
+so that It will be available to the system and others who should have access to it</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.089"> </a></b>IMMZ.FXNREQ.089</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want To select the place of birth from a list as defined by the system administrator
+so that We have a standardized list of locations to prevent entry errors</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.090"> </a></b>IMMZ.FXNREQ.090</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want To select the health centre of the client from a list as defined by the system administrator
+so that I can be sure the client is assigned to the correct clinic and that all systems and users will understand it to be the same clinic</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.091"> </a></b>IMMZ.FXNREQ.091</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to validate that a client does not exist before adding a new record.
+so that Duplicates can be prevented</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.092"> </a></b>IMMZ.FXNREQ.092</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to enforce a minimal required data set for new registrations
+so that Sufficient data is entered to be able to identify the client</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.093"> </a></b>IMMZ.FXNREQ.093</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to uniquely identify every client using a system generated unique identifier or an existing identifier e.g. health care, national ID, health unique ID
+so that The client can be definitively identified using that number</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.094"> </a></b>IMMZ.FXNREQ.094</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to generate a unique identifier
+so that The client can be uniquely identified for vaccination activities across systems using the same ID</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.095"> </a></b>IMMZ.FXNREQ.095</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want Validate a unique ID when offline
+so that Entry errors are prevented</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.096"> </a></b>IMMZ.FXNREQ.096</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to provide a mechanism to prevent unwanted duplication of records, i.e. the system warns if a client is registered with same name and date of birth
+so that Duplicates can be prevented, and entries that are not duplicates can be confirmed as similar but separate</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.097"> </a></b>IMMZ.FXNREQ.097</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want To handle duplicates (such as merging records)
+so that Duplicate records are minimized or eliminated</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.098"> </a></b>IMMZ.FXNREQ.098</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability for remote access and update of client records (via mobile device)
+so that Records can be updated when the client is present, to confirm any information</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.099"> </a></b>IMMZ.FXNREQ.099</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability for the system administrator to configure what information and what data will be returned to determine a match
+so that To maintain confidentiality of records by only displaying what is needed to make a match</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.100"> </a></b>IMMZ.FXNREQ.100</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability to add a historical vaccination history on a new client
+so that the record will contain the full vaccine history</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.101"> </a></b>IMMZ.FXNREQ.101</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability to generate a barcode label to affix to the paper record
+so that The record can easily be uniquely identified by scanning the ID</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.102"> </a></b>IMMZ.FXNREQ.102</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability to include an appropriate data on the barcode including the unique ID and data to support the digital vaccination certificate verification and validation process such as web end point or public key
+so that Interaction with other systems can be facilitated</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.103"> </a></b>IMMZ.FXNREQ.103</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability to associate a unique ID generated by another authority (local or global) to the record
+so that The record can be more easily shared or identified with other appropriate systems</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.104"> </a></b>IMMZ.FXNREQ.104</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The ability to add relevant health history if needed
+so that Relevant clinical information will be available to users of the system to improve decisions making</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.105"> </a></b>IMMZ.FXNREQ.105</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want To modify or update appropriate client data as needed
+so that Most up to date information is available to all users</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.106"> </a></b>IMMZ.FXNREQ.106</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to track that I have changed or modified an existing record
+so that accountability for correct data is improved</p>
+</div></td></tr><tr><td><b><a name="IMMZ.FXNREQ.107"> </a></b>IMMZ.FXNREQ.107</td><td/><td><div><p>As a <a href="ActorDefinition-HealthWorker.html">health worker (HW)</a>
+I want The system to identify changes made to the record for my confirmation before saving
+so that I can have the opportunity to double check the data to prevent errors</p>
+</div></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.url">
+    <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/Requirements/immz-e-fxnreq"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.version">
+    <valueString value="0.1.0"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.status">
+    <valueCode value="active"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.date">
+    <valueDateTime value="2023-10-23T19:19:30+00:00"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.publisher">
+    <valueString value="WHO"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.contact">
+    <valueContactDetail>
+      <name value="WHO"/>
+      <telecom>
+        <system value="url"/>
+        <value value="http://who.int"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.087"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want To confirm I have selected the correct record&#xA;so that I know I have the correct record"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.088"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want To enter all necessary registration data&#xA;so that It will be available to the system and others who should have access to it"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.089"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want To select the place of birth from a list as defined by the system administrator&#xA;so that We have a standardized list of locations to prevent entry errors"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.090"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want To select the health centre of the client from a list as defined by the system administrator&#xA;so that I can be sure the client is assigned to the correct clinic and that all systems and users will understand it to be the same clinic"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.091"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to validate that a client does not exist before adding a new record.&#xA;so that Duplicates can be prevented"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.092"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to enforce a minimal required data set for new registrations&#xA;so that Sufficient data is entered to be able to identify the client"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.093"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to uniquely identify every client using a system generated unique identifier or an existing identifier e.g. health care, national ID, health unique ID&#xA;so that The client can be definitively identified using that number"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.094"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to generate a unique identifier&#xA;so that The client can be uniquely identified for vaccination activities across systems using the same ID"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.095"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want Validate a unique ID when offline&#xA;so that Entry errors are prevented"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.096"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to provide a mechanism to prevent unwanted duplication of records, i.e. the system warns if a client is registered with same name and date of birth&#xA;so that Duplicates can be prevented, and entries that are not duplicates can be confirmed as similar but separate"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.097"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want To handle duplicates (such as merging records)&#xA;so that Duplicate records are minimized or eliminated"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.098"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability for remote access and update of client records (via mobile device)&#xA;so that Records can be updated when the client is present, to confirm any information"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.099"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability for the system administrator to configure what information and what data will be returned to determine a match&#xA;so that To maintain confidentiality of records by only displaying what is needed to make a match"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.100"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability to add a historical vaccination history on a new client&#xA;so that the record will contain the full vaccine history"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.101"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability to generate a barcode label to affix to the paper record&#xA;so that The record can easily be uniquely identified by scanning the ID"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.102"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability to include an appropriate data on the barcode including the unique ID and data to support the digital vaccination certificate verification and validation process such as web end point or public key&#xA;so that Interaction with other systems can be facilitated"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.103"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability to associate a unique ID generated by another authority (local or global) to the record&#xA;so that The record can be more easily shared or identified with other appropriate systems"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.104"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The ability to add relevant health history if needed&#xA;so that Relevant clinical information will be available to users of the system to improve decisions making"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.105"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want To modify or update appropriate client data as needed&#xA;so that Most up to date information is available to all users"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.106"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to track that I have changed or modified an existing record&#xA;so that accountability for correct data is improved"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.key">
+      <valueId value="IMMZ.FXNREQ.107"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.statement.requirement">
+      <valueMarkdown value="As a [health worker (HW)](ActorDefinition-HealthWorker.html)&#xA;I want The system to identify changes made to the record for my confirmation before saving&#xA;so that I can have the opportunity to double check the data to prevent errors"/>
+    </extension>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/fhir-types"/>
+      <code value="Requirements"/>
+    </coding>
+  </code>
+</Basic>

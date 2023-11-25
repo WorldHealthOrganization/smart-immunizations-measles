@@ -1,0 +1,379 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "IMMZ-C-LMToPatient",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url" : "http://worldhealthorganization.github.io/smart-immunizations-mini/StructureMap/IMMZ-C-LMToPatient",
+  "version" : "0.1.0",
+  "name" : "IMMZ-C-LMToPatient",
+  "status" : "draft",
+  "date" : "2023-09-27T05:42:47+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "structure" : [{
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-mini/StructureDefinition/IMMZ-C-register-client",
+    "mode" : "target",
+    "alias" : "IMMZC"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Patient",
+    "mode" : "target",
+    "alias" : "Patient"
+  }],
+  "group" : [{
+    "name" : "IMMZCToPatient",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "immzc",
+      "type" : "IMMZC",
+      "mode" : "source"
+    },
+    {
+      "name" : "patient",
+      "type" : "Patient",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetIdentifier",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "uniqueId",
+        "variable" : "id"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "identifier"
+      }],
+      "rule" : [{
+        "name" : "SetIdentifierValue",
+        "source" : [{
+          "context" : "id"
+        }],
+        "target" : [{
+          "context" : "identifier",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "id"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetName",
+      "source" : [{
+        "context" : "immzc"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "name",
+        "variable" : "pname"
+      }],
+      "dependent" : [{
+        "name" : "NameToHumanName",
+        "variable" : ["immzc",
+        "pname"]
+      }]
+    },
+    {
+      "name" : "SetGender",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "sex",
+        "variable" : "sex"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "gender",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueString" : "translate(sex, 'http://worldhealthorganization.github.io/smart-immunizations-mini/ConceptMap/IMMZ-C-SexToAdministrativeGender', 'code')"
+        }]
+      }]
+    },
+    {
+      "name" : "SetBirthDate",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "birthDate",
+        "variable" : "birthDate"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "birthDate",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "birthDate"
+        }]
+      }]
+    },
+    {
+      "name" : "SetCaregiver",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "caregiver",
+        "variable" : "caregiver"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "contact",
+        "variable" : "contact"
+      },
+      {
+        "context" : "contact",
+        "contextType" : "variable",
+        "element" : "name",
+        "variable" : "hname"
+      }],
+      "dependent" : [{
+        "name" : "CGNameToHumanName",
+        "variable" : ["immzc",
+        "hname"]
+      }]
+    },
+    {
+      "name" : "SetPhone",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "phone",
+        "variable" : "phone"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "telecom",
+        "variable" : "telecom"
+      }],
+      "rule" : [{
+        "name" : "SetPhoneValue",
+        "source" : [{
+          "context" : "phone",
+          "variable" : "content"
+        }],
+        "target" : [{
+          "context" : "telecom",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "content"
+          }]
+        },
+        {
+          "context" : "telecom",
+          "contextType" : "variable",
+          "element" : "system",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "phone"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetAdministrativeArea",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "administrativeArea",
+        "variable" : "area"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "address",
+        "variable" : "address"
+      }],
+      "rule" : [{
+        "name" : "SetAddressText",
+        "source" : [{
+          "context" : "area",
+          "element" : "coding",
+          "listMode" : "first",
+          "variable" : "coding"
+        }],
+        "target" : [{
+          "contextType" : "variable",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "address"
+          }]
+        }],
+        "rule" : [{
+          "name" : "SetAddressToCode",
+          "source" : [{
+            "context" : "coding",
+            "element" : "code",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "address",
+            "contextType" : "variable",
+            "element" : "text",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        },
+        {
+          "name" : "SetAddressToDisplay",
+          "source" : [{
+            "context" : "coding",
+            "element" : "display",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "address",
+            "contextType" : "variable",
+            "element" : "text",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "NameToHumanName",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "immzc",
+      "mode" : "source"
+    },
+    {
+      "name" : "hname",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetFullName",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "fullName",
+        "variable" : "fullName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "text",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "fullName"
+        }]
+      }]
+    },
+    {
+      "name" : "SetFirstName",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "firstName",
+        "variable" : "firstName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "given",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "firstName"
+        }]
+      }]
+    },
+    {
+      "name" : "SetFamilyName",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "familyName",
+        "variable" : "familyName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "family",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "familyName"
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "CGNameToHumanName",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "immzc",
+      "mode" : "source"
+    },
+    {
+      "name" : "hname",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetFullName",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "cgfullName",
+        "variable" : "fullName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "text",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "fullName"
+        }]
+      }]
+    },
+    {
+      "name" : "SetFirstName",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "cgfirstName",
+        "variable" : "firstName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "given",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "firstName"
+        }]
+      }]
+    },
+    {
+      "name" : "SetFamilyName",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "cgfamilyName",
+        "variable" : "familyName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "family",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "familyName"
+        }]
+      }]
+    }]
+  }]
+}

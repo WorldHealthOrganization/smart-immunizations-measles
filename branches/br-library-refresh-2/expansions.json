@@ -1,0 +1,1139 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "c2e990e6-a0ea-4ecc-a407-adace9d8e6fd",
+  "meta" : {
+    "lastUpdated" : "2023-10-24T07:10:36.703+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE10",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ.D1.html\">codesystem IMMZ.D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D1-DE11\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D1.html#IMMZ.D1-DE11\">DE11</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</td><td>HIV-positive</td><td><div><p>The client is known to be HIV positive</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D1-DE12\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D1.html#IMMZ.D1-DE12\">DE12</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</td><td>HIV-negative</td><td><div><p>The client is known to be HIV negative</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D1-DE13\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D1.html#IMMZ.D1-DE13\">DE13</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</td><td>Unknown</td><td><div><p>The client's HIV status is unknown</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE10",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "status" : "active",
+      "expansion" : {
+        "identifier" : "urn:uuid:34c1665e-02b6-4f9e-ab6b-55ab9c2988b2",
+        "timestamp" : "2023-10-24T07:12:34+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1",
+          "code" : "DE11",
+          "display" : "HIV-positive"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1",
+          "code" : "DE12",
+          "display" : "HIV-negative"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1",
+          "code" : "DE13",
+          "display" : "Unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.C.DE5",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ.C.html\">codesystem IMMZ.C CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE6\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE6\">DE6</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Male</td><td><div><p>Client's biological sex is male</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE7\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE7\">DE7</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Female</td><td><div><p>Client's biological sex is female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE8\">DE8</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Biological sex not specified</td><td><div><p>Client's biological sex is not specified</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE9\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE9\">DE9</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Intersex</td><td><div><p>Client's biological sex is intersex</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.C.DE5",
+      "version" : "0.1.0",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ.C.DE5 ValueSet for Sex",
+      "status" : "active",
+      "experimental" : false,
+      "expansion" : {
+        "identifier" : "urn:uuid:d02cbd0f-cbfc-4c74-9095-c66136e1ad52",
+        "timestamp" : "2023-10-24T07:12:35+00:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE6",
+          "display" : "Male"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE7",
+          "display" : "Female"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE8",
+          "display" : "Biological sex not specified"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE9",
+          "display" : "Intersex"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ.D4.html\">codesystem IMMZ.D4 CodeSystem for Check Contraindications Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE162\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE162\">DE162</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Currently pregnant</td><td><div><p>The client is currently pregnant</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE165\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE165\">DE165</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Severely immunosuppressed</td><td><div><p>The client is known to be severely immunocompromised or immunosuppressed</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE166\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE166\">DE166</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>History of anaphylactic reactions</td><td><div><p>The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE167\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE167\">DE167</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Severe allergic reactions</td><td><div><p>The client is known to have severe allergic reaction to vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE168\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE168\">DE168</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Symptomatic HIV infection</td><td><div><p>The client is experiencing HIV-related symptoms</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D4_DE161",
+      "title" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "status" : "active",
+      "expansion" : {
+        "identifier" : "urn:uuid:36f9af05-6ece-4bb2-8ebe-063b67629941",
+        "timestamp" : "2023-10-24T07:12:35+00:00",
+        "total" : 5,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE162",
+          "display" : "Currently pregnant"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE165",
+          "display" : "Severely immunosuppressed"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE166",
+          "display" : "History of anaphylactic reactions"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE167",
+          "display" : "Severe allergic reactions"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE168",
+          "display" : "Symptomatic HIV infection"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/ARVDrugs-values",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li>SNOMED CT International edition 01-Sep 2023</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-713540004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/713540004\">713540004</a></td><td>http://snomed.info/sct</td><td>Substance with antiretroviral mechanism of action (substance)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-788075003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/788075003\">788075003</a></td><td>http://snomed.info/sct</td><td>Medicinal product acting as antiretroviral agent (product)</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/ARVDrugs-values",
+      "version" : "0.1.0",
+      "name" : "ARVDrugsvalues",
+      "title" : "ARV Drugs values",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:43fc5e8f-b85c-460a-9d64-fdbf1dd80b21",
+        "timestamp" : "2023-10-24T07:12:45+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "713540004",
+          "display" : "Substance with antiretroviral mechanism of action (substance)"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "788075003",
+          "display" : "Medicinal product acting as antiretroviral agent (product)"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/AllVaccineTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 10 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"CodeSystem-ICD11.html\">codesystem ICD-11 v0.1.0 (CodeSystem)</a></li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8L15\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8L15\">XM8L15</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM9439\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM9439\">XM9439</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8TF3\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8TF3\">XM8TF3</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM21H2\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM21H2\">XM21H2</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM4AJ8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM4AJ8\">XM4AJ8</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM28X5\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM28X5\">XM28X5</a></td><td>http://id.who.int/icd11/mms</td><td>Measles vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM1131\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM1131\">XM1131</a></td><td>http://id.who.int/icd11/mms</td><td>Mumps vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM2340\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM2340\">XM2340</a></td><td>http://id.who.int/icd11/mms</td><td>Mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-30940-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/30940-1/\">30940-1</a></td><td>http://loinc.org</td><td>Measles virus+Mumps virus+Rubella virus dose count in combination vaccine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-836382004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/836382004\">836382004</a></td><td>http://snomed.info/sct</td><td>Measles morbillivirus antigen-containing vaccine product</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/AllVaccineTypes",
+      "version" : "0.1.0",
+      "name" : "AllVaccineTypes",
+      "title" : "Vaccine Type ValueSet",
+      "status" : "active",
+      "date" : "2023-10-24T07:10:36+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:d1926dbd-42c5-4571-8c23-3ee615d400d5",
+        "timestamp" : "2023-10-24T07:12:45+00:00",
+        "total" : 10,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8L15",
+          "display" : "Measles, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM9439",
+          "display" : "Measles, combinations with mumps, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8TF3",
+          "display" : "Measles, combinations with mumps and rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM21H2",
+          "display" : "Measles, combinations with rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM4AJ8",
+          "display" : "Measles, combinations with mumps, rubella and varicella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM28X5",
+          "display" : "Measles vaccines"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM1131",
+          "display" : "Mumps vaccines"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM2340",
+          "display" : "Mumps, live attenuated"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "30940-1",
+          "display" : "Measles virus+Mumps virus+Rubella virus dose count in combination vaccine"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "836382004",
+          "display" : "Measles morbillivirus antigen-containing vaccine product"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/Birthweight-values",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-276610007\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/276610007\">276610007</a></td><td>http://snomed.info/sct</td><td>Birthweight</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-8339-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/8339-4/\">8339-4</a></td><td>http://loinc.org</td><td>Birth weight Measured</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-56056-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/56056-5/\">56056-5</a></td><td>http://loinc.org</td><td>Birth weight - Reported</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/Birthweight-values",
+      "version" : "0.1.0",
+      "name" : "Birthweightvalues",
+      "title" : "Birthweight valueset",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:9a3b12a5-880e-4455-a000-aa11575a41d9",
+        "timestamp" : "2023-10-24T07:12:45+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://loinc.org|2.74"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "276610007",
+          "display" : "Birthweight"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "8339-4",
+          "display" : "Birth weight Measured"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "56056-5",
+          "display" : "Birth weight - Reported"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/HIVstatus-values",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"CodeSystem-ICD11.html\">codesystem ICD-11 v0.1.0 (CodeSystem)</a></li><li>SNOMED CT International edition 01-Sep 2023</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-278977008\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/278977008\">278977008</a></td><td>http://snomed.info/sct</td><td>Human immunodeficiency virus status (observable entity)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-1C62.Z\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-1C62.46Z\">1C62.Z</a></td><td>http://id.who.int/icd11/mms</td><td>Human immunodeficiency virus disease without mention of associated disease or condition, clinical stage unspecified</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-MA14.0\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-MA14.460\">MA14.0</a></td><td>http://id.who.int/icd11/mms</td><td>Laboratory evidence of human immunodeficiency virus</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/HIVstatus-values",
+      "version" : "0.1.0",
+      "name" : "HIVstatusvalues",
+      "title" : "HIV status values",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:83983f2c-c52b-41a3-8356-4c93f42c4fcd",
+        "timestamp" : "2023-10-24T07:12:46+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "278977008",
+          "display" : "Human immunodeficiency virus status (observable entity)"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "1C62.Z",
+          "display" : "Human immunodeficiency virus disease without mention of associated disease or condition, clinical stage unspecified"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "MA14.0",
+          "display" : "Laboratory evidence of human immunodeficiency virus"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.C.DE5",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ.C.html\">codesystem IMMZ.C CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE6\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE6\">DE6</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Male</td><td><div><p>Client's biological sex is male</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE7\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE7\">DE7</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Female</td><td><div><p>Client's biological sex is female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE8\">DE8</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Biological sex not specified</td><td><div><p>Client's biological sex is not specified</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.C-DE9\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.C.html#IMMZ.C-DE9\">DE9</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C</td><td>Intersex</td><td><div><p>Client's biological sex is intersex</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.C.DE5",
+      "version" : "0.1.0",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ.C.DE5 ValueSet for Sex",
+      "status" : "active",
+      "experimental" : false,
+      "expansion" : {
+        "identifier" : "urn:uuid:d02cbd0f-cbfc-4c74-9095-c66136e1ad52",
+        "timestamp" : "2023-10-24T07:12:35+00:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE6",
+          "display" : "Male"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE7",
+          "display" : "Female"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE8",
+          "display" : "Biological sex not specified"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.C",
+          "code" : "DE9",
+          "display" : "Intersex"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE10",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ.D1.html\">codesystem IMMZ.D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D1-DE11\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D1.html#IMMZ.D1-DE11\">DE11</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</td><td>HIV-positive</td><td><div><p>The client is known to be HIV positive</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D1-DE12\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D1.html#IMMZ.D1-DE12\">DE12</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</td><td>HIV-negative</td><td><div><p>The client is known to be HIV negative</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D1-DE13\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D1.html#IMMZ.D1-DE13\">DE13</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</td><td>Unknown</td><td><div><p>The client's HIV status is unknown</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE10",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "status" : "active",
+      "expansion" : {
+        "identifier" : "urn:uuid:34c1665e-02b6-4f9e-ab6b-55ab9c2988b2",
+        "timestamp" : "2023-10-24T07:12:34+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1",
+          "code" : "DE11",
+          "display" : "HIV-positive"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1",
+          "code" : "DE12",
+          "display" : "HIV-negative"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1",
+          "code" : "DE13",
+          "display" : "Unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ.D4.html\">codesystem IMMZ.D4 CodeSystem for Check Contraindications Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE162\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE162\">DE162</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Currently pregnant</td><td><div><p>The client is currently pregnant</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE165\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE165\">DE165</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Severely immunosuppressed</td><td><div><p>The client is known to be severely immunocompromised or immunosuppressed</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE166\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE166\">DE166</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>History of anaphylactic reactions</td><td><div><p>The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE167\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE167\">DE167</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Severe allergic reactions</td><td><div><p>The client is known to have severe allergic reaction to vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE168\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ.D4.html#IMMZ.D4-DE168\">DE168</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td><td>Symptomatic HIV infection</td><td><div><p>The client is experiencing HIV-related symptoms</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D4_DE161",
+      "title" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "status" : "active",
+      "expansion" : {
+        "identifier" : "urn:uuid:36f9af05-6ece-4bb2-8ebe-063b67629941",
+        "timestamp" : "2023-10-24T07:12:35+00:00",
+        "total" : 5,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE162",
+          "display" : "Currently pregnant"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE165",
+          "display" : "Severely immunosuppressed"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE166",
+          "display" : "History of anaphylactic reactions"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE167",
+          "display" : "Severe allergic reactions"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4",
+          "code" : "DE168",
+          "display" : "Symptomatic HIV infection"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.Z.DE9",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 8 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"CodeSystem-ICD11.html\">codesystem ICD-11 v0.1.0 (CodeSystem)</a></li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM28X5\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM28X5\">XM28X5</a></td><td>http://id.who.int/icd11/mms</td><td>Measles vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8L15\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8L15\">XM8L15</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8TF3\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8TF3\">XM8TF3</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM21H2\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM21H2\">XM21H2</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM4AJ8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM4AJ8\">XM4AJ8</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM9439\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM9439\">XM9439</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-30940-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/30940-1/\">30940-1</a></td><td>http://loinc.org</td><td>Measles virus+Mumps virus+Rubella virus dose count in combination vaccine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-836382004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/836382004\">836382004</a></td><td>http://snomed.info/sct</td><td>Measles morbillivirus antigen-containing vaccine product</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.Z.DE9",
+      "version" : "0.1.0",
+      "name" : "IMMZ_Z_DE9",
+      "title" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines",
+      "status" : "active",
+      "date" : "2023-10-24T07:10:36+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:1a04c4ac-8fa3-48af-a8fd-32e03bc32c26",
+        "timestamp" : "2023-10-24T07:12:47+00:00",
+        "total" : 8,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM28X5",
+          "display" : "Measles vaccines"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8L15",
+          "display" : "Measles, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8TF3",
+          "display" : "Measles, combinations with mumps and rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM21H2",
+          "display" : "Measles, combinations with rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM4AJ8",
+          "display" : "Measles, combinations with mumps, rubella and varicella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM9439",
+          "display" : "Measles, combinations with mumps, live attenuated"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "30940-1",
+          "display" : "Measles virus+Mumps virus+Rubella virus dose count in combination vaccine"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "836382004",
+          "display" : "Measles morbillivirus antigen-containing vaccine product"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/Immunocompromised-values",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li>SNOMED CT International edition 01-Sep 2023</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-370388006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/370388006\">370388006</a></td><td>http://snomed.info/sct</td><td>Patient immunocompromised</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-370391006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/370391006\">370391006</a></td><td>http://snomed.info/sct</td><td>Patient immunosuppressed</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/Immunocompromised-values",
+      "version" : "0.1.0",
+      "name" : "Immunocompromisedvalues",
+      "title" : "Immunocompromised valueset",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:45042e66-3d85-45ff-b41b-533271dacd6b",
+        "timestamp" : "2023-10-24T07:12:47+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "370388006",
+          "display" : "Patient immunocompromised"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "370391006",
+          "display" : "Patient immunosuppressed"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 20 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-ICD11.html\">codesystem ICD-11 v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8142\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8142\">XM8142</a></td><td>http://id.who.int/icd11/mms</td><td>Tuberculosis, live attenuated vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM72A0\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM72A0\">XM72A0</a></td><td>http://id.who.int/icd11/mms</td><td>Cholera, live attenuated vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM47S0\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM47S0\">XM47S0</a></td><td>http://id.who.int/icd11/mms</td><td>Encephalitis, Japanese, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8L15\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8L15\">XM8L15</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8TF3\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8TF3\">XM8TF3</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM21H2\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM21H2\">XM21H2</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM4AJ8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM4AJ8\">XM4AJ8</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM9439\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM9439\">XM9439</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM2340\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM2340\">XM2340</a></td><td>http://id.who.int/icd11/mms</td><td>Mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM79H3\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM79H3\">XM79H3</a></td><td>http://id.who.int/icd11/mms</td><td>Poliomyelitis oral, bivalent, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM0VX8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM0VX8\">XM0VX8</a></td><td>http://id.who.int/icd11/mms</td><td>Poliomyelitis oral, monovalent live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM0KZ1\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM0KZ1\">XM0KZ1</a></td><td>http://id.who.int/icd11/mms</td><td>Poliomyelitis oral, trivalent, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM4GV0\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM4GV0\">XM4GV0</a></td><td>http://id.who.int/icd11/mms</td><td>Rota virus, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM9PS9\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM9PS9\">XM9PS9</a></td><td>http://id.who.int/icd11/mms</td><td>Rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM3B09\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM3B09\">XM3B09</a></td><td>http://id.who.int/icd11/mms</td><td>Rubella, combinations with mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM5V64\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM5V64\">XM5V64</a></td><td>http://id.who.int/icd11/mms</td><td>Influenza vaccines, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM33K4\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM33K4\">XM33K4</a></td><td>http://id.who.int/icd11/mms</td><td>Typhoid, oral, live attenuated vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM0NS8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM0NS8\">XM0NS8</a></td><td>http://id.who.int/icd11/mms</td><td>Varicella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM3418\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM3418\">XM3418</a></td><td>http://id.who.int/icd11/mms</td><td>Yellow Fever, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM5DF6\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM5DF6\">XM5DF6</a></td><td>http://id.who.int/icd11/mms</td><td>COVID-19 vaccines, live attenuated virus</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines",
+      "version" : "0.1.0",
+      "name" : "LiveAttenuatedVaccines",
+      "title" : "Set of live attenuated vaccines",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:53896915-3c40-4e8c-a496-74fa23cfbbe5",
+        "timestamp" : "2023-10-24T07:12:47+00:00",
+        "total" : 20,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8142",
+          "display" : "Tuberculosis, live attenuated vaccines"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM72A0",
+          "display" : "Cholera, live attenuated vaccines"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM47S0",
+          "display" : "Encephalitis, Japanese, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8L15",
+          "display" : "Measles, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8TF3",
+          "display" : "Measles, combinations with mumps and rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM21H2",
+          "display" : "Measles, combinations with rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM4AJ8",
+          "display" : "Measles, combinations with mumps, rubella and varicella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM9439",
+          "display" : "Measles, combinations with mumps, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM2340",
+          "display" : "Mumps, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM79H3",
+          "display" : "Poliomyelitis oral, bivalent, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM0VX8",
+          "display" : "Poliomyelitis oral, monovalent live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM0KZ1",
+          "display" : "Poliomyelitis oral, trivalent, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM4GV0",
+          "display" : "Rota virus, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM9PS9",
+          "display" : "Rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM3B09",
+          "display" : "Rubella, combinations with mumps, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM5V64",
+          "display" : "Influenza vaccines, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM33K4",
+          "display" : "Typhoid, oral, live attenuated vaccines"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM0NS8",
+          "display" : "Varicella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM3418",
+          "display" : "Yellow Fever, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM5DF6",
+          "display" : "COVID-19 vaccines, live attenuated virus"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/Negativetestresult-values",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li>SNOMED CT International edition 01-Sep 2023</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-260385009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/260385009\">260385009</a></td><td>http://snomed.info/sct</td><td>Negative (qualifier value)</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/Negativetestresult-values",
+      "version" : "0.1.0",
+      "name" : "Negativetestresultvalues",
+      "title" : "Negative Test Results",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:c5835f5e-1099-4f39-b6b3-903196018518",
+        "timestamp" : "2023-10-24T07:12:48+00:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "260385009",
+          "display" : "Negative (qualifier value)"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/PositiveTestResult-values",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li>SNOMED CT International edition 01-Sep 2023</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-10828004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/10828004\">10828004</a></td><td>http://snomed.info/sct</td><td>Positive (qualifier value)</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/PositiveTestResult-values",
+      "version" : "0.1.0",
+      "name" : "PositiveTestResultvalues",
+      "title" : "Positive Test Result valuest",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2023-10-24T07:10:36+00:00",
+      "immutable" : true,
+      "expansion" : {
+        "identifier" : "urn:uuid:22ac24d0-dc40-476e-ad68-4e81535b8f6f",
+        "timestamp" : "2023-10-24T07:12:48+00:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "10828004",
+          "display" : "Positive (qualifier value)"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VSMeaslesVaccineProducts",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-VaccineProducts.html\">codesystem Vaccine Product codes CodeSet v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-VaccineProducts-20009060-2\"> </a>\u00a0\u00a0<a href=\"CodeSystem-VaccineProducts.html#VaccineProducts-20009060.472\">20009060/2</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts</td><td>Serum Institute of India Measles vaccine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-VaccineProducts-7680007030014\"> </a>\u00a0\u00a0<a href=\"CodeSystem-VaccineProducts.html#VaccineProducts-7680007030014\">7680007030014</a></td><td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts</td><td>M-M-RvaxPRO</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VSMeaslesVaccineProducts",
+      "version" : "0.1.0",
+      "name" : "VSMeaslesVaccineProducts",
+      "title" : "MeaslesVaccine Products ValueSet",
+      "status" : "draft",
+      "date" : "2023-10-24T07:10:36+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:518052d1-ca45-4d2b-9a4e-fde82b9aab76",
+        "timestamp" : "2023-10-24T07:12:48+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts",
+          "code" : "20009060/2",
+          "display" : "Serum Institute of India Measles vaccine"
+        },
+        {
+          "system" : "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts",
+          "code" : "7680007030014",
+          "display" : "M-M-RvaxPRO"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VaccineTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 8 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li><a href=\"CodeSystem-ICD11.html\">codesystem ICD-11 v0.1.0 (CodeSystem)</a></li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li><li>Loinc v2.74</li><li>SNOMED CT International edition 01-Sep 2023</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8L15\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8L15\">XM8L15</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM9439\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM9439\">XM9439</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM8TF3\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM8TF3\">XM8TF3</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM21H2\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM21H2\">XM21H2</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with rubella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM4AJ8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM4AJ8\">XM4AJ8</a></td><td>http://id.who.int/icd11/mms</td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---id.who.int-icd11-mms-XM28X5\"> </a>\u00a0\u00a0<a href=\"CodeSystem-ICD11.html#ICD11-XM28X5\">XM28X5</a></td><td>http://id.who.int/icd11/mms</td><td>Measles vaccines</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-30940-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/30940-1/\">30940-1</a></td><td>http://loinc.org</td><td>Measles virus+Mumps virus+Rubella virus dose count in combination vaccine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-836382004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/836382004\">836382004</a></td><td>http://snomed.info/sct</td><td>Measles morbillivirus antigen-containing vaccine product</td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VaccineTypes",
+      "version" : "0.1.0",
+      "name" : "VaccineTypes",
+      "title" : "Measles Vaccine Type ValueSet",
+      "status" : "active",
+      "date" : "2023-10-24T07:10:36+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:ec194595-1038-422f-9dc3-ddfb4d9ae75a",
+        "timestamp" : "2023-10-24T07:12:49+00:00",
+        "total" : 8,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://id.who.int/icd11/mms|0.1.0"
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://loinc.org|2.74"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230901"
+        }],
+        "contains" : [{
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8L15",
+          "display" : "Measles, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM9439",
+          "display" : "Measles, combinations with mumps, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM8TF3",
+          "display" : "Measles, combinations with mumps and rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM21H2",
+          "display" : "Measles, combinations with rubella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM4AJ8",
+          "display" : "Measles, combinations with mumps, rubella and varicella, live attenuated"
+        },
+        {
+          "system" : "http://id.who.int/icd11/mms",
+          "code" : "XM28X5",
+          "display" : "Measles vaccines"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "30940-1",
+          "display" : "Measles virus+Mumps virus+Rubella virus dose count in combination vaccine"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "836382004",
+          "display" : "Measles morbillivirus antigen-containing vaccine product"
+        }]
+      }
+    }
+  }]
+}

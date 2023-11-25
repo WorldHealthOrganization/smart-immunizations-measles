@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="IMMZ-DT-08-Measles-MR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ActivityDefinition</b><a name="IMMZ-DT-08-Measles-MR"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ActivityDefinition &quot;IMMZ-DT-08-Measles-MR&quot; </p></div><p><b>url</b>: <code>http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZ-DT-08-Measles-MR</p><p><b>title</b>: IMMZ.DT.08.Measles.MR</p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2022-05-06 12:05:48-0400</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: Provide measles immunization</p><p><b>kind</b>: MedicationRequest</p><p><b>code</b>: Administration of vaccine to produce active immunity <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#33879002)</span></p><p><b>intent</b>: proposal</p><p><b>doNotPerform</b>: false</p></div>
+  </text>
+  <url value="http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ-DT-08-Measles-MR"/>
+  <title value="IMMZ.DT.08.Measles.MR"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2022-05-06T12:05:48.3799313-04:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Provide measles immunization"/>
+  <kind value="MedicationRequest"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="33879002"/>
+      <display value="Administration of vaccine to produce active immunity"/>
+    </coding>
+  </code>
+  <intent value="proposal"/>
+  <doNotPerform value="false"/>
+</ActivityDefinition>

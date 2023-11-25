@@ -1,0 +1,2386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="3f197819-6381-4f6a-97b9-506b28d98a06"/>
+  <meta>
+    <lastUpdated value="2023-10-18T20:43:12.620+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-C-DE5"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-C.html">codesystem IMMZ-C CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE6"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE6">DE6</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Male</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is male</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE7"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE7">DE7</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Female</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is female</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE8"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE8">DE8</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Biological sex not specified</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is not specified</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE9"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE9">DE9</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Intersex</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is intersex</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-C-DE5"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_C_DE5"/>
+        <title value="IMMZ-C-DE5 ValueSet for Sex"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:1a292ece-88f3-4fee-91b1-251df4b09538"/>
+          <timestamp value="2023-10-18T20:44:43+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE6"/>
+            <display value="Male"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE7"/>
+            <display value="Female"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE8"/>
+            <display value="Biological sex not specified"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE9"/>
+            <display value="Intersex"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE11"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE11">DE11</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>HIV-positive</td>
+                <td>
+                  <div>
+                    <p>The client is known to be HIV positive</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE12"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE12">DE12</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>HIV-negative</td>
+                <td>
+                  <div>
+                    <p>The client is known to be HIV negative</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE13"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE13">DE13</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Unknown</td>
+                <td>
+                  <div>
+                    <p>The client's HIV status is unknown</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE10"/>
+        <title value="IMMZ-D1.DE10 ValueSet for HIV Status"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:f06ead9e-820e-4af9-9598-da5d8b86ac54"/>
+          <timestamp value="2023-10-18T20:44:44+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE11"/>
+            <display value="HIV-positive"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE12"/>
+            <display value="HIV-negative"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE13"/>
+            <display value="Unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ.D4.html">codesystem IMMZ.D4 CodeSystem for Check Contraindications Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE162"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE162">DE162</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Currently pregnant</td>
+                <td>
+                  <div>
+                    <p>The client is currently pregnant</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE165"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE165">DE165</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Severely immunosuppressed</td>
+                <td>
+                  <div>
+                    <p>The client is known to be severely immunocompromised or immunosuppressed</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE166"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE166">DE166</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>History of anaphylactic reactions</td>
+                <td>
+                  <div>
+                    <p>The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE167"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE167">DE167</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Severe allergic reactions</td>
+                <td>
+                  <div>
+                    <p>The client is known to have severe allergic reaction to vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE168"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE168">DE168</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Symptomatic HIV infection</td>
+                <td>
+                  <div>
+                    <p>The client is experiencing HIV-related symptoms</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D4_DE161"/>
+        <title value="IMMZ.D4.DE161 ValueSet for Potential Contraindications"/>
+        <status value="active"/>
+        <expansion>
+          <identifier value="urn:uuid:65946a20-8797-4221-b8e2-fcf42c987d7c"/>
+          <timestamp value="2023-10-18T20:44:44+00:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE162"/>
+            <display value="Currently pregnant"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE165"/>
+            <display value="Severely immunosuppressed"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE166"/>
+            <display value="History of anaphylactic reactions"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE167"/>
+            <display value="Severe allergic reactions"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE168"/>
+            <display value="Symptomatic HIV infection"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-C-DE5"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-C.html">codesystem IMMZ-C CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE6"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE6">DE6</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Male</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is male</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE7"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE7">DE7</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Female</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is female</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE8"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE8">DE8</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Biological sex not specified</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is not specified</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-C-DE9"> </a>  
+                  <a href="CodeSystem-IMMZ-C.html#IMMZ-C-DE9">DE9</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C</td>
+                <td>Intersex</td>
+                <td>
+                  <div>
+                    <p>Client's biological sex is intersex</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-C-DE5"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_C_DE5"/>
+        <title value="IMMZ-C-DE5 ValueSet for Sex"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:1a292ece-88f3-4fee-91b1-251df4b09538"/>
+          <timestamp value="2023-10-18T20:44:43+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE6"/>
+            <display value="Male"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE7"/>
+            <display value="Female"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE8"/>
+            <display value="Biological sex not specified"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-C"/>
+            <code value="DE9"/>
+            <display value="Intersex"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE11"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE11">DE11</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>HIV-positive</td>
+                <td>
+                  <div>
+                    <p>The client is known to be HIV positive</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE12"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE12">DE12</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>HIV-negative</td>
+                <td>
+                  <div>
+                    <p>The client is known to be HIV negative</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE13"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE13">DE13</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Unknown</td>
+                <td>
+                  <div>
+                    <p>The client's HIV status is unknown</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE10"/>
+        <title value="IMMZ-D1.DE10 ValueSet for HIV Status"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:f06ead9e-820e-4af9-9598-da5d8b86ac54"/>
+          <timestamp value="2023-10-18T20:44:44+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE11"/>
+            <display value="HIV-positive"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE12"/>
+            <display value="HIV-negative"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE13"/>
+            <display value="Unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE35"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE36"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE36">DE36</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>IPV</td>
+                <td>
+                  <div>
+                    <p>Inactivated poliovirus vaccine (IPV)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE37"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE37">DE37</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>bOPV</td>
+                <td>
+                  <div>
+                    <p>Bivalent oral poliovirus vaccine (bOPV)</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE35"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE35"/>
+        <title value="IMMZ-D1.DE35 ValueSet for Type of polio dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:24917bd4-84de-4789-a569-54abfc9a164d"/>
+          <timestamp value="2023-10-18T20:44:50+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE36"/>
+            <display value="IPV"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE37"/>
+            <display value="bOPV"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE52"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE53"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE53">DE53</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Inactivated Vero cell-derived vaccine</td>
+                <td>
+                  <div>
+                    <p>Inactivated Vero cell-derived Japanese encephalitis (JE) vaccine type</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE54"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE54">DE54</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Live attenuated vaccine</td>
+                <td>
+                  <div>
+                    <p>Live attenuated Japanese encephalitis (JE) vaccine type</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE55"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE55">DE55</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Live recombinant vaccine</td>
+                <td>
+                  <div>
+                    <p>Live recombinant Japanese encephalitis (JE) vaccine type</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE52"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE52"/>
+        <title value="IMMZ-D1.DE52 ValueSet for Type of last JE dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:30548ae3-a242-4c60-bfcf-dd7f108be650"/>
+          <timestamp value="2023-10-18T20:44:50+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE53"/>
+            <display value="Inactivated Vero cell-derived vaccine"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE54"/>
+            <display value="Live attenuated vaccine"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE55"/>
+            <display value="Live recombinant vaccine"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE56"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE57"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE57">DE57</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>FSME-Immun</td>
+                <td>
+                  <div>
+                    <p>FSME-Immun vaccine product, which is an inactivated whole-virus vaccine for tick-borne encephalitis (TBE)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE58"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE58">DE58</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Encepur</td>
+                <td>
+                  <div>
+                    <p>Encepur vaccine product, which is an inactivated viral vaccine for tick-borne encephalitis (TBE)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE59"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE59">DE59</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>TBE-Moscow</td>
+                <td>
+                  <div>
+                    <p>TBE-Moscow vaccine product, which is a vaccine for tick-borne encephalitis (TBE)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE60"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE60">DE60</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>EnceVir</td>
+                <td>
+                  <div>
+                    <p>EnceVir vaccine product, which is a vaccine for tick-borne encephalitis (TBE)</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE56"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE56"/>
+        <title value="IMMZ-D1.DE56 ValueSet for Type of last TBE dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:79a05e48-c14f-4b63-ac63-e7bd06371b6e"/>
+          <timestamp value="2023-10-18T20:44:50+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE57"/>
+            <display value="FSME-Immun"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE58"/>
+            <display value="Encepur"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE59"/>
+            <display value="TBE-Moscow"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE60"/>
+            <display value="EnceVir"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE61"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE62"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE62">DE62</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Typbar-TCV</td>
+                <td>
+                  <div>
+                    <p>Typbar-TCV vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE63"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE63">DE63</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>ViPS</td>
+                <td>
+                  <div>
+                    <p>Vi polysaccharide (ViPS) vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE64"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE64">DE64</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Ty21a</td>
+                <td>
+                  <div>
+                    <p>Ty21a vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE61"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE61"/>
+        <title value="IMMZ-D1.DE61 ValueSet for Type of last typhoid dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:48261f38-4899-4fdc-94b2-15f63845ee15"/>
+          <timestamp value="2023-10-18T20:44:51+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE62"/>
+            <display value="Typbar-TCV"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE63"/>
+            <display value="ViPS"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE64"/>
+            <display value="Ty21a"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE65"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE66"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE66">DE66</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>WC vaccine</td>
+                <td>
+                  <div>
+                    <p>Killed whole cell (WC) only cholera vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE67"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE67">DE67</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>WC-rBS vaccine</td>
+                <td>
+                  <div>
+                    <p>Vaccine contains a mixture of the recombinant B subunit (rBS) of cholera toxin plus killed whole cell (WC)</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE65"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE65"/>
+        <title value="IMMZ-D1.DE65 ValueSet for Type of last cholera dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:e55ca12c-c26a-459f-b169-35d458b813c5"/>
+          <timestamp value="2023-10-18T20:44:51+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE66"/>
+            <display value="WC vaccine"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE67"/>
+            <display value="WC-rBS vaccine"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE68"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE69"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE69">DE69</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>MenA conjugate vaccine (5µg)</td>
+                <td>
+                  <div>
+                    <p>Monovalent serogroup A (MenA) conjugate vaccine (5µg) vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE70"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE70">DE70</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Monovalent MenC conjugate</td>
+                <td>
+                  <div>
+                    <p>Monovalent MenC conjugate vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE71"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE71">DE71</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Quadrivalent conjugate</td>
+                <td>
+                  <div>
+                    <p>Quadrivalent conjugate (A,C,W135,Y-D and A,C,W135,Y-CRM) vaccines</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE68"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE68"/>
+        <title value="IMMZ-D1.DE68 ValueSet for Type of last meningococcal dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:11467564-29ea-40f0-bc9f-0c2a7b12a384"/>
+          <timestamp value="2023-10-18T20:44:51+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE69"/>
+            <display value="MenA conjugate vaccine (5µg)"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE70"/>
+            <display value="Monovalent MenC conjugate"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE71"/>
+            <display value="Quadrivalent conjugate"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE73"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE74"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE74">DE74</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Live attenuated hepatitis A vaccine</td>
+                <td>
+                  <div>
+                    <p>Live attenuated hepatitis A vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE75"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE75">DE75</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Inactivated hepatitis A vaccine</td>
+                <td>
+                  <div>
+                    <p>Inactivated hepatitis A vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE73"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE73"/>
+        <title value="IMMZ-D1.DE73 ValueSet for Type of last hepatitis A dose"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:8e2f739f-b84b-4cda-ac95-e8ac843cfeba"/>
+          <timestamp value="2023-10-18T20:44:51+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE74"/>
+            <display value="Live attenuated hepatitis A vaccine"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE75"/>
+            <display value="Inactivated hepatitis A vaccine"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE84"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE85"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE85">DE85</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>IGRA</td>
+                <td>
+                  <div>
+                    <p>Interferon-gamma release assay (IGRA)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE86"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE86">DE86</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>TST</td>
+                <td>
+                  <div>
+                    <p>Tuberculin skin test (TST)</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE84"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE84"/>
+        <title value="IMMZ-D1.DE84 ValueSet for Type of TB infection test performed"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:32e85dbb-2956-4c73-873f-10e3b3a24f12"/>
+          <timestamp value="2023-10-18T20:44:52+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE85"/>
+            <display value="IGRA"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE86"/>
+            <display value="TST"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE87"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ-D1.html">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE88"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE88">DE88</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Positive</td>
+                <td>
+                  <div>
+                    <p>Test result was positive</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE89"> </a>  
+                  <a href="CodeSystem-IMMZ-D1.html#IMMZ-D1-DE89">DE89</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</td>
+                <td>Negative</td>
+                <td>
+                  <div>
+                    <p>Test result was negative</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ-D1.DE87"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D1_DE87"/>
+        <title value="IMMZ-D1.DE87 ValueSet for TB infection test result"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:bf092612-64de-410f-8678-729a0e96bdfa"/>
+          <timestamp value="2023-10-18T20:44:52+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE88"/>
+            <display value="Positive"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+            <code value="DE89"/>
+            <display value="Negative"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IMMZ.D4.html">codesystem IMMZ.D4 CodeSystem for Check Contraindications Data Elements v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE162"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE162">DE162</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Currently pregnant</td>
+                <td>
+                  <div>
+                    <p>The client is currently pregnant</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE165"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE165">DE165</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Severely immunosuppressed</td>
+                <td>
+                  <div>
+                    <p>The client is known to be severely immunocompromised or immunosuppressed</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE166"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE166">DE166</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>History of anaphylactic reactions</td>
+                <td>
+                  <div>
+                    <p>The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE167"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE167">DE167</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Severe allergic reactions</td>
+                <td>
+                  <div>
+                    <p>The client is known to have severe allergic reaction to vaccine</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-IMMZ.D4-DE168"> </a>  
+                  <a href="CodeSystem-IMMZ.D4.html#IMMZ.D4-DE168">DE168</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4</td>
+                <td>Symptomatic HIV infection</td>
+                <td>
+                  <div>
+                    <p>The client is experiencing HIV-related symptoms</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D4.DE161"/>
+        <version value="0.1.0"/>
+        <name value="IMMZ_D4_DE161"/>
+        <title value="IMMZ.D4.DE161 ValueSet for Potential Contraindications"/>
+        <status value="active"/>
+        <expansion>
+          <identifier value="urn:uuid:65946a20-8797-4221-b8e2-fcf42c987d7c"/>
+          <timestamp value="2023-10-18T20:44:44+00:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE162"/>
+            <display value="Currently pregnant"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE165"/>
+            <display value="Severely immunosuppressed"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE166"/>
+            <display value="History of anaphylactic reactions"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE167"/>
+            <display value="Severe allergic reactions"/>
+          </contains>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D4"/>
+            <code value="DE168"/>
+            <display value="Symptomatic HIV infection"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VSMeaslesVaccineProducts"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 1 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-VaccineProducts.html">codesystem Vaccine Product codes CodeSet v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---smart.who.int-ig-smart-immunizations-measles-CodeSystem-VaccineProducts-20009060-2"> </a>  
+                  <a href="CodeSystem-VaccineProducts.html#VaccineProducts-20009060.472">20009060/2</a>
+                </td>
+                <td>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts</td>
+                <td>Serum Institute of India Measles vaccine</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VSMeaslesVaccineProducts"/>
+        <version value="0.1.0"/>
+        <name value="VSMeaslesVaccineProducts"/>
+        <title value="MeaslesVaccine Products ValueSet"/>
+        <status value="draft"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:d9fa0576-dfda-4421-9099-947bf382149f"/>
+          <timestamp value="2023-10-18T20:44:52+00:00"/>
+          <total value="1"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts"/>
+            <code value="20009060/2"/>
+            <display value="Serum Institute of India Measles vaccine"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VaccineTypes"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 36 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-ICD11.html">codesystem ICD-11 v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td>
+                  <b>Level</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM28X5"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM28X5">XM28X5</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Measles vaccines</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM8L15"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-ICD11.html#ICD11-XM8L15">XM8L15</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Measles, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM9439"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-ICD11.html#ICD11-XM9439">XM9439</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Measles, combinations with mumps, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM8TF3"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-ICD11.html#ICD11-XM8TF3">XM8TF3</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Measles, combinations with mumps and rubella, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM21H2"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-ICD11.html#ICD11-XM21H2">XM21H2</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Measles, combinations with rubella, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM4AJ8"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-ICD11.html#ICD11-XM4AJ8">XM4AJ8</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Measles, combinations with mumps, rubella and varicella, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM1131"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM1131">XM1131</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Mumps vaccines</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM2340"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-ICD11.html#ICD11-XM2340">XM2340</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Mumps, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XX45B7"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XX45B7">XX45B7</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Intersex</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XX2PX3"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XX2PX3">XX2PX3</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Biological sex not specified</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XX2V25"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XX2V25">XX2V25</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Female</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XX2UQ8"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XX2UQ8">XX2UQ8</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-1B1Z"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-1B1Z">1B1Z</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Tuberculosis</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-1C62.Z"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-1C62.46Z">1C62.Z</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Human immunodeficiency virus disease without mention of tuberculosis or malaria</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-1H0Z"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-1H0Z">1H0Z</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Certain infectious or parasitic diseases</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-3A51"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-3A51">3A51</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Sickle cell disorders or other haemoglobinopathies</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-4B4Z"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-4B4Z">4B4Z</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Diseases of the immune system</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-KA21.4"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-KA21.464">KA21.4</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Preterm newborn</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QA02.0"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QA02.460">QA02.0</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Observation for suspected tuberculosis, ruled out</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QA02.Y"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QA02.46Y">QA02.Y</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Medical observation or evaluation for suspected diseases or conditions, ruled out</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QA48.1"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QA48.461">QA48.1</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Care or examination of lactating mother</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QC60"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QC60">QC60</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Family history of infectious diseases</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM18Y8"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM18Y8">XM18Y8</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Meningococcus C, purified polysaccharides antigen conjugated vaccines</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM2280"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM2280">XM2280</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Meningococcus A, purified polysaccharides antigen conjugated vaccines</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM33K4"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM33K4">XM33K4</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Typhoid, oral, live attenuated vaccines</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM3KQ4"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM3KQ4">XM3KQ4</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Interferon gamma</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM3SF6"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM3SF6">XM3SF6</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Typhoid, purified polysaccharide antigen vaccines</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM47S0"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM47S0">XM47S0</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Encephalitis, Japanese, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM5V19"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM5V19">XM5V19</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Poliomyelitis, trivalent, inactivated, whole virus</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM79H3"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM79H3">XM79H3</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Poliomyelitis oral, bivalent, live attenuated</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XM7PF6"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XM7PF6">XM7PF6</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Tuberculin</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-XT0S"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-XT0S">XT0S</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Pregnancy</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QA41"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QA41">QA41</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Pregnant state</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QC44.0"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QC44.460">QC44.0</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Personal history of anaphylaxis</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-QC44.2"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-QC44.462">QC44.2</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>Personal history of allergy to drugs, medicaments or biological substances</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---id.who.int-icd11-mms-1C62.1"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ICD11.html#ICD11-1C62.461">1C62.1</a>
+                </td>
+                <td>http://id.who.int/icd11/mms</td>
+                <td>HIV disease clinical stage 2 without mention of tuberculosis or malaria</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VaccineTypes"/>
+        <version value="0.1.0"/>
+        <name value="VaccineTypes"/>
+        <title value="Vaccine Type ValueSet"/>
+        <status value="draft"/>
+        <date value="2023-10-18T20:43:12+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:0cdcc14e-a7ff-4607-9696-c5a6291d9bb3"/>
+          <timestamp value="2023-10-18T20:44:52+00:00"/>
+          <total value="36"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://id.who.int/icd11/mms|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM28X5"/>
+            <display value="Measles vaccines"/>
+            <contains>
+              <system value="http://id.who.int/icd11/mms"/>
+              <code value="XM8L15"/>
+              <display value="Measles, live attenuated"/>
+            </contains>
+            <contains>
+              <system value="http://id.who.int/icd11/mms"/>
+              <code value="XM9439"/>
+              <display value="Measles, combinations with mumps, live attenuated"/>
+            </contains>
+            <contains>
+              <system value="http://id.who.int/icd11/mms"/>
+              <code value="XM8TF3"/>
+              <display value="Measles, combinations with mumps and rubella, live attenuated"/>
+            </contains>
+            <contains>
+              <system value="http://id.who.int/icd11/mms"/>
+              <code value="XM21H2"/>
+              <display value="Measles, combinations with rubella, live attenuated"/>
+            </contains>
+            <contains>
+              <system value="http://id.who.int/icd11/mms"/>
+              <code value="XM4AJ8"/>
+              <display value="Measles, combinations with mumps, rubella and varicella, live attenuated"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM1131"/>
+            <display value="Mumps vaccines"/>
+            <contains>
+              <system value="http://id.who.int/icd11/mms"/>
+              <code value="XM2340"/>
+              <display value="Mumps, live attenuated"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XX45B7"/>
+            <display value="Intersex"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XX2PX3"/>
+            <display value="Biological sex not specified"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XX2V25"/>
+            <display value="Female"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XX2UQ8"/>
+            <display value="Male"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="1B1Z"/>
+            <display value="Tuberculosis"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="1C62.Z"/>
+            <display value="Human immunodeficiency virus disease without mention of tuberculosis or malaria"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="1H0Z"/>
+            <display value="Certain infectious or parasitic diseases"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="3A51"/>
+            <display value="Sickle cell disorders or other haemoglobinopathies"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="4B4Z"/>
+            <display value="Diseases of the immune system"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="KA21.4"/>
+            <display value="Preterm newborn"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QA02.0"/>
+            <display value="Observation for suspected tuberculosis, ruled out"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QA02.Y"/>
+            <display value="Medical observation or evaluation for suspected diseases or conditions, ruled out"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QA48.1"/>
+            <display value="Care or examination of lactating mother"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QC60"/>
+            <display value="Family history of infectious diseases"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM18Y8"/>
+            <display value="Meningococcus C, purified polysaccharides antigen conjugated vaccines"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM2280"/>
+            <display value="Meningococcus A, purified polysaccharides antigen conjugated vaccines"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM33K4"/>
+            <display value="Typhoid, oral, live attenuated vaccines"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM3KQ4"/>
+            <display value="Interferon gamma"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM3SF6"/>
+            <display value="Typhoid, purified polysaccharide antigen vaccines"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM47S0"/>
+            <display value="Encephalitis, Japanese, live attenuated"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM5V19"/>
+            <display value="Poliomyelitis, trivalent, inactivated, whole virus"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM79H3"/>
+            <display value="Poliomyelitis oral, bivalent, live attenuated"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XM7PF6"/>
+            <display value="Tuberculin"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="XT0S"/>
+            <display value="Pregnancy"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QA41"/>
+            <display value="Pregnant state"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QC44.0"/>
+            <display value="Personal history of anaphylaxis"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="QC44.2"/>
+            <display value="Personal history of allergy to drugs, medicaments or biological substances"/>
+          </contains>
+          <contains>
+            <system value="http://id.who.int/icd11/mms"/>
+            <code value="1C62.1"/>
+            <display value="HIV disease clinical stage 2 without mention of tuberculosis or malaria"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

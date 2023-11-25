@@ -1,0 +1,633 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "e04db7c4-6e58-4957-9a0d-93d0a35b3f36",
+  "meta" : {
+    "lastUpdated" : "2023-09-30T16:32:09.097+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE11\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE11\">DE11</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>HIV-positive</td><td><div><p>The client is known to be HIV positive</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE12\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE12\">DE12</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>HIV-negative</td><td><div><p>The client is known to be HIV negative</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE13\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE13\">DE13</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Unknown</td><td><div><p>The client's HIV status is unknown</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ-D1.DE10 ValueSet for HIV Status",
+      "status" : "active",
+      "experimental" : false,
+      "expansion" : {
+        "identifier" : "urn:uuid:1ce56210-d8b5-41f8-925c-f05ff59c7b9b",
+        "timestamp" : "2023-09-30T16:32:42+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE11",
+          "display" : "HIV-positive"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE12",
+          "display" : "HIV-negative"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE13",
+          "display" : "Unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-C-DE5",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-C.html\">codesystem IMMZ-C CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE6\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE6\">DE6</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Male</td><td><div><p>Client's biological sex is male</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE7\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE7\">DE7</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Female</td><td><div><p>Client's biological sex is female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE8\">DE8</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Biological sex not specified</td><td><div><p>Client's biological sex is not specified</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE9\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE9\">DE9</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Intersex</td><td><div><p>Client's biological sex is intersex</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-C-DE5",
+      "version" : "0.1.0",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ-C-DE5 ValueSet for Sex",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:73fa5255-b1ec-40f2-abba-24fa78909bd0",
+        "timestamp" : "2023-09-30T16:32:43+00:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE6",
+          "display" : "Male"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE7",
+          "display" : "Female"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE8",
+          "display" : "Biological sex not specified"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE9",
+          "display" : "Intersex"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-C-DE5",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-C.html\">codesystem IMMZ-C CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE6\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE6\">DE6</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Male</td><td><div><p>Client's biological sex is male</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE7\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE7\">DE7</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Female</td><td><div><p>Client's biological sex is female</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE8\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE8\">DE8</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Biological sex not specified</td><td><div><p>Client's biological sex is not specified</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-C-DE9\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-C.html#IMMZ-C-DE9\">DE9</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C</td><td>Intersex</td><td><div><p>Client's biological sex is intersex</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-C-DE5",
+      "version" : "0.1.0",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ-C-DE5 ValueSet for Sex",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:73fa5255-b1ec-40f2-abba-24fa78909bd0",
+        "timestamp" : "2023-09-30T16:32:43+00:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE6",
+          "display" : "Male"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE7",
+          "display" : "Female"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE8",
+          "display" : "Biological sex not specified"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+          "code" : "DE9",
+          "display" : "Intersex"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE35",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE36\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE36\">DE36</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>IPV</td><td><div><p>Inactivated poliovirus vaccine (IPV)</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE37\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE37\">DE37</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>bOPV</td><td><div><p>Bivalent oral poliovirus vaccine (bOPV)</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE35",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE35",
+      "title" : "IMMZ-D1.DE35 ValueSet for Type of polio dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:3ae23d7d-7fe1-47eb-9fe4-a7a50a2928d3",
+        "timestamp" : "2023-09-30T16:32:44+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE36",
+          "display" : "IPV"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE37",
+          "display" : "bOPV"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE52",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE53\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE53\">DE53</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Inactivated Vero cell-derived vaccine</td><td><div><p>Inactivated Vero cell-derived Japanese encephalitis (JE) vaccine type</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE54\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE54\">DE54</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Live attenuated vaccine</td><td><div><p>Live attenuated Japanese encephalitis (JE) vaccine type</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE55\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE55\">DE55</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Live recombinant vaccine</td><td><div><p>Live recombinant Japanese encephalitis (JE) vaccine type</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE52",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE52",
+      "title" : "IMMZ-D1.DE52 ValueSet for Type of last JE dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:84afb8dd-8873-4a16-a047-ce8b94e27882",
+        "timestamp" : "2023-09-30T16:32:44+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE53",
+          "display" : "Inactivated Vero cell-derived vaccine"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE54",
+          "display" : "Live attenuated vaccine"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE55",
+          "display" : "Live recombinant vaccine"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE11\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE11\">DE11</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>HIV-positive</td><td><div><p>The client is known to be HIV positive</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE12\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE12\">DE12</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>HIV-negative</td><td><div><p>The client is known to be HIV negative</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE13\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE13\">DE13</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Unknown</td><td><div><p>The client's HIV status is unknown</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ-D1.DE10 ValueSet for HIV Status",
+      "status" : "active",
+      "experimental" : false,
+      "expansion" : {
+        "identifier" : "urn:uuid:1ce56210-d8b5-41f8-925c-f05ff59c7b9b",
+        "timestamp" : "2023-09-30T16:32:42+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE11",
+          "display" : "HIV-positive"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE12",
+          "display" : "HIV-negative"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE13",
+          "display" : "Unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE65",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE66\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE66\">DE66</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>WC vaccine</td><td><div><p>Killed whole cell (WC) only cholera vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE67\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE67\">DE67</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>WC-rBS vaccine</td><td><div><p>Vaccine contains a mixture of the recombinant B subunit (rBS) of cholera toxin plus killed whole cell (WC)</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE65",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE65",
+      "title" : "IMMZ-D1.DE65 ValueSet for Type of last cholera dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:825f28d1-ff35-429d-a53c-11916d272b43",
+        "timestamp" : "2023-09-30T16:32:45+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE66",
+          "display" : "WC vaccine"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE67",
+          "display" : "WC-rBS vaccine"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE84",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE85\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE85\">DE85</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>IGRA</td><td><div><p>Interferon-gamma release assay (IGRA)</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE86\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE86\">DE86</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>TST</td><td><div><p>Tuberculin skin test (TST)</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE84",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE84",
+      "title" : "IMMZ-D1.DE84 ValueSet for Type of TB infection test performed",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:61728170-c2d0-4efa-916d-7c0ecec3054d",
+        "timestamp" : "2023-09-30T16:32:45+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE85",
+          "display" : "IGRA"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE86",
+          "display" : "TST"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE56",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE57\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE57\">DE57</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>FSME-Immun</td><td><div><p>FSME-Immun vaccine product, which is an inactivated whole-virus vaccine for tick-borne encephalitis (TBE)</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE58\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE58\">DE58</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Encepur</td><td><div><p>Encepur vaccine product, which is an inactivated viral vaccine for tick-borne encephalitis (TBE)</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE59\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE59\">DE59</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>TBE-Moscow</td><td><div><p>TBE-Moscow vaccine product, which is a vaccine for tick-borne encephalitis (TBE)</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE60\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE60\">DE60</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>EnceVir</td><td><div><p>EnceVir vaccine product, which is a vaccine for tick-borne encephalitis (TBE)</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE56",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE56",
+      "title" : "IMMZ-D1.DE56 ValueSet for Type of last TBE dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:4d95c5ee-9501-4ffb-837a-f5896eae2539",
+        "timestamp" : "2023-09-30T16:32:46+00:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE57",
+          "display" : "FSME-Immun"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE58",
+          "display" : "Encepur"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE59",
+          "display" : "TBE-Moscow"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE60",
+          "display" : "EnceVir"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE68",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE69\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE69\">DE69</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>MenA conjugate vaccine (5µg)</td><td><div><p>Monovalent serogroup A (MenA) conjugate vaccine (5µg) vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE70\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE70\">DE70</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Monovalent MenC conjugate</td><td><div><p>Monovalent MenC conjugate vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE71\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE71\">DE71</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Quadrivalent conjugate</td><td><div><p>Quadrivalent conjugate (A,C,W135,Y-D and A,C,W135,Y-CRM) vaccines</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE68",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE68",
+      "title" : "IMMZ-D1.DE68 ValueSet for Type of last meningococcal dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:4060a32b-95f0-4780-9b2c-c239875ff73d",
+        "timestamp" : "2023-09-30T16:32:46+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE69",
+          "display" : "MenA conjugate vaccine (5µg)"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE70",
+          "display" : "Monovalent MenC conjugate"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE71",
+          "display" : "Quadrivalent conjugate"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE73",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE74\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE74\">DE74</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Live attenuated hepatitis A vaccine</td><td><div><p>Live attenuated hepatitis A vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE75\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE75\">DE75</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Inactivated hepatitis A vaccine</td><td><div><p>Inactivated hepatitis A vaccine</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE73",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE73",
+      "title" : "IMMZ-D1.DE73 ValueSet for Type of last hepatitis A dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:725f2e4e-b0c6-4075-8924-05bab8abffbb",
+        "timestamp" : "2023-09-30T16:32:46+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE74",
+          "display" : "Live attenuated hepatitis A vaccine"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE75",
+          "display" : "Inactivated hepatitis A vaccine"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE61",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE62\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE62\">DE62</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Typbar-TCV</td><td><div><p>Typbar-TCV vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE63\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE63\">DE63</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>ViPS</td><td><div><p>Vi polysaccharide (ViPS) vaccine</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE64\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE64\">DE64</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Ty21a</td><td><div><p>Ty21a vaccine</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE61",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE61",
+      "title" : "IMMZ-D1.DE61 ValueSet for Type of last typhoid dose",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:7e1182d8-cc7c-45cd-859e-b2aa5a832d96",
+        "timestamp" : "2023-09-30T16:32:46+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE62",
+          "display" : "Typbar-TCV"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE63",
+          "display" : "ViPS"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE64",
+          "display" : "Ty21a"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE87",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IMMZ-D1.html\">codesystem IMMZ-D1 CodeSystem for Data Elements v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE88\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE88\">DE88</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Positive</td><td><div><p>Test result was positive</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-immunizations-measles-CodeSystem-IMMZ-D1-DE89\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IMMZ-D1.html#IMMZ-D1-DE89\">DE89</a></td><td>http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1</td><td>Negative</td><td><div><p>Test result was negative</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE87",
+      "version" : "0.1.0",
+      "name" : "IMMZ_D1_DE87",
+      "title" : "IMMZ-D1.DE87 ValueSet for TB infection test result",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-09-30T16:32:09+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:330a4b4e-87e3-4a22-8fcd-894411547f25",
+        "timestamp" : "2023-09-30T16:32:46+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "warning-draft",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE88",
+          "display" : "Positive"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+          "code" : "DE89",
+          "display" : "Negative"
+        }]
+      }
+    }
+  }]
+}
