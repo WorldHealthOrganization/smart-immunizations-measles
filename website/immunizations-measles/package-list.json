@@ -12,7 +12,7 @@
       "status" : "release",
       "sequence" : "Releases",
       "fhirversion" : "4.0.1",
-      "date" : "2023-11-25",
+      "date" : "2023-12-26",
       "current" : true,
       "desc" : "First stable release"
     }

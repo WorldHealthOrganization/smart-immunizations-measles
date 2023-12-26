@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "HIV status values"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2023-11-25T09:47:07+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-12-26T06:30:20+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "WHO"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "WHO" ] ;

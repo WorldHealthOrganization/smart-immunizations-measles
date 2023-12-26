@@ -10,12 +10,12 @@
       "version-count" : 1,
       "latest" : {
         "version" : "0.1.0",
-        "date" : "2023-11-25",
+        "date" : "2023-12-26",
         "path" : "http://smart.who.int/immunizations-measles/0.1.0"
       },
       "milestone" : {
         "version" : "0.1.0",
-        "date" : "2023-11-25",
+        "date" : "2023-12-26",
         "path" : "http://smart.who.int/immunizations-measles/0.1.0"
       }
     }

@@ -1,13 +1,13 @@
 ﻿SMART : Validation Results
 =========================================
 
-err = 29, warn = 68, info = 14
-IG Publisher Version: 1.5.5
-Generated Sat Nov 25 09:49:30 UTC 2023. FHIR version 4.0.1 for smart.who.int.immunizations-measles#0.1.0 (canonical = http://smart.who.int/immunizations-measles)
+err = 29, warn = 68, info = 37
+IG Publisher Version: 1.5.8
+Generated Tue Dec 26 06:32:59 UTC 2023. FHIR version 4.0.1 for smart.who.int.immunizations-measles#0.1.0 (canonical = http://smart.who.int/immunizations-measles)
  Build Errors : 13 / 4 / 0
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesCIMR : 0 / 0 / 2
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesEval : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesMR : 0 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesCIMR : 0 / 0 / 3
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesEval : 0 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesMR : 0 / 0 / 3
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActorDefinition-CommunityHealthWorker : 0 / 1 / 1
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActorDefinition-EPIManager : 0 / 1 / 1
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ActorDefinition-HealthWorker : 0 / 1 / 1
@@ -24,20 +24,20 @@ Generated Sat Nov 25 09:49:30 UTC 2023. FHIR version 4.0.1 for smart.who.int.imm
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ConceptMap-IMMZD4ConceptMap : 0 / 26 / 1
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Immunization-Immunization1 : 0 / 0 / 2
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/ImplementationGuide-smart.who.int.immunizations-measles : 0 / 1 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-FHIRCommon : 0 / 25 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-FHIRHelpers : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZCommon : 0 / 23 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZCommonIzDataElements : 0 / 4 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZConcepts : 2 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZConfig : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZD2DTMeaslesLogic : 0 / 13 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZDT08 : 0 / 18 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZIND08 : 3 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZINDMeasles : 0 / 1 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZIndicatorCommon : 0 / 14 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZVaccineLibrary : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-WHOCommon : 0 / 18 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-WHOConcepts : 1 / 0 / 1
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-FHIRCommon : 0 / 25 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-FHIRHelpers : 0 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZCommon : 0 / 23 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZCommonIzDataElements : 0 / 4 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZConcepts : 2 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZConfig : 0 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZD2DTMeaslesLogic : 0 / 13 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZDT08 : 0 / 18 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZIND08 : 3 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZINDMeasles : 0 / 1 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZIndicatorCommon : 0 / 14 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-IMMZVaccineLibrary : 0 / 0 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-WHOCommon : 0 / 18 / 2
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Library-WHOConcepts : 1 / 0 / 2
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Measure-IMMZIND05 : 0 / 1 / 1
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Measure-IMMZIND40 : 0 / 1 / 1
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Medication-Vaccine-MSDMMRVaxPro : 0 / 5 / 3
@@ -45,9 +45,9 @@ Generated Sat Nov 25 09:49:30 UTC 2023. FHIR version 4.0.1 for smart.who.int.imm
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/MedicationRequest-VaccineProposal1 : 0 / 2 / 2
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Patient-P123456 : 0 / 0 / 1
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Patient-P654321 : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/PlanDefinition-IMMZD2DTMeasles : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/PlanDefinition-IMMZD2DTMeaslesCI : 0 / 0 / 1
- /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/PlanDefinition-IMMZDTUmbrella : 0 / 0 / 1
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/PlanDefinition-IMMZD2DTMeasles : 0 / 0 / 3
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/PlanDefinition-IMMZD2DTMeaslesCI : 0 / 0 / 3
+ /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/PlanDefinition-IMMZDTUmbrella : 0 / 0 / 3
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Questionnaire-AdministerVaccine : 0 / 2 / 5
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Questionnaire-IMMZD1ClientHistoryMeasles : 0 / 0 / 3
  /tmp/smart.who.int.immunizations-measles#0.1.0/fsh-generated/resources/Questionnaire-QIMMZCRegisterClient : 1 / 0 / 2
@@ -110,18 +110,21 @@ ERROR: Unable to find ImplementationGuide.definition.resource.name for the resou
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD4LMToResources.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD4QRToLM.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD4QRToResources.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /tmp/smart.who.int.immunizations-measles#0.1.0/output/Questionnaire-QIMMZCRegisterClient-form.html: unexpected non-end of element null::div  at line 339 column 250
 ERROR: /tmp/smart.who.int.immunizations-measles#0.1.0/output/Questionnaire-QIMMZD4CheckContraindicationsMeasles-form.html: unexpected non-end of element null::div  at line 339 column 266
 ERROR: /tmp/smart.who.int.immunizations-measles#0.1.0/output/Questionnaire-IMMZD1ClientHistoryMeasles-form.html: unexpected non-end of element null::div  at line 339 column 256
 ERROR: /tmp/smart.who.int.immunizations-measles#0.1.0/output/Questionnaire-AdministerVaccine-form.html: unexpected non-end of element null::div  at line 339 column 247
-ERROR: /tmp/smart.who.int.immunizations-measles#0.1.0/output/Questionnaire-QIMMZCRegisterClient-form.html: unexpected non-end of element null::div  at line 339 column 250
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesCIMR.json ==
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesCIMR: ActivityDefinition.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 INFORMATION: ActivityDefinition/IMMZD2DTMeaslesCIMR: ActivityDefinition.product.ofType(CodeableConcept).coding[0]: The definition for the Code System with URI 'http://id.who.int/icd/release/11/mms' doesnt provide any codes so the code cannot be validated
 == fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesEval.json ==
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesEval: ActivityDefinition.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesMR.json ==
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesMR: ActivityDefinition.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 INFORMATION: ActivityDefinition/IMMZD2DTMeaslesMR: ActivityDefinition.product.ofType(CodeableConcept).coding[0]: The definition for the Code System with URI 'http://id.who.int/icd/release/11/mms' doesnt provide any codes so the code cannot be validated
 == fsh-generated/resources/ActorDefinition-CommunityHealthWorker.json ==
 WARNING: ActorDefinition/CommunityHealthWorker: ActorDefinition.meta.profile[0]: Profile reference 'http://smart.who.int/smart-base/StructureDefinition/SGPersona' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
@@ -153,42 +156,56 @@ WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/FHIRCommon.cql
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/FHIRCommon.cql: The function FHIRCommon.ModifierExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/FHIRCommon.cql: The function FHIRCommon.BaseExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/FHIRCommon.cql: The function FHIRCommon.BaseModifierExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/FHIRCommon: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-FHIRHelpers.json ==
+INFORMATION: Library/FHIRHelpers: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZCommon.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZCommon.cql: The function FHIRHelpers.ToInterval has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZCommon.cql: The function WHOCommon.ModifierExtension has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZCommon: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZCommonIzDataElements.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZCommonIzDataElements.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZCommonIzDataElements.cql: The function WHOCommon.Official has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZCommonIzDataElements: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZConcepts.json ==
+INFORMATION: Library/IMMZConcepts: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 ERROR: Library/IMMZConcepts: Library.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/sid/ciel' does not resolve
 ERROR: Library/IMMZConcepts: Library.relatedArtifact[12].resource: Canonical URL 'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips' does not resolve
 == fsh-generated/resources/Library-IMMZConfig.json ==
+INFORMATION: Library/IMMZConfig: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZD2DTMeaslesLogic.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZD2DTMeaslesLogic.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZD2DTMeaslesLogic.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZD2DTMeaslesLogic: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZDT08.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZDT08.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: IMMZDT08.cql: Result type choice<System.String,System.Integer> of definition MCV Next Dose Number is not supported; implementations may not be able to use the result of this expression
+INFORMATION: Library/IMMZDT08: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZIND08.json ==
 ERROR: IMMZIND08: Could not resolve identifier MCV Doses Administered to Patient During Measurement Period in library IMMZIndicatorCommon.
 ERROR: IMMZIND08: Could not resolve identifier MCV Doses Administered to Patient During Measurement Period in library IMMZIndicatorCommon.
 ERROR: IMMZIND08.cql: CQL Processing failed with (2) errors.
+INFORMATION: Library/IMMZIND08: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZINDMeasles.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZINDMeasles.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZINDMeasles: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZIndicatorCommon.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZIndicatorCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZIndicatorCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/IMMZIndicatorCommon.cql: The function WHOCommon.Official has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZIndicatorCommon: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-IMMZVaccineLibrary.json ==
+INFORMATION: Library/IMMZVaccineLibrary: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-WHOCommon.json ==
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/WHOCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/WHOCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/WHOCommon.cql: The function WHOCommon.Extensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
 WARNING: /tmp/smart.who.int.immunizations-measles#0.1.0/input/cql/WHOCommon.cql: The function WHOCommon.ModifierExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/WHOCommon: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Library-WHOConcepts.json ==
+INFORMATION: Library/WHOConcepts: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 ERROR: Library/WHOConcepts: Library.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/sid/ciel' does not resolve
 == fsh-generated/resources/Measure-IMMZIND05.json ==
 WARNING: Measure/IMMZIND05: Measure: Published measures SHOULD conform to the ShareableMeasure profile, which says that the element Measure.title is mandatory, but it is not present
@@ -214,11 +231,17 @@ INFORMATION: MedicationRequest/VaccineProposal1: MedicationRequest.medication.of
 == fsh-generated/resources/Patient-P123456.json ==
 == fsh-generated/resources/Patient-P654321.json ==
 == fsh-generated/resources/PlanDefinition-IMMZD2DTMeasles.json ==
+INFORMATION: PlanDefinition/IMMZD2DTMeasles: PlanDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PlanDefinition/IMMZD2DTMeasles: PlanDefinition.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/PlanDefinition-IMMZD2DTMeaslesCI.json ==
+INFORMATION: PlanDefinition/IMMZD2DTMeaslesCI: PlanDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PlanDefinition/IMMZD2DTMeaslesCI: PlanDefinition.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/PlanDefinition-IMMZDTUmbrella.json ==
+INFORMATION: PlanDefinition/IMMZDTUmbrella: PlanDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PlanDefinition/IMMZDTUmbrella: PlanDefinition.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
 == fsh-generated/resources/Questionnaire-AdministerVaccine.json ==
 INFORMATION: Questionnaire/AdministerVaccine: Questionnaire.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap|3.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: Questionnaire/AdministerVaccine: Questionnaire.contained[2]/*ValueSet/AllVaccineTypes*/.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition is not complete)
+WARNING: Questionnaire/AdministerVaccine: Questionnaire.contained[2]/*ValueSet/AllVaccineTypes*/.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition doesn't include any codes, so the code has not been validated)
 WARNING: ValueSet.where(id = 'AllVaccineTypes'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd/release/11/mms
 == fsh-generated/resources/Questionnaire-IMMZD1ClientHistoryMeasles.json ==
 INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[4].code[1]: The definition for the Code System with URI 'http://id.who.int/icd/release/11/mms' doesnt provide any codes so the code cannot be validated
@@ -255,11 +278,11 @@ WARNING: StructureDefinition.where(url = 'http://smart.who.int/immunizations-mea
 WARNING: StructureDefinition/sg-ext-administeredProduct: StructureDefinition.context[0]: Review the extension type for sg-ext-administeredProduct: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 == fsh-generated/resources/ValueSet-ARVDrugs-values.json ==
 == fsh-generated/resources/ValueSet-AllVaccineTypes.json ==
-WARNING: ValueSet/AllVaccineTypes: ValueSet.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition is not complete)
+WARNING: ValueSet/AllVaccineTypes: ValueSet.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition doesn't include any codes, so the code has not been validated)
 WARNING: ValueSet.where(id = 'AllVaccineTypes'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd/release/11/mms
 == fsh-generated/resources/ValueSet-Birthweight-values.json ==
 == fsh-generated/resources/ValueSet-HIVstatus-values.json ==
-WARNING: ValueSet/HIVstatus-values: ValueSet.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition is not complete)
+WARNING: ValueSet/HIVstatus-values: ValueSet.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition doesn't include any codes, so the code has not been validated)
 WARNING: ValueSet.where(id = 'HIVstatus-values'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd/release/11/mms
 == fsh-generated/resources/ValueSet-IMMZ.C.DE5.json ==
 == fsh-generated/resources/ValueSet-IMMZ.D1.DE10.json ==
@@ -267,11 +290,11 @@ WARNING: ValueSet.where(id = 'HIVstatus-values'): Error from http://tx.fhir.org/
 == fsh-generated/resources/ValueSet-IMMZ.D1.DE5VS.json ==
 == fsh-generated/resources/ValueSet-IMMZ.D4.DE161.json ==
 == fsh-generated/resources/ValueSet-IMMZ.Z.DE9.json ==
-WARNING: ValueSet/IMMZ.Z.DE9: ValueSet.compose.include[0]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition is not complete)
+WARNING: ValueSet/IMMZ.Z.DE9: ValueSet.compose.include[0]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition doesn't include any codes, so the code has not been validated)
 WARNING: ValueSet.where(id = 'IMMZ.Z.DE9'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd/release/11/mms
 == fsh-generated/resources/ValueSet-Immunocompromised-values.json ==
 == fsh-generated/resources/ValueSet-LiveAttenuatedVaccines.json ==
-WARNING: ValueSet/LiveAttenuatedVaccines: ValueSet.compose.include[0]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition is not complete)
+WARNING: ValueSet/LiveAttenuatedVaccines: ValueSet.compose.include[0]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition doesn't include any codes, so the code has not been validated)
 WARNING: ValueSet.where(id = 'LiveAttenuatedVaccines'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd/release/11/mms
 == fsh-generated/resources/ValueSet-Negativetestresult-values.json ==
 == fsh-generated/resources/ValueSet-PositiveTestResult-values.json ==
@@ -279,7 +302,7 @@ WARNING: ValueSet.where(id = 'LiveAttenuatedVaccines'): Error from http://tx.fhi
 == fsh-generated/resources/ValueSet-VSMeaslesVaccineProducts.json ==
 WARNING: ValueSet/VSMeaslesVaccineProducts: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-VaccineTypes.json ==
-WARNING: ValueSet/VaccineTypes: ValueSet.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition is not complete)
+WARNING: ValueSet/VaccineTypes: ValueSet.compose.include[1]: Unknown System 'http://id.who.int/icd/release/11/mms' specified, so Concepts and Filters can't be checked (Details: Resolved system http://id.who.int/icd/release/11/mms (v1.0.0), but the definition doesn't include any codes, so the code has not been validated)
 WARNING: ValueSet/VaccineTypes: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 WARNING: ValueSet.where(id = 'VaccineTypes'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd/release/11/mms
 == fsh-generated/resources/ValueSet-pregnancystatus-values.json ==

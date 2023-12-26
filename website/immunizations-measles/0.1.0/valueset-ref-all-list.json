@@ -192,9 +192,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-SGImmunization.html" : "SGImmunization",
-      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct",
       "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct",
+      "StructureDefinition-SGImmunization.html" : "SGImmunization",
       "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
     },
     {
@@ -209,8 +209,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.375"],
       "uses" : {
       },
-      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct",
-      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal"
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
@@ -630,8 +630,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-SGMedicationClassification.html" : "SGMedicationClassification",
-      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal"
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGMedicationClassification.html" : "SGMedicationClassification"
     },
     {
       "url" : "http://smart.who.int/immunizations-measles/ValueSet/pregnancystatus-values",

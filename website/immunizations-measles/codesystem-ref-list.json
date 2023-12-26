@@ -22,8 +22,8 @@
       "oids" : ["2.16.840.1.113883.4.642.4.110"],
       "uses" : {
       },
-      "ValueSet-SGImmunizationStatusCodes.html" : "Immunization Status Codes",
-      "ValueSet-AdministerVaccine_SGImmunizationStatusCodes.html" : "Immunization Status Codes"
+      "ValueSet-AdministerVaccine_SGImmunizationStatusCodes.html" : "Immunization Status Codes",
+      "ValueSet-SGImmunizationStatusCodes.html" : "Immunization Status Codes"
     },
     {
       "url" : "http://id.who.int/icd/release/11/mms",
@@ -34,15 +34,15 @@
       "description" : "The International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS) is one of the ICD11 linearizations. Information about the ICD Foundation Component and the ICD11 Linearizations can be found in the complete reference guide here: [https://icd.who.int/icd11refguide/en/index.html](https://icd.who.int/icd11refguide/en/index.html)\r\n\r\n\"**The ICD11 Linearizations (Tabular lists)**\r\n\r\nA linearization is a subset of the foundation component, that is:\r\n\r\n1. fit for a particular purpose: reporting mortality, morbidity, primary care or other uses;\r\n\r\n 2. composed of entities that are Mutually Exclusive of each other; \r\n\r\n3. each entity is given a single parent.\r\n\r\nLinearization is similar to the classical print versions of ICD Tabular List (e.g. volume I of ICD-10 or other previous editions). The main linearization of ICD-11 is Mortality and Morbidity Statistics (MMS). Various linearizations could be built at different granularity, use case or other purposes such as for Primary Care, Clinical Care or Research. The linkage from the foundation component to a particular linearization will ensure consistent use of the ICD.\"\r\n\r\nICD-11 for Mortality and Morbidity (ICD-11 MMS) can be downloaded in either print or electronic (spreadsheet) format from the  browser in the Info tab located [here](https://icd.who.int/browse11/l-m/en)",
       "uses" : {
       },
-      "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
       "ConceptMap-IMMZD4ConceptMap.html" : "ConceptMap to and from IMMZ.D4 DataElements",
-      "ValueSet-LiveAttenuatedVaccines.html" : "Set of live attenuated vaccines",
-      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
-      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines",
       "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
-      "ValueSet-HIVstatus-values.html" : "HIV status values",
       "ValueSet-AdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet",
-      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines"
+      "ValueSet-HIVstatus-values.html" : "HIV status values",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
+      "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
+      "ValueSet-LiveAttenuatedVaccines.html" : "Set of live attenuated vaccines"
     },
     {
       "url" : "http://loinc.org",
@@ -54,15 +54,15 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
       "ConceptMap-IMMZD4ConceptMap.html" : "ConceptMap to and from IMMZ.D4 DataElements",
-      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
-      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
-      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values",
-      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines",
       "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
       "ValueSet-AdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet",
-      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines"
+      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
+      "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
+      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values"
     },
     {
       "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C",
@@ -74,9 +74,9 @@
       "uses" : {
       },
       "ValueSet-QIMMZCRegisterClient_IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex",
-      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
       "ConceptMap-IMMZCSexToAdministrativeGender.html" : "ConceptMap to and From IMMZ.C sex to administrative gender",
-      "ValueSet-IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex"
+      "ValueSet-IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex",
+      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements"
     },
     {
       "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1",
@@ -87,9 +87,9 @@
       "description" : "CodeSystem for IMMZ.C Data Elements",
       "uses" : {
       },
+      "ValueSet-IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status",
       "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
-      "ValueSet-IMMZD1ClientHistoryMeasles_IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status",
-      "ValueSet-IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status"
+      "ValueSet-IMMZD1ClientHistoryMeasles_IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status"
     },
     {
       "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1.DE1",
@@ -148,20 +148,20 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
-      "ValueSet-PositiveTestResult-values.html" : "Positive Test Result valuest",
-      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values",
-      "ValueSet-HIVstatus-values.html" : "HIV status values",
       "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines",
-      "ConceptMap-IMMZD4ConceptMap.html" : "ConceptMap to and from IMMZ.D4 DataElements",
-      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
-      "ValueSet-ARVDrugs-values.html" : "ARV Drugs values",
-      "ValueSet-Immunocompromised-values.html" : "Immunocompromised valueset",
-      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
-      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
       "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-AdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-PositiveTestResult-values.html" : "Positive Test Result valuest",
+      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ConceptMap-IMMZCConceptMap.html" : "ConceptMap to and from IMMZ.C DataElements",
+      "ConceptMap-IMMZD1ConceptMap.html" : "ConceptMap to and from IMMZ.D1 DataElements",
+      "ValueSet-ARVDrugs-values.html" : "ARV Drugs values",
+      "ConceptMap-IMMZD4ConceptMap.html" : "ConceptMap to and from IMMZ.D4 DataElements",
+      "ValueSet-Immunocompromised-values.html" : "Immunocompromised valueset",
+      "ValueSet-HIVstatus-values.html" : "HIV status values",
       "ValueSet-Negativetestresult-values.html" : "Negative Test Results",
-      "ValueSet-AdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet"
+      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values"
     },
     {
       "url" : "urn:iso:std:iso:3166",
