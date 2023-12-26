@@ -265,8 +265,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
-      "StructureDefinition-SGMedicationClassification.html" : "SGMedicationClassification"
+      "StructureDefinition-SGMedicationClassification.html" : "SGMedicationClassification",
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal"
     },
     {
       "url" : "http://smart.who.int/immunizations-measles/ValueSet/pregnancystatus-values",

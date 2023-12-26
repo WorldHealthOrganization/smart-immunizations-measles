@@ -3,7 +3,7 @@
 
 err = 29, warn = 68, info = 37
 IG Publisher Version: 1.5.8
-Generated Tue Dec 26 06:36:10 UTC 2023. FHIR version 4.0.1 for smart.who.int.immunizations-measles#0.1.0 (canonical = http://smart.who.int/immunizations-measles)
+Generated Tue Dec 26 14:41:20 UTC 2023. FHIR version 4.0.1 for smart.who.int.immunizations-measles#0.1.0 (canonical = http://smart.who.int/immunizations-measles)
  Build Errors : 13 / 4 / 0
  /tmp/smart.who.int.immunizations-measles#0.1.0-milestone/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesCIMR : 0 / 0 / 3
  /tmp/smart.who.int.immunizations-measles#0.1.0-milestone/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesEval : 0 / 0 / 2

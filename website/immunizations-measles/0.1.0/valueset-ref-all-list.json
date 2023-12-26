@@ -192,10 +192,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
-      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct",
       "StructureDefinition-SGImmunization.html" : "SGImmunization",
-      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest",
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-codes",

@@ -23,7 +23,7 @@
   fhir:name [ fhir:v "SMART"] ; # 
   fhir:title [ fhir:v "WHO SMART Guidelines - Measles Immunization"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-12-26T06:30:20+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-12-26T14:27:17+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "WHO"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "WHO" ] ;

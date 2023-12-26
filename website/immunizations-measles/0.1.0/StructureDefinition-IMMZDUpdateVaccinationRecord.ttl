@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "IMMZDUpdateVaccinationRecord"] ; # 
   fhir:title [ fhir:v "IMMZ.D Update Vaccination Record"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2023-12-26T06:30:20+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-12-26T14:27:17+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "WHO"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "WHO" ] ;
