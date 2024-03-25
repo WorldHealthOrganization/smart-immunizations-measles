@@ -1,0 +1,60 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://id.who.int/icd/release/11/mms",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICD11",
+      "title" : "ICD-11",
+      "description" : "ICD-11."
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZ_C",
+      "title" : "IMMZ.C CodeSystem for Data Elements",
+      "description" : "CodeSystem for IMMZ.C Data Elements"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZ_D1",
+      "title" : "IMMZ.D1 CodeSystem for Data Elements",
+      "description" : "CodeSystem for IMMZ.C Data Elements"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1.DE1",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZ_D1",
+      "title" : "IMMZ.D1.DE1 CodeSystem for Immunization status",
+      "description" : "CodeSystem for IMMZ.D1.DE1 Immunization status"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1.DE5",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZ_D1",
+      "title" : "IMMZ.D1.DE5 CodeSystem for Reason Not Done",
+      "description" : "CodeSystem for IMMZ.D1.DE5 Reason Not Done"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZ_D4",
+      "title" : "IMMZ.D4 CodeSystem for Check Contraindications Data Elements",
+      "description" : "CodeSystem for IMMZ.D4 Check Contraindications Data Elements"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineProducts",
+      "title" : "Vaccine Product codes CodeSet",
+      "description" : "Vaccine Product codes, containing the different available products."
+    }
+  ]
+}

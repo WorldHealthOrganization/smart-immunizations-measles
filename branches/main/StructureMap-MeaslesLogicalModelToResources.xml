@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="MeaslesLogicalModelToResources"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>http://worldhealthorganization.github.io/smart-ot/StructureMap/MeaslesLogicalModelToResources<span style="color: navy">&quot; = &quot;</span>MeaslesLogicalModelToResources<span style="color: navy">&quot;
+
+</span><b>uses</b><span style="color: navy"> &quot;</span>http://worldhealthorganization.github.io/smart-ot/StructureDefinition/SOTMeasles<span style="color: navy">&quot; </span><b>alias </b>MeaslesLogicalModel <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>MeaslesCIFBundle <b>as </b><b>target</b>
+<b>uses</b><span style="color: navy"> &quot;</span>http://worldhealthorganization.github.io/smart-ot/StructureDefinition/MeaslesCIFComposition<span style="color: navy">&quot; </span><b>alias </b>MeaslesCIFComposition <b>as </b><b>target</b>
+
+<b>group </b>MeaslesLogicalModelToResources<span style="color: navy">(</span><b>source</b> <span style="color: maroon">lm</span><span style="color: navy"> : </span>MeaslesLogicalModel, <b>target</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>MeaslesCIFBundle<span style="color: navy">)</span><span style="color: navy"> {
+</span>  lm<span style="color: navy"><b> -&gt; </b></span>bundle.type = <span style="color: blue">'document'</span> <i>&quot;set bundle type&quot;</i><span style="color: navy">;</span>
+  lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then</b><span style="color: navy"> {
+</span>    reportingSource.DateReportedNational<b> as </b><span style="color: maroon">date</span><span style="color: navy"><b> -&gt; </b></span>bundle.timestamp = <span style="color: maroon">date</span> <i>&quot;set date&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set timestamp&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">bid</span><span style="color: navy">, </span> bundle.id = <span style="color: maroon">bid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">pid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">prid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">oid</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">eid</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/MeaslesCIFComposition'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">composition</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">cid</span><span style="color: navy">)</span><b> then</b><span style="color: navy"> {
+</span>      lm<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">lm</span><b> then </b>LmToComposition<span style="color: navy">(</span><span style="color: maroon">lm</span><span style="color: navy">, </span><span style="color: maroon">composition</span><span style="color: navy">, </span><span style="color: maroon">cid</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span> <i>&quot;set&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Patient'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">patient</span><b> then</b><span style="color: navy"> {
+</span>        lm.Demographics<b> as </b><span style="color: maroon">demographics</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">demographics</span><b> then </b>DemographicsToPatient<span style="color: navy">(</span><span style="color: maroon">demographics</span><span style="color: navy">, </span><span style="color: maroon">patient</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;create patient&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">patient</span> <i>&quot;set patient as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map patient resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Practitioner'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">practitioner</span><b> then</b><span style="color: navy"> {
+</span>        lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then </b>ReportingSourceToPractitioner<span style="color: navy">(</span><span style="color: maroon">reportingSource</span><span style="color: navy">, </span><span style="color: maroon">practitioner</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">)</span> <i>&quot;create practitioner&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">practitioner</span> <i>&quot;set practitioner as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map practitioner resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Organization'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">organization</span><b> then</b><span style="color: navy"> {
+</span>        lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then </b>ReportingSourceToOrganization<span style="color: navy">(</span><span style="color: maroon">reportingSource</span><span style="color: navy">, </span><span style="color: maroon">organization</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">)</span> <i>&quot;create organization&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">organization</span> <i>&quot;set organization as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map organization resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Encounter'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">encounter</span><b> then</b><span style="color: navy"> {
+</span>        lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then </b>ReportingSourceToEncounter<span style="color: navy">(</span><span style="color: maroon">reportingSource</span><span style="color: navy">, </span><span style="color: maroon">encounter</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span> <i>&quot;create encounter&quot;</i><span style="color: navy">;</span>
+        lm<span style="color: navy"><b> -&gt; </b></span>entry.resource = <span style="color: maroon">encounter</span> <i>&quot;set encounter as entry&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;map encounter resource&quot;</i><span style="color: navy">;</span>
+      lm<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">lm</span><b> then </b>mapClinicalToObservations<span style="color: navy">(</span><span style="color: maroon">lm</span><span style="color: navy">, </span><span style="color: maroon">bundle</span><span style="color: navy">, </span><span style="color: maroon">composition</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set clinical data&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;map composition resource&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set entries&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>mapClinicalToObservations<span style="color: navy">(</span><b>source</b> <span style="color: maroon">lm</span><span style="color: navy"> : </span>MeaslesLogicalModel, <b>target</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>Bundle, <b>target</b> <span style="color: maroon">composition</span><span style="color: navy"> : </span>MeaslesCIFComposition, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  lm<span style="color: navy"><b> -&gt; </b></span> composition.section<b> as </b><span style="color: maroon">section</span><span style="color: navy">, </span> section.title = <span style="color: blue">'Clinical Data, Follow up and Treatment'</span><b> then</b><span style="color: navy"> {
+</span>    lm.Clinical<b> as </b><span style="color: maroon">clinical</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">clinical</span><b> then</b><span style="color: navy"> {
+</span>      clinical.Fever<b> as </b><span style="color: maroon">fever</span><span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obsid</span><span style="color: navy">, </span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> section.entry<b> as </b><span style="color: maroon">sectionEntry</span><span style="color: navy">, </span> sectionEntry.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Observation/'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">observation</span><b> then</b><span style="color: navy"> {
+</span>        fever<span style="color: navy"><b> -&gt; </b></span>observation.id = <span style="color: maroon">obsid</span> <i>&quot;set obsid&quot;</i><span style="color: navy">;</span>
+        fever<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Coding'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">coding</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'45701-0'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'https://loinc.org'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'Fever'</span><b> then</b><span style="color: navy"> {
+</span>          fever<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">fever</span><b> then </b>createObservationResource<span style="color: navy">(</span><span style="color: maroon">fever</span><span style="color: navy">, </span><span style="color: maroon">coding</span><span style="color: navy">, </span><span style="color: maroon">observation</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;set fever&quot;</i><span style="color: navy">;</span>
+      clinical.Rash<b> as </b><span style="color: maroon">rash</span><span style="color: navy"><b> -&gt; </b></span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obsid</span><span style="color: navy">, </span> bundle.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.fullUrl = <b>append</b><span style="color: navy">(</span><span style="color: blue">'urn:uuid:'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> section.entry<b> as </b><span style="color: maroon">sectionEntry</span><span style="color: navy">, </span> sectionEntry.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Observation/'</span><span style="color: navy">, </span><span style="color: maroon">obsid</span><span style="color: navy">)</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">observation</span><b> then</b><span style="color: navy"> {
+</span>        rash<span style="color: navy"><b> -&gt; </b></span>observation.id = <span style="color: maroon">obsid</span> <i>&quot;set obsid&quot;</i><span style="color: navy">;</span>
+        rash<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Coding'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">coding</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'45701-0'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'https://loinc.org'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'rash'</span><b> then</b><span style="color: navy"> {
+</span>          rash<span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">rash</span><b> then </b>createObservationResource<span style="color: navy">(</span><span style="color: maroon">rash</span><span style="color: navy">, </span><span style="color: maroon">coding</span><span style="color: navy">, </span><span style="color: maroon">observation</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;set obs&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;set rash&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;set clinical&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set sectiom&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>createObservationResource<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span>, <b>source</b> <span style="color: maroon">coding</span><span style="color: navy"> : </span>Coding, <b>target</b> <span style="color: maroon">observation</span><span style="color: navy"> : </span>Observation, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  src<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">code</span><span style="color: navy">, </span> code.coding = <span style="color: maroon">coding</span><span style="color: navy">, </span> observation.code = <span style="color: maroon">code</span> <i>&quot;set code&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>observation.value = <span style="color: maroon">src</span> <i>&quot;set value&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>observation.status = <span style="color: blue">'registered'</span> <i>&quot;set status&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>observation.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Patient/'</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>mapLabsToObservations<span style="color: navy">(</span><b>source</b> <span style="color: maroon">labs</span><span style="color: navy"> : </span>MeaslesLabs, <b>target</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>Bundle, <b>target</b> <span style="color: maroon">section</span><span style="color: navy"> : </span>Section, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span><span style="color: #b36b00" title="This element was not defined prior to R5">// labs -&gt;  uuid() as obsid, bundle.entry as entry, entry.fullUrl = append('urn:uuid:', obsid), section.entry as sectionEntry, sectionEntry.reference =append('Observation/', obsid), create('Observation') as observation then {     labs -&gt; labs then ClinicalToObservationEntries(clinical, observation, obsid, pid) &quot;create observation&quot;;     labs -&gt; entry.resource = observation &quot;set observation as entry&quot;;  }</span>
+<span style="color: navy">}
+
+</span><b>group </b>LmToComposition<span style="color: navy">(</span><b>source</b> <span style="color: maroon">lm</span><span style="color: navy"> : </span>MeaslesLogicalModel, <b>target</b> <span style="color: maroon">composition</span><span style="color: navy"> : </span>MeaslesCIFComposition, <b>source</b> <span style="color: maroon">cid</span>, <b>source</b> <span style="color: maroon">pid</span>, <b>source</b> <span style="color: maroon">prid</span>, <b>source</b> <span style="color: maroon">oid</span>, <b>source</b> <span style="color: maroon">eid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  cid<span style="color: navy"><b> -&gt; </b></span>composition.id = <span style="color: maroon">cid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.status = <span style="color: blue">'final'</span> <i>&quot;set status&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.title = <span style="color: blue">'PAHO Measles Case Investigation Form'</span> <i>&quot;set title&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'Coding'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">coding</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'55751-2'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'http://loinc.org'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'Public health Case report'</span><span style="color: navy">, </span> <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">code</span><span style="color: navy">, </span> code.coding = <span style="color: maroon">coding</span><span style="color: navy">, </span> composition.type = <span style="color: maroon">code</span> <i>&quot;set type&quot;</i><span style="color: navy">;</span>
+  lm.ReportingSource<b> as </b><span style="color: maroon">reportingSource</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">reportingSource</span><b> then</b><span style="color: navy"> {
+</span>    reportingSource.DateReportedLocal<b> as </b><span style="color: maroon">date</span><span style="color: navy"><b> -&gt; </b></span>composition.date = <span style="color: maroon">date</span> <i>&quot;set date&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set date reported local&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Patient/'</span><span style="color: navy">, </span><span style="color: maroon">pid</span><span style="color: navy">)</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set subject&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.author<b> as </b><span style="color: maroon">practitioner</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>practitioner.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Practitioner/'</span><span style="color: navy">, </span><span style="color: maroon">prid</span><span style="color: navy">)</span> <i>&quot;set author practitioner&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set author practitioner&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.author<b> as </b><span style="color: maroon">institution</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>institution.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Organization/'</span><span style="color: navy">, </span><span style="color: maroon">oid</span><span style="color: navy">)</span> <i>&quot;set author institution&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set author org&quot;</i><span style="color: navy">;</span>
+  lm<span style="color: navy"><b> -&gt; </b></span>composition.encounter<b> as </b><span style="color: maroon">encounter</span><b> then</b><span style="color: navy"> {
+</span>    lm<span style="color: navy"><b> -&gt; </b></span>encounter.reference = <b>append</b><span style="color: navy">(</span><span style="color: blue">'Encounter/'</span><span style="color: navy">, </span><span style="color: maroon">eid</span><span style="color: navy">)</span> <i>&quot;set encounter&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set encounter&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>DemographicsToPatient<span style="color: navy">(</span><b>source</b> <span style="color: maroon">demographics</span><span style="color: navy"> : </span>DemographicsLogicalModel, <b>target</b> <span style="color: maroon">patient</span><span style="color: navy"> : </span>MeaslesPatient, <b>source</b> <span style="color: maroon">pid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  pid<span style="color: navy"><b> -&gt; </b></span>patient.id = <span style="color: maroon">pid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  demographics.Name<b> as </b><span style="color: maroon">name</span><span style="color: navy"><b> -&gt; </b></span>patient.name = <span style="color: maroon">name</span> <i>&quot;set name&quot;</i><span style="color: navy">;</span>
+  demographics.DateOfBirth<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>patient.birthDate = <span style="color: maroon">dob</span> <i>&quot;set date of birth&quot;</i><span style="color: navy">;</span>
+  demographics.Sex<b> as </b><span style="color: maroon">sex</span><span style="color: navy"><b> -&gt; </b></span>patient.gender = <span style="color: maroon">sex</span> <i>&quot;set sex&quot;</i><span style="color: navy">;</span>
+  demographics.CountryOfBirth<b> as </b><span style="color: maroon">cob</span><span style="color: navy"><b> -&gt; </b></span>patient.CountryOfBirth = <span style="color: maroon">cob</span> <i>&quot;set CountryOfBirth&quot;</i><span style="color: navy">;</span>
+  demographics.Landmark<b> as </b><span style="color: maroon">landmark</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    landmark<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Landmark'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">landmark</span> <i>&quot;set landmark value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set landmark&quot;</i><span style="color: navy">;</span>
+  demographics.Guardian<b> as </b><span style="color: maroon">guardian</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    guardian<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Guardian'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">guardian</span> <i>&quot;set guardian value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set guardian&quot;</i><span style="color: navy">;</span>
+  demographics.Telephone<b> as </b><span style="color: maroon">phone</span><span style="color: navy"><b> -&gt; </b></span>patient.telecom = <span style="color: maroon">phone</span> <i>&quot;set telephone&quot;</i><span style="color: navy">;</span>
+  demographics.PlaceOfResidence<b> as </b><span style="color: maroon">address</span><span style="color: navy"><b> -&gt; </b></span>patient.address = <span style="color: maroon">address</span> <i>&quot;set address&quot;</i><span style="color: navy">;</span>
+  demographics.Occupation<b> as </b><span style="color: maroon">occupation</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    occupation<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Occupation'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">occupation</span> <i>&quot;set occupation value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set occupation&quot;</i><span style="color: navy">;</span>
+  demographics.WorkAddress<b> as </b><span style="color: maroon">workAddress</span><span style="color: navy"><b> -&gt; </b></span>patient.extension<b> as </b><span style="color: maroon">ext</span><b> then</b><span style="color: navy"> {
+</span>    workAddress<span style="color: navy"><b> -&gt; </b></span> ext.url = <span style="color: blue">'http://worldhealthorganization.github.io/smart-ot/StructureDefinition/WorkAddress'</span><span style="color: navy">, </span> ext.value = <span style="color: maroon">workAddress</span> <i>&quot;set work address value&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;set work address&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ReportingSourceToPractitioner<span style="color: navy">(</span><b>source</b> <span style="color: maroon">reportingSource</span><span style="color: navy"> : </span>ReportingSourceLogicalModel, <b>target</b> <span style="color: maroon">practitioner</span><span style="color: navy"> : </span>Practitioner, <b>source</b> <span style="color: maroon">prid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  prid<span style="color: navy"><b> -&gt; </b></span>practitioner.id = <span style="color: maroon">prid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  reportingSource.ReportedBy<b> as </b><span style="color: maroon">name</span><span style="color: navy"><b> -&gt; </b></span> practitioner.name<b> as </b><span style="color: maroon">humanName</span><span style="color: navy">, </span> humanName.text = <span style="color: maroon">name</span> <i>&quot;set name&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ReportingSourceToOrganization<span style="color: navy">(</span><b>source</b> <span style="color: maroon">reportingSource</span><span style="color: navy"> : </span>ReportingSourceLogicalModel, <b>target</b> <span style="color: maroon">organization</span><span style="color: navy"> : </span>MeaslesOrganization, <b>source</b> <span style="color: maroon">oid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  oid<span style="color: navy"><b> -&gt; </b></span>organization.id = <span style="color: maroon">oid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  reportingSource.HealthServiceName<b> as </b><span style="color: maroon">name</span><span style="color: navy"><b> -&gt; </b></span>organization.name = <span style="color: maroon">name</span> <i>&quot;set name&quot;</i><span style="color: navy">;</span>
+  reportingSource.HealthServiceTelephone<b> as </b><span style="color: maroon">phone</span><span style="color: navy"><b> -&gt; </b></span> organization.contact<b> as </b><span style="color: maroon">contactDetails</span><span style="color: navy">, </span> contactDetails.telecom = <span style="color: maroon">phone</span> <i>&quot;set phone&quot;</i><span style="color: navy">;</span>
+  reportingSource.PlaceOfReporting<b> as </b><span style="color: maroon">location</span><span style="color: navy"><b> -&gt; </b></span> organization.contact<b> as </b><span style="color: maroon">contactDetails</span><span style="color: navy">, </span> contactDetails.address = <span style="color: maroon">location</span> <i>&quot;set address&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ReportingSourceToEncounter<span style="color: navy">(</span><b>source</b> <span style="color: maroon">reportingSource</span><span style="color: navy"> : </span>ReportingSourceLogicalModel, <b>target</b> <span style="color: maroon">encounter</span><span style="color: navy"> : </span>MeaslesEncounter, <b>source</b> <span style="color: maroon">eid</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  eid<span style="color: navy"><b> -&gt; </b></span>encounter.id = <span style="color: maroon">eid</span> <i>&quot;set id&quot;</i><span style="color: navy">;</span>
+  reportingSource.DateReportedLocal<b> as </b><span style="color: maroon">date</span><span style="color: navy"><b> -&gt; </b></span> encounter.period<b> as </b><span style="color: maroon">period</span><span style="color: navy">, </span> period.start = <span style="color: maroon">date</span> <i>&quot;set date&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="http://worldhealthorganization.github.io/smart-ot/StructureMap/MeaslesLogicalModelToResources"/>
+  <version value="0.1.0"/>
+  <name value="MeaslesLogicalModelToResources"/>
+  <status value="draft"/>
+  <date value="2023-09-29T18:14:45+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <structure>
+    <url value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/SOTMeasles"/>
+    <mode value="source"/>
+    <alias value="MeaslesLogicalModel"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="target"/>
+    <alias value="MeaslesCIFBundle"/>
+  </structure>
+  <structure>
+    <url value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/MeaslesCIFComposition"/>
+    <mode value="target"/>
+    <alias value="MeaslesCIFComposition"/>
+  </structure>
+  <group>
+    <name value="MeaslesLogicalModelToResources"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="lm"/>
+      <type value="MeaslesLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <type value="MeaslesCIFBundle"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="set bundle type"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="type"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="document"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set timestamp"/>
+      <source>
+        <context value="lm"/>
+        <element value="ReportingSource"/>
+        <variable value="reportingSource"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="reportingSource"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="set date"/>
+        <source>
+          <context value="reportingSource"/>
+          <element value="DateReportedNational"/>
+          <variable value="date"/>
+        </source>
+        <target>
+          <context value="bundle"/>
+          <contextType value="variable"/>
+          <element value="timestamp"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="date"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set id"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <variable value="bid"/>
+        <transform value="uuid"/>
+      </target>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="bid"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set entries"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <variable value="cid"/>
+        <transform value="uuid"/>
+      </target>
+      <target>
+        <contextType value="variable"/>
+        <variable value="pid"/>
+        <transform value="uuid"/>
+      </target>
+      <target>
+        <contextType value="variable"/>
+        <variable value="prid"/>
+        <transform value="uuid"/>
+      </target>
+      <target>
+        <contextType value="variable"/>
+        <variable value="oid"/>
+        <transform value="uuid"/>
+      </target>
+      <target>
+        <contextType value="variable"/>
+        <variable value="eid"/>
+        <transform value="uuid"/>
+      </target>
+      <rule>
+        <name value="map composition resource"/>
+        <source>
+          <context value="lm"/>
+        </source>
+        <target>
+          <context value="bundle"/>
+          <contextType value="variable"/>
+          <element value="entry"/>
+          <variable value="entry"/>
+        </target>
+        <target>
+          <context value="entry"/>
+          <contextType value="variable"/>
+          <element value="resource"/>
+          <variable value="composition"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/MeaslesCIFComposition"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="entry"/>
+          <contextType value="variable"/>
+          <element value="fullUrl"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="urn:uuid:"/>
+          </parameter>
+          <parameter>
+            <valueId value="cid"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="set"/>
+          <source>
+            <context value="lm"/>
+          </source>
+          <target>
+            <contextType value="variable"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueId value="lm"/>
+            </parameter>
+          </target>
+          <dependent>
+            <name value="LmToComposition"/>
+            <variable value="lm"/>
+            <variable value="composition"/>
+            <variable value="cid"/>
+            <variable value="pid"/>
+            <variable value="prid"/>
+            <variable value="oid"/>
+            <variable value="eid"/>
+          </dependent>
+        </rule>
+        <rule>
+          <name value="map patient resource"/>
+          <source>
+            <context value="lm"/>
+          </source>
+          <target>
+            <context value="bundle"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="entry"/>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="urn:uuid:"/>
+            </parameter>
+            <parameter>
+              <valueId value="pid"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="patient"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Patient"/>
+            </parameter>
+          </target>
+          <rule>
+            <name value="create patient"/>
+            <source>
+              <context value="lm"/>
+              <element value="Demographics"/>
+              <variable value="demographics"/>
+            </source>
+            <target>
+              <contextType value="variable"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="demographics"/>
+              </parameter>
+            </target>
+            <dependent>
+              <name value="DemographicsToPatient"/>
+              <variable value="demographics"/>
+              <variable value="patient"/>
+              <variable value="pid"/>
+            </dependent>
+          </rule>
+          <rule>
+            <name value="set patient as entry"/>
+            <source>
+              <context value="lm"/>
+            </source>
+            <target>
+              <context value="entry"/>
+              <contextType value="variable"/>
+              <element value="resource"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="patient"/>
+              </parameter>
+            </target>
+          </rule>
+        </rule>
+        <rule>
+          <name value="map practitioner resource"/>
+          <source>
+            <context value="lm"/>
+          </source>
+          <target>
+            <context value="bundle"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="entry"/>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="urn:uuid:"/>
+            </parameter>
+            <parameter>
+              <valueId value="prid"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="practitioner"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Practitioner"/>
+            </parameter>
+          </target>
+          <rule>
+            <name value="create practitioner"/>
+            <source>
+              <context value="lm"/>
+              <element value="ReportingSource"/>
+              <variable value="reportingSource"/>
+            </source>
+            <target>
+              <contextType value="variable"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="reportingSource"/>
+              </parameter>
+            </target>
+            <dependent>
+              <name value="ReportingSourceToPractitioner"/>
+              <variable value="reportingSource"/>
+              <variable value="practitioner"/>
+              <variable value="prid"/>
+            </dependent>
+          </rule>
+          <rule>
+            <name value="set practitioner as entry"/>
+            <source>
+              <context value="lm"/>
+            </source>
+            <target>
+              <context value="entry"/>
+              <contextType value="variable"/>
+              <element value="resource"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="practitioner"/>
+              </parameter>
+            </target>
+          </rule>
+        </rule>
+        <rule>
+          <name value="map organization resource"/>
+          <source>
+            <context value="lm"/>
+          </source>
+          <target>
+            <context value="bundle"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="entry"/>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="urn:uuid:"/>
+            </parameter>
+            <parameter>
+              <valueId value="oid"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="organization"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Organization"/>
+            </parameter>
+          </target>
+          <rule>
+            <name value="create organization"/>
+            <source>
+              <context value="lm"/>
+              <element value="ReportingSource"/>
+              <variable value="reportingSource"/>
+            </source>
+            <target>
+              <contextType value="variable"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="reportingSource"/>
+              </parameter>
+            </target>
+            <dependent>
+              <name value="ReportingSourceToOrganization"/>
+              <variable value="reportingSource"/>
+              <variable value="organization"/>
+              <variable value="oid"/>
+            </dependent>
+          </rule>
+          <rule>
+            <name value="set organization as entry"/>
+            <source>
+              <context value="lm"/>
+            </source>
+            <target>
+              <context value="entry"/>
+              <contextType value="variable"/>
+              <element value="resource"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="organization"/>
+              </parameter>
+            </target>
+          </rule>
+        </rule>
+        <rule>
+          <name value="map encounter resource"/>
+          <source>
+            <context value="lm"/>
+          </source>
+          <target>
+            <context value="bundle"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="entry"/>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="urn:uuid:"/>
+            </parameter>
+            <parameter>
+              <valueId value="eid"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="encounter"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Encounter"/>
+            </parameter>
+          </target>
+          <rule>
+            <name value="create encounter"/>
+            <source>
+              <context value="lm"/>
+              <element value="ReportingSource"/>
+              <variable value="reportingSource"/>
+            </source>
+            <target>
+              <contextType value="variable"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="reportingSource"/>
+              </parameter>
+            </target>
+            <dependent>
+              <name value="ReportingSourceToEncounter"/>
+              <variable value="reportingSource"/>
+              <variable value="encounter"/>
+              <variable value="eid"/>
+            </dependent>
+          </rule>
+          <rule>
+            <name value="set encounter as entry"/>
+            <source>
+              <context value="lm"/>
+            </source>
+            <target>
+              <context value="entry"/>
+              <contextType value="variable"/>
+              <element value="resource"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="encounter"/>
+              </parameter>
+            </target>
+          </rule>
+        </rule>
+        <rule>
+          <name value="set clinical data"/>
+          <source>
+            <context value="lm"/>
+          </source>
+          <target>
+            <contextType value="variable"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueId value="lm"/>
+            </parameter>
+          </target>
+          <dependent>
+            <name value="mapClinicalToObservations"/>
+            <variable value="lm"/>
+            <variable value="bundle"/>
+            <variable value="composition"/>
+            <variable value="pid"/>
+          </dependent>
+        </rule>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="mapClinicalToObservations"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="lm"/>
+      <type value="MeaslesLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <type value="Bundle"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="composition"/>
+      <type value="MeaslesCIFComposition"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="pid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set sectiom"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="section"/>
+        <variable value="section"/>
+      </target>
+      <target>
+        <context value="section"/>
+        <contextType value="variable"/>
+        <element value="title"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="Clinical Data, Follow up and Treatment"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="set clinical"/>
+        <source>
+          <context value="lm"/>
+          <element value="Clinical"/>
+          <variable value="clinical"/>
+        </source>
+        <target>
+          <contextType value="variable"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="clinical"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="set fever"/>
+          <source>
+            <context value="clinical"/>
+            <element value="Fever"/>
+            <variable value="fever"/>
+          </source>
+          <target>
+            <contextType value="variable"/>
+            <variable value="obsid"/>
+            <transform value="uuid"/>
+          </target>
+          <target>
+            <context value="bundle"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="entry"/>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="urn:uuid:"/>
+            </parameter>
+            <parameter>
+              <valueId value="obsid"/>
+            </parameter>
+          </target>
+          <target>
+            <context value="section"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="sectionEntry"/>
+          </target>
+          <target>
+            <context value="sectionEntry"/>
+            <contextType value="variable"/>
+            <element value="reference"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="Observation/"/>
+            </parameter>
+            <parameter>
+              <valueId value="obsid"/>
+            </parameter>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="resource"/>
+            <variable value="observation"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Observation"/>
+            </parameter>
+          </target>
+          <rule>
+            <name value="set obsid"/>
+            <source>
+              <context value="fever"/>
+            </source>
+            <target>
+              <context value="observation"/>
+              <contextType value="variable"/>
+              <element value="id"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="obsid"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="set obs"/>
+            <source>
+              <context value="fever"/>
+            </source>
+            <target>
+              <contextType value="variable"/>
+              <variable value="coding"/>
+              <transform value="create"/>
+              <parameter>
+                <valueString value="Coding"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="code"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="45701-0"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="system"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="https://loinc.org"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="display"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="Fever"/>
+              </parameter>
+            </target>
+            <rule>
+              <name value="set obs"/>
+              <source>
+                <context value="fever"/>
+              </source>
+              <target>
+                <contextType value="variable"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="fever"/>
+                </parameter>
+              </target>
+              <dependent>
+                <name value="createObservationResource"/>
+                <variable value="fever"/>
+                <variable value="coding"/>
+                <variable value="observation"/>
+                <variable value="pid"/>
+              </dependent>
+            </rule>
+          </rule>
+        </rule>
+        <rule>
+          <name value="set rash"/>
+          <source>
+            <context value="clinical"/>
+            <element value="Rash"/>
+            <variable value="rash"/>
+          </source>
+          <target>
+            <contextType value="variable"/>
+            <variable value="obsid"/>
+            <transform value="uuid"/>
+          </target>
+          <target>
+            <context value="bundle"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="entry"/>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="urn:uuid:"/>
+            </parameter>
+            <parameter>
+              <valueId value="obsid"/>
+            </parameter>
+          </target>
+          <target>
+            <context value="section"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="sectionEntry"/>
+          </target>
+          <target>
+            <context value="sectionEntry"/>
+            <contextType value="variable"/>
+            <element value="reference"/>
+            <transform value="append"/>
+            <parameter>
+              <valueString value="Observation/"/>
+            </parameter>
+            <parameter>
+              <valueId value="obsid"/>
+            </parameter>
+          </target>
+          <target>
+            <context value="entry"/>
+            <contextType value="variable"/>
+            <element value="resource"/>
+            <variable value="observation"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Observation"/>
+            </parameter>
+          </target>
+          <rule>
+            <name value="set obsid"/>
+            <source>
+              <context value="rash"/>
+            </source>
+            <target>
+              <context value="observation"/>
+              <contextType value="variable"/>
+              <element value="id"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="obsid"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="set obs"/>
+            <source>
+              <context value="rash"/>
+            </source>
+            <target>
+              <contextType value="variable"/>
+              <variable value="coding"/>
+              <transform value="create"/>
+              <parameter>
+                <valueString value="Coding"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="code"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="45701-0"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="system"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="https://loinc.org"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="display"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="rash"/>
+              </parameter>
+            </target>
+            <rule>
+              <name value="set obs"/>
+              <source>
+                <context value="rash"/>
+              </source>
+              <target>
+                <contextType value="variable"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="rash"/>
+                </parameter>
+              </target>
+              <dependent>
+                <name value="createObservationResource"/>
+                <variable value="rash"/>
+                <variable value="coding"/>
+                <variable value="observation"/>
+                <variable value="pid"/>
+              </dependent>
+            </rule>
+          </rule>
+        </rule>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="createObservationResource"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="coding"/>
+      <type value="Coding"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="observation"/>
+      <type value="Observation"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="pid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set code"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <variable value="code"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="code"/>
+        <contextType value="variable"/>
+        <element value="coding"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="coding"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="code"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set value"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="value"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="src"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set status"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="status"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="registered"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set subject"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="subject"/>
+        <variable value="subject"/>
+      </target>
+      <rule>
+        <name value="set subject"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="subject"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="Patient/"/>
+          </parameter>
+          <parameter>
+            <valueId value="pid"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="mapLabsToObservations"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="labs"/>
+      <type value="MeaslesLabs"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <type value="Bundle"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="section"/>
+      <type value="Section"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="pid"/>
+      <mode value="source"/>
+    </input>
+  </group>
+  <group>
+    <name value="LmToComposition"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="lm"/>
+      <type value="MeaslesLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="composition"/>
+      <type value="MeaslesCIFComposition"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="cid"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="pid"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="prid"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="oid"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="eid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set id"/>
+      <source>
+        <context value="cid"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="cid"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set status"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="status"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="final"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set title"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="title"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="PAHO Measles Case Investigation Form"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set type"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <variable value="coding"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Coding"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="coding"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="55751-2"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="coding"/>
+        <contextType value="variable"/>
+        <element value="system"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="http://loinc.org"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="coding"/>
+        <contextType value="variable"/>
+        <element value="display"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="Public health Case report"/>
+        </parameter>
+      </target>
+      <target>
+        <contextType value="variable"/>
+        <variable value="code"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="code"/>
+        <contextType value="variable"/>
+        <element value="coding"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="coding"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="type"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="code"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set date reported local"/>
+      <source>
+        <context value="lm"/>
+        <element value="ReportingSource"/>
+        <variable value="reportingSource"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="reportingSource"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="set date"/>
+        <source>
+          <context value="reportingSource"/>
+          <element value="DateReportedLocal"/>
+          <variable value="date"/>
+        </source>
+        <target>
+          <context value="composition"/>
+          <contextType value="variable"/>
+          <element value="date"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="date"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set subject"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="subject"/>
+        <variable value="subject"/>
+      </target>
+      <rule>
+        <name value="set subject"/>
+        <source>
+          <context value="lm"/>
+        </source>
+        <target>
+          <context value="subject"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="Patient/"/>
+          </parameter>
+          <parameter>
+            <valueId value="pid"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set author practitioner"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="author"/>
+        <variable value="practitioner"/>
+      </target>
+      <rule>
+        <name value="set author practitioner"/>
+        <source>
+          <context value="lm"/>
+        </source>
+        <target>
+          <context value="practitioner"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="Practitioner/"/>
+          </parameter>
+          <parameter>
+            <valueId value="prid"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set author org"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="author"/>
+        <variable value="institution"/>
+      </target>
+      <rule>
+        <name value="set author institution"/>
+        <source>
+          <context value="lm"/>
+        </source>
+        <target>
+          <context value="institution"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="Organization/"/>
+          </parameter>
+          <parameter>
+            <valueId value="oid"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set encounter"/>
+      <source>
+        <context value="lm"/>
+      </source>
+      <target>
+        <context value="composition"/>
+        <contextType value="variable"/>
+        <element value="encounter"/>
+        <variable value="encounter"/>
+      </target>
+      <rule>
+        <name value="set encounter"/>
+        <source>
+          <context value="lm"/>
+        </source>
+        <target>
+          <context value="encounter"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="Encounter/"/>
+          </parameter>
+          <parameter>
+            <valueId value="eid"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="DemographicsToPatient"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="demographics"/>
+      <type value="DemographicsLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="patient"/>
+      <type value="MeaslesPatient"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="pid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set id"/>
+      <source>
+        <context value="pid"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="pid"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set name"/>
+      <source>
+        <context value="demographics"/>
+        <element value="Name"/>
+        <variable value="name"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="name"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="name"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set date of birth"/>
+      <source>
+        <context value="demographics"/>
+        <element value="DateOfBirth"/>
+        <variable value="dob"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="birthDate"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="dob"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set sex"/>
+      <source>
+        <context value="demographics"/>
+        <element value="Sex"/>
+        <variable value="sex"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="gender"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="sex"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set CountryOfBirth"/>
+      <source>
+        <context value="demographics"/>
+        <element value="CountryOfBirth"/>
+        <variable value="cob"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="CountryOfBirth"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="cob"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set landmark"/>
+      <source>
+        <context value="demographics"/>
+        <element value="Landmark"/>
+        <variable value="landmark"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="ext"/>
+      </target>
+      <rule>
+        <name value="set landmark value"/>
+        <source>
+          <context value="landmark"/>
+        </source>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Landmark"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="landmark"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set guardian"/>
+      <source>
+        <context value="demographics"/>
+        <element value="Guardian"/>
+        <variable value="guardian"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="ext"/>
+      </target>
+      <rule>
+        <name value="set guardian value"/>
+        <source>
+          <context value="guardian"/>
+        </source>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Guardian"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="guardian"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set telephone"/>
+      <source>
+        <context value="demographics"/>
+        <element value="Telephone"/>
+        <variable value="phone"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="telecom"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="phone"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set address"/>
+      <source>
+        <context value="demographics"/>
+        <element value="PlaceOfResidence"/>
+        <variable value="address"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="address"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="address"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set occupation"/>
+      <source>
+        <context value="demographics"/>
+        <element value="Occupation"/>
+        <variable value="occupation"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="ext"/>
+      </target>
+      <rule>
+        <name value="set occupation value"/>
+        <source>
+          <context value="occupation"/>
+        </source>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/Occupation"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="occupation"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="set work address"/>
+      <source>
+        <context value="demographics"/>
+        <element value="WorkAddress"/>
+        <variable value="workAddress"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="ext"/>
+      </target>
+      <rule>
+        <name value="set work address value"/>
+        <source>
+          <context value="workAddress"/>
+        </source>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://worldhealthorganization.github.io/smart-ot/StructureDefinition/WorkAddress"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="ext"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="workAddress"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="ReportingSourceToPractitioner"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="reportingSource"/>
+      <type value="ReportingSourceLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="practitioner"/>
+      <type value="Practitioner"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="prid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set id"/>
+      <source>
+        <context value="prid"/>
+      </source>
+      <target>
+        <context value="practitioner"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="prid"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set name"/>
+      <source>
+        <context value="reportingSource"/>
+        <element value="ReportedBy"/>
+        <variable value="name"/>
+      </source>
+      <target>
+        <context value="practitioner"/>
+        <contextType value="variable"/>
+        <element value="name"/>
+        <variable value="humanName"/>
+      </target>
+      <target>
+        <context value="humanName"/>
+        <contextType value="variable"/>
+        <element value="text"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="name"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="ReportingSourceToOrganization"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="reportingSource"/>
+      <type value="ReportingSourceLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="organization"/>
+      <type value="MeaslesOrganization"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="oid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set id"/>
+      <source>
+        <context value="oid"/>
+      </source>
+      <target>
+        <context value="organization"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="oid"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set name"/>
+      <source>
+        <context value="reportingSource"/>
+        <element value="HealthServiceName"/>
+        <variable value="name"/>
+      </source>
+      <target>
+        <context value="organization"/>
+        <contextType value="variable"/>
+        <element value="name"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="name"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set phone"/>
+      <source>
+        <context value="reportingSource"/>
+        <element value="HealthServiceTelephone"/>
+        <variable value="phone"/>
+      </source>
+      <target>
+        <context value="organization"/>
+        <contextType value="variable"/>
+        <element value="contact"/>
+        <variable value="contactDetails"/>
+      </target>
+      <target>
+        <context value="contactDetails"/>
+        <contextType value="variable"/>
+        <element value="telecom"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="phone"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set address"/>
+      <source>
+        <context value="reportingSource"/>
+        <element value="PlaceOfReporting"/>
+        <variable value="location"/>
+      </source>
+      <target>
+        <context value="organization"/>
+        <contextType value="variable"/>
+        <element value="contact"/>
+        <variable value="contactDetails"/>
+      </target>
+      <target>
+        <context value="contactDetails"/>
+        <contextType value="variable"/>
+        <element value="address"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="location"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="ReportingSourceToEncounter"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="reportingSource"/>
+      <type value="ReportingSourceLogicalModel"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="encounter"/>
+      <type value="MeaslesEncounter"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="eid"/>
+      <mode value="source"/>
+    </input>
+    <rule>
+      <name value="set id"/>
+      <source>
+        <context value="eid"/>
+      </source>
+      <target>
+        <context value="encounter"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="eid"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="set date"/>
+      <source>
+        <context value="reportingSource"/>
+        <element value="DateReportedLocal"/>
+        <variable value="date"/>
+      </source>
+      <target>
+        <context value="encounter"/>
+        <contextType value="variable"/>
+        <element value="period"/>
+        <variable value="period"/>
+      </target>
+      <target>
+        <context value="period"/>
+        <contextType value="variable"/>
+        <element value="start"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="date"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

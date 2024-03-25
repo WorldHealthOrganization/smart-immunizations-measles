@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sgcountry",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/5.4.0/CodeSystem-ISO3166Part1.html\"><code>urn:iso:std:iso:3166</code></a></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/immunizations-measles/ValueSet/sgcountry",
+  "version" : "0.1.0",
+  "name" : "SGCountryValueSet",
+  "title" : "Country ValueSet",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-01-20T17:27:08+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "This value set defines a base set of codes for countries.   \n\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:iso:std:iso:3166"
+    }]
+  }
+}

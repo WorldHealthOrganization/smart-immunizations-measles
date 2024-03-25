@@ -1,0 +1,165 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/TestScript/testscript-evaluate-measure-ind-08> a fhir:TestScript ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "testscript-evaluate-measure-ind-08"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestScript</b><a name=\"testscript-evaluate-measure-ind-08\"> </a><a name=\"hctestscript-evaluate-measure-ind-08\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestScript &quot;testscript-evaluate-measure-ind-08&quot; </p></div><p><b>url</b>: <code>http://smart.who.int/immunizations/TestScript/testscript-smart-immunizations-measles-ind08-d2</code></p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.4.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:oid:2.16.840.1.113883.4.642.12.3</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: TestScriptEvaluateIND08</p><p><b>title</b>: TestScript - Evaluate Measure - IND08</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2017-01-18</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: TestScript for Measles IND 08</p><p><b>purpose</b>: Test Measles immmunization indicator 08 - Immunization coverage for Measles containing vaccine (Estimated Denominator)</p><p><b>copyright</b>: © 2024+</p><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>patient-D2</blockquote><p><b>autocreate</b>: true</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Patient/D2\">Patient/D2: Patient D2</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>measles1-D2</blockquote><p><b>autocreate</b>: true</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Immunization/measles1-D2\">Immunization/measles1-D2: Patient D2 - first measles immunization</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>measles2-D2</blockquote><p><b>autocreate</b>: true</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Immunization/measles2-D2\">Immunization/measles2-D2: Patient D2 - second measles immunization</a></p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: femaleCountExpression</p><p><b>description</b>: Evaluate the returned total of females with the expected vaccine coverage</p><p><b>expression</b>: MeasureReport.group.stratifier.where(id='IMMZ.IND.08.S2').stratum.where(value.text='female').population.where(id='IMMZ.IND.08.N').count.toInteger()</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: cqlserverbase</p><p><b>defaultValue</b>: http://localhost:8080/fhir</p><p><b>description</b>: URL for the CQL server</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: expectedCount</p><p><b>defaultValue</b>: 1</p><p><b>description</b>: Expected patient count for mealles immunization indicator 08</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')</td><td>Patient</td><td>POST resources to server.</td><td>json</td><td>true</td><td>patient-D2</td></tr></table><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that results was POSTed OK.</td><td>created</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')</td><td>Immunization</td><td>POST resources to server.</td><td>json</td><td>true</td><td>measles1-D2</td></tr></table><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that results was POSTed OK.</td><td>created</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')</td><td>Immunization</td><td>POST resources to server.</td><td>json</td><td>true</td><td>measles2-D2</td></tr></table><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that results was POSTed OK.</td><td>created</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>01-Evaluate</blockquote><p><b>name</b>: Evaluate the measure</p><p><b>description</b>: Evaluate the measure.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>ResponseId</b></td><td><b>SourceId</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>evaluate (Details: http://hl7.org/fhir/restful-interaction code evaluate = 'evaluate', stated as 'null')</td><td>Send the request for the Measure evaluation.</td><td>json</td><td>json</td><td>true</td><td>PatientCreateResponse</td><td>fixture-patient-create</td><td>${cqlserverbase}/Measure/IMMZ.IND.08/$evaluate-measure?periodStart=2000-01-01&amp;periodEnd=2024-12-31</td></tr></table><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the returned HTTP status is 201(Created).</td><td>okay</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the returned result evaluates to the expected value</td><td>${femaleCountExpression}=$#{expectedCount}</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/immunizations/TestScript/testscript-smart-immunizations-measles-ind08-d2"^^xsd:anyURI] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.12.3" ]
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "TestScriptEvaluateIND08"] ; # 
+  fhir:title [ fhir:v "TestScript - Evaluate Measure - IND08"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2017-01-18"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "TestScript for Measles IND 08"] ; # 
+  fhir:purpose [ fhir:v "Test Measles immmunization indicator 08 - Immunization coverage for Measles containing vaccine (Estimated Denominator)"] ; # 
+  fhir:copyright [ fhir:v "© 2024+"] ; # 
+  fhir:fixture ( [
+     fhir:id [ fhir:v "patient-D2" ] ;
+     fhir:autocreate [ fhir:v "true"^^xsd:boolean ] ;
+     fhir:autodelete [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:resource [
+       fhir:link <http://smart.who.int/immunizations-measles/Patient/D2> ;
+       fhir:reference [ fhir:v "Patient/D2" ] ;
+       fhir:display [ fhir:v "Patient D2" ]
+     ]
+  ] [
+     fhir:id [ fhir:v "measles1-D2" ] ;
+     fhir:autocreate [ fhir:v "true"^^xsd:boolean ] ;
+     fhir:autodelete [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:resource [
+       fhir:link <http://smart.who.int/immunizations-measles/Immunization/measles1-D2> ;
+       fhir:reference [ fhir:v "Immunization/measles1-D2" ] ;
+       fhir:display [ fhir:v "Patient D2 - first measles immunization" ]
+     ]
+  ] [
+     fhir:id [ fhir:v "measles2-D2" ] ;
+     fhir:autocreate [ fhir:v "true"^^xsd:boolean ] ;
+     fhir:autodelete [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:resource [
+       fhir:link <http://smart.who.int/immunizations-measles/Immunization/measles2-D2> ;
+       fhir:reference [ fhir:v "Immunization/measles2-D2" ] ;
+       fhir:display [ fhir:v "Patient D2 - second measles immunization" ]
+     ]
+  ] ) ; # 
+  fhir:variable ( [
+     fhir:name [ fhir:v "femaleCountExpression" ] ;
+     fhir:description [ fhir:v "Evaluate the returned total of females with the expected vaccine coverage" ] ;
+     fhir:expression [ fhir:v "MeasureReport.group.stratifier.where(id='IMMZ.IND.08.S2').stratum.where(value.text='female').population.where(id='IMMZ.IND.08.N').count.toInteger()" ]
+  ] [
+     fhir:name [ fhir:v "cqlserverbase" ] ;
+     fhir:defaultValue [ fhir:v "http://localhost:8080/fhir" ] ;
+     fhir:description [ fhir:v "URL for the CQL server" ]
+  ] [
+     fhir:name [ fhir:v "expectedCount" ] ;
+     fhir:defaultValue [ fhir:v "1" ] ;
+     fhir:description [ fhir:v "Expected patient count for mealles immunization indicator 08" ]
+  ] ) ; # 
+  fhir:setup [
+     fhir:action ( [
+       fhir:operation [
+         fhir:type [
+           fhir:system [ fhir:v "http://hl7.org/fhir/restful-interaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "post" ]
+         ] ;
+         fhir:resource [ fhir:v "Patient" ] ;
+         fhir:description [ fhir:v "POST resources to server." ] ;
+         fhir:accept [ fhir:v "json" ] ;
+         fhir:encodeRequestUrl [ fhir:v "true"^^xsd:boolean ] ;
+         fhir:sourceId [ fhir:v "patient-D2" ]
+       ] ;
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that results was POSTed OK." ] ;
+         fhir:response [ fhir:v "created" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:operation [
+         fhir:type [
+           fhir:system [ fhir:v "http://hl7.org/fhir/restful-interaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "post" ]
+         ] ;
+         fhir:resource [ fhir:v "Immunization" ] ;
+         fhir:description [ fhir:v "POST resources to server." ] ;
+         fhir:accept [ fhir:v "json" ] ;
+         fhir:encodeRequestUrl [ fhir:v "true"^^xsd:boolean ] ;
+         fhir:sourceId [ fhir:v "measles1-D2" ]
+       ] ;
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that results was POSTed OK." ] ;
+         fhir:response [ fhir:v "created" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:operation [
+         fhir:type [
+           fhir:system [ fhir:v "http://hl7.org/fhir/restful-interaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "post" ]
+         ] ;
+         fhir:resource [ fhir:v "Immunization" ] ;
+         fhir:description [ fhir:v "POST resources to server." ] ;
+         fhir:accept [ fhir:v "json" ] ;
+         fhir:encodeRequestUrl [ fhir:v "true"^^xsd:boolean ] ;
+         fhir:sourceId [ fhir:v "measles2-D2" ]
+       ] ;
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that results was POSTed OK." ] ;
+         fhir:response [ fhir:v "created" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] )
+  ] ; # 
+  fhir:test ( [
+     fhir:id [ fhir:v "01-Evaluate" ] ;
+     fhir:name [ fhir:v "Evaluate the measure" ] ;
+     fhir:description [ fhir:v "Evaluate the measure." ] ;
+     fhir:action ( [
+       fhir:operation [
+         fhir:type [
+           fhir:system [ fhir:v "http://hl7.org/fhir/restful-interaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "evaluate" ]
+         ] ;
+         fhir:description [ fhir:v "Send the request for the Measure evaluation." ] ;
+         fhir:accept [ fhir:v "json" ] ;
+         fhir:contentType [ fhir:v "json" ] ;
+         fhir:encodeRequestUrl [ fhir:v "true"^^xsd:boolean ] ;
+         fhir:responseId [ fhir:v "PatientCreateResponse" ] ;
+         fhir:sourceId [ fhir:v "fixture-patient-create" ] ;
+         fhir:url [ fhir:v "${cqlserverbase}/Measure/IMMZ.IND.08/$evaluate-measure?periodStart=2000-01-01&periodEnd=2024-12-31" ]
+       ] ;
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the returned HTTP status is 201(Created)." ] ;
+         fhir:response [ fhir:v "okay" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the returned result evaluates to the expected value" ] ;
+         fhir:expression [ fhir:v "${femaleCountExpression}=$#{expectedCount}" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

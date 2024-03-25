@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="VaccineTypes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="CodeSystem-ICD11.html"><code>http://hl7.org/fhir/sid/icd-11/mms</code></a> where parent  =  <a href="CodeSystem-ICD11.html#ICD11-XM28X5">XM28X5</a></li><li>Include these codes as defined in <a href="CodeSystem-ICD11.html"><code>http://hl7.org/fhir/sid/icd-11/mms</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-ICD11.html#ICD11-XM28X5">XM28X5</a></td><td style="color: #cccccc">Measles vaccines</td></tr></table></li><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/30940-1/">30940-1</a></td><td>Measles virus+Mumps virus+Rubella virus dose count in combination vaccine</td></tr></table></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/836382004">836382004</a></td><td>Measles morbillivirus antigen-containing vaccine product</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VaccineTypes"/>
+  <version value="0.1.0"/>
+  <name value="VaccineTypes"/>
+  <title value="Measles Vaccine Type ValueSet"/>
+  <status value="active"/>
+  <date value="2023-10-25T08:05:26+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Measles Vaccine type Codes, containing the different types of antigens used in vaccine guidelines."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/icd-11/mms"/>
+      <filter>
+        <property value="parent"/>
+        <op value="="/>
+        <value value="XM28X5"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/sid/icd-11/mms"/>
+      <concept>
+        <code value="XM28X5"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="30940-1"/>
+        <display value="Measles virus+Mumps virus+Rubella virus dose count in combination vaccine"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="836382004"/>
+        <display value="Measles morbillivirus antigen-containing vaccine product"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

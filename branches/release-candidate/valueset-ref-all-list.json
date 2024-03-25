@@ -1,0 +1,690 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/Problem/DiagnosisCodes",
+      "title" : "Condition/Problem/Diagnosis Codes",
+      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.161"],
+      "sources" : ["2.16.840.1.113883.4.642.3.161"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationFunctionCodes",
+      "title" : "Immunization Function Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the function a practitioner or organization may play in the immunization event. This value set is provided as a suggestive example.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0443"],
+      "oids" : ["2.16.840.1.113883.4.642.3.995"],
+      "sources" : ["2.16.840.1.113883.4.642.3.995"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-funding-source",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationFundingSource",
+      "title" : "Immunization Funding Source",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/immunization-funding-source"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.293"],
+      "sources" : ["2.16.840.1.113883.4.642.3.293"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-origin",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationOriginCodes",
+      "title" : "Immunization Origin Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the data when the report of the immunization event is not based on information from the person, entity or organization who administered the vaccine. This value set is provided as a suggestive example.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/immunization-origin"],
+      "oids" : ["2.16.840.1.113883.4.642.3.296"],
+      "sources" : ["2.16.840.1.113883.4.642.3.296"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-program-eligibility",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationProgramEligibility",
+      "title" : "Immunization Program Eligibility",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient's eligibility for a vaccination program. This value set is provided as a suggestive example.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/immunization-program-eligibility"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.291"],
+      "sources" : ["2.16.840.1.113883.4.642.3.291"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationReasonCodes",
+      "title" : "Immunization Reason Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose of vaccine was administered. This value set is provided as a suggestive example.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.290"],
+      "sources" : ["2.16.840.1.113883.4.642.3.290"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-route",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationRouteCodes",
+      "title" : "Immunization Route Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the administrative routes used during vaccination. This value set is provided as a suggestive example.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.289"],
+      "sources" : ["2.16.840.1.113883.4.642.3.289"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-site",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CodesForImmunizationSiteOfAdministration",
+      "title" : "Codes for Immunization Site of Administration",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the body site where the vaccination occurred. This value set is provided as a suggestive example.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActSite"],
+      "oids" : ["2.16.840.1.113883.4.642.3.288"],
+      "sources" : ["2.16.840.1.113883.4.642.3.288"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationStatusCodes",
+      "title" : "Immunization Status Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+      "systems" : ["http://hl7.org/fhir/event-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.295"],
+      "sources" : ["2.16.840.1.113883.4.642.3.295"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationStatusReasonCodes",
+      "title" : "Immunization Status Reason Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose of vaccine was not administered. This value set is provided as a suggestive example.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.992"],
+      "sources" : ["2.16.840.1.113883.4.642.3.992"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationSubpotentReason",
+      "title" : "Immunization Subpotent Reason",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.993"],
+      "sources" : ["2.16.840.1.113883.4.642.3.993"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-target-disease",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationTargetDiseaseCodes",
+      "title" : "Immunization Target Disease Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the disease that the dose is being administered against. This value set is provided as a suggestive example and includes the SNOMED CT concepts from the 64572001 (Disease) hierarchy.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1047"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1047"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest",
+      "StructureDefinition-SGImmunization.html" : "SGImmunization",
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.375"],
+      "sources" : ["2.16.840.1.113883.4.642.3.375"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTFormCodes",
+      "title" : "SNOMED CT Form Codes",
+      "description" : "This value set includes all dose form codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.374"],
+      "sources" : ["2.16.840.1.113883.4.642.3.374"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Medication Status Codes",
+      "title" : "Medication  status  codes",
+      "description" : "Medication Status Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medication-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.376"],
+      "sources" : ["2.16.840.1.113883.4.642.3.376"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProduct.html" : "SGVaccineProduct"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Category Codes",
+      "title" : "Medication request  category  codes",
+      "description" : "MedicationRequest Category Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1322"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1322"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Course of Therapy Codes",
+      "title" : "Medication request  course of  therapy  codes",
+      "description" : "MedicationRequest Course of Therapy Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1326"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1326"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Intent",
+      "title" : "Medication request  intent",
+      "description" : "MedicationRequest Intent Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1321"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1321"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationrequest Status",
+      "title" : "Medicationrequest  status",
+      "description" : "MedicationRequest Status Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1320"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1320"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Status Reason Codes",
+      "title" : "Medication request  status  reason  codes",
+      "description" : "MedicationRequest Status Reason Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1324"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1324"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedurePerformerRoleCodes",
+      "title" : "Procedure Performer Role Codes",
+      "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.433"],
+      "sources" : ["2.16.840.1.113883.4.642.3.433"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "Request priority",
+      "description" : "The clinical priority of a diagnostic order.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/vaccine-code",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "VaccineAdministeredValueSet",
+      "title" : "Vaccine Administered Value Set",
+      "description" : "This identifies the vaccine substance administered - CVX codes.",
+      "systems" : ["urn:oid:1.2.36.1.2001.1005.17", "http://hl7.org/fhir/sid/cvx"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.22"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.22"],
+      "uses" : {
+      },
+      "StructureDefinition-SGImmunization.html" : "SGImmunization"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/ARVDrugs-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ARVDrugsvalues",
+      "title" : "ARV Drugs values",
+      "description" : "Codes representing ARV Drugs values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/AllVaccineTypes",
+      "version" : null,
+      "status" : "active",
+      "name" : "AllVaccineTypes",
+      "title" : "Vaccine Type ValueSet",
+      "description" : "Vaccine type Codes, containing the different types of antigens used in vaccine guidelines.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/AllVaccineTypes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "AllVaccineTypes",
+      "title" : "Vaccine Type ValueSet",
+      "description" : "Vaccine type Codes, containing the different types of antigens used in vaccine guidelines.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/Birthweight-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Birthweightvalues",
+      "title" : "Birthweight valueset",
+      "description" : "Codes representing Birthweight values",
+      "systems" : ["http://loinc.org", "http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/HIVstatus-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "HIVstatusvalues",
+      "title" : "HIV status values",
+      "description" : "Codes representing HIV status values",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.C.DE5",
+      "version" : null,
+      "status" : "active",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ.C.DE5 ValueSet for Sex",
+      "description" : "ValueSet for Sex for IMMZ.C.DE5.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.C.DE5",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ.C.DE5 ValueSet for Sex",
+      "description" : "ValueSet for Sex for IMMZ.C.DE5.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZCRegisterClient.html" : "IMMZ.C Register Client"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE10",
+      "version" : null,
+      "status" : "active",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "description" : "ValueSet for HIV Status for IMMZ.D1.DE10.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE10",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "description" : "ValueSet for HIV Status for IMMZ.D1.DE10.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZD1ClientHistoryMeasles.html" : "IMMZ.D1 Capture Client History for Measles"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE1VS",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZD1DE1VS",
+      "title" : "IMMZ.D1.DE1 CodeSystem for Immunization status",
+      "description" : "CodeSystem for IMMZ.D1.DE1 Immunization status",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1.DE1"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZDUpdateVaccinationRecord.html" : "IMMZ.D Update Vaccination Record"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE5VS",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZD1DE5VS",
+      "title" : "IMMZ.D1.DE5 CodeSystem for Reason Not Done",
+      "description" : "CodeSystem for IMMZ.D1.DE5 Reason Not Done",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1.DE5"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZDUpdateVaccinationRecord.html" : "IMMZ.D Update Vaccination Record"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D4.DE161",
+      "version" : null,
+      "status" : "active",
+      "name" : "IMMZ_D4_DE161",
+      "title" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "description" : "ValueSet for Potential Contraindications for IMMZ.D4.DE161.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D4.DE161",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_D4_DE161",
+      "title" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "description" : "ValueSet for Potential Contraindications for IMMZ.D4.DE161.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZD4CheckContraindicationsMeasles.html" : "IMMZ.D4 Check Contraindications for Measles"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE9",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_Z_DE9",
+      "title" : "IMMZ.Z.DE10 ValueSet for Measles Vaccines",
+      "description" : "ValueSet for Measles Vaccines for IMMZ.Z.DE9.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZD1ClientHistoryMeasles.html" : "IMMZ.D1 Capture Client History for Measles"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/Immunocompromised-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Immunocompromisedvalues",
+      "title" : "Immunocompromised valueset",
+      "description" : "Codes representing Immunocompromised values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/LiveAttenuatedVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "LiveAttenuatedVaccines",
+      "title" : "Set of live attenuated vaccines",
+      "description" : "Codes representing live attenuated vaccines",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/Negativetestresult-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Negativetestresultvalues",
+      "title" : "Negative Test Results",
+      "description" : "Codes representing negative test result values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/PositiveTestResult-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PositiveTestResultvalues",
+      "title" : "Positive Test Result valuest",
+      "description" : "Codes representing Positive Test Result values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/SGImmunizationStatusCodes",
+      "version" : null,
+      "status" : "draft",
+      "name" : "SGImmunizationStatusCodes",
+      "title" : "Immunization Status Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+      "systems" : ["http://hl7.org/fhir/event-status"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/SGImmunizationStatusCodes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "SGImmunizationStatusCodes",
+      "title" : "Immunization Status Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+      "systems" : ["http://hl7.org/fhir/event-status"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/VSMeaslesVaccineProducts",
+      "version" : null,
+      "status" : "draft",
+      "name" : "VSMeaslesVaccineProducts",
+      "title" : "MeaslesVaccine Products ValueSet",
+      "description" : "Vaccine Product Codes - representing the codes of the products currently available.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/VSMeaslesVaccineProducts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VSMeaslesVaccineProducts",
+      "title" : "MeaslesVaccine Products ValueSet",
+      "description" : "Vaccine Product Codes - representing the codes of the products currently available.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/VaccineTypes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineTypes",
+      "title" : "Measles Vaccine Type ValueSet",
+      "description" : "Measles Vaccine type Codes, containing the different types of antigens used in vaccine guidelines.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGMedicationClassification.html" : "SGMedicationClassification"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/pregnancystatus-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "pregnancystatus-values",
+      "title" : "Pregnancy status values",
+      "description" : "Codes representing possible values for the Pregnancy status element",
+      "systems" : ["http://loinc.org", "http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/sgcountry",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "SGCountryValueSet",
+      "title" : "Country ValueSet",
+      "description" : "This value set defines a base set of codes for countries.   \n\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZDUpdateVaccinationRecord.html" : "IMMZ.D Update Vaccination Record"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActSubstanceAdminSubstitutionCode",
+      "title" : "ActSubstanceAdminSubstitutionCode",
+      "description" : "***No description***",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.16621"],
+      "sources" : ["2.16.840.1.113883.1.11.16621"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "SubstanceAdminSubstitutionReason",
+      "title" : "SubstanceAdminSubstitutionReason",
+      "description" : "***No description***",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+      "oids" : ["2.16.840.1.113883.1.11.19377"],
+      "sources" : ["2.16.840.1.113883.1.11.19377"],
+      "uses" : {
+      },
+      "StructureDefinition-SGVaccineProposal.html" : "SGVaccineProposal",
+      "StructureDefinition-SGVaccineRequest.html" : "SGVaccineRequest"
+    }
+  ]
+}

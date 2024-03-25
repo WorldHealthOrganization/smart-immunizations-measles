@@ -1,0 +1,551 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>TestScript - Evaluate Measure - IND40 - XML Representation - WHO SMART Guidelines - Measles Immunization v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.97"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.97"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART Guidelines - Measles Immunization</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b>TestScript - Evaluate Measure - IND40</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">WHO SMART Guidelines - Measles Immunization, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://smart.who.int/immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="TestScript-testscript-evaluate-measure-ind-40.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestScript-testscript-evaluate-measure-ind-40.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestScript-testscript-evaluate-measure-ind-40.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: TestScript - Evaluate Measure - IND40 - XML Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2017-01-18
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="TestScript-testscript-evaluate-measure-ind-40.xml" no-download="true">Raw xml</a> | <a href="TestScript-testscript-evaluate-measure-ind-40.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+
+&lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript">TestScript</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;testscript-evaluate-measure-ind-40&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: TestScript&lt;/b&gt;&lt;a name=&quot;testscript-evaluate-measure-ind-40&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hctestscript-evaluate-measure-ind-40&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Resource TestScript &amp;quot;testscript-evaluate-measure-ind-40&amp;quot; &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;code&gt;http://smart.who.int/immunizations/TestScript/testscript-smart-immunizations-measles-ind08-d2&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 0.1.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: TestScriptEvaluateIND40&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: TestScript - Evaluate Measure - IND40&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: draft&lt;/p&gt;&lt;p&gt;&lt;b&gt;experimental&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2017-01-18&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: WHO&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: WHO: &lt;a href=&quot;http://who.int&quot;&gt;http://who.int&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: TestScript for Measles IND 40&lt;/p&gt;&lt;p&gt;&lt;b&gt;purpose&lt;/b&gt;: Test Measles immmunization indicator 40&lt;/p&gt;&lt;p&gt;&lt;b&gt;copyright&lt;/b&gt;: © 2024+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;fixture&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;&lt;/p&gt;patient-P123456&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;autocreate&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;autodelete&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: &lt;a href=&quot;Patient-P123456.html&quot;&gt;Patient/P123456: Patient P123456&lt;/a&gt; &amp;quot; PATIENT&amp;quot;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;fixture&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;&lt;/p&gt;Immunization1&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;autocreate&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;autodelete&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: &lt;a href=&quot;Immunization-Immunization1.html&quot;&gt;Immunization/Immunization1: Patient P123456 - first measles immunization&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;fixture&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;&lt;/p&gt;Immunization2&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;autocreate&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;autodelete&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: &lt;a href=&quot;Immunization-Immunization2.html&quot;&gt;Immunization/Immunization2: Patient P123456 - second measles immunization&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;variable&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: femaleCountExpression&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Evaluate the returned total of females with the expected vaccine coverage&lt;/p&gt;&lt;p&gt;&lt;b&gt;expression&lt;/b&gt;: MeasureReport.group.stratifier.where(id='IMMZ.IND.08.S2').stratum.where(value.text='female').population.where(id='IMMZ.IND.08.N').count.toInteger()&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;variable&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: cqlserverbase&lt;/p&gt;&lt;p&gt;&lt;b&gt;defaultValue&lt;/b&gt;: http://localhost:8080/fhir&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: URL for the CQL server&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;variable&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: expectedCount&lt;/p&gt;&lt;p&gt;&lt;b&gt;defaultValue&lt;/b&gt;: 1&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Expected patient count for mealles immunization indicator 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;setup&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Resource&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Accept&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;EncodeRequestUrl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourceId&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')&lt;/td&gt;&lt;td&gt;Patient&lt;/td&gt;&lt;td&gt;POST resources to server.&lt;/td&gt;&lt;td&gt;json&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td&gt;patient-P123456&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Response&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;WarningOnly&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Confirm that results were POSTed OK.&lt;/td&gt;&lt;td&gt;created&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Resource&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Accept&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;EncodeRequestUrl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourceId&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')&lt;/td&gt;&lt;td&gt;Immunization&lt;/td&gt;&lt;td&gt;POST resources to server.&lt;/td&gt;&lt;td&gt;json&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td&gt;Immunization1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Response&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;WarningOnly&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Confirm that results was POSTed OK.&lt;/td&gt;&lt;td&gt;created&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Resource&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Accept&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;EncodeRequestUrl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourceId&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')&lt;/td&gt;&lt;td&gt;Immunization&lt;/td&gt;&lt;td&gt;POST resources to server.&lt;/td&gt;&lt;td&gt;json&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td&gt;Immunization2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Response&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;WarningOnly&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Confirm that results was POSTed OK.&lt;/td&gt;&lt;td&gt;created&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;test&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;&lt;/p&gt;01-Evaluate&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Evaluate the measure&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Evaluate the measure.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Accept&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;EncodeRequestUrl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ResponseId&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourceId&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;evaluate (Details: http://hl7.org/fhir/restful-interaction code evaluate = 'evaluate', stated as 'null')&lt;/td&gt;&lt;td&gt;Send the request for the Measure evaluation.&lt;/td&gt;&lt;td&gt;json&lt;/td&gt;&lt;td&gt;json&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td&gt;PatientCreateResponse&lt;/td&gt;&lt;td&gt;fixture-patient-create&lt;/td&gt;&lt;td&gt;${cqlserverbase}/Measure/IMMZIND40/$evaluate-measure?periodStart=2000-01-01&amp;amp;periodEnd=2024-12-31&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Response&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;WarningOnly&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Confirm that the returned HTTP status is 201(Created).&lt;/td&gt;&lt;td&gt;okay&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Expression&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;WarningOnly&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Confirm that the returned result evaluates to the expected value&lt;/td&gt;&lt;td&gt;${femaleCountExpression}=$#{expectedCount}&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://smart.who.int/immunizations/TestScript/testscript-smart-immunizations-measles-ind08-d2&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;TestScriptEvaluateIND40&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;TestScript - Evaluate Measure - IND40&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2017-01-18&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;WHO&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;WHO&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://who.int&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;TestScript for Measles IND 40&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.purpose">purpose</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Test Measles immmunization indicator 40&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.copyright">copyright</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;© 2024+&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture">fixture</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;patient-P123456&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.autocreate">autocreate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.autodelete">autodelete</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.resource">resource</a>&gt;<a href="Patient-P123456.html" style="color: Maroon">&#x1F517;</a> 
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/P123456&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient P123456&quot;/&gt;
+    &lt;/resource&gt;
+  &lt;/fixture&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture">fixture</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Immunization1&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.autocreate">autocreate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.autodelete">autodelete</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.resource">resource</a>&gt;<a href="Immunization-Immunization1.html" style="color: Maroon">&#x1F517;</a> 
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Immunization/Immunization1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient P123456 - first measles immunization&quot;/&gt;
+    &lt;/resource&gt;
+  &lt;/fixture&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture">fixture</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Immunization2&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.autocreate">autocreate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.autodelete">autodelete</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.fixture.resource">resource</a>&gt;<a href="Immunization-Immunization2.html" style="color: Maroon">&#x1F517;</a> 
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Immunization/Immunization2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient P123456 - second measles immunization&quot;/&gt;
+    &lt;/resource&gt;
+  &lt;/fixture&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable">variable</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;femaleCountExpression&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.description">description</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Evaluate the returned total of females with the expected vaccine coverage&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.expression">expression</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MeasureReport.group.stratifier.where(id='IMMZ.IND.08.S2').stratum.where(value.text='female').population.where(id='IMMZ.IND.08.N').count.toInteger()&quot;/&gt;
+  &lt;/variable&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable">variable</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cqlserverbase&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.defaultValue">defaultValue</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://localhost:8080/fhir&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;URL for the CQL server&quot;/&gt;
+  &lt;/variable&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable">variable</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;expectedCount&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.defaultValue">defaultValue</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.variable.description">description</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Expected patient count for mealles immunization indicator 40&quot;/&gt;
+  &lt;/variable&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup">setup</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action">action</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation">operation</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.type">type</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/restful-interaction&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;post&quot;/&gt;
+        &lt;/type&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;POST resources to server.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.accept">accept</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.encodeRequestUrl">encodeRequestUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.sourceId">sourceId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;patient-P123456&quot;/&gt;
+      &lt;/operation&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert">assert</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Confirm that results were POSTed OK.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.response">response</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;created&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.warningOnly">warningOnly</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;/assert&gt;
+    &lt;/action&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action">action</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation">operation</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.type">type</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/restful-interaction&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;post&quot;/&gt;
+        &lt;/type&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Immunization&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;POST resources to server.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.accept">accept</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.encodeRequestUrl">encodeRequestUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.sourceId">sourceId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Immunization1&quot;/&gt;
+      &lt;/operation&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert">assert</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Confirm that results was POSTed OK.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.response">response</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;created&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.warningOnly">warningOnly</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;/assert&gt;
+    &lt;/action&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action">action</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation">operation</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.type">type</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/restful-interaction&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;post&quot;/&gt;
+        &lt;/type&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Immunization&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;POST resources to server.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.accept">accept</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.encodeRequestUrl">encodeRequestUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.sourceId">sourceId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Immunization2&quot;/&gt;
+      &lt;/operation&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert">assert</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Confirm that results was POSTed OK.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.response">response</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;created&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.warningOnly">warningOnly</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;/assert&gt;
+    &lt;/action&gt;
+  &lt;/setup&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test">test</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;01-Evaluate&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Evaluate the measure&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Evaluate the measure.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.action">action</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.action.operation">operation</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.type">type</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/restful-interaction&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;evaluate&quot;/&gt;
+        &lt;/type&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Send the request for the Measure evaluation.&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.accept">accept</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.encodeRequestUrl">encodeRequestUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.responseId">responseId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;PatientCreateResponse&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.sourceId">sourceId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;fixture-patient-create&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.operation.url">url</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;${cqlserverbase}/Measure/IMMZIND40/$evaluate-measure?periodStart=2000-01-01&amp;amp;periodEnd=2024-12-31&quot;/&gt;
+      &lt;/operation&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.action.assert">assert</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.description">description</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Confirm that the returned HTTP status is 201(Created).&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.response">response</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;okay&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.warningOnly">warningOnly</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;/assert&gt;
+    &lt;/action&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.action">action</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.test.action.assert">assert</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.description">description</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Confirm that the returned result evaluates to the expected value&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.expression">expression</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;${femaleCountExpression}=$#{expectedCount}&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/testscript.html#TestScript.setup.action.assert.warningOnly">warningOnly</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;/assert&gt;
+    &lt;/action&gt;
+  &lt;/test&gt;
+&lt;/TestScript&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 22, 2024 16:34+0000">2024-03-22</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZ.D1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">DE80<a name=\"IMMZ.D1-DE80\"> </a></td><td>Dose 0 administered</td><td>Indicates if the client has received a birth dose and/or supplementary dose</td></tr><tr><td style=\"white-space:nowrap\">DE8<a name=\"IMMZ.D1-DE8\"> </a></td><td>Completed the primary vaccination series</td><td>Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen.</td></tr><tr><td style=\"white-space:nowrap\">DE81<a name=\"IMMZ.D1-DE81\"> </a></td><td>Date when primary vaccination series was completed</td><td>The date when the client completed the primary vaccination series (per product/antigen)</td></tr><tr><td style=\"white-space:nowrap\">DE10<a name=\"IMMZ.D1-DE10\"> </a></td><td>HIV status</td><td>The current human immunodeficiency virus (HIV) status of the client</td></tr><tr><td style=\"white-space:nowrap\">DE11<a name=\"IMMZ.D1-DE11\"> </a></td><td>HIV-positive</td><td>The client is known to be HIV positive</td></tr><tr><td style=\"white-space:nowrap\">DE12<a name=\"IMMZ.D1-DE12\"> </a></td><td>HIV-negative</td><td>The client is known to be HIV negative</td></tr><tr><td style=\"white-space:nowrap\">DE13<a name=\"IMMZ.D1-DE13\"> </a></td><td>Unknown</td><td>The client's HIV status is unknown</td></tr><tr><td style=\"white-space:nowrap\">DE15<a name=\"IMMZ.D1-DE15\"> </a></td><td>Preterm birth</td><td>The infant was preterm; the mother gave birth to the infant when gestational age was less than 37 weeks</td></tr><tr><td style=\"white-space:nowrap\">DE92<a name=\"IMMZ.D1-DE92\"> </a></td><td>Severely immunosuppressed</td><td>The client is known to be severely immunocompromised or immunosuppressed</td></tr><tr><td style=\"white-space:nowrap\">DE49<a name=\"IMMZ.D1-DE49\"> </a></td><td>ART start date</td><td>The date on which the client started or restarted antiretroviral therapy (ART)</td></tr><tr><td style=\"white-space:nowrap\">DE19<a name=\"IMMZ.D1-DE19\"> </a></td><td>Vaccine type</td><td>Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element</td></tr><tr><td style=\"white-space:nowrap\">DE20<a name=\"IMMZ.D1-DE20\"> </a></td><td>Date and time of vaccination</td><td>Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZ_D1"] ; # 
+  fhir:title [ fhir:v "IMMZ.D1 CodeSystem for Data Elements"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-23T19:19:30+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem for IMMZ.C Data Elements"] ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "DE80" ] ;
+     fhir:display [ fhir:v "Dose 0 administered" ] ;
+     fhir:definition [ fhir:v "Indicates if the client has received a birth dose and/or supplementary dose" ]
+  ] [
+     fhir:code [ fhir:v "DE8" ] ;
+     fhir:display [ fhir:v "Completed the primary vaccination series" ] ;
+     fhir:definition [ fhir:v "Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen." ]
+  ] [
+     fhir:code [ fhir:v "DE81" ] ;
+     fhir:display [ fhir:v "Date when primary vaccination series was completed" ] ;
+     fhir:definition [ fhir:v "The date when the client completed the primary vaccination series (per product/antigen)" ]
+  ] [
+     fhir:code [ fhir:v "DE10" ] ;
+     fhir:display [ fhir:v "HIV status" ] ;
+     fhir:definition [ fhir:v "The current human immunodeficiency virus (HIV) status of the client" ]
+  ] [
+     fhir:code [ fhir:v "DE11" ] ;
+     fhir:display [ fhir:v "HIV-positive" ] ;
+     fhir:definition [ fhir:v "The client is known to be HIV positive" ]
+  ] [
+     fhir:code [ fhir:v "DE12" ] ;
+     fhir:display [ fhir:v "HIV-negative" ] ;
+     fhir:definition [ fhir:v "The client is known to be HIV negative" ]
+  ] [
+     fhir:code [ fhir:v "DE13" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "The client's HIV status is unknown" ]
+  ] [
+     fhir:code [ fhir:v "DE15" ] ;
+     fhir:display [ fhir:v "Preterm birth" ] ;
+     fhir:definition [ fhir:v "The infant was preterm; the mother gave birth to the infant when gestational age was less than 37 weeks" ]
+  ] [
+     fhir:code [ fhir:v "DE92" ] ;
+     fhir:display [ fhir:v "Severely immunosuppressed" ] ;
+     fhir:definition [ fhir:v "The client is known to be severely immunocompromised or immunosuppressed" ]
+  ] [
+     fhir:code [ fhir:v "DE49" ] ;
+     fhir:display [ fhir:v "ART start date" ] ;
+     fhir:definition [ fhir:v "The date on which the client started or restarted antiretroviral therapy (ART)" ]
+  ] [
+     fhir:code [ fhir:v "DE19" ] ;
+     fhir:display [ fhir:v "Vaccine type" ] ;
+     fhir:definition [ fhir:v "Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element" ]
+  ] [
+     fhir:code [ fhir:v "DE20" ] ;
+     fhir:display [ fhir:v "Date and time of vaccination" ] ;
+     fhir:definition [ fhir:v "Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

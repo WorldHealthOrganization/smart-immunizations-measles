@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="IMMZ.D1.DE1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-insensitive code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE1</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE2<a name="IMMZ.D1.DE1-IMMZ.46D.46DE2"> </a></td><td>Completed</td><td>The immunization event was successfully carried out as intended</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE3<a name="IMMZ.D1.DE1-IMMZ.46D.46DE3"> </a></td><td>Entered in error</td><td>Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it</td></tr><tr><td style="white-space:nowrap">IMMZ.D.DE4<a name="IMMZ.D1.DE1-IMMZ.46D.46DE4"> </a></td><td>Not Done</td><td>Planned immunization event was not carried out for some reason</td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE1"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ_D1"/>
+  <title value="IMMZ.D1.DE1 CodeSystem for Immunization status"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-10-24T11:42:42+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem for IMMZ.D1.DE1 Immunization status"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="IMMZ.D.DE2"/>
+    <display value="Completed"/>
+    <definition value="The immunization event was successfully carried out as intended"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE3"/>
+    <display value="Entered in error"/>
+    <definition value="Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it"/>
+  </concept>
+  <concept>
+    <code value="IMMZ.D.DE4"/>
+    <display value="Not Done"/>
+    <definition value="Planned immunization event was not carried out for some reason"/>
+  </concept>
+</CodeSystem>

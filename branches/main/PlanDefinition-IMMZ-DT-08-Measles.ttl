@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://worldhealthorganization.github.io/smart-immunizations-measles/PlanDefinition/IMMZ-DT-08-Measles> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZ-DT-08-Measles"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"IMMZ-DT-08-Measles\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;IMMZ-DT-08-Measles&quot; </p></div><p><b>url</b>: <code>http://worldhealthorganization.github.io/smart-immunizations-measles/PlanDefinition/IMMZ-DT-08-Measles</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZ.DT.08.Measles</p><p><b>title</b>: IMMZ.DT.08.Measles</p><p><b>status</b>: draft</p><p><b>date</b>: 2023-10-10 15:26:25+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: If the child or patient has not been given MCV1 (at 9 months) and MCV2 (between 15-18 months) vaccination</p><p><b>library</b>: <a href=\"http://worldhealthorganization.github.io/smart-immunizations-measles/Library/IMMZDT08\">http://worldhealthorganization.github.io/smart-immunizations-measles/Library/IMMZDT08</a></p><blockquote><p><b>action</b></p><p><b>title</b>: Immunize patient for Measles</p><p><b>description</b>: Provide measles immunization</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Provision of the MCV dose</td><td>text/cql-identifier</td><td>Provision of the MCV dose</td></tr></table></blockquote><p><b>definition</b>: <a href=\"http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR\">http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR</a></p></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://worldhealthorganization.github.io/smart-immunizations-measles/PlanDefinition/IMMZ-DT-08-Measles"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZ.DT.08.Measles"] ; # 
+  fhir:title [ fhir:v "IMMZ.DT.08.Measles"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2023-10-10T15:26:25+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "If the child or patient has not been given MCV1 (at 9 months) and MCV2 (between 15-18 months) vaccination"] ; # 
+  fhir:library ( [
+     fhir:v "http://worldhealthorganization.github.io/smart-immunizations-measles/Library/IMMZDT08"^^xsd:anyURI ;
+     fhir:link <http://worldhealthorganization.github.io/smart-immunizations-measles/Library/IMMZDT08>
+  ] ) ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "Immunize patient for Measles" ] ;
+     fhir:description [ fhir:v "Provide measles immunization" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "Provision of the MCV dose" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Provision of the MCV dose" ]
+       ]
+     ] ) ;
+     fhir:definition [
+       fhir:v "http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR"^^xsd:anyURI ;
+       fhir:link <http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

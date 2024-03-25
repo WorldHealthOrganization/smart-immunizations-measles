@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "LiveAttenuatedVaccines"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/sid/icd-11</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM8142</td><td/></tr><tr><td>XM72A0</td><td/></tr><tr><td>XM47S0</td><td/></tr><tr><td>XM8L15</td><td/></tr><tr><td>XM8TF3</td><td/></tr><tr><td>XM21H2</td><td/></tr><tr><td>XM4AJ8</td><td/></tr><tr><td>XM9439</td><td/></tr><tr><td>XM2340</td><td/></tr><tr><td>XM79H3</td><td/></tr><tr><td>XM0VX8</td><td/></tr><tr><td>XM0KZ1</td><td/></tr><tr><td>XM4GV0</td><td/></tr><tr><td>XM9PS9</td><td/></tr><tr><td>XM3B09</td><td/></tr><tr><td>XM5V64</td><td/></tr><tr><td>XM33K4</td><td/></tr><tr><td>XM0NS8</td><td/></tr><tr><td>XM3418</td><td/></tr><tr><td>XM5DF6</td><td/></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "LiveAttenuatedVaccines"] ; # 
+  fhir:title [ fhir:v "Set of live attenuated vaccines"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-24T20:15:55+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes representing live attenuated vaccines"] ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-11"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "XM8142" ]
+       ] [
+         fhir:code [ fhir:v "XM72A0" ]
+       ] [
+         fhir:code [ fhir:v "XM47S0" ]
+       ] [
+         fhir:code [ fhir:v "XM8L15" ]
+       ] [
+         fhir:code [ fhir:v "XM8TF3" ]
+       ] [
+         fhir:code [ fhir:v "XM21H2" ]
+       ] [
+         fhir:code [ fhir:v "XM4AJ8" ]
+       ] [
+         fhir:code [ fhir:v "XM9439" ]
+       ] [
+         fhir:code [ fhir:v "XM2340" ]
+       ] [
+         fhir:code [ fhir:v "XM79H3" ]
+       ] [
+         fhir:code [ fhir:v "XM0VX8" ]
+       ] [
+         fhir:code [ fhir:v "XM0KZ1" ]
+       ] [
+         fhir:code [ fhir:v "XM4GV0" ]
+       ] [
+         fhir:code [ fhir:v "XM9PS9" ]
+       ] [
+         fhir:code [ fhir:v "XM3B09" ]
+       ] [
+         fhir:code [ fhir:v "XM5V64" ]
+       ] [
+         fhir:code [ fhir:v "XM33K4" ]
+       ] [
+         fhir:code [ fhir:v "XM0NS8" ]
+       ] [
+         fhir:code [ fhir:v "XM3418" ]
+       ] [
+         fhir:code [ fhir:v "XM5DF6" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

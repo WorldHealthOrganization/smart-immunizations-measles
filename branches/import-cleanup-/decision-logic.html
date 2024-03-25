@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Decision-support logic -  v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.6"}
+    h3,h4,h5,h6{--heading-prefix:"2.6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='business-requirements.html'><b>Business Requirements</b></a></li><li><b>Decision-support logic</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART, published by WHO. This is not an authorized publication; it is the continuous build for version 0.1.0). This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://smart.who.int/ig/smart-immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Decision-support logic</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#decision-support-logic-overview" id="markdown-toc-decision-support-logic-overview">Decision Support Logic Overview</a></li>
+  <li><a href="#decision-logic-tables" id="markdown-toc-decision-logic-tables">Decision Logic Tables</a></li>
+</ul>
+
+</div>
+<p>This page describes the decision support logic included in the WHO
+Digital Adaptation Kit (DAK): SMART Guidelines for Immunizations (link forthcoming).</p>
+
+<p>The decision-support logic component provides the decision logic and
+algorithms, as well as the scheduling of services, in accordance with
+WHO guidelines. The decision logic and algorithms in this implementation
+guide deconstruct the recommendations within the immunization guidelines
+and guidance into a machine readable format that clearly labels the
+inputs and outputs that would be operationalized in a digital
+decision-support system, such as an electronic immunization registry
+(EIR).</p>
+
+<h3 id="decision-support-logic-overview">Decision Support Logic Overview</h3>
+<p>The table below provides an overview of the decision-support tables and
+algorithms for the different business processes in an EIR. The structure
+of the decision-support tables is based on an adaptation of the Decision
+Model and Notation (DMN™), an industry standard for modelling and
+executing decision logic. These decision-support tables detail the
+business rules, data inputs and outputs to support EIR business
+processes.</p>
+
+<p><strong>Overview of decision support tables for vaccine delivery (Measles excerpt)</strong></p>
+
+<div style=" width: 100%;">
+  <table border="1" class="dataframe table table-striped table-bordered">
+    <thead>
+      <tr style="text-align: left;">
+        <th>Activity ID &amp; Activity Name</th>
+        <th>Decision Table ID</th>
+        <th>Decision Table Description</th>
+        <th>Reference/Source</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: left; vertical-align: top">
+      <tr>
+        <td rowspan="22">IMMZ.G2.Determine required vaccinations if any</td>
+        <td>IMMZ.DT.01.BCG</td>
+        <td>If child or person has not been vaccinated, give BCG vaccine as soon as possible after birth</td>
+        <td rowspan="22">WHO recommendations for routine immunization - summary tables: https://www.who.int/teams/immunization-vaccines-and-biologicals/policies/who-recommendations-for-routine-immunization---summary-tables</td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td>...</td>
+      </tr>
+      <tr>
+        <td>IMMZ.DT.08.Measles</td>
+        <td>If the child or client has not been given MCV1 (usually at 9 months) and MCV2 (usually between 15-18 months) vaccination</td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td>...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="decision-logic-tables">Decision Logic Tables</h3>
+
+<h4 id="immzdt08measles-determine-required-vaccinations---measles-example">IMMZ.DT.08.Measles Determine required vaccinations - Measles Example</h4>
+
+<table class="table-bordered table-sm">
+  <thead>
+    <tr>
+      <th><a href="#">Number of birth doses administered</a></th>
+      <th><a href="#">Age in Months</a></th>
+      <th><a href="#">Number of weeks since last dose</a></th>
+      <th><a href="#">Number of doses administered</a></th>
+      <th><a href="#">HIV status</a></th>
+      <th><a href="#">Patient is currently receiving ART</a></th>
+      <th><a href="#">Patient is currently pregnant</a></th>
+      <th><a href="#">Immune reconstitution was achieved</a></th>
+      <th><a href="#">CD4+ T Lymphocyte monitoring is available</a></th>
+      <th><a href="#">Number of months since HAART was initiated</a></th>
+      <th><a href="#">Current vaccination status</a></th>
+      <th>Decision</th>
+      <th>Annotation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>&gt;6 and &lt;9</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>Positive</td>
+      <td>FALSE</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>No doses</td>
+      <td>Should vaccinate patient for measles (supplimentary)</td>
+      <td><a href="#note1">See note 1</a></td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>&gt;=9</td>
+      <td>N/A</td>
+      <td>0</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>FALSE</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>No doses</td>
+      <td>Should vaccinate patient for measles</td>
+      <td><a href="#note2">See note 2</a></td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>&gt;=12</td>
+      <td>N/A</td>
+      <td>0</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>FALSE</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>No doses</td>
+      <td>Should vaccinate patient for measles</td>
+      <td><a href="#note3">See note 3</a></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>&gt;=15</td>
+      <td>&gt;=4</td>
+      <td>1</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>FALSE</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>1 Dose</td>
+      <td>Should vaccinate patient for measles</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>Positive</td>
+      <td>TRUE</td>
+      <td>FALSE</td>
+      <td>TRUE</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>Supplimentary</td>
+      <td>Should vaccinate patient for measles supplimentary dose</td>
+      <td><a href="#note4">See note 4</a></td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>Positive</td>
+      <td>TRUE</td>
+      <td>FALSE</td>
+      <td>N/A</td>
+      <td>FALSE</td>
+      <td>&gt;=6 and &lt;=12</td>
+      <td>Supplimentary</td>
+      <td>Should vaccinate patient for measles supplimentary dose</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a name="note1"></a> Note 1: Refer to the first note in the CSV data for specifics on the supplementary dose.<br />
+<a name="note2"></a> Note 2: This dose is applicable if the patient is in a setting where there is high transmission of Measles.<br />
+<a name="note3"></a> Note 3: This dose is applicable if the patient is in a setting where there is low transmission of Measles.<br />
+<a name="note4"></a> Note 4: This dose is applicable if immune reconstitution was achieved for the individual following HAART.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package who.fhir.smart-immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 24, 2023 11:42+0000">2023-10-24</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/ig/smart-immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
