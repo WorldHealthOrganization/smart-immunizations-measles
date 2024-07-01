@@ -1,0 +1,1691 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "t" : [ {
+            "name" : "DecisionID",
+            "value" : "IMMZ.D2.DT.Measles.Low transmission"
+         }, {
+            "name" : "BusinessRule",
+            "value" : "Determine if the client is due for a measles vaccination according to the national immunization schedule"
+         }, {
+            "name" : "Trigger",
+            "value" : "IMMZ.D2 Determine required vaccination(s) if any"
+         }, {
+            "name" : "Description",
+            "value" : "Countries with low levels of measles transmission (countries that provide first dose of MCV at 12 months and second dose of MCV at 15 months)"
+         } ],
+         "s" : {
+            "r" : "108",
+            "s" : [ {
+               "value" : [ "/*\n@DecisionID: IMMZ.D2.DT.Measles.Low transmission\n@BusinessRule: Determine if the client is due for a measles vaccination according to the national immunization schedule\n@Trigger: IMMZ.D2 Determine required vaccination(s) if any\n@Description: Countries with low levels of measles transmission (countries that provide first dose of MCV at 12 months and second dose of MCV at 15 months)\n*/\n\n","library IMMZD2DTMeaslesLTLogic" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZD2DTMeaslesLTLogic",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "10:1-10:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "12:1-12:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "14:1-14:27",
+            "localIdentifier" : "WC",
+            "path" : "http://smart.who.int/immunizations-measles/WHOCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "WHOCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","WC" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "15:1-15:41",
+            "localIdentifier" : "Logic",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZD2DTMeaslesLogic",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZD2DTMeaslesLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Logic" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "6",
+            "locator" : "17:1-17:31",
+            "name" : "Today",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","parameter ","Today"," default " ]
+                  }, {
+                     "r" : "5",
+                     "s" : [ {
+                        "value" : [ "Today","()" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "5",
+               "locator" : "17:25-17:31",
+               "type" : "Today"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "19:1-19:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "19:1-19:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "19:1-19:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "9",
+            "locator" : "25:1-26:58",
+            "name" : "Measles Routine Immunization Schedule Incomplete",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "9",
+                  "s" : [ {
+                     "value" : [ "/*\nPlanDefinition Applicability Expressions\n*/\n\n","define ","\"Measles Routine Immunization Schedule Incomplete\"",":\n  " ]
+                  }, {
+                     "r" : "8",
+                     "s" : [ {
+                        "r" : "7",
+                        "s" : [ {
+                           "value" : [ "Logic" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "8",
+                        "s" : [ {
+                           "value" : [ "\"Measles Routine Immunization Schedule Incomplete\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "8",
+               "locator" : "26:3-26:58",
+               "name" : "Measles Routine Immunization Schedule Incomplete",
+               "libraryName" : "Logic",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "14",
+            "locator" : "28:1-29:57",
+            "name" : "No Primary Series Doses Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "14",
+                  "s" : [ {
+                     "value" : [ "","define ","\"No Primary Series Doses Administered\"",":\n  " ]
+                  }, {
+                     "r" : "13",
+                     "s" : [ {
+                        "r" : "11",
+                        "s" : [ {
+                           "r" : "10",
+                           "s" : [ {
+                              "value" : [ "Logic" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "11",
+                           "s" : [ {
+                              "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "12",
+                        "value" : [ " ","="," ","0" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "13",
+               "locator" : "29:3-29:57",
+               "type" : "Equal",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "11",
+                  "locator" : "29:3-29:53",
+                  "name" : "Number Of Primary Series Doses Administered",
+                  "libraryName" : "Logic",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "12",
+                  "locator" : "29:57",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "0",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "19",
+            "locator" : "31:1-32:57",
+            "name" : "One Primary Series Dose Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "19",
+                  "s" : [ {
+                     "value" : [ "","define ","\"One Primary Series Dose Administered\"",":\n  " ]
+                  }, {
+                     "r" : "18",
+                     "s" : [ {
+                        "r" : "16",
+                        "s" : [ {
+                           "r" : "15",
+                           "s" : [ {
+                              "value" : [ "Logic" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "16",
+                           "s" : [ {
+                              "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "17",
+                        "value" : [ " ","="," ","1" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "18",
+               "locator" : "32:3-32:57",
+               "type" : "Equal",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "16",
+                  "locator" : "32:3-32:53",
+                  "name" : "Number Of Primary Series Doses Administered",
+                  "libraryName" : "Logic",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "17",
+                  "locator" : "32:57",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "1",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "24",
+            "locator" : "34:1-35:57",
+            "name" : "Two Primary Series Doses Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "24",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Two Primary Series Doses Administered\"",":\n  " ]
+                  }, {
+                     "r" : "23",
+                     "s" : [ {
+                        "r" : "21",
+                        "s" : [ {
+                           "r" : "20",
+                           "s" : [ {
+                              "value" : [ "Logic" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "21",
+                           "s" : [ {
+                              "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "22",
+                        "value" : [ " ","="," ","2" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "23",
+               "locator" : "35:3-35:57",
+               "type" : "Equal",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "21",
+                  "locator" : "35:3-35:53",
+                  "name" : "Number Of Primary Series Doses Administered",
+                  "libraryName" : "Logic",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "22",
+                  "locator" : "35:57",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "2",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "29",
+            "locator" : "37:1-38:27",
+            "name" : "Client Age Less Than 12 Months",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "29",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Client Age Less Than 12 Months\"",":\n  " ]
+                  }, {
+                     "r" : "28",
+                     "s" : [ {
+                        "r" : "26",
+                        "s" : [ {
+                           "value" : [ "AgeInMonthsAt","(" ]
+                        }, {
+                           "r" : "25",
+                           "s" : [ {
+                              "value" : [ "Today" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "r" : "27",
+                        "value" : [ " ","<"," ","12" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "28",
+               "locator" : "38:3-38:27",
+               "type" : "Less",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "26",
+                  "locator" : "38:3-38:22",
+                  "precision" : "Month",
+                  "type" : "CalculateAgeAt",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "path" : "birthDate.value",
+                     "type" : "Property",
+                     "source" : {
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  }, {
+                     "localId" : "25",
+                     "locator" : "38:17-38:21",
+                     "name" : "Today",
+                     "type" : "ParameterRef"
+                  } ]
+               }, {
+                  "localId" : "27",
+                  "locator" : "38:26-38:27",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "12",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "34",
+            "locator" : "40:1-41:27",
+            "name" : "Client Age Less Than 15 Months",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "34",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Client Age Less Than 15 Months\"",":\n  " ]
+                  }, {
+                     "r" : "33",
+                     "s" : [ {
+                        "r" : "31",
+                        "s" : [ {
+                           "value" : [ "AgeInMonthsAt","(" ]
+                        }, {
+                           "r" : "30",
+                           "s" : [ {
+                              "value" : [ "Today" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "r" : "32",
+                        "value" : [ " ","<"," ","15" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "33",
+               "locator" : "41:3-41:27",
+               "type" : "Less",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "31",
+                  "locator" : "41:3-41:22",
+                  "precision" : "Month",
+                  "type" : "CalculateAgeAt",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "path" : "birthDate.value",
+                     "type" : "Property",
+                     "source" : {
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  }, {
+                     "localId" : "30",
+                     "locator" : "41:17-41:21",
+                     "name" : "Today",
+                     "type" : "ParameterRef"
+                  } ]
+               }, {
+                  "localId" : "32",
+                  "locator" : "41:26-41:27",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "15",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "41",
+            "locator" : "43:1-44:74",
+            "name" : "Last Live Vaccine Administered Within 4 Weeks",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "41",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Last Live Vaccine Administered Within 4 Weeks\"",":\n  " ]
+                  }, {
+                     "r" : "40",
+                     "s" : [ {
+                        "r" : "38",
+                        "s" : [ {
+                           "r" : "36",
+                           "s" : [ {
+                              "r" : "35",
+                              "s" : [ {
+                                 "value" : [ "Logic" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "36",
+                              "s" : [ {
+                                 "value" : [ "\"Date Last Live Vaccine Administered\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " + " ]
+                        }, {
+                           "r" : "37",
+                           "s" : [ {
+                              "value" : [ "4 ","weeks" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "40",
+                        "value" : [ " ","on or before"," " ]
+                     }, {
+                        "r" : "39",
+                        "s" : [ {
+                           "value" : [ "Today" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "40",
+               "locator" : "44:3-44:74",
+               "type" : "SameOrBefore",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "38",
+                  "locator" : "44:3-44:55",
+                  "type" : "Add",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "36",
+                     "locator" : "44:3-44:45",
+                     "name" : "Date Last Live Vaccine Administered",
+                     "libraryName" : "Logic",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "37",
+                     "locator" : "44:49-44:55",
+                     "value" : 4,
+                     "unit" : "weeks",
+                     "type" : "Quantity"
+                  } ]
+               }, {
+                  "localId" : "39",
+                  "locator" : "44:70-44:74",
+                  "name" : "Today",
+                  "type" : "ParameterRef"
+               } ]
+            }
+         }, {
+            "localId" : "49",
+            "locator" : "58:1-62:14",
+            "name" : "MCV1 Status",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "49",
+                  "s" : [ {
+                     "value" : [ "/*\nSupporting Logic\n*/\n\n","define ","\"MCV1 Status\"",":\n  " ]
+                  }, {
+                     "r" : "48",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "45",
+                        "s" : [ {
+                           "r" : "43",
+                           "s" : [ {
+                              "r" : "42",
+                              "s" : [ {
+                                 "value" : [ "Logic" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "43",
+                              "s" : [ {
+                                 "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "44",
+                           "value" : [ " ","="," ","0" ]
+                        } ]
+                     }, {
+                        "value" : [ " then \n    " ]
+                     }, {
+                        "r" : "46",
+                        "s" : [ {
+                           "value" : [ "'Needed'" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n  else\n    " ]
+                     }, {
+                        "r" : "47",
+                        "s" : [ {
+                           "value" : [ "'Complete'" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "48",
+               "locator" : "59:3-62:14",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "45",
+                  "locator" : "59:6-59:60",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "43",
+                     "locator" : "59:6-59:56",
+                     "name" : "Number Of Primary Series Doses Administered",
+                     "libraryName" : "Logic",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "44",
+                     "locator" : "59:60",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "46",
+                  "locator" : "60:5-60:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Needed",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "47",
+                  "locator" : "62:5-62:14",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Complete",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "61",
+            "locator" : "64:1-65:31",
+            "name" : "MCV1 Schedule Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "61",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV1 Schedule Date\"",":\n  " ]
+                  }, {
+                     "r" : "60",
+                     "s" : [ {
+                        "r" : "58",
+                        "s" : [ {
+                           "r" : "57",
+                           "s" : [ {
+                              "value" : [ "Patient" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "58",
+                           "s" : [ {
+                              "value" : [ "birthDate" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " + " ]
+                     }, {
+                        "r" : "59",
+                        "s" : [ {
+                           "value" : [ "12 ","months" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "60",
+               "locator" : "65:3-65:31",
+               "type" : "Add",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "name" : "ToDate",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "58",
+                     "locator" : "65:3-65:19",
+                     "path" : "birthDate",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "57",
+                        "locator" : "65:3-65:9",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  } ]
+               }, {
+                  "localId" : "59",
+                  "locator" : "65:23-65:31",
+                  "value" : 12,
+                  "unit" : "months",
+                  "type" : "Quantity"
+               } ]
+            }
+         }, {
+            "localId" : "72",
+            "locator" : "70:1-78:8",
+            "name" : "MCV1 Due Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "72",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV1 Due Date\"",":\n  " ]
+                  }, {
+                     "r" : "71",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "55",
+                        "s" : [ {
+                           "r" : "53",
+                           "s" : [ {
+                              "value" : [ "\"MCV1 Status\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " ","="," " ]
+                        }, {
+                           "r" : "54",
+                           "s" : [ {
+                              "value" : [ "'Needed'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "69",
+                        "s" : [ {
+                           "r" : "56",
+                           "s" : [ {
+                              "value" : [ "WC" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "69",
+                           "s" : [ {
+                              "value" : [ "LatestOf","(" ]
+                           }, {
+                              "r" : "68",
+                              "s" : [ {
+                                 "value" : [ "{\n        " ]
+                              }, {
+                                 "r" : "62",
+                                 "s" : [ {
+                                    "value" : [ "\"MCV1 Schedule Date\"" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ",\n        " ]
+                              }, {
+                                 "r" : "66",
+                                 "s" : [ {
+                                    "r" : "64",
+                                    "s" : [ {
+                                       "r" : "63",
+                                       "s" : [ {
+                                          "value" : [ "Logic" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "64",
+                                       "s" : [ {
+                                          "value" : [ "\"Date Last Live Vaccine Administered\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " + " ]
+                                 }, {
+                                    "r" : "65",
+                                    "s" : [ {
+                                       "value" : [ "4 ","weeks" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ",\n        " ]
+                              }, {
+                                 "r" : "67",
+                                 "s" : [ {
+                                    "value" : [ "Today" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n    }" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "70",
+                        "value" : [ "\n  else\n    ","null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "71",
+               "locator" : "71:3-78:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "55",
+                  "locator" : "71:6-71:29",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "53",
+                     "locator" : "71:6-71:18",
+                     "name" : "MCV1 Status",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "54",
+                     "locator" : "71:22-71:29",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Needed",
+                     "type" : "Literal"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "69",
+                  "locator" : "72:5-76:6",
+                  "name" : "LatestOf",
+                  "libraryName" : "WC",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "68",
+                     "locator" : "72:17-76:5",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "62",
+                        "locator" : "73:9-73:28",
+                        "name" : "MCV1 Schedule Date",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "66",
+                        "locator" : "74:9-74:61",
+                        "type" : "Add",
+                        "signature" : [ {
+                           "name" : "{urn:hl7-org:elm-types:r1}Date",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "64",
+                           "locator" : "74:9-74:51",
+                           "name" : "Date Last Live Vaccine Administered",
+                           "libraryName" : "Logic",
+                           "type" : "ExpressionRef"
+                        }, {
+                           "localId" : "65",
+                           "locator" : "74:55-74:61",
+                           "value" : 4,
+                           "unit" : "weeks",
+                           "type" : "Quantity"
+                        } ]
+                     }, {
+                        "localId" : "67",
+                        "locator" : "75:9-75:13",
+                        "name" : "Today",
+                        "type" : "ParameterRef"
+                     } ]
+                  } ]
+               },
+               "else" : {
+                  "asType" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "As",
+                  "operand" : {
+                     "localId" : "70",
+                     "locator" : "78:5-78:8",
+                     "type" : "Null"
+                  }
+               }
+            }
+         }, {
+            "localId" : "77",
+            "locator" : "46:1-48:42",
+            "name" : "Client Is Due For MCV1",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "77",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Client Is Due For MCV1\"",":\n  " ]
+                  }, {
+                     "r" : "76",
+                     "s" : [ {
+                        "r" : "52",
+                        "s" : [ {
+                           "r" : "50",
+                           "s" : [ {
+                              "value" : [ "\"MCV1 Status\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " ","="," " ]
+                        }, {
+                           "r" : "51",
+                           "s" : [ {
+                              "value" : [ "'Needed'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "75",
+                        "s" : [ {
+                           "r" : "73",
+                           "s" : [ {
+                              "value" : [ "\"MCV1 Due Date\"" ]
+                           } ]
+                        }, {
+                           "r" : "75",
+                           "value" : [ " ","on or before"," " ]
+                        }, {
+                           "r" : "74",
+                           "s" : [ {
+                              "value" : [ "Today" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "76",
+               "locator" : "47:3-48:42",
+               "type" : "And",
+               "operand" : [ {
+                  "localId" : "52",
+                  "locator" : "47:3-47:26",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "50",
+                     "locator" : "47:3-47:15",
+                     "name" : "MCV1 Status",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "51",
+                     "locator" : "47:19-47:26",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Needed",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "localId" : "75",
+                  "locator" : "48:9-48:42",
+                  "type" : "SameOrBefore",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "73",
+                     "locator" : "48:9-48:23",
+                     "name" : "MCV1 Due Date",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "74",
+                     "locator" : "48:38-48:42",
+                     "name" : "Today",
+                     "type" : "ParameterRef"
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "85",
+            "locator" : "80:1-84:14",
+            "name" : "MCV2 Status",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "85",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV2 Status\"",":\n  " ]
+                  }, {
+                     "r" : "84",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "81",
+                        "s" : [ {
+                           "r" : "79",
+                           "s" : [ {
+                              "r" : "78",
+                              "s" : [ {
+                                 "value" : [ "Logic" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "79",
+                              "s" : [ {
+                                 "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "80",
+                           "value" : [ " ","="," ","1" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "82",
+                        "s" : [ {
+                           "value" : [ "'Needed'" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n  else\n    " ]
+                     }, {
+                        "r" : "83",
+                        "s" : [ {
+                           "value" : [ "'Complete'" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "84",
+               "locator" : "81:3-84:14",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "81",
+                  "locator" : "81:6-81:60",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "79",
+                     "locator" : "81:6-81:56",
+                     "name" : "Number Of Primary Series Doses Administered",
+                     "libraryName" : "Logic",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "80",
+                     "locator" : "81:60",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "82",
+                  "locator" : "82:5-82:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Needed",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "83",
+                  "locator" : "84:5-84:14",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Complete",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "97",
+            "locator" : "86:1-87:31",
+            "name" : "MCV2 Schedule Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "97",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV2 Schedule Date\"",":\n  " ]
+                  }, {
+                     "r" : "96",
+                     "s" : [ {
+                        "r" : "94",
+                        "s" : [ {
+                           "r" : "93",
+                           "s" : [ {
+                              "value" : [ "Patient" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "94",
+                           "s" : [ {
+                              "value" : [ "birthDate" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " + " ]
+                     }, {
+                        "r" : "95",
+                        "s" : [ {
+                           "value" : [ "15 ","months" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "96",
+               "locator" : "87:3-87:31",
+               "type" : "Add",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "name" : "ToDate",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "94",
+                     "locator" : "87:3-87:19",
+                     "path" : "birthDate",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "93",
+                        "locator" : "87:3-87:9",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  } ]
+               }, {
+                  "localId" : "95",
+                  "locator" : "87:23-87:31",
+                  "value" : 15,
+                  "unit" : "months",
+                  "type" : "Quantity"
+               } ]
+            }
+         }, {
+            "localId" : "108",
+            "locator" : "92:1-100:8",
+            "name" : "MCV2 Due Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "108",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV2 Due Date\"",":\n  " ]
+                  }, {
+                     "r" : "107",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "91",
+                        "s" : [ {
+                           "r" : "89",
+                           "s" : [ {
+                              "value" : [ "\"MCV2 Status\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " ","="," " ]
+                        }, {
+                           "r" : "90",
+                           "s" : [ {
+                              "value" : [ "'Needed'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "105",
+                        "s" : [ {
+                           "r" : "92",
+                           "s" : [ {
+                              "value" : [ "WC" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "105",
+                           "s" : [ {
+                              "value" : [ "LatestOf","(" ]
+                           }, {
+                              "r" : "104",
+                              "s" : [ {
+                                 "value" : [ "{\n        " ]
+                              }, {
+                                 "r" : "98",
+                                 "s" : [ {
+                                    "value" : [ "\"MCV2 Schedule Date\"" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ",\n        " ]
+                              }, {
+                                 "r" : "102",
+                                 "s" : [ {
+                                    "r" : "100",
+                                    "s" : [ {
+                                       "r" : "99",
+                                       "s" : [ {
+                                          "value" : [ "Logic" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "100",
+                                       "s" : [ {
+                                          "value" : [ "\"Date Last Live Vaccine Administered\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " + " ]
+                                 }, {
+                                    "r" : "101",
+                                    "s" : [ {
+                                       "value" : [ "4 ","weeks" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ",\n        " ]
+                              }, {
+                                 "r" : "103",
+                                 "s" : [ {
+                                    "value" : [ "Today" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n    }" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "106",
+                        "value" : [ "\n  else\n    ","null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "107",
+               "locator" : "93:3-100:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "91",
+                  "locator" : "93:6-93:29",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "89",
+                     "locator" : "93:6-93:18",
+                     "name" : "MCV2 Status",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "90",
+                     "locator" : "93:22-93:29",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Needed",
+                     "type" : "Literal"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "105",
+                  "locator" : "94:5-98:6",
+                  "name" : "LatestOf",
+                  "libraryName" : "WC",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "104",
+                     "locator" : "94:17-98:5",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "98",
+                        "locator" : "95:9-95:28",
+                        "name" : "MCV2 Schedule Date",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "102",
+                        "locator" : "96:9-96:61",
+                        "type" : "Add",
+                        "signature" : [ {
+                           "name" : "{urn:hl7-org:elm-types:r1}Date",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "100",
+                           "locator" : "96:9-96:51",
+                           "name" : "Date Last Live Vaccine Administered",
+                           "libraryName" : "Logic",
+                           "type" : "ExpressionRef"
+                        }, {
+                           "localId" : "101",
+                           "locator" : "96:55-96:61",
+                           "value" : 4,
+                           "unit" : "weeks",
+                           "type" : "Quantity"
+                        } ]
+                     }, {
+                        "localId" : "103",
+                        "locator" : "97:9-97:13",
+                        "name" : "Today",
+                        "type" : "ParameterRef"
+                     } ]
+                  } ]
+               },
+               "else" : {
+                  "asType" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "As",
+                  "operand" : {
+                     "localId" : "106",
+                     "locator" : "100:5-100:8",
+                     "type" : "Null"
+                  }
+               }
+            }
+         }, {
+            "localId" : "113",
+            "locator" : "50:1-52:42",
+            "name" : "Client Is Due For MCV2",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "113",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Client Is Due For MCV2\"",":\n  " ]
+                  }, {
+                     "r" : "112",
+                     "s" : [ {
+                        "r" : "88",
+                        "s" : [ {
+                           "r" : "86",
+                           "s" : [ {
+                              "value" : [ "\"MCV2 Status\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " ","="," " ]
+                        }, {
+                           "r" : "87",
+                           "s" : [ {
+                              "value" : [ "'Needed'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "111",
+                        "s" : [ {
+                           "r" : "109",
+                           "s" : [ {
+                              "value" : [ "\"MCV2 Due Date\"" ]
+                           } ]
+                        }, {
+                           "r" : "111",
+                           "value" : [ " ","on or before"," " ]
+                        }, {
+                           "r" : "110",
+                           "s" : [ {
+                              "value" : [ "Today" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "112",
+               "locator" : "51:3-52:42",
+               "type" : "And",
+               "operand" : [ {
+                  "localId" : "88",
+                  "locator" : "51:3-51:26",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "86",
+                     "locator" : "51:3-51:15",
+                     "name" : "MCV2 Status",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "87",
+                     "locator" : "51:19-51:26",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Needed",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "localId" : "111",
+                  "locator" : "52:9-52:42",
+                  "type" : "SameOrBefore",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "109",
+                     "locator" : "52:9-52:23",
+                     "name" : "MCV2 Due Date",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "110",
+                     "locator" : "52:38-52:42",
+                     "name" : "Today",
+                     "type" : "ParameterRef"
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "118",
+            "locator" : "67:1-68:31",
+            "name" : "MCV1 Expiration Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "118",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV1 Expiration Date\"",":\n  " ]
+                  }, {
+                     "r" : "117",
+                     "s" : [ {
+                        "r" : "115",
+                        "s" : [ {
+                           "r" : "114",
+                           "s" : [ {
+                              "value" : [ "Patient" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "115",
+                           "s" : [ {
+                              "value" : [ "birthDate" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " + " ]
+                     }, {
+                        "r" : "116",
+                        "s" : [ {
+                           "value" : [ "15 ","months" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "117",
+               "locator" : "68:3-68:31",
+               "type" : "Add",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "name" : "ToDate",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "115",
+                     "locator" : "68:3-68:19",
+                     "path" : "birthDate",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "114",
+                        "locator" : "68:3-68:9",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  } ]
+               }, {
+                  "localId" : "116",
+                  "locator" : "68:23-68:31",
+                  "value" : 15,
+                  "unit" : "months",
+                  "type" : "Quantity"
+               } ]
+            }
+         }, {
+            "localId" : "122",
+            "locator" : "89:1-90:14",
+            "name" : "MCV2 Expiration Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "122",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV2 Expiration Date\"",":\n  " ]
+                  }, {
+                     "r" : "121",
+                     "s" : [ {
+                        "r" : "119",
+                        "value" : [ "null"," as " ]
+                     }, {
+                        "r" : "120",
+                        "s" : [ {
+                           "value" : [ "Date" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "121",
+               "locator" : "90:3-90:14",
+               "strict" : false,
+               "type" : "As",
+               "operand" : {
+                  "localId" : "119",
+                  "locator" : "90:3-90:6",
+                  "type" : "Null"
+               },
+               "asTypeSpecifier" : {
+                  "localId" : "120",
+                  "locator" : "90:11-90:14",
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      }
+   }
+}

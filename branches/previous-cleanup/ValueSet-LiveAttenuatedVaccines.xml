@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="LiveAttenuatedVaccines"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/sid/icd-11</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM8142</td><td/></tr><tr><td>XM72A0</td><td/></tr><tr><td>XM47S0</td><td/></tr><tr><td>XM8L15</td><td/></tr><tr><td>XM8TF3</td><td/></tr><tr><td>XM21H2</td><td/></tr><tr><td>XM4AJ8</td><td/></tr><tr><td>XM9439</td><td/></tr><tr><td>XM2340</td><td/></tr><tr><td>XM79H3</td><td/></tr><tr><td>XM0VX8</td><td/></tr><tr><td>XM0KZ1</td><td/></tr><tr><td>XM4GV0</td><td/></tr><tr><td>XM9PS9</td><td/></tr><tr><td>XM3B09</td><td/></tr><tr><td>XM5V64</td><td/></tr><tr><td>XM33K4</td><td/></tr><tr><td>XM0NS8</td><td/></tr><tr><td>XM3418</td><td/></tr><tr><td>XM5DF6</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines"/>
+  <version value="0.1.0"/>
+  <name value="LiveAttenuatedVaccines"/>
+  <title value="Set of live attenuated vaccines"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-10-24T20:15:55+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Codes representing live attenuated vaccines"/>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/icd-11"/>
+      <concept>
+        <code value="XM8142"/>
+      </concept>
+      <concept>
+        <code value="XM72A0"/>
+      </concept>
+      <concept>
+        <code value="XM47S0"/>
+      </concept>
+      <concept>
+        <code value="XM8L15"/>
+      </concept>
+      <concept>
+        <code value="XM8TF3"/>
+      </concept>
+      <concept>
+        <code value="XM21H2"/>
+      </concept>
+      <concept>
+        <code value="XM4AJ8"/>
+      </concept>
+      <concept>
+        <code value="XM9439"/>
+      </concept>
+      <concept>
+        <code value="XM2340"/>
+      </concept>
+      <concept>
+        <code value="XM79H3"/>
+      </concept>
+      <concept>
+        <code value="XM0VX8"/>
+      </concept>
+      <concept>
+        <code value="XM0KZ1"/>
+      </concept>
+      <concept>
+        <code value="XM4GV0"/>
+      </concept>
+      <concept>
+        <code value="XM9PS9"/>
+      </concept>
+      <concept>
+        <code value="XM3B09"/>
+      </concept>
+      <concept>
+        <code value="XM5V64"/>
+      </concept>
+      <concept>
+        <code value="XM33K4"/>
+      </concept>
+      <concept>
+        <code value="XM0NS8"/>
+      </concept>
+      <concept>
+        <code value="XM3418"/>
+      </concept>
+      <concept>
+        <code value="XM5DF6"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

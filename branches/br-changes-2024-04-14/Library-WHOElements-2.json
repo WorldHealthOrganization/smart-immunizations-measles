@@ -1,0 +1,435 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "24",
+            "s" : [ {
+               "value" : [ "","library WHOElements" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "WHOElements",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "5:1-5:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "7:1-7:35",
+            "localIdentifier" : "Concepts",
+            "path" : "http://smart.who.int/immunizations-measles/WHOConcepts",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "WHOConcepts" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Concepts" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "8:1-8:31",
+            "localIdentifier" : "Common",
+            "path" : "http://smart.who.int/immunizations-measles/WHOCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "WHOCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Common" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "10:1-10:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "10:1-10:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "10:1-10:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "15",
+            "locator" : "12:1-14:57",
+            "name" : "Pregnancy Status Observation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "15",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Pregnancy Status Observation\"",":\n  " ]
+                  }, {
+                     "r" : "14",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "6",
+                           "s" : [ {
+                              "r" : "5",
+                              "s" : [ {
+                                 "r" : "5",
+                                 "s" : [ {
+                                    "value" : [ "[","Observation",": " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "Concepts",".","\"Pregnancy status\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","O" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "13",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "13",
+                           "s" : [ {
+                              "r" : "8",
+                              "s" : [ {
+                                 "r" : "7",
+                                 "s" : [ {
+                                    "value" : [ "O" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "8",
+                                 "s" : [ {
+                                    "value" : [ "status" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " in " ]
+                           }, {
+                              "r" : "12",
+                              "s" : [ {
+                                 "value" : [ "{ " ]
+                              }, {
+                                 "r" : "9",
+                                 "s" : [ {
+                                    "value" : [ "'final'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "10",
+                                 "s" : [ {
+                                    "value" : [ "'amended'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "11",
+                                 "s" : [ {
+                                    "value" : [ "'corrected'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "14",
+               "locator" : "13:3-14:57",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "6",
+                  "locator" : "13:3-13:46",
+                  "alias" : "O",
+                  "expression" : {
+                     "localId" : "5",
+                     "locator" : "13:3-13:44",
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "type" : "ToList",
+                        "operand" : {
+                           "locator" : "13:17-13:43",
+                           "name" : "Pregnancy status",
+                           "libraryName" : "Concepts",
+                           "type" : "CodeRef"
+                        }
+                     }
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "13",
+                  "locator" : "14:5-14:57",
+                  "type" : "In",
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "signature" : [ {
+                        "name" : "{http://hl7.org/fhir}ObservationStatus",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "8",
+                        "locator" : "14:11-14:18",
+                        "path" : "status",
+                        "scope" : "O",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "12",
+                     "locator" : "14:23-14:57",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "9",
+                        "locator" : "14:25-14:31",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "final",
+                        "type" : "Literal"
+                     }, {
+                        "localId" : "10",
+                        "locator" : "14:34-14:42",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "amended",
+                        "type" : "Literal"
+                     }, {
+                        "localId" : "11",
+                        "locator" : "14:45-14:55",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "corrected",
+                        "type" : "Literal"
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "24",
+            "locator" : "16:1-18:39",
+            "name" : "Pregnant Observation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "24",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Pregnant Observation\"",":\n  " ]
+                  }, {
+                     "r" : "23",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "17",
+                           "s" : [ {
+                              "r" : "16",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "\"Pregnancy Status Observation\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","O" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "22",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "22",
+                           "s" : [ {
+                              "r" : "19",
+                              "s" : [ {
+                                 "r" : "18",
+                                 "s" : [ {
+                                    "value" : [ "O" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "19",
+                                 "s" : [ {
+                                    "value" : [ "value" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","~"," " ]
+                           }, {
+                              "r" : "21",
+                              "s" : [ {
+                                 "r" : "20",
+                                 "s" : [ {
+                                    "value" : [ "Concepts" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "21",
+                                 "s" : [ {
+                                    "value" : [ "\"Pregnant\"" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "23",
+               "locator" : "17:3-18:39",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "17",
+                  "locator" : "17:3-17:34",
+                  "alias" : "O",
+                  "expression" : {
+                     "localId" : "16",
+                     "locator" : "17:3-17:32",
+                     "name" : "Pregnancy Status Observation",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "22",
+                  "locator" : "18:5-18:39",
+                  "type" : "Equivalent",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "name" : "ToConcept",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "asType" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "19",
+                           "locator" : "18:11-18:17",
+                           "path" : "value",
+                           "scope" : "O",
+                           "type" : "Property"
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToConcept",
+                     "signature" : [ {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : {
+                        "localId" : "21",
+                        "locator" : "18:21-18:39",
+                        "name" : "Pregnant",
+                        "libraryName" : "Concepts",
+                        "type" : "CodeRef"
+                     }
+                  } ]
+               }
+            }
+         } ]
+      }
+   }
+}

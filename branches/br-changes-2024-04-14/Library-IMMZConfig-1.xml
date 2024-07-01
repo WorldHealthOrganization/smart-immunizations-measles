@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="65">
+         <a:s>library IMMZConfig</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZConfig" system="http://smart.who.int/immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <statements>
+      <def localId="3" locator="5:1-5:62" name="High incidence of TB and/or high leprosy burden" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s r="2">define &quot;High incidence of TB and/or high leprosy burden&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="2" locator="5:59-5:62" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="5" locator="6:1-6:61" name="Polio-endemic country with high risk of spread" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s r="4">define &quot;Polio-endemic country with high risk of spread&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="4" locator="6:58-6:61" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="7" locator="14:1-14:38" name="Polio dose scheme" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>/*
+define &quot;Combined bOPV and IPV Schedule&quot;: true
+define &quot;Sequential IPV-OPV Schedule&quot;: true
+*/
+/*
+ * Possible Polio dose schemes are 'combined', 'sequential', or 'ipv'
+ */
+define &quot;Polio dose scheme&quot;: </a:s>
+               <a:s r="6">
+                  <a:s>'combined'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="6" locator="14:29-14:38" valueType="t:String" value="combined" xsi:type="Literal"/>
+      </def>
+      <def localId="9" locator="15:1-15:59" name="Country has a high risk of exposure to polio" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="9">
+               <a:s r="8">define &quot;Country has a high risk of exposure to polio&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="8" locator="15:56-15:59" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="11" locator="16:1-16:66" name="High Coverage of Polio and Risk of Wild Importation" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="11">
+               <a:s r="10">define &quot;High Coverage of Polio and Risk of Wild Importation&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="10" locator="16:63-16:66" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="13" locator="18:1-18:94" name="In a country where the peak burden of severe Hib disease occurs in young infants" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="13">
+               <a:s r="12">define &quot;In a country where the peak burden of severe Hib disease occurs in young infants&quot;:true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="12" locator="18:91-18:94" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="15" locator="19:1-19:187" name="In a setting where the greatest disease morbidity and mortality occur later, or whererate reductions of disease are not fully sustained after the routine use of Hib vaccine" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="15">
+               <a:s r="14">define &quot;In a setting where the greatest disease morbidity and mortality occur later, or whererate reductions of disease are not fully sustained after the routine use of Hib vaccine&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="14" locator="19:184-19:187" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="17" locator="20:1-20:30" name="Hib dose scheme" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="17">
+               <a:s>define &quot;Hib dose scheme&quot;: </a:s>
+               <a:s r="16">
+                  <a:s>'1p'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="16" locator="20:27-20:30" valueType="t:String" value="1p" xsi:type="Literal"/>
+      </def>
+      <def localId="19" locator="21:1-21:42" name="Hepatitis A endemic country" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="19">
+               <a:s r="18">define &quot;Hepatitis A endemic country&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="18" locator="21:39-21:42" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="21" locator="23:1-23:56" name="Japanese Encephalitis dose scheme" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="21">
+               <a:s>define &quot;Japanese Encephalitis dose scheme&quot;: </a:s>
+               <a:s r="20">
+                  <a:s>'attenuated'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="20" locator="23:45-23:56" valueType="t:String" value="attenuated" xsi:type="Literal"/>
+      </def>
+      <def localId="23" locator="29:1-29:57" name="Country recognizes JE as a health priority" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="23">
+               <a:s r="22">/*
+define &quot;Country is administering Live recombinant JE antigen&quot;:true
+define &quot;Country is administering Live attentuated JE antigen&quot;: true
+define &quot;Country is administering Inactivated Vero cell-derived JE antigen&quot;: true
+*/
+define &quot;Country recognizes JE as a health priority&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="22" locator="29:54-29:57" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="25" locator="35:1-35:41" name="Pneumococcal dose scheme" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="25">
+               <a:s>/*
+define &quot;Country is following a 2 dose scheme for Pneumococcal&quot;: true
+define &quot;Country is following a 3 dose scheme for Pneumococcal&quot;: true
+*/
+define &quot;Pneumococcal dose scheme&quot;: </a:s>
+               <a:s r="24">
+                  <a:s>'2p+1'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="24" locator="35:36-35:41" valueType="t:String" value="2p+1" xsi:type="Literal"/>
+      </def>
+      <def localId="27" locator="36:1-36:59" name="Country is not highly endemic for Hepatitis A" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="27">
+               <a:s r="26">define &quot;Country is not highly endemic for Hepatitis A&quot;:true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="26" locator="36:56-36:59" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="29" locator="37:1-37:69" name="Country is administering a Live attenuated HAV vaccine" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="29">
+               <a:s r="28">define &quot;Country is administering a Live attenuated HAV vaccine&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="28" locator="37:66-37:69" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="31" locator="38:1-38:68" name="In a setting with a high disease burden and mortality" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="31">
+               <a:s r="30">define &quot;In a setting with a high disease burden and mortality&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="30" locator="38:65-38:68" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="33" locator="40:1-40:58" name="Region recommends Meningococcal vaccination" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="33">
+               <a:s r="32">define &quot;Region recommends Meningococcal vaccination&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="32" locator="40:55-40:58" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="35" locator="41:1-41:52" name="Region recommends Cholera vaccination" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="35">
+               <a:s r="34">define &quot;Region recommends Cholera vaccination&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="34" locator="41:49-41:52" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="37" locator="42:1-42:52" name="Region recommends Typhoid vaccination" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="37">
+               <a:s r="36">define &quot;Region recommends Typhoid vaccination&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="36" locator="42:49-42:52" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="39" locator="43:1-43:55" name="Country is administering the TCV vaccine" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="39">
+               <a:s r="38">define &quot;Country is administering the TCV vaccine&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="38" locator="43:52-43:55" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="41" locator="44:1-44:52" name="Country is administering ViPS vaccine" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="41">
+               <a:s r="40">define &quot;Country is administering ViPS vaccine&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="40" locator="44:49-44:52" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="43" locator="45:1-45:66" name="Country is administering an Inactivated HAV vaccine" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="43">
+               <a:s r="42">define &quot;Country is administering an Inactivated HAV vaccine&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="42" locator="45:63-45:66" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="45" locator="46:1-46:99" name="In a setting where the risk of measles among infants &lt; 9 months of age remains high" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="45">
+               <a:s r="44">define &quot;In a setting where the risk of measles among infants &lt; 9 months of age remains high&quot;: false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="44" locator="46:95-46:99" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="47" locator="47:1-47:56" name="Country currently has a measles outbreak" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="47">
+               <a:s r="46">define &quot;Country currently has a measles outbreak&quot;: false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="46" locator="47:52-47:56" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="49" locator="48:1-48:93" name="Population is in conflict zones internally displaced populations and refugees" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="49">
+               <a:s r="48">define &quot;Population is in conflict zones internally displaced populations and refugees&quot;: false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="48" locator="48:89-48:93" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="51" locator="49:1-49:71" name="In a setting where there is high transmission of Measles" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="51">
+               <a:s r="50">define &quot;In a setting where there is high transmission of Measles&quot;:false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="50" locator="49:67-49:71" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="53" locator="50:1-50:70" name="In a setting where there is low transmission of Measles" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="53">
+               <a:s r="52">define &quot;In a setting where there is low transmission of Measles&quot;:false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="52" locator="50:66-50:70" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="55" locator="52:1-52:47" name="Country has Yellow Fever Endemic" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="55">
+               <a:s r="54">define &quot;Country has Yellow Fever Endemic&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="54" locator="52:44-52:47" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="57" locator="53:1-53:51" name="Country recognizes TBE as a priority" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="57">
+               <a:s r="56">define &quot;Country recognizes TBE as a priority&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="56" locator="53:48-53:51" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="59" locator="55:1-55:109" name="There is a compelling reason to vaccinate infants with Meningococcal between 3 to 9 months old" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="59">
+               <a:s r="58">define &quot;There is a compelling reason to vaccinate infants with Meningococcal between 3 to 9 months old&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="58" locator="55:106-55:109" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="61" locator="56:1-56:77" name="Country recognizes Varicella an important public health burden" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="61">
+               <a:s r="60">define &quot;Country recognizes Varicella an important public health burden&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="60" locator="56:74-56:77" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="63" locator="57:1-57:77" name="Country recognizes MUMPS reduction as a public health priority" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="63">
+               <a:s r="62">define &quot;Country recognizes MUMPS reduction as a public health priority&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="62" locator="57:74-57:77" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="65" locator="58:1-58:60" name="Country is using a 3 dose series ROTA product" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="65">
+               <a:s r="64">define &quot;Country is using a 3 dose series ROTA product&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="64" locator="58:57-58:60" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+   </statements>
+</library>

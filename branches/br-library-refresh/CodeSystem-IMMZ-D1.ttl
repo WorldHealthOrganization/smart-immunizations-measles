@@ -1,0 +1,269 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZ-D1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">DE80<a name=\"IMMZ-D1-DE80\"> </a></td><td>Dose 0 administered</td><td>Indicates if the client has received a birth dose and/or supplementary dose</td></tr><tr><td style=\"white-space:nowrap\">DE8<a name=\"IMMZ-D1-DE8\"> </a></td><td>Completed the primary vaccination series</td><td>Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen.</td></tr><tr><td style=\"white-space:nowrap\">DE81<a name=\"IMMZ-D1-DE81\"> </a></td><td>Date when primary vaccination series was completed</td><td>The date when the client completed the primary vaccination series (per product/antigen)</td></tr><tr><td style=\"white-space:nowrap\">DE9<a name=\"IMMZ-D1-DE9\"> </a></td><td>Currently pregnant</td><td>The client is currently pregnant</td></tr><tr><td style=\"white-space:nowrap\">DE82<a name=\"IMMZ-D1-DE82\"> </a></td><td>Breastfeeding</td><td>The client is currently breastfeeding</td></tr><tr><td style=\"white-space:nowrap\">DE10<a name=\"IMMZ-D1-DE10\"> </a></td><td>HIV status</td><td>The current human immunodeficiency virus (HIV) status of the client</td></tr><tr><td style=\"white-space:nowrap\">DE11<a name=\"IMMZ-D1-DE11\"> </a></td><td>HIV-positive</td><td>The client is known to be HIV positive</td></tr><tr><td style=\"white-space:nowrap\">DE12<a name=\"IMMZ-D1-DE12\"> </a></td><td>HIV-negative</td><td>The client is known to be HIV negative</td></tr><tr><td style=\"white-space:nowrap\">DE13<a name=\"IMMZ-D1-DE13\"> </a></td><td>Unknown</td><td>The client's HIV status is unknown</td></tr><tr><td style=\"white-space:nowrap\">DE15<a name=\"IMMZ-D1-DE15\"> </a></td><td>Preterm birth</td><td>The infant was preterm</td></tr><tr><td style=\"white-space:nowrap\">DE16<a name=\"IMMZ-D1-DE16\"> </a></td><td>Immunocompromised</td><td>The client is known to be immunocompromised or immunosuppressed. This means the client has a weakened immune system and having a reduced ability to fight infections and other diseases</td></tr><tr><td style=\"white-space:nowrap\">DE17<a name=\"IMMZ-D1-DE17\"> </a></td><td>Currently on ART</td><td>The client is currently receiving antiretroviral therapy (ART)</td></tr><tr><td style=\"white-space:nowrap\">DE84<a name=\"IMMZ-D1-DE84\"> </a></td><td>Type of TB infection test performed</td><td>The type of TB infection test performed</td></tr><tr><td style=\"white-space:nowrap\">DE85<a name=\"IMMZ-D1-DE85\"> </a></td><td>IGRA</td><td>Interferon-gamma release assay (IGRA)</td></tr><tr><td style=\"white-space:nowrap\">DE86<a name=\"IMMZ-D1-DE86\"> </a></td><td>TST</td><td>Tuberculin skin test (TST)</td></tr><tr><td style=\"white-space:nowrap\">DE87<a name=\"IMMZ-D1-DE87\"> </a></td><td>TB infection test result</td><td>Records the result of the TB infection test</td></tr><tr><td style=\"white-space:nowrap\">DE88<a name=\"IMMZ-D1-DE88\"> </a></td><td>Positive</td><td>Test result was positive</td></tr><tr><td style=\"white-space:nowrap\">DE89<a name=\"IMMZ-D1-DE89\"> </a></td><td>Negative</td><td>Test result was negative</td></tr><tr><td style=\"white-space:nowrap\">DE90<a name=\"IMMZ-D1-DE90\"> </a></td><td>HIV-exposed infant</td><td>The infant is  known to be exposed to HIV (i.e. born to an HIV-infected woman)</td></tr><tr><td style=\"white-space:nowrap\">DE29<a name=\"IMMZ-D1-DE29\"> </a></td><td>Birth weight in grams</td><td>Represents the client's birth weight value measures in grams</td></tr><tr><td style=\"white-space:nowrap\">DE35<a name=\"IMMZ-D1-DE35\"> </a></td><td>Type of polio dose</td><td>The type of the polio vaccine dose administered to the client</td></tr><tr><td style=\"white-space:nowrap\">DE36<a name=\"IMMZ-D1-DE36\"> </a></td><td>IPV</td><td>Inactivated poliovirus vaccine (IPV)</td></tr><tr><td style=\"white-space:nowrap\">DE37<a name=\"IMMZ-D1-DE37\"> </a></td><td>bOPV</td><td>Bivalent oral poliovirus vaccine (bOPV)</td></tr><tr><td style=\"white-space:nowrap\">DE38<a name=\"IMMZ-D1-DE38\"> </a></td><td>Age in years when client received first DTP dose</td><td>The client's age in years when they received their first diphtheria-tetanus-pertussis (DTP) dose</td></tr><tr><td style=\"white-space:nowrap\">DE39<a name=\"IMMZ-D1-DE39\"> </a></td><td>Age in months when client received first Hib dose</td><td>The client's age in months when they received their first Haemophilus influenzae type b (Hib) dose</td></tr><tr><td style=\"white-space:nowrap\">DE40<a name=\"IMMZ-D1-DE40\"> </a></td><td>Sickle-cell disease</td><td>The client is known to have a sickle-cell disease</td></tr><tr><td style=\"white-space:nowrap\">DE41<a name=\"IMMZ-D1-DE41\"> </a></td><td>Age in months when client received third pneumococcal dose</td><td>The client's age in months when they received their third pneumococcal dose</td></tr><tr><td style=\"white-space:nowrap\">DE42<a name=\"IMMZ-D1-DE42\"> </a></td><td>No history of intussusception</td><td>The client is known to have no history of intussusception</td></tr><tr><td style=\"white-space:nowrap\">DE43<a name=\"IMMZ-D1-DE43\"> </a></td><td>Previous rotavirus doses given were the same product</td><td>Indicates whether or not all of the client's previous rotavirus doses were the same product</td></tr><tr><td style=\"white-space:nowrap\">DE46<a name=\"IMMZ-D1-DE46\"> </a></td><td>Immune reconstitution was achieved</td><td>The client is known to have achieved immune reconstitution</td></tr><tr><td style=\"white-space:nowrap\">DE92<a name=\"IMMZ-D1-DE92\"> </a></td><td>Severely immunosuppressed</td><td>The client is known to be severely immunocompromised or immunosuppressed</td></tr><tr><td style=\"white-space:nowrap\">DE49<a name=\"IMMZ-D1-DE49\"> </a></td><td>ART start date</td><td>The date on which the client started or restarted antiretroviral therapy (ART)</td></tr><tr><td style=\"white-space:nowrap\">DE52<a name=\"IMMZ-D1-DE52\"> </a></td><td>Type of last JE dose</td><td>The type of the last Japanese encephalitis (JE) vaccine dose administered to the client</td></tr><tr><td style=\"white-space:nowrap\">DE53<a name=\"IMMZ-D1-DE53\"> </a></td><td>Inactivated Vero cell-derived vaccine</td><td>Inactivated Vero cell-derived Japanese encephalitis (JE) vaccine type</td></tr><tr><td style=\"white-space:nowrap\">DE54<a name=\"IMMZ-D1-DE54\"> </a></td><td>Live attenuated vaccine</td><td>Live attenuated Japanese encephalitis (JE) vaccine type</td></tr><tr><td style=\"white-space:nowrap\">DE55<a name=\"IMMZ-D1-DE55\"> </a></td><td>Live recombinant vaccine</td><td>Live recombinant Japanese encephalitis (JE) vaccine type</td></tr><tr><td style=\"white-space:nowrap\">DE56<a name=\"IMMZ-D1-DE56\"> </a></td><td>Type of last TBE dose</td><td>The type of the last tick-borne encephalitis (TBE) vaccine dose administered</td></tr><tr><td style=\"white-space:nowrap\">DE57<a name=\"IMMZ-D1-DE57\"> </a></td><td>FSME-Immun</td><td>FSME-Immun vaccine product, which is an inactivated whole-virus vaccine for tick-borne encephalitis (TBE)</td></tr><tr><td style=\"white-space:nowrap\">DE58<a name=\"IMMZ-D1-DE58\"> </a></td><td>Encepur</td><td>Encepur vaccine product, which is an inactivated viral vaccine for tick-borne encephalitis (TBE)</td></tr><tr><td style=\"white-space:nowrap\">DE59<a name=\"IMMZ-D1-DE59\"> </a></td><td>TBE-Moscow</td><td>TBE-Moscow vaccine product, which is a vaccine for tick-borne encephalitis (TBE)</td></tr><tr><td style=\"white-space:nowrap\">DE60<a name=\"IMMZ-D1-DE60\"> </a></td><td>EnceVir</td><td>EnceVir vaccine product, which is a vaccine for tick-borne encephalitis (TBE)</td></tr><tr><td style=\"white-space:nowrap\">DE61<a name=\"IMMZ-D1-DE61\"> </a></td><td>Type of last typhoid dose</td><td>The type of the last typhoid vaccine dose administered to the client</td></tr><tr><td style=\"white-space:nowrap\">DE62<a name=\"IMMZ-D1-DE62\"> </a></td><td>Typbar-TCV</td><td>Typbar-TCV vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE63<a name=\"IMMZ-D1-DE63\"> </a></td><td>ViPS</td><td>Vi polysaccharide (ViPS) vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE64<a name=\"IMMZ-D1-DE64\"> </a></td><td>Ty21a</td><td>Ty21a vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE65<a name=\"IMMZ-D1-DE65\"> </a></td><td>Type of last cholera dose</td><td>The type of the last cholera vaccine dose administered to the client</td></tr><tr><td style=\"white-space:nowrap\">DE66<a name=\"IMMZ-D1-DE66\"> </a></td><td>WC vaccine</td><td>Killed whole cell (WC) only cholera vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE67<a name=\"IMMZ-D1-DE67\"> </a></td><td>WC-rBS vaccine</td><td>Vaccine contains a mixture of the recombinant B subunit (rBS) of cholera toxin plus killed whole cell (WC)</td></tr><tr><td style=\"white-space:nowrap\">DE68<a name=\"IMMZ-D1-DE68\"> </a></td><td>Type of last meningococcal dose</td><td>The type of the last meningococcal vaccine dose administered to the client</td></tr><tr><td style=\"white-space:nowrap\">DE69<a name=\"IMMZ-D1-DE69\"> </a></td><td>MenA conjugate vaccine (5µg)</td><td>Monovalent serogroup A (MenA) conjugate vaccine (5µg) vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE70<a name=\"IMMZ-D1-DE70\"> </a></td><td>Monovalent MenC conjugate</td><td>Monovalent MenC conjugate vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE71<a name=\"IMMZ-D1-DE71\"> </a></td><td>Quadrivalent conjugate</td><td>Quadrivalent conjugate (A,C,W135,Y-D and A,C,W135,Y-CRM) vaccines</td></tr><tr><td style=\"white-space:nowrap\">DE72<a name=\"IMMZ-D1-DE72\"> </a></td><td>Age in months when client received first meningococcal dose</td><td>The age in months when client received their first meningococcal dose</td></tr><tr><td style=\"white-space:nowrap\">DE73<a name=\"IMMZ-D1-DE73\"> </a></td><td>Type of last hepatitis A dose</td><td>The type of the last hepatitis A vaccine dose administered to the client</td></tr><tr><td style=\"white-space:nowrap\">DE74<a name=\"IMMZ-D1-DE74\"> </a></td><td>Live attenuated hepatitis A vaccine</td><td>Live attenuated hepatitis A vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE75<a name=\"IMMZ-D1-DE75\"> </a></td><td>Inactivated hepatitis A vaccine</td><td>Inactivated hepatitis A vaccine</td></tr><tr><td style=\"white-space:nowrap\">DE76<a name=\"IMMZ-D1-DE76\"> </a></td><td>VNA level</td><td>Vaccine-induced neutralizing (VNA) antibody level. It is a measured as a serum antibody concentration amount observed from the result of the concentrated, purified cell culture and embryonated egg-based rabies vaccines (CCEEV)</td></tr><tr><td style=\"white-space:nowrap\">DE77<a name=\"IMMZ-D1-DE77\"> </a></td><td>Seronegative for dengue</td><td>The client is known to be seronegative for dengue</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ-D1"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZ_D1"] ; # 
+  fhir:title [ fhir:v "IMMZ-D1 CodeSystem for Data Elements"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-17T17:18:47+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem for IMMZ.C Data Elements"] ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "58"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "DE80" ] ;
+     fhir:display [ fhir:v "Dose 0 administered" ] ;
+     fhir:definition [ fhir:v "Indicates if the client has received a birth dose and/or supplementary dose" ]
+  ] [
+     fhir:code [ fhir:v "DE8" ] ;
+     fhir:display [ fhir:v "Completed the primary vaccination series" ] ;
+     fhir:definition [ fhir:v "Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen." ]
+  ] [
+     fhir:code [ fhir:v "DE81" ] ;
+     fhir:display [ fhir:v "Date when primary vaccination series was completed" ] ;
+     fhir:definition [ fhir:v "The date when the client completed the primary vaccination series (per product/antigen)" ]
+  ] [
+     fhir:code [ fhir:v "DE9" ] ;
+     fhir:display [ fhir:v "Currently pregnant" ] ;
+     fhir:definition [ fhir:v "The client is currently pregnant" ]
+  ] [
+     fhir:code [ fhir:v "DE82" ] ;
+     fhir:display [ fhir:v "Breastfeeding" ] ;
+     fhir:definition [ fhir:v "The client is currently breastfeeding" ]
+  ] [
+     fhir:code [ fhir:v "DE10" ] ;
+     fhir:display [ fhir:v "HIV status" ] ;
+     fhir:definition [ fhir:v "The current human immunodeficiency virus (HIV) status of the client" ]
+  ] [
+     fhir:code [ fhir:v "DE11" ] ;
+     fhir:display [ fhir:v "HIV-positive" ] ;
+     fhir:definition [ fhir:v "The client is known to be HIV positive" ]
+  ] [
+     fhir:code [ fhir:v "DE12" ] ;
+     fhir:display [ fhir:v "HIV-negative" ] ;
+     fhir:definition [ fhir:v "The client is known to be HIV negative" ]
+  ] [
+     fhir:code [ fhir:v "DE13" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "The client's HIV status is unknown" ]
+  ] [
+     fhir:code [ fhir:v "DE15" ] ;
+     fhir:display [ fhir:v "Preterm birth" ] ;
+     fhir:definition [ fhir:v "The infant was preterm" ]
+  ] [
+     fhir:code [ fhir:v "DE16" ] ;
+     fhir:display [ fhir:v "Immunocompromised" ] ;
+     fhir:definition [ fhir:v "The client is known to be immunocompromised or immunosuppressed. This means the client has a weakened immune system and having a reduced ability to fight infections and other diseases" ]
+  ] [
+     fhir:code [ fhir:v "DE17" ] ;
+     fhir:display [ fhir:v "Currently on ART" ] ;
+     fhir:definition [ fhir:v "The client is currently receiving antiretroviral therapy (ART)" ]
+  ] [
+     fhir:code [ fhir:v "DE84" ] ;
+     fhir:display [ fhir:v "Type of TB infection test performed" ] ;
+     fhir:definition [ fhir:v "The type of TB infection test performed" ]
+  ] [
+     fhir:code [ fhir:v "DE85" ] ;
+     fhir:display [ fhir:v "IGRA" ] ;
+     fhir:definition [ fhir:v "Interferon-gamma release assay (IGRA)" ]
+  ] [
+     fhir:code [ fhir:v "DE86" ] ;
+     fhir:display [ fhir:v "TST" ] ;
+     fhir:definition [ fhir:v "Tuberculin skin test (TST)" ]
+  ] [
+     fhir:code [ fhir:v "DE87" ] ;
+     fhir:display [ fhir:v "TB infection test result" ] ;
+     fhir:definition [ fhir:v "Records the result of the TB infection test" ]
+  ] [
+     fhir:code [ fhir:v "DE88" ] ;
+     fhir:display [ fhir:v "Positive" ] ;
+     fhir:definition [ fhir:v "Test result was positive" ]
+  ] [
+     fhir:code [ fhir:v "DE89" ] ;
+     fhir:display [ fhir:v "Negative" ] ;
+     fhir:definition [ fhir:v "Test result was negative" ]
+  ] [
+     fhir:code [ fhir:v "DE90" ] ;
+     fhir:display [ fhir:v "HIV-exposed infant" ] ;
+     fhir:definition [ fhir:v "The infant is  known to be exposed to HIV (i.e. born to an HIV-infected woman)" ]
+  ] [
+     fhir:code [ fhir:v "DE29" ] ;
+     fhir:display [ fhir:v "Birth weight in grams" ] ;
+     fhir:definition [ fhir:v "Represents the client's birth weight value measures in grams" ]
+  ] [
+     fhir:code [ fhir:v "DE35" ] ;
+     fhir:display [ fhir:v "Type of polio dose" ] ;
+     fhir:definition [ fhir:v "The type of the polio vaccine dose administered to the client" ]
+  ] [
+     fhir:code [ fhir:v "DE36" ] ;
+     fhir:display [ fhir:v "IPV" ] ;
+     fhir:definition [ fhir:v "Inactivated poliovirus vaccine (IPV)" ]
+  ] [
+     fhir:code [ fhir:v "DE37" ] ;
+     fhir:display [ fhir:v "bOPV" ] ;
+     fhir:definition [ fhir:v "Bivalent oral poliovirus vaccine (bOPV)" ]
+  ] [
+     fhir:code [ fhir:v "DE38" ] ;
+     fhir:display [ fhir:v "Age in years when client received first DTP dose" ] ;
+     fhir:definition [ fhir:v "The client's age in years when they received their first diphtheria-tetanus-pertussis (DTP) dose" ]
+  ] [
+     fhir:code [ fhir:v "DE39" ] ;
+     fhir:display [ fhir:v "Age in months when client received first Hib dose" ] ;
+     fhir:definition [ fhir:v "The client's age in months when they received their first Haemophilus influenzae type b (Hib) dose" ]
+  ] [
+     fhir:code [ fhir:v "DE40" ] ;
+     fhir:display [ fhir:v "Sickle-cell disease" ] ;
+     fhir:definition [ fhir:v "The client is known to have a sickle-cell disease" ]
+  ] [
+     fhir:code [ fhir:v "DE41" ] ;
+     fhir:display [ fhir:v "Age in months when client received third pneumococcal dose" ] ;
+     fhir:definition [ fhir:v "The client's age in months when they received their third pneumococcal dose" ]
+  ] [
+     fhir:code [ fhir:v "DE42" ] ;
+     fhir:display [ fhir:v "No history of intussusception" ] ;
+     fhir:definition [ fhir:v "The client is known to have no history of intussusception" ]
+  ] [
+     fhir:code [ fhir:v "DE43" ] ;
+     fhir:display [ fhir:v "Previous rotavirus doses given were the same product" ] ;
+     fhir:definition [ fhir:v "Indicates whether or not all of the client's previous rotavirus doses were the same product" ]
+  ] [
+     fhir:code [ fhir:v "DE46" ] ;
+     fhir:display [ fhir:v "Immune reconstitution was achieved" ] ;
+     fhir:definition [ fhir:v "The client is known to have achieved immune reconstitution" ]
+  ] [
+     fhir:code [ fhir:v "DE92" ] ;
+     fhir:display [ fhir:v "Severely immunosuppressed" ] ;
+     fhir:definition [ fhir:v "The client is known to be severely immunocompromised or immunosuppressed" ]
+  ] [
+     fhir:code [ fhir:v "DE49" ] ;
+     fhir:display [ fhir:v "ART start date" ] ;
+     fhir:definition [ fhir:v "The date on which the client started or restarted antiretroviral therapy (ART)" ]
+  ] [
+     fhir:code [ fhir:v "DE52" ] ;
+     fhir:display [ fhir:v "Type of last JE dose" ] ;
+     fhir:definition [ fhir:v "The type of the last Japanese encephalitis (JE) vaccine dose administered to the client" ]
+  ] [
+     fhir:code [ fhir:v "DE53" ] ;
+     fhir:display [ fhir:v "Inactivated Vero cell-derived vaccine" ] ;
+     fhir:definition [ fhir:v "Inactivated Vero cell-derived Japanese encephalitis (JE) vaccine type" ]
+  ] [
+     fhir:code [ fhir:v "DE54" ] ;
+     fhir:display [ fhir:v "Live attenuated vaccine" ] ;
+     fhir:definition [ fhir:v "Live attenuated Japanese encephalitis (JE) vaccine type" ]
+  ] [
+     fhir:code [ fhir:v "DE55" ] ;
+     fhir:display [ fhir:v "Live recombinant vaccine" ] ;
+     fhir:definition [ fhir:v "Live recombinant Japanese encephalitis (JE) vaccine type" ]
+  ] [
+     fhir:code [ fhir:v "DE56" ] ;
+     fhir:display [ fhir:v "Type of last TBE dose" ] ;
+     fhir:definition [ fhir:v "The type of the last tick-borne encephalitis (TBE) vaccine dose administered" ]
+  ] [
+     fhir:code [ fhir:v "DE57" ] ;
+     fhir:display [ fhir:v "FSME-Immun" ] ;
+     fhir:definition [ fhir:v "FSME-Immun vaccine product, which is an inactivated whole-virus vaccine for tick-borne encephalitis (TBE)" ]
+  ] [
+     fhir:code [ fhir:v "DE58" ] ;
+     fhir:display [ fhir:v "Encepur" ] ;
+     fhir:definition [ fhir:v "Encepur vaccine product, which is an inactivated viral vaccine for tick-borne encephalitis (TBE)" ]
+  ] [
+     fhir:code [ fhir:v "DE59" ] ;
+     fhir:display [ fhir:v "TBE-Moscow" ] ;
+     fhir:definition [ fhir:v "TBE-Moscow vaccine product, which is a vaccine for tick-borne encephalitis (TBE)" ]
+  ] [
+     fhir:code [ fhir:v "DE60" ] ;
+     fhir:display [ fhir:v "EnceVir" ] ;
+     fhir:definition [ fhir:v "EnceVir vaccine product, which is a vaccine for tick-borne encephalitis (TBE)" ]
+  ] [
+     fhir:code [ fhir:v "DE61" ] ;
+     fhir:display [ fhir:v "Type of last typhoid dose" ] ;
+     fhir:definition [ fhir:v "The type of the last typhoid vaccine dose administered to the client" ]
+  ] [
+     fhir:code [ fhir:v "DE62" ] ;
+     fhir:display [ fhir:v "Typbar-TCV" ] ;
+     fhir:definition [ fhir:v "Typbar-TCV vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE63" ] ;
+     fhir:display [ fhir:v "ViPS" ] ;
+     fhir:definition [ fhir:v "Vi polysaccharide (ViPS) vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE64" ] ;
+     fhir:display [ fhir:v "Ty21a" ] ;
+     fhir:definition [ fhir:v "Ty21a vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE65" ] ;
+     fhir:display [ fhir:v "Type of last cholera dose" ] ;
+     fhir:definition [ fhir:v "The type of the last cholera vaccine dose administered to the client" ]
+  ] [
+     fhir:code [ fhir:v "DE66" ] ;
+     fhir:display [ fhir:v "WC vaccine" ] ;
+     fhir:definition [ fhir:v "Killed whole cell (WC) only cholera vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE67" ] ;
+     fhir:display [ fhir:v "WC-rBS vaccine" ] ;
+     fhir:definition [ fhir:v "Vaccine contains a mixture of the recombinant B subunit (rBS) of cholera toxin plus killed whole cell (WC)" ]
+  ] [
+     fhir:code [ fhir:v "DE68" ] ;
+     fhir:display [ fhir:v "Type of last meningococcal dose" ] ;
+     fhir:definition [ fhir:v "The type of the last meningococcal vaccine dose administered to the client" ]
+  ] [
+     fhir:code [ fhir:v "DE69" ] ;
+     fhir:display [ fhir:v "MenA conjugate vaccine (5µg)" ] ;
+     fhir:definition [ fhir:v "Monovalent serogroup A (MenA) conjugate vaccine (5µg) vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE70" ] ;
+     fhir:display [ fhir:v "Monovalent MenC conjugate" ] ;
+     fhir:definition [ fhir:v "Monovalent MenC conjugate vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE71" ] ;
+     fhir:display [ fhir:v "Quadrivalent conjugate" ] ;
+     fhir:definition [ fhir:v "Quadrivalent conjugate (A,C,W135,Y-D and A,C,W135,Y-CRM) vaccines" ]
+  ] [
+     fhir:code [ fhir:v "DE72" ] ;
+     fhir:display [ fhir:v "Age in months when client received first meningococcal dose" ] ;
+     fhir:definition [ fhir:v "The age in months when client received their first meningococcal dose" ]
+  ] [
+     fhir:code [ fhir:v "DE73" ] ;
+     fhir:display [ fhir:v "Type of last hepatitis A dose" ] ;
+     fhir:definition [ fhir:v "The type of the last hepatitis A vaccine dose administered to the client" ]
+  ] [
+     fhir:code [ fhir:v "DE74" ] ;
+     fhir:display [ fhir:v "Live attenuated hepatitis A vaccine" ] ;
+     fhir:definition [ fhir:v "Live attenuated hepatitis A vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE75" ] ;
+     fhir:display [ fhir:v "Inactivated hepatitis A vaccine" ] ;
+     fhir:definition [ fhir:v "Inactivated hepatitis A vaccine" ]
+  ] [
+     fhir:code [ fhir:v "DE76" ] ;
+     fhir:display [ fhir:v "VNA level" ] ;
+     fhir:definition [ fhir:v "Vaccine-induced neutralizing (VNA) antibody level. It is a measured as a serum antibody concentration amount observed from the result of the concentrated, purified cell culture and embryonated egg-based rabies vaccines (CCEEV)" ]
+  ] [
+     fhir:code [ fhir:v "DE77" ] ;
+     fhir:display [ fhir:v "Seronegative for dengue" ] ;
+     fhir:definition [ fhir:v "The client is known to be seronegative for dengue" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

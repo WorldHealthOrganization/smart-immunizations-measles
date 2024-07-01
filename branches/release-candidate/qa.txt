@@ -1,0 +1,386 @@
+SMART : Validation Results
+=========================================
+
+err = 29, warn = 46, info = 110
+IG Publisher Version: 1.5.14
+Generated Sat Jan 20 17:29:09 UTC 2024. FHIR version 4.0.1 for smart.who.int.immunizations-measles#0.1.0 (canonical = http://smart.who.int/immunizations-measles)
+ Build Errors : 13 / 4 / 0
+ /github/workspace/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesCIMR : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesEval : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesMR : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/ActorDefinition-CommunityHealthWorker : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ActorDefinition-EPIManager : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ActorDefinition-HealthWorker : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-ICD11 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-IMMZ.C : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-IMMZ.D1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-IMMZ.D1.DE1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-IMMZ.D1.DE5 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-IMMZ.D4 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-VaccineProducts : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ConceptMap-IMMZCConceptMap : 0 / 33 / 1
+ /github/workspace/fsh-generated/resources/ConceptMap-IMMZCSexToAdministrativeGender : 0 / 8 / 1
+ /github/workspace/fsh-generated/resources/ConceptMap-IMMZD1ConceptMap : 0 / 28 / 1
+ /github/workspace/fsh-generated/resources/ConceptMap-IMMZD4ConceptMap : 0 / 26 / 1
+ /github/workspace/fsh-generated/resources/Immunization-Immunization1 : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.immunizations-measles : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Library-FHIRCommon : 0 / 25 / 2
+ /github/workspace/fsh-generated/resources/Library-FHIRHelpers : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZCommon : 0 / 23 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZCommonIzDataElements : 0 / 4 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZConcepts : 2 / 0 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZConfig : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZD2DTMeaslesLogic : 0 / 13 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZDT08 : 0 / 18 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZIND08 : 3 / 0 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZINDMeasles : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZIndicatorCommon : 0 / 14 / 2
+ /github/workspace/fsh-generated/resources/Library-IMMZVaccineLibrary : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Library-WHOCommon : 0 / 18 / 2
+ /github/workspace/fsh-generated/resources/Library-WHOConcepts : 1 / 0 / 2
+ /github/workspace/fsh-generated/resources/Measure-IMMZIND05 : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Measure-IMMZIND40 : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Medication-Vaccine-MSDMMRVaxPro : 0 / 0 / 4
+ /github/workspace/fsh-generated/resources/Medication-Vaccine-SIIMeasles : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/MedicationRequest-VaccineProposal1 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Patient-P123456 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-P654321 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/PlanDefinition-IMMZD2DTMeasles : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/PlanDefinition-IMMZD2DTMeaslesCI : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/PlanDefinition-IMMZDTUmbrella : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/Questionnaire-AdministerVaccine : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Questionnaire-IMMZD1ClientHistoryMeasles : 0 / 0 / 10
+ /github/workspace/fsh-generated/resources/Questionnaire-QIMMZCRegisterClient : 1 / 0 / 10
+ /github/workspace/fsh-generated/resources/Questionnaire-QIMMZD4CheckContraindicationsMeasles : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.C.QuestionnaireResponse.1 : 0 / 0 / 4
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D1.QuestionnaireResponse.1 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D1.QuestionnaireResponse.2 : 0 / 1 / 3
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D1.QuestionnaireResponse.3 : 0 / 2 / 4
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.1 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.2 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.3 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.4 : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Requirements-immz-e-fxnreq : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-IMMZCRegisterClient : 0 / 0 / 23
+ /github/workspace/fsh-generated/resources/StructureDefinition-IMMZD1ClientHistoryMeasles : 0 / 0 / 19
+ /github/workspace/fsh-generated/resources/StructureDefinition-IMMZD4CheckContraindicationsMeasles : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-IMMZDUpdateVaccinationRecord : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SGImmunization : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SGMedicationClassification : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SGVaccineProduct : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SGVaccineProposal : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SGVaccineRequest : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-sg-ext-administeredProduct : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-ARVDrugs-values : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-AllVaccineTypes : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-Birthweight-values : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-HIVstatus-values : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-IMMZ.C.DE5 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-IMMZ.D1.DE10 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-IMMZ.D1.DE1VS : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-IMMZ.D1.DE5VS : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-IMMZ.D4.DE161 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-IMMZ.Z.DE9 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-Immunocompromised-values : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-LiveAttenuatedVaccines : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-Negativetestresult-values : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-PositiveTestResult-values : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-SGImmunizationStatusCodes : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-VSMeaslesVaccineProducts : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-VaccineTypes : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-pregnancystatus-values : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-sgcountry : 0 / 0 / 1
+ /github/workspace/input/maps/IMMZCLMToPatient : 0 / 1 / 1
+ /github/workspace/input/maps/IMMZCQRToLM : 1 / 2 / 1
+ /github/workspace/input/maps/IMMZCQRToPatient : 2 / 0 / 1
+ /github/workspace/input/maps/IMMZD1LMToResources : 1 / 0 / 1
+ /github/workspace/input/maps/IMMZD1QRToLM : 5 / 0 / 1
+ /github/workspace/input/maps/IMMZD1QRToResources : 2 / 0 / 1
+ /github/workspace/input/maps/IMMZD4LMToResources : 0 / 0 / 1
+ /github/workspace/input/maps/IMMZD4QRToLM : 0 / 0 / 1
+ /github/workspace/input/maps/IMMZD4QRToResources : 2 / 0 / 1
+</table>
+== n/a ==
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZCLMToPatient.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZCQRToLM.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZCQRToPatient.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD1LMToResources.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD1QRToLM.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD1QRToResources.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD4LMToResources.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD4QRToLM.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/IMMZD4QRToResources.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /github/workspace/output/Questionnaire-QIMMZCRegisterClient-form.html: unexpected non-end of element null::div  at line 339 column 250
+ERROR: /github/workspace/output/Questionnaire-QIMMZD4CheckContraindicationsMeasles-form.html: unexpected non-end of element null::div  at line 339 column 266
+ERROR: /github/workspace/output/Questionnaire-IMMZD1ClientHistoryMeasles-form.html: unexpected non-end of element null::div  at line 339 column 256
+ERROR: /github/workspace/output/Questionnaire-AdministerVaccine-form.html: unexpected non-end of element null::div  at line 339 column 247
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesCIMR.json ==
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesCIMR: ActivityDefinition.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesCIMR: ActivityDefinition.product.ofType(CodeableConcept): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+== fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesEval.json ==
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesEval: ActivityDefinition.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/ActivityDefinition-IMMZD2DTMeaslesMR.json ==
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesMR: ActivityDefinition.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: ActivityDefinition/IMMZD2DTMeaslesMR: ActivityDefinition.product.ofType(CodeableConcept): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+== fsh-generated/resources/ActorDefinition-CommunityHealthWorker.json ==
+WARNING: ActorDefinition/CommunityHealthWorker: ActorDefinition.meta.profile[0]: Profile reference 'http://smart.who.int/smart-base/StructureDefinition/SGPersona' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/ActorDefinition-EPIManager.json ==
+WARNING: ActorDefinition/EPIManager: ActorDefinition.meta.profile[0]: Profile reference 'http://smart.who.int/smart-base/StructureDefinition/SGPersona' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/ActorDefinition-HealthWorker.json ==
+WARNING: ActorDefinition/HealthWorker: ActorDefinition.meta.profile[0]: Profile reference 'http://smart.who.int/smart-base/StructureDefinition/SGPersona' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/CodeSystem-ICD11.json ==
+INFORMATION: CodeSystem/ICD11: CodeSystem: CodeSystems SHOULD have a stated value for the hierarchyMeaning element so that users know the status and meaning of the code system clearly
+== fsh-generated/resources/CodeSystem-IMMZ.C.json ==
+== fsh-generated/resources/CodeSystem-IMMZ.D1.json ==
+== fsh-generated/resources/CodeSystem-IMMZ.D1.DE1.json ==
+== fsh-generated/resources/CodeSystem-IMMZ.D1.DE5.json ==
+== fsh-generated/resources/CodeSystem-IMMZ.D4.json ==
+== fsh-generated/resources/CodeSystem-VaccineProducts.json ==
+== fsh-generated/resources/ConceptMap-IMMZCConceptMap.json ==
+== fsh-generated/resources/ConceptMap-IMMZCSexToAdministrativeGender.json ==
+== fsh-generated/resources/ConceptMap-IMMZD1ConceptMap.json ==
+== fsh-generated/resources/ConceptMap-IMMZD4ConceptMap.json ==
+== fsh-generated/resources/Immunization-Immunization1.json ==
+INFORMATION: Immunization/Immunization1: Immunization.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts|0.1.0
+INFORMATION: Immunization/Immunization1: Immunization.vaccineCode: Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+== fsh-generated/resources/ImplementationGuide-smart.who.int.immunizations-measles.json ==
+WARNING: ImplementationGuide/smart.who.int.immunizations-measles: ImplementationGuide.meta.profile[0]: Profile reference 'http://smart.who.int/smart-base/ImplementationGuide-SGImplementationGuide' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Library-FHIRCommon.json ==
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRHelpers.ToInterval has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRCommon.Extensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRCommon.ModifierExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRCommon.BaseExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/FHIRCommon.cql: The function FHIRCommon.BaseModifierExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/FHIRCommon: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-FHIRHelpers.json ==
+INFORMATION: Library/FHIRHelpers: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZCommon.json ==
+WARNING: /github/workspace/input/cql/IMMZCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZCommon.cql: The function FHIRHelpers.ToInterval has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZCommon.cql: The function WHOCommon.ModifierExtension has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZCommon: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZCommonIzDataElements.json ==
+WARNING: /github/workspace/input/cql/IMMZCommonIzDataElements.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZCommonIzDataElements.cql: The function WHOCommon.Official has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZCommonIzDataElements: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZConcepts.json ==
+INFORMATION: Library/IMMZConcepts: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+ERROR: Library/IMMZConcepts: Library.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/sid/ciel' does not resolve
+ERROR: Library/IMMZConcepts: Library.relatedArtifact[12].resource: Canonical URL 'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips' does not resolve
+== fsh-generated/resources/Library-IMMZConfig.json ==
+INFORMATION: Library/IMMZConfig: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZD2DTMeaslesLogic.json ==
+WARNING: /github/workspace/input/cql/IMMZD2DTMeaslesLogic.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZD2DTMeaslesLogic.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZD2DTMeaslesLogic: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZDT08.json ==
+WARNING: /github/workspace/input/cql/IMMZDT08.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: IMMZDT08.cql: Result type choice<System.String,System.Integer> of definition MCV Next Dose Number is not supported; implementations may not be able to use the result of this expression
+INFORMATION: Library/IMMZDT08: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZIND08.json ==
+ERROR: IMMZIND08: Could not resolve identifier MCV Doses Administered to Patient During Measurement Period in library IMMZIndicatorCommon.
+ERROR: IMMZIND08: Could not resolve identifier MCV Doses Administered to Patient During Measurement Period in library IMMZIndicatorCommon.
+ERROR: IMMZIND08.cql: CQL Processing failed with (2) errors.
+INFORMATION: Library/IMMZIND08: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZINDMeasles.json ==
+WARNING: /github/workspace/input/cql/IMMZINDMeasles.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZINDMeasles: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZIndicatorCommon.json ==
+WARNING: /github/workspace/input/cql/IMMZIndicatorCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZIndicatorCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/IMMZIndicatorCommon.cql: The function WHOCommon.Official has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/IMMZIndicatorCommon: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-IMMZVaccineLibrary.json ==
+INFORMATION: Library/IMMZVaccineLibrary: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-WHOCommon.json ==
+WARNING: /github/workspace/input/cql/WHOCommon.cql: The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/WHOCommon.cql: The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/WHOCommon.cql: The function WHOCommon.Extensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+WARNING: /github/workspace/input/cql/WHOCommon.cql: The function WHOCommon.ModifierExtensions has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.
+INFORMATION: Library/WHOCommon: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Library-WHOConcepts.json ==
+INFORMATION: Library/WHOConcepts: Library.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+ERROR: Library/WHOConcepts: Library.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/sid/ciel' does not resolve
+== fsh-generated/resources/Measure-IMMZIND05.json ==
+WARNING: Measure/IMMZIND05: Measure: Published measures SHOULD conform to the ShareableMeasure profile, which says that the element Measure.title is mandatory, but it is not present
+== fsh-generated/resources/Measure-IMMZIND40.json ==
+WARNING: Measure/IMMZIND40: Measure: Published measures SHOULD conform to the ShareableMeasure profile, which says that the element Measure.title is mandatory, but it is not present
+== fsh-generated/resources/Medication-Vaccine-MSDMMRVaxPro.json ==
+INFORMATION: Medication/Vaccine-MSDMMRVaxPro: Medication.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+INFORMATION: Medication/Vaccine-MSDMMRVaxPro: Medication.extension[1].value.ofType(CodeableConcept): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+INFORMATION: Medication/Vaccine-MSDMMRVaxPro: Medication.code: Reference to experimental CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts|0.1.0
+== fsh-generated/resources/Medication-Vaccine-SIIMeasles.json ==
+INFORMATION: Medication/Vaccine-SIIMeasles: Medication.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+INFORMATION: Medication/Vaccine-SIIMeasles: Medication.code: Reference to experimental CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts|0.1.0
+== fsh-generated/resources/MedicationRequest-VaccineProposal1.json ==
+INFORMATION: MedicationRequest/VaccineProposal1: MedicationRequest.medication.ofType(CodeableConcept): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+== fsh-generated/resources/Patient-P123456.json ==
+== fsh-generated/resources/Patient-P654321.json ==
+== fsh-generated/resources/PlanDefinition-IMMZD2DTMeasles.json ==
+INFORMATION: PlanDefinition/IMMZD2DTMeasles: PlanDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PlanDefinition/IMMZD2DTMeasles: PlanDefinition.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/PlanDefinition-IMMZD2DTMeaslesCI.json ==
+INFORMATION: PlanDefinition/IMMZD2DTMeaslesCI: PlanDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PlanDefinition/IMMZD2DTMeaslesCI: PlanDefinition.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/PlanDefinition-IMMZDTUmbrella.json ==
+INFORMATION: PlanDefinition/IMMZDTUmbrella: PlanDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PlanDefinition/IMMZDTUmbrella: PlanDefinition.extension[0].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+== fsh-generated/resources/Questionnaire-AdministerVaccine.json ==
+INFORMATION: Questionnaire/AdministerVaccine: Questionnaire.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap|3.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Questionnaire-IMMZD1ClientHistoryMeasles.json ==
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[0].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[1].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[3].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[4].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[4].code[1]: Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[5].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: Questionnaire/IMMZD1ClientHistoryMeasles: Questionnaire.item[6].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+== fsh-generated/resources/Questionnaire-QIMMZCRegisterClient.json ==
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[0].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[1].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[3].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[4].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[5].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[6].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: Questionnaire/QIMMZCRegisterClient: Questionnaire.item[7].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+ERROR: Questionnaire/QIMMZCRegisterClient: Questionnaire: Constraint failed: que-2: 'The link ids for groups and questions must be unique within the questionnaire' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
+== fsh-generated/resources/Questionnaire-QIMMZD4CheckContraindicationsMeasles.json ==
+INFORMATION: Questionnaire/QIMMZD4CheckContraindicationsMeasles: Questionnaire.item[0].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.C.QuestionnaireResponse.1.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.C.QuestionnaireResponse.1: QuestionnaireResponse.item[2].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.C.QuestionnaireResponse.1: QuestionnaireResponse.item[6].answer[0].value.ofType(Coding): Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021
+INFORMATION: QuestionnaireResponse/Example.IMMZ.C.QuestionnaireResponse.1: QuestionnaireResponse.item[6].answer[0]: Cannot validate options because no option or options are provided
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D1.QuestionnaireResponse.1.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.1: QuestionnaireResponse.item[2].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D1.QuestionnaireResponse.2.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.2: QuestionnaireResponse.item[2].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.2: QuestionnaireResponse.item[5].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+WARNING: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.2: QuestionnaireResponse.item[5].item[0].answer[0]: ValueSet '#IMMZ.Z.DE9' not found
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D1.QuestionnaireResponse.3.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.3: QuestionnaireResponse.item[3].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.3: QuestionnaireResponse.item[7].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.3: QuestionnaireResponse.item[8].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem http://id.who.int/icd/release/11/mms|0.1.0
+WARNING: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.3: QuestionnaireResponse.item[7].item[0].answer[0]: ValueSet '#IMMZ.Z.DE9' not found
+WARNING: QuestionnaireResponse/Example.IMMZ.D1.QuestionnaireResponse.3: QuestionnaireResponse.item[8].item[0].answer[0]: ValueSet '#IMMZ.Z.DE9' not found
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.1.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.1: QuestionnaireResponse.item[0].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.2.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.2: QuestionnaireResponse.item[0].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.3.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.3: QuestionnaireResponse.item[0].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+== fsh-generated/resources/QuestionnaireResponse-Example.IMMZ.D4.QuestionnaireResponse.4.json ==
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.4: QuestionnaireResponse.item[0].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.4: QuestionnaireResponse.item[1].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.4: QuestionnaireResponse.item[2].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+INFORMATION: QuestionnaireResponse/Example.IMMZ.D4.QuestionnaireResponse.4: QuestionnaireResponse.item[3].answer[0].value.ofType(Coding): Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+== fsh-generated/resources/Requirements-immz-e-fxnreq.json ==
+== fsh-generated/resources/StructureDefinition-IMMZCRegisterClient.json ==
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[1].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[3].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[4].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[5].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[9].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[10].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[11].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[12].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[13].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.snapshot.element[14].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[1].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[3].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[4].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[5].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[6].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[7].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[8].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[9].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[10].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+INFORMATION: StructureDefinition/IMMZCRegisterClient: StructureDefinition.differential.element[11].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.C|0.1.0
+== fsh-generated/resources/StructureDefinition-IMMZD1ClientHistoryMeasles.json ==
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[3].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[4].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[5].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[6].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[7].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[8].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[13].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.snapshot.element[14].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[3].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[4].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[5].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[6].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[7].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[8].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[10].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+INFORMATION: StructureDefinition/IMMZD1ClientHistoryMeasles: StructureDefinition.differential.element[11].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D1|0.1.0
+== fsh-generated/resources/StructureDefinition-IMMZD4CheckContraindicationsMeasles.json ==
+INFORMATION: StructureDefinition/IMMZD4CheckContraindicationsMeasles: StructureDefinition.snapshot.element[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+INFORMATION: StructureDefinition/IMMZD4CheckContraindicationsMeasles: StructureDefinition.differential.element[2].code[0]: Reference to draft CodeSystem http://smart.who.int/immunizations-measles/CodeSystem/IMMZ.D4|0.1.0
+== fsh-generated/resources/StructureDefinition-IMMZDUpdateVaccinationRecord.json ==
+== fsh-generated/resources/StructureDefinition-SGImmunization.json ==
+== fsh-generated/resources/StructureDefinition-SGMedicationClassification.json ==
+== fsh-generated/resources/StructureDefinition-SGVaccineProduct.json ==
+== fsh-generated/resources/StructureDefinition-SGVaccineProposal.json ==
+== fsh-generated/resources/StructureDefinition-SGVaccineRequest.json ==
+WARNING: StructureDefinition.where(url = 'http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineRequest'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-sg-ext-administeredProduct.json ==
+WARNING: StructureDefinition/sg-ext-administeredProduct: StructureDefinition.context[0]: Review the extension type for sg-ext-administeredProduct: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+== fsh-generated/resources/ValueSet-ARVDrugs-values.json ==
+== fsh-generated/resources/ValueSet-AllVaccineTypes.json ==
+== fsh-generated/resources/ValueSet-Birthweight-values.json ==
+== fsh-generated/resources/ValueSet-HIVstatus-values.json ==
+== fsh-generated/resources/ValueSet-IMMZ.C.DE5.json ==
+== fsh-generated/resources/ValueSet-IMMZ.D1.DE10.json ==
+== fsh-generated/resources/ValueSet-IMMZ.D1.DE1VS.json ==
+== fsh-generated/resources/ValueSet-IMMZ.D1.DE5VS.json ==
+== fsh-generated/resources/ValueSet-IMMZ.D4.DE161.json ==
+== fsh-generated/resources/ValueSet-IMMZ.Z.DE9.json ==
+== fsh-generated/resources/ValueSet-Immunocompromised-values.json ==
+== fsh-generated/resources/ValueSet-LiveAttenuatedVaccines.json ==
+== fsh-generated/resources/ValueSet-Negativetestresult-values.json ==
+== fsh-generated/resources/ValueSet-PositiveTestResult-values.json ==
+== fsh-generated/resources/ValueSet-SGImmunizationStatusCodes.json ==
+== fsh-generated/resources/ValueSet-VSMeaslesVaccineProducts.json ==
+WARNING: ValueSet/VSMeaslesVaccineProducts: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-VaccineTypes.json ==
+WARNING: ValueSet/VaccineTypes: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-pregnancystatus-values.json ==
+WARNING: ValueSet/pregnancystatus-values: ValueSet: Constraint failed: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+== fsh-generated/resources/ValueSet-sgcountry.json ==
+== input/maps/IMMZCLMToPatient.fml ==
+WARNING: StructureMap/IMMZCLMToPatient: StructureMap.group[0].rule[4].dependent[0]: The group NameToHumanName has already been used with different parameters, so the type checking may be incorrect (other = [source IMMZCRegisterClient name, target HumanName hname]; this = [source http://smart.who.int/immunizations-measles/StructureDefinition/IMMZCRegisterClient#IMMZCRegisterClient.caregiver name, target HumanName hname])
+== input/maps/IMMZCQRToLM.fml ==
+ERROR: StructureMap/IMMZCQRToLM: StructureMap.group[0].rule[0].rule[1].dependent[0].variable[0]: The source parameter 'name'  was not found
+WARNING: StructureMap/IMMZCQRToLM: StructureMap.group[0].rule[0].rule[2].rule[0].rule[0].source[0]: The target path coding.code refers to the path QuestionnaireResponse.item.answer.value[x].code which could be a reference to multiple elements (Coding.code, Quantity.code). No further checking can be performed
+WARNING: StructureMap/IMMZCQRToLM: StructureMap.group[0].rule[0].rule[6].rule[0].rule[1].source[0]: The target path coding.display refers to the path QuestionnaireResponse.item.answer.value[x].display which could be a reference to multiple elements (Coding.display, Reference.display). No further checking can be performed
+== input/maps/IMMZCQRToPatient.fml ==
+ERROR: StructureMap/IMMZCQRToPatient: StructureMap.group[0].rule[2].rule[0].dependent[0].variable[1]: The target parameter 'immzc'  was not found
+ERROR: StructureMap/IMMZCQRToPatient: StructureMap.group[0].rule[2].rule[1].dependent[0].variable[0]: The source parameter 'immzc'  was not found
+== input/maps/IMMZD1LMToResources.fml ==
+ERROR: StructureMap/IMMZD1LMToResources: StructureMap.group[0].rule[1].rule[7].rule[3].target[0]: Transform cast not checked yet
+== input/maps/IMMZD1QRToLM.fml ==
+ERROR: StructureMap/IMMZD1QRToLM: StructureMap.group[0].rule[1].rule[7].rule[0].source[0]: The source context history is not known at this point
+ERROR: StructureMap/IMMZD1QRToLM: StructureMap.group[0].rule[1].rule[7].rule[0].rule[0].source[0]: The source context entry is not known at this point
+ERROR: StructureMap/IMMZD1QRToLM: StructureMap.group[0].rule[1].rule[7].rule[0].rule[0].rule[0].source[0]: The source context answer is not known at this point
+ERROR: StructureMap/IMMZD1QRToLM: StructureMap.group[0].rule[1].rule[7].rule[0].rule[1].source[0]: The source context entry is not known at this point
+ERROR: StructureMap/IMMZD1QRToLM: StructureMap.group[0].rule[1].rule[7].rule[0].rule[1].rule[0].source[0]: The source context answer is not known at this point
+== input/maps/IMMZD1QRToResources.fml ==
+ERROR: StructureMap/IMMZD1QRToResources: StructureMap.group[0].rule[0].rule[0].dependent[0].variable[1]: The target parameter 'immz'  was not found
+ERROR: StructureMap/IMMZD1QRToResources: StructureMap.group[0].rule[0].rule[1].dependent[0].variable[0]: The source parameter 'immz'  was not found
+== input/maps/IMMZD4LMToResources.fml ==
+== input/maps/IMMZD4QRToLM.fml ==
+== input/maps/IMMZD4QRToResources.fml ==
+ERROR: StructureMap/IMMZD4QRToResources: StructureMap.group[0].rule[0].rule[0].dependent[0].variable[1]: The target parameter 'immz'  was not found
+ERROR: StructureMap/IMMZD4QRToResources: StructureMap.group[0].rule[0].rule[1].dependent[0].variable[0]: The source parameter 'immz'  was not found

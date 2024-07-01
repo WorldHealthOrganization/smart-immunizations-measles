@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/Measure/IMMZIND08> a fhir:Measure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZIND08"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Measure IMMZIND08</b></p><a name=\"IMMZIND08\"> </a><a name=\"hcIMMZIND08\"> </a><a name=\"hcIMMZIND08-en-US\"> </a><p><b>url</b>: <a href=\"Measure-IMMZIND08.html\">Measure IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZIND08</p><p><b>title</b>: IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)</p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2023-10-05</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: </p><div><p>IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)</p>\n</div><p><b>library</b>: <a href=\"Library-IMMZIND08Logic.html\">IMMZ.IND.08 Logic</a></p><p><b>scoring</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-scoring continuous-variable}\">Continuous Variable</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.IP</blockquote><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Initial Population</td></tr></table></blockquote><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.MP</blockquote><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population measure-population}\">Measure Population</span></p><p><b>description</b>: Measure Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Measure Population</td></tr></table></blockquote><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.MO</blockquote><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population measure-observation}\">Measure Observation</span></p><p><b>description</b>: Measure Observation</p><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Measure Observation</td></tr></table></blockquote><blockquote><p><b>stratifier</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.S</blockquote><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Stratification</td></tr></table></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "boolean" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/Measure/IMMZIND08"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZIND08"] ; # 
+  fhir:title [ fhir:v "IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-05"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)"] ; # 
+  fhir:library ( [
+     fhir:v "http://smart.who.int/immunizations-measles/Library/IMMZIND08Logic"^^xsd:anyURI ;
+     fhir:link <http://smart.who.int/immunizations-measles/Library/IMMZIND08Logic>
+  ] ) ; # 
+  fhir:scoring [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/measure-scoring"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "continuous-variable" ] ;
+       fhir:display [ fhir:v "Continuous Variable" ]
+     ] )
+  ] ; # 
+  fhir:group ( [
+     fhir:population ( [
+       fhir:id [ fhir:v "IMMZ.IND.08.IP" ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/measure-population"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "initial-population" ] ;
+           fhir:display [ fhir:v "Initial Population" ]
+         ] )
+       ] ;
+       fhir:description [ fhir:v "Initial Population" ] ;
+       fhir:criteria [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Initial Population" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "IMMZ.IND.08.MP" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "boolean" ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/measure-population"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "measure-population" ] ;
+           fhir:display [ fhir:v "Measure Population" ]
+         ] )
+       ] ;
+       fhir:description [ fhir:v "Measure Population" ] ;
+       fhir:criteria [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Measure Population" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "IMMZ.IND.08.MO" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "measure-population" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "count" ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/measure-population"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "measure-observation" ]
+         ] )
+       ] ;
+       fhir:description [ fhir:v "Measure Observation" ] ;
+       fhir:criteria [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Measure Observation" ]
+       ]
+     ] ) ;
+     fhir:stratifier ( [
+       fhir:id [ fhir:v "IMMZ.IND.08.S" ] ;
+       fhir:criteria [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Stratification" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

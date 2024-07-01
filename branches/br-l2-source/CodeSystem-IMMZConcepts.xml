@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="IMMZConcepts"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem IMMZConcepts</b></p><a name="IMMZConcepts"> </a><a name="hcIMMZConcepts"> </a><a name="hcIMMZConcepts-en-US"> </a><p>This case-insensitive code system <code>http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">C.DE1<a name="IMMZConcepts-C.46DE1"> </a></td><td>Unique identifier</td><td>Unique identifier for the client, according to the policies applicable to each country. There can be more than one unique identifier used to link records (e.g. national ID, health ID, immunization information system ID, medical record ID).</td></tr><tr><td style="white-space:nowrap">C.DE2<a name="IMMZConcepts-C.46DE2"> </a></td><td>Name</td><td>The full name of the client</td></tr><tr><td style="white-space:nowrap">C.DE3<a name="IMMZConcepts-C.46DE3"> </a></td><td>First name</td><td>Client's first name or given name</td></tr><tr><td style="white-space:nowrap">C.DE4<a name="IMMZConcepts-C.46DE4"> </a></td><td>Family name</td><td>Client's family name or last name</td></tr><tr><td style="white-space:nowrap">C.DE5<a name="IMMZConcepts-C.46DE5"> </a></td><td>Sex</td><td>Documentation of a specific instance of sex information for the client</td></tr><tr><td style="white-space:nowrap">C.DE6<a name="IMMZConcepts-C.46DE6"> </a></td><td>Male</td><td>Client's biological sex is male</td></tr><tr><td style="white-space:nowrap">C.DE7<a name="IMMZConcepts-C.46DE7"> </a></td><td>Female</td><td>Client's biological sex is female</td></tr><tr><td style="white-space:nowrap">C.DE8<a name="IMMZConcepts-C.46DE8"> </a></td><td>Biological sex not specified</td><td>Client's biological sex is not specified</td></tr><tr><td style="white-space:nowrap">C.DE9<a name="IMMZConcepts-C.46DE9"> </a></td><td>Intersex</td><td>Client's biological sex is intersex</td></tr><tr><td style="white-space:nowrap">C.DE10<a name="IMMZConcepts-C.46DE10"> </a></td><td>Date of birth</td><td>Client's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes</td></tr><tr><td style="white-space:nowrap">C.DE13<a name="IMMZConcepts-C.46DE13"> </a></td><td>Age</td><td>The client's calculated age (presented as number of years, months, days) based on the date of birth (DOB) and the visit date</td></tr><tr><td style="white-space:nowrap">C.DE14<a name="IMMZConcepts-C.46DE14"> </a></td><td>Caregivers (multiple)</td><td>The client's caregiver (person) which could be next of kin (e.g. partner, husband, mother, sibling, etc.)</td></tr><tr><td style="white-space:nowrap">C.DE15<a name="IMMZConcepts-C.46DE15"> </a></td><td>Caregiver's full name</td><td>The full name of the client's caregiver</td></tr><tr><td style="white-space:nowrap">C.DE16<a name="IMMZConcepts-C.46DE16"> </a></td><td>Caregiver's first name</td><td>First or given name of the client's caregiver</td></tr><tr><td style="white-space:nowrap">C.DE17<a name="IMMZConcepts-C.46DE17"> </a></td><td>Caregiver's family name</td><td>Family name or last name of the client's caregiver</td></tr><tr><td style="white-space:nowrap">C.DE18<a name="IMMZConcepts-C.46DE18"> </a></td><td>Contact phone number</td><td>Client's phone number</td></tr><tr><td style="white-space:nowrap">C.DE19<a name="IMMZConcepts-C.46DE19"> </a></td><td>Administrative area</td><td>The name of the city/municipality/town/village of where the client lives</td></tr><tr><td style="white-space:nowrap">C.DE20<a name="IMMZConcepts-C.46DE20"> </a></td><td>Active health worker</td><td>Is the client an active and participating health worker. This data element is used mainly for reporting and indicators purposes.</td></tr><tr><td style="white-space:nowrap">D.DE1<a name="IMMZConcepts-D.46DE1"> </a></td><td>Immunization event status</td><td>The current status of the individual immunization event</td></tr><tr><td style="white-space:nowrap">D.DE2<a name="IMMZConcepts-D.46DE2"> </a></td><td>Completed</td><td>The immunization event was successfully carried out as intended</td></tr><tr><td style="white-space:nowrap">D.DE3<a name="IMMZConcepts-D.46DE3"> </a></td><td>Entered in error</td><td>Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it</td></tr><tr><td style="white-space:nowrap">D.DE4<a name="IMMZConcepts-D.46DE4"> </a></td><td>Not Done</td><td>Planned immunization event was not carried out for some reason</td></tr><tr><td style="white-space:nowrap">D.DE5<a name="IMMZConcepts-D.46DE5"> </a></td><td>Reason vaccine was not administered</td><td>The reason this immunization event was not performed</td></tr><tr><td style="white-space:nowrap">D.DE6<a name="IMMZConcepts-D.46DE6"> </a></td><td>Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization</td><td/></tr><tr><td style="white-space:nowrap">D.DE7<a name="IMMZConcepts-D.46DE7"> </a></td><td>Medical precaution</td><td>The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted</td></tr><tr><td style="white-space:nowrap">D.DE8<a name="IMMZConcepts-D.46DE8"> </a></td><td>Product out of stock</td><td>There was no supply of the product on hand to perform the service</td></tr><tr><td style="white-space:nowrap">D.DE9<a name="IMMZConcepts-D.46DE9"> </a></td><td>Client objection</td><td>The client or their guardian objects to receiving the vaccine</td></tr><tr><td style="white-space:nowrap">D.DE10<a name="IMMZConcepts-D.46DE10"> </a></td><td>Caregiver refusal</td><td>The client's caregiver refused the vaccine</td></tr><tr><td style="white-space:nowrap">D.DE11<a name="IMMZConcepts-D.46DE11"> </a></td><td>Unspecified reason</td><td>The immunization event was not carried out for an unspecified reason</td></tr><tr><td style="white-space:nowrap">D.DE12<a name="IMMZConcepts-D.46DE12"> </a></td><td>Client allergy to vaccine or component</td><td>The immunization event was not carried out because of client allergy to vaccine or component</td></tr><tr><td style="white-space:nowrap">D.DE13<a name="IMMZConcepts-D.46DE13"> </a></td><td>Immunocompromised</td><td>The immunization event was not carried out because the client is immunocompromised</td></tr><tr><td style="white-space:nowrap">D.DE14<a name="IMMZConcepts-D.46DE14"> </a></td><td>Chronic illness or condition</td><td>The immunization event was not carried out due a chronic illness or condition of the client</td></tr><tr><td style="white-space:nowrap">D.DE15<a name="IMMZConcepts-D.46DE15"> </a></td><td>Acute illness</td><td>The immunization event was not carried out due to an acute illness present in the client</td></tr><tr><td style="white-space:nowrap">D.DE16<a name="IMMZConcepts-D.46DE16"> </a></td><td>Had the disease</td><td>The immunization event was not carried out due to the client having had the disease</td></tr><tr><td style="white-space:nowrap">D.DE17<a name="IMMZConcepts-D.46DE17"> </a></td><td>Immunization not carried out for other reasons</td><td>The immunization event was not carried out for other reasons</td></tr><tr><td style="white-space:nowrap">D.DE18<a name="IMMZConcepts-D.46DE18"> </a></td><td>Vaccine brand</td><td>The brand or trade name used to refer to the vaccine received</td></tr><tr><td style="white-space:nowrap">D.DE173<a name="IMMZConcepts-D.46DE173"> </a></td><td>Live attenuated vaccine</td><td>Uses a living but weakened version of the virus or one that’s very similar</td></tr><tr><td style="white-space:nowrap">D.DE19<a name="IMMZConcepts-D.46DE19"> </a></td><td>Vaccine type</td><td>Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element</td></tr><tr><td style="white-space:nowrap">D.DE20<a name="IMMZConcepts-D.46DE20"> </a></td><td>Date and time of vaccination</td><td>Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client</td></tr><tr><td style="white-space:nowrap">D.DE21<a name="IMMZConcepts-D.46DE21"> </a></td><td>Country of vaccination</td><td>The service delivery country where the vaccine administration occurred</td></tr><tr><td style="white-space:nowrap">D.DE22<a name="IMMZConcepts-D.46DE22"> </a></td><td>Vaccination location</td><td>The service delivery location where the vaccine administration occurred</td></tr><tr><td style="white-space:nowrap">D.DE23<a name="IMMZConcepts-D.46DE23"> </a></td><td>Vaccine manufacturer</td><td>The manufacturer of the vaccine product</td></tr><tr><td style="white-space:nowrap">D.DE24<a name="IMMZConcepts-D.46DE24"> </a></td><td>Vaccine batch number</td><td>Batch number or lot number of vaccine</td></tr><tr><td style="white-space:nowrap">D.DE25<a name="IMMZConcepts-D.46DE25"> </a></td><td>Vaccine market authorization holder</td><td>Name of the market authorization holder of the vaccine received. If market authorization holder is unknown, vaccine manufacturer is REQUIRED</td></tr><tr><td style="white-space:nowrap">D.DE26<a name="IMMZConcepts-D.46DE26"> </a></td><td>Expiration date</td><td>The expiration date of the vaccine</td></tr><tr><td style="white-space:nowrap">D.DE34<a name="IMMZConcepts-D.46DE34"> </a></td><td>Dose quantity</td><td>The quantity of vaccine product that was administered</td></tr><tr><td style="white-space:nowrap">D.DE35<a name="IMMZConcepts-D.46DE35"> </a></td><td>Health worker identifier</td><td>The person, organization, or role of the entity that performed the act of giving the vaccine to the client. The implementing system can choose to populate this field using data from a health worker registry or health facility registry</td></tr><tr><td style="white-space:nowrap">D.DE124<a name="IMMZConcepts-D.46DE124"> </a></td><td>Dose number</td><td>Vaccine dose number including dose number within series</td></tr><tr><td style="white-space:nowrap">D.DE125<a name="IMMZConcepts-D.46DE125"> </a></td><td>Total doses in series</td><td>The recommended number of doses for immunity according to the national protocol</td></tr><tr><td style="white-space:nowrap">D1.DE80<a name="IMMZConcepts-D1.46DE80"> </a></td><td>Dose 0 administered</td><td>Indicates if the client has received a birth dose and/or supplementary dose</td></tr><tr><td style="white-space:nowrap">D1.DE8<a name="IMMZConcepts-D1.46DE8"> </a></td><td>Completed the primary vaccination series</td><td>Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen.</td></tr><tr><td style="white-space:nowrap">D1.DE81<a name="IMMZConcepts-D1.46DE81"> </a></td><td>Date when primary vaccination series was completed</td><td>The date when the client completed the primary vaccination series (per product/antigen)</td></tr><tr><td style="white-space:nowrap">D1.DE10<a name="IMMZConcepts-D1.46DE10"> </a></td><td>HIV status</td><td>The current human immunodeficiency virus (HIV) status of the client</td></tr><tr><td style="white-space:nowrap">D1.DE11<a name="IMMZConcepts-D1.46DE11"> </a></td><td>HIV-positive</td><td>The client is known to be HIV positive</td></tr><tr><td style="white-space:nowrap">D1.DE12<a name="IMMZConcepts-D1.46DE12"> </a></td><td>HIV-negative</td><td>The client is known to be HIV negative</td></tr><tr><td style="white-space:nowrap">D1.DE13<a name="IMMZConcepts-D1.46DE13"> </a></td><td>Unknown</td><td>The client's HIV status is unknown</td></tr><tr><td style="white-space:nowrap">D1.DE15<a name="IMMZConcepts-D1.46DE15"> </a></td><td>Preterm birth</td><td>The infant was preterm; the mother gave birth to the infant when gestational age was less than 37 weeks</td></tr><tr><td style="white-space:nowrap">D1.DE92<a name="IMMZConcepts-D1.46DE92"> </a></td><td>Severely immunosuppressed</td><td>The client is known to be severely immunocompromised or immunosuppressed</td></tr><tr><td style="white-space:nowrap">D1.DE49<a name="IMMZConcepts-D1.46DE49"> </a></td><td>ART start date</td><td>The date on which the client started or restarted antiretroviral therapy (ART)</td></tr><tr><td style="white-space:nowrap">D1.DE19<a name="IMMZConcepts-D1.46DE19"> </a></td><td>Vaccine type</td><td>Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element</td></tr><tr><td style="white-space:nowrap">D1.DE20<a name="IMMZConcepts-D1.46DE20"> </a></td><td>Date and time of vaccination</td><td>Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client</td></tr><tr><td style="white-space:nowrap">D4.DE161<a name="IMMZConcepts-D4.46DE161"> </a></td><td>Potential contraindications</td><td>Specific situations or medical conditions in which it is advised or recommended to avoid or delay administering a particular vaccine</td></tr><tr><td style="white-space:nowrap">D4.DE162<a name="IMMZConcepts-D4.46DE162"> </a></td><td>Currently pregnant</td><td>The client is currently pregnant</td></tr><tr><td style="white-space:nowrap">D4.DE165<a name="IMMZConcepts-D4.46DE165"> </a></td><td>Severely immunosuppressed</td><td>The client is known to be severely immunocompromised or immunosuppressed</td></tr><tr><td style="white-space:nowrap">D4.DE166<a name="IMMZConcepts-D4.46DE166"> </a></td><td>History of anaphylactic reactions</td><td>The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component.</td></tr><tr><td style="white-space:nowrap">D4.DE167<a name="IMMZConcepts-D4.46DE167"> </a></td><td>Severe allergic reactions</td><td>The client is known to have severe allergic reaction to vaccine</td></tr><tr><td style="white-space:nowrap">D4.DE168<a name="IMMZConcepts-D4.46DE168"> </a></td><td>Symptomatic HIV infection</td><td>The client is experiencing HIV-related symptoms</td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+  <version value="0.1.0"/>
+  <name value="IMMZConcepts"/>
+  <title value="Immunizations Concepts CodeSystem"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-06-28T14:17:27+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="This code system defines concepts used in SMART Immunizations"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="67"/>
+  <concept>
+    <code value="C.DE1"/>
+    <display value="Unique identifier"/>
+    <definition value="Unique identifier for the client, according to the policies applicable to each country. There can be more than one unique identifier used to link records (e.g. national ID, health ID, immunization information system ID, medical record ID)."/>
+  </concept>
+  <concept>
+    <code value="C.DE2"/>
+    <display value="Name"/>
+    <definition value="The full name of the client"/>
+  </concept>
+  <concept>
+    <code value="C.DE3"/>
+    <display value="First name"/>
+    <definition value="Client's first name or given name"/>
+  </concept>
+  <concept>
+    <code value="C.DE4"/>
+    <display value="Family name"/>
+    <definition value="Client's family name or last name"/>
+  </concept>
+  <concept>
+    <code value="C.DE5"/>
+    <display value="Sex"/>
+    <definition value="Documentation of a specific instance of sex information for the client"/>
+  </concept>
+  <concept>
+    <code value="C.DE6"/>
+    <display value="Male"/>
+    <definition value="Client's biological sex is male"/>
+  </concept>
+  <concept>
+    <code value="C.DE7"/>
+    <display value="Female"/>
+    <definition value="Client's biological sex is female"/>
+  </concept>
+  <concept>
+    <code value="C.DE8"/>
+    <display value="Biological sex not specified"/>
+    <definition value="Client's biological sex is not specified"/>
+  </concept>
+  <concept>
+    <code value="C.DE9"/>
+    <display value="Intersex"/>
+    <definition value="Client's biological sex is intersex"/>
+  </concept>
+  <concept>
+    <code value="C.DE10"/>
+    <display value="Date of birth"/>
+    <definition value="Client's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes"/>
+  </concept>
+  <concept>
+    <code value="C.DE13"/>
+    <display value="Age"/>
+    <definition value="The client's calculated age (presented as number of years, months, days) based on the date of birth (DOB) and the visit date"/>
+  </concept>
+  <concept>
+    <code value="C.DE14"/>
+    <display value="Caregivers (multiple)"/>
+    <definition value="The client's caregiver (person) which could be next of kin (e.g. partner, husband, mother, sibling, etc.)"/>
+  </concept>
+  <concept>
+    <code value="C.DE15"/>
+    <display value="Caregiver's full name"/>
+    <definition value="The full name of the client's caregiver"/>
+  </concept>
+  <concept>
+    <code value="C.DE16"/>
+    <display value="Caregiver's first name"/>
+    <definition value="First or given name of the client's caregiver"/>
+  </concept>
+  <concept>
+    <code value="C.DE17"/>
+    <display value="Caregiver's family name"/>
+    <definition value="Family name or last name of the client's caregiver"/>
+  </concept>
+  <concept>
+    <code value="C.DE18"/>
+    <display value="Contact phone number"/>
+    <definition value="Client's phone number"/>
+  </concept>
+  <concept>
+    <code value="C.DE19"/>
+    <display value="Administrative area"/>
+    <definition value="The name of the city/municipality/town/village of where the client lives"/>
+  </concept>
+  <concept>
+    <code value="C.DE20"/>
+    <display value="Active health worker"/>
+    <definition value="Is the client an active and participating health worker. This data element is used mainly for reporting and indicators purposes."/>
+  </concept>
+  <concept>
+    <code value="D.DE1"/>
+    <display value="Immunization event status"/>
+    <definition value="The current status of the individual immunization event"/>
+  </concept>
+  <concept>
+    <code value="D.DE2"/>
+    <display value="Completed"/>
+    <definition value="The immunization event was successfully carried out as intended"/>
+  </concept>
+  <concept>
+    <code value="D.DE3"/>
+    <display value="Entered in error"/>
+    <definition value="Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it"/>
+  </concept>
+  <concept>
+    <code value="D.DE4"/>
+    <display value="Not Done"/>
+    <definition value="Planned immunization event was not carried out for some reason"/>
+  </concept>
+  <concept>
+    <code value="D.DE5"/>
+    <display value="Reason vaccine was not administered"/>
+    <definition value="The reason this immunization event was not performed"/>
+  </concept>
+  <concept>
+    <code value="D.DE6"/>
+    <display value="Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization"/>
+  </concept>
+  <concept>
+    <code value="D.DE7"/>
+    <display value="Medical precaution"/>
+    <definition value="The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted"/>
+  </concept>
+  <concept>
+    <code value="D.DE8"/>
+    <display value="Product out of stock"/>
+    <definition value="There was no supply of the product on hand to perform the service"/>
+  </concept>
+  <concept>
+    <code value="D.DE9"/>
+    <display value="Client objection"/>
+    <definition value="The client or their guardian objects to receiving the vaccine"/>
+  </concept>
+  <concept>
+    <code value="D.DE10"/>
+    <display value="Caregiver refusal"/>
+    <definition value="The client's caregiver refused the vaccine"/>
+  </concept>
+  <concept>
+    <code value="D.DE11"/>
+    <display value="Unspecified reason"/>
+    <definition value="The immunization event was not carried out for an unspecified reason"/>
+  </concept>
+  <concept>
+    <code value="D.DE12"/>
+    <display value="Client allergy to vaccine or component"/>
+    <definition value="The immunization event was not carried out because of client allergy to vaccine or component"/>
+  </concept>
+  <concept>
+    <code value="D.DE13"/>
+    <display value="Immunocompromised"/>
+    <definition value="The immunization event was not carried out because the client is immunocompromised"/>
+  </concept>
+  <concept>
+    <code value="D.DE14"/>
+    <display value="Chronic illness or condition"/>
+    <definition value="The immunization event was not carried out due a chronic illness or condition of the client"/>
+  </concept>
+  <concept>
+    <code value="D.DE15"/>
+    <display value="Acute illness"/>
+    <definition value="The immunization event was not carried out due to an acute illness present in the client"/>
+  </concept>
+  <concept>
+    <code value="D.DE16"/>
+    <display value="Had the disease"/>
+    <definition value="The immunization event was not carried out due to the client having had the disease"/>
+  </concept>
+  <concept>
+    <code value="D.DE17"/>
+    <display value="Immunization not carried out for other reasons"/>
+    <definition value="The immunization event was not carried out for other reasons"/>
+  </concept>
+  <concept>
+    <code value="D.DE18"/>
+    <display value="Vaccine brand"/>
+    <definition value="The brand or trade name used to refer to the vaccine received"/>
+  </concept>
+  <concept>
+    <code value="D.DE173"/>
+    <display value="Live attenuated vaccine"/>
+    <definition value="Uses a living but weakened version of the virus or one that’s very similar"/>
+  </concept>
+  <concept>
+    <code value="D.DE19"/>
+    <display value="Vaccine type"/>
+    <definition value="Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element"/>
+  </concept>
+  <concept>
+    <code value="D.DE20"/>
+    <display value="Date and time of vaccination"/>
+    <definition value="Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client"/>
+  </concept>
+  <concept>
+    <code value="D.DE21"/>
+    <display value="Country of vaccination"/>
+    <definition value="The service delivery country where the vaccine administration occurred"/>
+  </concept>
+  <concept>
+    <code value="D.DE22"/>
+    <display value="Vaccination location"/>
+    <definition value="The service delivery location where the vaccine administration occurred"/>
+  </concept>
+  <concept>
+    <code value="D.DE23"/>
+    <display value="Vaccine manufacturer"/>
+    <definition value="The manufacturer of the vaccine product"/>
+  </concept>
+  <concept>
+    <code value="D.DE24"/>
+    <display value="Vaccine batch number"/>
+    <definition value="Batch number or lot number of vaccine"/>
+  </concept>
+  <concept>
+    <code value="D.DE25"/>
+    <display value="Vaccine market authorization holder"/>
+    <definition value="Name of the market authorization holder of the vaccine received. If market authorization holder is unknown, vaccine manufacturer is REQUIRED"/>
+  </concept>
+  <concept>
+    <code value="D.DE26"/>
+    <display value="Expiration date"/>
+    <definition value="The expiration date of the vaccine"/>
+  </concept>
+  <concept>
+    <code value="D.DE34"/>
+    <display value="Dose quantity"/>
+    <definition value="The quantity of vaccine product that was administered"/>
+  </concept>
+  <concept>
+    <code value="D.DE35"/>
+    <display value="Health worker identifier"/>
+    <definition value="The person, organization, or role of the entity that performed the act of giving the vaccine to the client. The implementing system can choose to populate this field using data from a health worker registry or health facility registry"/>
+  </concept>
+  <concept>
+    <code value="D.DE124"/>
+    <display value="Dose number"/>
+    <definition value="Vaccine dose number including dose number within series"/>
+  </concept>
+  <concept>
+    <code value="D.DE125"/>
+    <display value="Total doses in series"/>
+    <definition value="The recommended number of doses for immunity according to the national protocol"/>
+  </concept>
+  <concept>
+    <code value="D1.DE80"/>
+    <display value="Dose 0 administered"/>
+    <definition value="Indicates if the client has received a birth dose and/or supplementary dose"/>
+  </concept>
+  <concept>
+    <code value="D1.DE8"/>
+    <display value="Completed the primary vaccination series"/>
+    <definition value="Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen."/>
+  </concept>
+  <concept>
+    <code value="D1.DE81"/>
+    <display value="Date when primary vaccination series was completed"/>
+    <definition value="The date when the client completed the primary vaccination series (per product/antigen)"/>
+  </concept>
+  <concept>
+    <code value="D1.DE10"/>
+    <display value="HIV status"/>
+    <definition value="The current human immunodeficiency virus (HIV) status of the client"/>
+  </concept>
+  <concept>
+    <code value="D1.DE11"/>
+    <display value="HIV-positive"/>
+    <definition value="The client is known to be HIV positive"/>
+  </concept>
+  <concept>
+    <code value="D1.DE12"/>
+    <display value="HIV-negative"/>
+    <definition value="The client is known to be HIV negative"/>
+  </concept>
+  <concept>
+    <code value="D1.DE13"/>
+    <display value="Unknown"/>
+    <definition value="The client's HIV status is unknown"/>
+  </concept>
+  <concept>
+    <code value="D1.DE15"/>
+    <display value="Preterm birth"/>
+    <definition value="The infant was preterm; the mother gave birth to the infant when gestational age was less than 37 weeks"/>
+  </concept>
+  <concept>
+    <code value="D1.DE92"/>
+    <display value="Severely immunosuppressed"/>
+    <definition value="The client is known to be severely immunocompromised or immunosuppressed"/>
+  </concept>
+  <concept>
+    <code value="D1.DE49"/>
+    <display value="ART start date"/>
+    <definition value="The date on which the client started or restarted antiretroviral therapy (ART)"/>
+  </concept>
+  <concept>
+    <code value="D1.DE19"/>
+    <display value="Vaccine type"/>
+    <definition value="Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element"/>
+  </concept>
+  <concept>
+    <code value="D1.DE20"/>
+    <display value="Date and time of vaccination"/>
+    <definition value="Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client"/>
+  </concept>
+  <concept>
+    <code value="D4.DE161"/>
+    <display value="Potential contraindications"/>
+    <definition value="Specific situations or medical conditions in which it is advised or recommended to avoid or delay administering a particular vaccine"/>
+  </concept>
+  <concept>
+    <code value="D4.DE162"/>
+    <display value="Currently pregnant"/>
+    <definition value="The client is currently pregnant"/>
+  </concept>
+  <concept>
+    <code value="D4.DE165"/>
+    <display value="Severely immunosuppressed"/>
+    <definition value="The client is known to be severely immunocompromised or immunosuppressed"/>
+  </concept>
+  <concept>
+    <code value="D4.DE166"/>
+    <display value="History of anaphylactic reactions"/>
+    <definition value="The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component."/>
+  </concept>
+  <concept>
+    <code value="D4.DE167"/>
+    <display value="Severe allergic reactions"/>
+    <definition value="The client is known to have severe allergic reaction to vaccine"/>
+  </concept>
+  <concept>
+    <code value="D4.DE168"/>
+    <display value="Symptomatic HIV infection"/>
+    <definition value="The client is experiencing HIV-related symptoms"/>
+  </concept>
+</CodeSystem>

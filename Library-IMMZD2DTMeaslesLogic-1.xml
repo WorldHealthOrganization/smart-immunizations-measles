@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:t name="Description" value="Common logic used in all the measles decisions"/>
+      <a:s r="57">
+         <a:s>/*
+@Description: Common logic used in all the measles decisions
+*/
+library IMMZD2DTMeaslesLogic</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZD2DTMeaslesLogic" system="http://smart.who.int/immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="6:1-6:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="8:1-8:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="10:1-10:27" localIdentifier="WC" path="http://smart.who.int/immunizations-measles/WHOCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>WHOCommon</a:s>
+               </a:s>
+               <a:s> called WC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="11:1-11:36" localIdentifier="Concepts" path="http://smart.who.int/immunizations-measles/IMMZConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConcepts</a:s>
+               </a:s>
+               <a:s> called Concepts</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="12:1-12:32" localIdentifier="Common" path="http://smart.who.int/immunizations-measles/IMMZCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZCommon</a:s>
+               </a:s>
+               <a:s> called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="13:1-13:32" localIdentifier="Config" path="http://smart.who.int/immunizations-measles/IMMZConfig">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConfig</a:s>
+               </a:s>
+               <a:s> called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="7" locator="14:1-14:45" localIdentifier="Elements" path="http://smart.who.int/immunizations-measles/IMMZEncounterElements">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZEncounterElements</a:s>
+               </a:s>
+               <a:s> called Elements</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="9" locator="16:1-16:31" name="Today" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="9">
+               <a:s>parameter Today default </a:s>
+               <a:s r="8">
+                  <a:s>Today()</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="8" locator="16:25-16:31" xsi:type="Today"/>
+      </def>
+      <def localId="12" locator="19:1-19:83" name="Individual is at high risk of contracting measles" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>// TODO: Should these be data elements?
+parameter &quot;Individual is at high risk of contracting measles&quot; </a:s>
+               <a:s r="11">
+                  <a:s>Boolean</a:s>
+               </a:s>
+               <a:s r="10"> default false</a:s>
+            </a:s>
+         </annotation>
+         <default localId="10" locator="19:79-19:83" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         <parameterTypeSpecifier localId="11" locator="19:63-19:69" name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+      </def>
+      <def localId="15" locator="20:1-20:102" name="Individual is travelling to a country experiencing measles outbreaks" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="15">
+               <a:s>parameter &quot;Individual is travelling to a country experiencing measles outbreaks&quot; </a:s>
+               <a:s r="14">
+                  <a:s>Boolean</a:s>
+               </a:s>
+               <a:s r="13"> default false</a:s>
+            </a:s>
+         </annotation>
+         <default localId="13" locator="20:98-20:102" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         <parameterTypeSpecifier localId="14" locator="20:82-20:88" name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+      </def>
+      <def localId="18" locator="21:1-21:83" name="Individual is known to be HIV-infected or exposed" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="18">
+               <a:s>parameter &quot;Individual is known to be HIV-infected or exposed&quot; </a:s>
+               <a:s r="17">
+                  <a:s>Boolean</a:s>
+               </a:s>
+               <a:s r="16"> default false</a:s>
+            </a:s>
+         </annotation>
+         <default localId="16" locator="21:79-21:83" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         <parameterTypeSpecifier localId="17" locator="21:63-21:69" name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+      </def>
+      <def localId="21" locator="22:1-22:68" name="Immune reconstitution was achieved" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="21">
+               <a:s>parameter &quot;Immune reconstitution was achieved&quot; </a:s>
+               <a:s r="20">
+                  <a:s>Boolean</a:s>
+               </a:s>
+               <a:s r="19"> default false</a:s>
+            </a:s>
+         </annotation>
+         <default localId="19" locator="22:64-22:68" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         <parameterTypeSpecifier localId="20" locator="22:48-22:54" name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+      </def>
+   </parameters>
+   <contexts>
+      <def locator="24:1-24:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="24:1-24:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="24:1-24:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="25" locator="26:1-27:43" name="Most Recent Live Vaccine Dose" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="25">
+               <a:s>define &quot;Most Recent Live Vaccine Dose&quot;:
+  </a:s>
+               <a:s r="24">
+                  <a:s r="23">
+                     <a:s r="22">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="23">
+                        <a:s>&quot;Live vaccine dose&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="24">
+                     <a:s>mostRecent()</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="24" locator="27:3-27:43" name="mostRecent" libraryName="WC" xsi:type="FunctionRef">
+            <signature xsi:type="ListTypeSpecifier">
+               <elementType name="fhir:Immunization" xsi:type="NamedTypeSpecifier"/>
+            </signature>
+            <operand localId="23" locator="27:3-27:30" name="Live vaccine dose" libraryName="Elements" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="31" locator="29:1-30:76" name="Date Last Live Vaccine Administered" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="31">
+               <a:s>define &quot;Date Last Live Vaccine Administered&quot;:
+  </a:s>
+               <a:s r="30">
+                  <a:s>date from </a:s>
+                  <a:s r="29">
+                     <a:s>start of </a:s>
+                     <a:s r="28">
+                        <a:s r="27">
+                           <a:s r="26">
+                              <a:s>&quot;Most Recent Live Vaccine Dose&quot;</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="27">
+                              <a:s>occurrence</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="28">
+                           <a:s>toInterval()</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="30" locator="30:3-30:76" xsi:type="DateFrom">
+            <operand localId="29" locator="30:13-30:76" xsi:type="Start">
+               <operand localId="28" locator="30:22-30:76" name="toInterval" libraryName="WC" xsi:type="FunctionRef">
+                  <operand localId="27" locator="30:22-30:63" path="occurrence" xsi:type="Property">
+                     <source localId="26" locator="30:22-30:52" name="Most Recent Live Vaccine Dose" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="34" locator="32:1-33:47" name="No Live Vaccine Administered" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="34">
+               <a:s>define &quot;No Live Vaccine Administered&quot;:
+  </a:s>
+               <a:s r="33">
+                  <a:s r="32">
+                     <a:s>&quot;Date Last Live Vaccine Administered&quot;</a:s>
+                  </a:s>
+                  <a:s> is null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="33" locator="33:3-33:47" xsi:type="IsNull">
+            <operand localId="32" locator="33:3-33:39" name="Date Last Live Vaccine Administered" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="38" locator="35:1-36:35" name="Number Of MCV0 Doses Administered" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="38">
+               <a:s>define &quot;Number Of MCV0 Doses Administered&quot;:
+  </a:s>
+               <a:s r="37">
+                  <a:s>Count(</a:s>
+                  <a:s r="36">
+                     <a:s r="35">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="36">
+                        <a:s>&quot;MCV Dose 0 Dose&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="37" locator="36:3-36:35" xsi:type="Count">
+            <source localId="36" locator="36:9-36:34" name="MCV Dose 0 Dose" libraryName="Elements" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="42" locator="38:1-39:43" name="Number Of Primary Series Doses Administered" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="42">
+               <a:s>define &quot;Number Of Primary Series Doses Administered&quot;:
+  </a:s>
+               <a:s r="41">
+                  <a:s>Count(</a:s>
+                  <a:s r="40">
+                     <a:s r="39">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="40">
+                        <a:s>&quot;MCV Primary Series Dose&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="41" locator="39:3-39:43" xsi:type="Count">
+            <source localId="40" locator="39:9-39:42" name="MCV Primary Series Dose" libraryName="Elements" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="46" locator="41:1-42:52" name="Measles Routine Immunization Schedule Complete" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="46">
+               <a:s>define &quot;Measles Routine Immunization Schedule Complete&quot;:
+  </a:s>
+               <a:s r="45">
+                  <a:s r="43">
+                     <a:s>&quot;Number Of Primary Series Doses Administered&quot;</a:s>
+                  </a:s>
+                  <a:s r="44"> >= 2</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="45" locator="42:3-42:52" xsi:type="GreaterOrEqual">
+            <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+            <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+            <operand localId="43" locator="42:3-42:47" name="Number Of Primary Series Doses Administered" xsi:type="ExpressionRef"/>
+            <operand localId="44" locator="42:52" valueType="t:Integer" value="2" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="49" locator="44:1-45:54" name="Measles Routine Immunization Schedule Incomplete" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="49">
+               <a:s>define &quot;Measles Routine Immunization Schedule Incomplete&quot;:
+  </a:s>
+               <a:s r="48">
+                  <a:s>not </a:s>
+                  <a:s r="47">
+                     <a:s>&quot;Measles Routine Immunization Schedule Complete&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="48" locator="45:3-45:54" xsi:type="Not">
+            <operand localId="47" locator="45:7-45:54" name="Measles Routine Immunization Schedule Complete" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="53" locator="47:1-48:42" name="Number Of Supplementary Doses Administered" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="53">
+               <a:s>define &quot;Number Of Supplementary Doses Administered&quot;:
+  </a:s>
+               <a:s r="52">
+                  <a:s>Count(</a:s>
+                  <a:s r="51">
+                     <a:s r="50">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="51">
+                        <a:s>&quot;MCV Supplementary Dose&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="52" locator="48:3-48:42" xsi:type="Count">
+            <source localId="51" locator="48:9-48:41" name="MCV Supplementary Dose" libraryName="Elements" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="57" locator="50:1-51:53" name="Draft Medication Request ID for MCV dose" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="57">
+               <a:s>define &quot;Draft Medication Request ID for MCV dose&quot;:
+  </a:s>
+               <a:s r="56">
+                  <a:s r="55">
+                     <a:s r="54">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="55">
+                        <a:s>&quot;Most Recent MCV Immunization Proposal&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="56">
+                     <a:s>id</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="56" locator="51:3-51:53" path="id" xsi:type="Property">
+            <source localId="55" locator="51:3-51:50" name="Most Recent MCV Immunization Proposal" libraryName="Elements" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+   </statements>
+</library>

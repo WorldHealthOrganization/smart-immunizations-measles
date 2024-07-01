@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Measlesprod2"/>
+  <meta>
+    <profile value="http://smart.who.int/ig/smart-immunizations-measles/StructureDefinition/VaccineProduct"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Medication</b><a name="Measlesprod2"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Medication &quot;Measlesprod2&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-VaccineProduct.html">VaccineProduct</a></p></div><p><b>Classification</b>: Measles vaccines <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-ICD11.html">ICD-11</a>#XM28X5)</span></p><p><b>code</b>: M-M-RvaxPRO <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-VaccineProducts.html">Vaccine Product codes CodeSet</a>#7680007030014)</span></p></div>
+  </text>
+  <extension url="http://smart.who.int/ig/smart-immunizations-measles/StructureDefinition/Classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://id.who.int/icd11/mms"/>
+        <code value="XM28X5"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts"/>
+      <code value="7680007030014"/>
+    </coding>
+  </code>
+</Medication>

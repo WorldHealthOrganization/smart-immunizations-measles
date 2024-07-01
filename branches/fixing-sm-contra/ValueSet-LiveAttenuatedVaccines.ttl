@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "LiveAttenuatedVaccines"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-ICD11.html\"><code>http://hl7.org/fhir/sid/icd-11/mms</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM8142\">XM8142</a></td><td style=\"color: #cccccc\">Tuberculosis, live attenuated vaccines</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM72A0\">XM72A0</a></td><td style=\"color: #cccccc\">Cholera, live attenuated vaccines</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM47S0\">XM47S0</a></td><td style=\"color: #cccccc\">Encephalitis, Japanese, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM8L15\">XM8L15</a></td><td style=\"color: #cccccc\">Measles, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM8TF3\">XM8TF3</a></td><td style=\"color: #cccccc\">Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM21H2\">XM21H2</a></td><td style=\"color: #cccccc\">Measles, combinations with rubella, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM4AJ8\">XM4AJ8</a></td><td style=\"color: #cccccc\">Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM9439\">XM9439</a></td><td style=\"color: #cccccc\">Measles, combinations with mumps, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM2340\">XM2340</a></td><td style=\"color: #cccccc\">Mumps, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM79H3\">XM79H3</a></td><td style=\"color: #cccccc\">Poliomyelitis oral, bivalent, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM0VX8\">XM0VX8</a></td><td style=\"color: #cccccc\">Poliomyelitis oral, monovalent live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM0KZ1\">XM0KZ1</a></td><td style=\"color: #cccccc\">Poliomyelitis oral, trivalent, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM4GV0\">XM4GV0</a></td><td style=\"color: #cccccc\">Rota virus, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM9PS9\">XM9PS9</a></td><td style=\"color: #cccccc\">Rubella, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM3B09\">XM3B09</a></td><td style=\"color: #cccccc\">Rubella, combinations with mumps, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM5V64\">XM5V64</a></td><td style=\"color: #cccccc\">Influenza vaccines, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM33K4\">XM33K4</a></td><td style=\"color: #cccccc\">Typhoid, oral, live attenuated vaccines</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM0NS8\">XM0NS8</a></td><td style=\"color: #cccccc\">Varicella, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM3418\">XM3418</a></td><td style=\"color: #cccccc\">Yellow Fever, live attenuated</td></tr><tr><td><a href=\"CodeSystem-ICD11.html#ICD11-XM5DF6\">XM5DF6</a></td><td style=\"color: #cccccc\">COVID-19 vaccines, live attenuated virus</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/LiveAttenuatedVaccines"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "LiveAttenuatedVaccines"] ; # 
+  fhir:title [ fhir:v "Set of live attenuated vaccines"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-25T08:05:26+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes representing live attenuated vaccines"] ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-11/mms"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "XM8142" ]
+       ] [
+         fhir:code [ fhir:v "XM72A0" ]
+       ] [
+         fhir:code [ fhir:v "XM47S0" ]
+       ] [
+         fhir:code [ fhir:v "XM8L15" ]
+       ] [
+         fhir:code [ fhir:v "XM8TF3" ]
+       ] [
+         fhir:code [ fhir:v "XM21H2" ]
+       ] [
+         fhir:code [ fhir:v "XM4AJ8" ]
+       ] [
+         fhir:code [ fhir:v "XM9439" ]
+       ] [
+         fhir:code [ fhir:v "XM2340" ]
+       ] [
+         fhir:code [ fhir:v "XM79H3" ]
+       ] [
+         fhir:code [ fhir:v "XM0VX8" ]
+       ] [
+         fhir:code [ fhir:v "XM0KZ1" ]
+       ] [
+         fhir:code [ fhir:v "XM4GV0" ]
+       ] [
+         fhir:code [ fhir:v "XM9PS9" ]
+       ] [
+         fhir:code [ fhir:v "XM3B09" ]
+       ] [
+         fhir:code [ fhir:v "XM5V64" ]
+       ] [
+         fhir:code [ fhir:v "XM33K4" ]
+       ] [
+         fhir:code [ fhir:v "XM0NS8" ]
+       ] [
+         fhir:code [ fhir:v "XM3418" ]
+       ] [
+         fhir:code [ fhir:v "XM5DF6" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

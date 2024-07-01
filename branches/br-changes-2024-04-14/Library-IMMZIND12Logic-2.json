@@ -1,0 +1,440 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "25",
+            "s" : [ {
+               "value" : [ "/*\n * Library: IMMZ.IND.12 Logic\n * Immunization coverage for Measles and rubella containing vaccine, 1st dose \n * The percentage in the target population who have received one dose of measles and rubella vaccine during reporting period\n * \n * Numerator: Number of measles and rubella doses (1st dose) administered through routine services during reporting period\n * Numerator Computation: COUNT of immunization events WHERE \"Vaccine type\" = \"Measles and rubella containing vaccines\"  for the first dose in the primary series AND \"Date and time of vaccination\" is during the reporting period\n * Denominator: Number in target group\n * Denominator Computation: As defined by the Member States\n * \n * Disaggregation:\n *   - Administrative area\n *   - Sex\n *   - Age in years\n *   - Age group (depending on schedule) \n * \n * References: WHO Immunization facility analysis guide;WHO Handbook on immunization data\n */\n","library IMMZIND12Logic" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZIND12Logic",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "29:1-29:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "/*\nNOTE: This is an estimated denominator measure, meaning that all we are contributing from the site perspective is a count\ntowards the numerator, actual processing of this data to determine a proportion measure would be done by downstream analytics\n\nFor this reason, this measure is modeled as a cohort measure where membership in the cohort is determine by administration of\na measles containing vaccine.\n*/\n\n","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "31:1-31:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "33:1-33:32",
+            "localIdentifier" : "Common",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "34:1-34:36",
+            "localIdentifier" : "Concepts",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZConcepts",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConcepts" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Concepts" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "5",
+            "locator" : "35:1-35:32",
+            "localIdentifier" : "Config",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZConfig",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Config" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "6",
+            "locator" : "36:1-36:45",
+            "localIdentifier" : "Elements",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZIndicatorElements",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZIndicatorElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Elements" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "7",
+            "locator" : "37:1-37:48",
+            "localIdentifier" : "VaccineLibrary",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZVaccineLibrary",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "7",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZVaccineLibrary" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","VaccineLibrary" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "10",
+            "locator" : "39:1-39:45",
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "10",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Measurement Period\""," " ]
+                  }, {
+                     "r" : "9",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "8",
+                        "s" : [ {
+                           "value" : [ "Date" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "parameterTypeSpecifier" : {
+               "localId" : "9",
+               "locator" : "39:32-39:45",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "8",
+                  "locator" : "39:41-39:44",
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "41:1-41:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "41:1-41:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "41:1-41:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "12",
+            "locator" : "46:1-47:6",
+            "name" : "Initial Population",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "r" : "11",
+                     "value" : [ "/*\n * As defined by Member State\n */\n","define ","\"Initial Population\"",":\n  ","true" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "11",
+               "locator" : "47:3-47:6",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "true",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "14",
+            "locator" : "52:1-53:6",
+            "name" : "Denominator",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "14",
+                  "s" : [ {
+                     "r" : "13",
+                     "value" : [ "/*\n * As defined by Member State\n */\n","define ","\"Denominator\"",":\n  ","true" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "13",
+               "locator" : "53:3-53:6",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "true",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "25",
+            "locator" : "59:1-63:3",
+            "name" : "Numerator",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "25",
+                  "s" : [ {
+                     "value" : [ "/*\n * Numerator: Number of measles and rubella doses (1st dose) administered through routine services during reporting period\n * Numerator Computation: COUNT of immunization events WHERE \"Vaccine type\" = \"Measles and rubella containing vaccines\"  for the first dose in the primary series AND \"Date and time of vaccination\" is during the reporting period\n */\n","define ","\"Numerator\"",":\n  " ]
+                  }, {
+                     "r" : "24",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "23",
+                        "s" : [ {
+                           "value" : [ "(\n\t" ]
+                        }, {
+                           "r" : "23",
+                           "s" : [ {
+                              "s" : [ {
+                                 "r" : "16",
+                                 "s" : [ {
+                                    "r" : "15",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "value" : [ "Elements",".","\"MCV Doses Administered to Patient During Measurement Period\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","I" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n\t  " ]
+                           }, {
+                              "r" : "22",
+                              "s" : [ {
+                                 "value" : [ "where " ]
+                              }, {
+                                 "r" : "22",
+                                 "s" : [ {
+                                    "r" : "20",
+                                    "s" : [ {
+                                       "r" : "19",
+                                       "s" : [ {
+                                          "r" : "18",
+                                          "s" : [ {
+                                             "r" : "17",
+                                             "s" : [ {
+                                                "value" : [ "I" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "18",
+                                             "s" : [ {
+                                                "value" : [ "protocolApplied" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "19",
+                                          "s" : [ {
+                                             "value" : [ "only","()" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "20",
+                                       "s" : [ {
+                                          "value" : [ "doseNumber" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "r" : "21",
+                                    "value" : [ " ","="," ","1" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "24",
+               "locator" : "60:3-63:3",
+               "type" : "Exists",
+               "operand" : {
+                  "localId" : "23",
+                  "locator" : "60:10-63:3",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "16",
+                     "locator" : "61:2-61:73",
+                     "alias" : "I",
+                     "expression" : {
+                        "localId" : "15",
+                        "locator" : "61:2-61:71",
+                        "name" : "MCV Doses Administered to Patient During Measurement Period",
+                        "libraryName" : "Elements",
+                        "type" : "ExpressionRef"
+                     }
+                  } ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "localId" : "22",
+                     "locator" : "62:4-62:48",
+                     "type" : "Equal",
+                     "signature" : [ {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "type" : "ToInteger",
+                        "operand" : {
+                           "localId" : "20",
+                           "locator" : "62:10-62:44",
+                           "path" : "doseNumber",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "19",
+                              "locator" : "62:10-62:33",
+                              "name" : "only",
+                              "libraryName" : "Common",
+                              "type" : "FunctionRef",
+                              "operand" : [ {
+                                 "localId" : "18",
+                                 "locator" : "62:10-62:26",
+                                 "path" : "protocolApplied",
+                                 "scope" : "I",
+                                 "type" : "Property"
+                              } ]
+                           }
+                        }
+                     }, {
+                        "localId" : "21",
+                        "locator" : "62:48",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "value" : "1",
+                        "type" : "Literal"
+                     } ]
+                  }
+               }
+            }
+         } ]
+      }
+   }
+}

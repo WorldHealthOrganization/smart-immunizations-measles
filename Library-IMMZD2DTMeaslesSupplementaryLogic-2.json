@@ -1,0 +1,945 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "t" : [ {
+            "name" : "DecisionID",
+            "value" : "IMMZ.D2.DT.Measles.Supplementary dose"
+         }, {
+            "name" : "BusinessRule",
+            "value" : "Determine if the client is due for a measles vaccination according to the national immunization schedule"
+         }, {
+            "name" : "Trigger",
+            "value" : "IMMZ.D2 Determine required vaccination(s) if any"
+         }, {
+            "name" : "Description",
+            "value" : "Measles supplementary dose administration"
+         } ],
+         "s" : {
+            "r" : "56",
+            "s" : [ {
+               "value" : [ "/*\n@DecisionID: IMMZ.D2.DT.Measles.Supplementary dose\n@BusinessRule: Determine if the client is due for a measles vaccination according to the national immunization schedule\n@Trigger: IMMZ.D2 Determine required vaccination(s) if any\n@Description: Measles supplementary dose administration\n*/\n","library IMMZD2DTMeaslesSupplementaryLogic" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZD2DTMeaslesSupplementaryLogic",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "9:1-9:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "11:1-11:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "13:1-13:27",
+            "localIdentifier" : "WC",
+            "path" : "http://smart.who.int/immunizations-measles/WHOCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "WHOCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","WC" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "14:1-14:41",
+            "localIdentifier" : "Logic",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZD2DTMeaslesLogic",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZD2DTMeaslesLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Logic" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "6",
+            "locator" : "16:1-16:31",
+            "name" : "Today",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","parameter ","Today"," default " ]
+                  }, {
+                     "r" : "5",
+                     "s" : [ {
+                        "value" : [ "Today","()" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "5",
+               "locator" : "16:25-16:31",
+               "type" : "Today"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "18:1-18:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "18:1-18:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "18:1-18:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "11",
+            "locator" : "24:1-25:58",
+            "name" : "Measles Routine Immunization Schedule Complete",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "11",
+                  "s" : [ {
+                     "value" : [ "/*\nPlanDefinition Applicability Expressions\n*/\n\n","define ","\"Measles Routine Immunization Schedule Complete\"",":\n  " ]
+                  }, {
+                     "r" : "10",
+                     "s" : [ {
+                        "r" : "8",
+                        "s" : [ {
+                           "r" : "7",
+                           "s" : [ {
+                              "value" : [ "Logic" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "8",
+                           "s" : [ {
+                              "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "9",
+                        "value" : [ " ",">="," ","2" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "10",
+               "locator" : "25:3-25:58",
+               "type" : "GreaterOrEqual",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "8",
+                  "locator" : "25:3-25:53",
+                  "name" : "Number Of Primary Series Doses Administered",
+                  "libraryName" : "Logic",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "9",
+                  "locator" : "25:58",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "2",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "16",
+            "locator" : "27:1-28:56",
+            "name" : "No Supplementary Dose Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "16",
+                  "s" : [ {
+                     "value" : [ "","define ","\"No Supplementary Dose Administered\"",":\n  " ]
+                  }, {
+                     "r" : "15",
+                     "s" : [ {
+                        "r" : "13",
+                        "s" : [ {
+                           "r" : "12",
+                           "s" : [ {
+                              "value" : [ "Logic" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "13",
+                           "s" : [ {
+                              "value" : [ "\"Number Of Supplementary Doses Administered\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "14",
+                        "value" : [ " ","="," ","0" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "15",
+               "locator" : "28:3-28:56",
+               "type" : "Equal",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "13",
+                  "locator" : "28:3-28:52",
+                  "name" : "Number Of Supplementary Doses Administered",
+                  "libraryName" : "Logic",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "14",
+                  "locator" : "28:56",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "0",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "21",
+            "locator" : "30:1-31:56",
+            "name" : "Supplementary Dose Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "21",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Supplementary Dose Administered\"",":\n  " ]
+                  }, {
+                     "r" : "20",
+                     "s" : [ {
+                        "r" : "18",
+                        "s" : [ {
+                           "r" : "17",
+                           "s" : [ {
+                              "value" : [ "Logic" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "18",
+                           "s" : [ {
+                              "value" : [ "\"Number Of Supplementary Doses Administered\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "19",
+                        "value" : [ " ","="," ","1" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "20",
+               "locator" : "31:3-31:56",
+               "type" : "Equal",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "18",
+                  "locator" : "31:3-31:52",
+                  "name" : "Number Of Supplementary Doses Administered",
+                  "libraryName" : "Logic",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "19",
+                  "locator" : "31:56",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "1",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "28",
+            "locator" : "33:1-34:74",
+            "name" : "Last Live Vaccine Administered Within 4 Weeks",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "28",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Last Live Vaccine Administered Within 4 Weeks\"",":\n  " ]
+                  }, {
+                     "r" : "27",
+                     "s" : [ {
+                        "r" : "25",
+                        "s" : [ {
+                           "r" : "23",
+                           "s" : [ {
+                              "r" : "22",
+                              "s" : [ {
+                                 "value" : [ "Logic" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "23",
+                              "s" : [ {
+                                 "value" : [ "\"Date Last Live Vaccine Administered\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " + " ]
+                        }, {
+                           "r" : "24",
+                           "s" : [ {
+                              "value" : [ "4 ","weeks" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "27",
+                        "value" : [ " ","on or before"," " ]
+                     }, {
+                        "r" : "26",
+                        "s" : [ {
+                           "value" : [ "Today" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "27",
+               "locator" : "34:3-34:74",
+               "type" : "SameOrBefore",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "25",
+                  "locator" : "34:3-34:55",
+                  "type" : "Add",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "23",
+                     "locator" : "34:3-34:45",
+                     "name" : "Date Last Live Vaccine Administered",
+                     "libraryName" : "Logic",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "24",
+                     "locator" : "34:49-34:55",
+                     "value" : 4,
+                     "unit" : "weeks",
+                     "type" : "Quantity"
+                  } ]
+               }, {
+                  "localId" : "26",
+                  "locator" : "34:70-34:74",
+                  "name" : "Today",
+                  "type" : "ParameterRef"
+               } ]
+            }
+         }, {
+            "localId" : "33",
+            "locator" : "45:1-46:7",
+            "name" : "Patient Is HIV-infected And Immune Reconstitution Has Been Achieved Or 6 To 12 Months Have Passed Since HAART Initiation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "33",
+                  "s" : [ {
+                     "r" : "32",
+                     "value" : [ "/*\nSupporting Logic\n*/\n\n// TODO: Define these\n","define ","\"Patient Is HIV-infected And Immune Reconstitution Has Been Achieved Or 6 To 12 Months Have Passed Since HAART Initiation\"",":\n  ","false" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "32",
+               "locator" : "46:3-46:7",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "39",
+            "locator" : "48:1-53:14",
+            "name" : "MCV Supplementary Dose Status",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "39",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV Supplementary Dose Status\"",":\n  " ]
+                  }, {
+                     "r" : "38",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "35",
+                        "s" : [ {
+                           "r" : "31",
+                           "s" : [ {
+                              "r" : "29",
+                              "s" : [ {
+                                 "value" : [ "\"No Supplementary Dose Administered\"" ]
+                              } ]
+                           }, {
+                              "value" : [ " and " ]
+                           }, {
+                              "r" : "30",
+                              "s" : [ {
+                                 "value" : [ "\"Measles Routine Immunization Schedule Complete\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "34",
+                           "s" : [ {
+                              "value" : [ "\"Patient Is HIV-infected And Immune Reconstitution Has Been Achieved Or 6 To 12 Months Have Passed Since HAART Initiation\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "36",
+                        "s" : [ {
+                           "value" : [ "'Eligible'" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n  else\n    " ]
+                     }, {
+                        "r" : "37",
+                        "s" : [ {
+                           "value" : [ "'Complete'" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "38",
+               "locator" : "49:3-53:14",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "35",
+                  "locator" : "49:6-50:130",
+                  "type" : "And",
+                  "operand" : [ {
+                     "localId" : "31",
+                     "locator" : "49:6-49:94",
+                     "type" : "And",
+                     "operand" : [ {
+                        "localId" : "29",
+                        "locator" : "49:6-49:41",
+                        "name" : "No Supplementary Dose Administered",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "30",
+                        "locator" : "49:47-49:94",
+                        "name" : "Measles Routine Immunization Schedule Complete",
+                        "type" : "ExpressionRef"
+                     } ]
+                  }, {
+                     "localId" : "34",
+                     "locator" : "50:9-50:130",
+                     "name" : "Patient Is HIV-infected And Immune Reconstitution Has Been Achieved Or 6 To 12 Months Have Passed Since HAART Initiation",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "36",
+                  "locator" : "51:5-51:14",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Eligible",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "37",
+                  "locator" : "53:5-53:14",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Complete",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "56",
+            "locator" : "61:1-68:8",
+            "name" : "MCV Supplementary Dose Due Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "56",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV Supplementary Dose Due Date\"",":\n  " ]
+                  }, {
+                     "r" : "55",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "45",
+                        "s" : [ {
+                           "r" : "43",
+                           "s" : [ {
+                              "value" : [ "\"MCV Supplementary Dose Status\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " ","="," " ]
+                        }, {
+                           "r" : "44",
+                           "s" : [ {
+                              "value" : [ "'Eligible'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "53",
+                        "s" : [ {
+                           "r" : "46",
+                           "s" : [ {
+                              "value" : [ "WC" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "53",
+                           "s" : [ {
+                              "value" : [ "LatestOf","(" ]
+                           }, {
+                              "r" : "52",
+                              "s" : [ {
+                                 "value" : [ "{\n        " ]
+                              }, {
+                                 "r" : "50",
+                                 "s" : [ {
+                                    "r" : "48",
+                                    "s" : [ {
+                                       "r" : "47",
+                                       "s" : [ {
+                                          "value" : [ "Logic" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "48",
+                                       "s" : [ {
+                                          "value" : [ "\"Date Last Live Vaccine Administered\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " + " ]
+                                 }, {
+                                    "r" : "49",
+                                    "s" : [ {
+                                       "value" : [ "4 ","weeks" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ",\n        " ]
+                              }, {
+                                 "r" : "51",
+                                 "s" : [ {
+                                    "value" : [ "Today" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n    }" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "54",
+                        "value" : [ "\n  else\n    ","null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "55",
+               "locator" : "62:3-68:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "45",
+                  "locator" : "62:6-62:49",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "43",
+                     "locator" : "62:6-62:36",
+                     "name" : "MCV Supplementary Dose Status",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "44",
+                     "locator" : "62:40-62:49",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Eligible",
+                     "type" : "Literal"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "53",
+                  "locator" : "63:5-66:6",
+                  "name" : "LatestOf",
+                  "libraryName" : "WC",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "52",
+                     "locator" : "63:17-66:5",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "50",
+                        "locator" : "64:9-64:61",
+                        "type" : "Add",
+                        "signature" : [ {
+                           "name" : "{urn:hl7-org:elm-types:r1}Date",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "48",
+                           "locator" : "64:9-64:51",
+                           "name" : "Date Last Live Vaccine Administered",
+                           "libraryName" : "Logic",
+                           "type" : "ExpressionRef"
+                        }, {
+                           "localId" : "49",
+                           "locator" : "64:55-64:61",
+                           "value" : 4,
+                           "unit" : "weeks",
+                           "type" : "Quantity"
+                        } ]
+                     }, {
+                        "localId" : "51",
+                        "locator" : "65:9-65:13",
+                        "name" : "Today",
+                        "type" : "ParameterRef"
+                     } ]
+                  } ]
+               },
+               "else" : {
+                  "asType" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "As",
+                  "operand" : {
+                     "localId" : "54",
+                     "locator" : "68:5-68:8",
+                     "type" : "Null"
+                  }
+               }
+            }
+         }, {
+            "localId" : "61",
+            "locator" : "36:1-38:60",
+            "name" : "Client Is Due For MCV Supplementary Dose",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "61",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Client Is Due For MCV Supplementary Dose\"",":\n  " ]
+                  }, {
+                     "r" : "60",
+                     "s" : [ {
+                        "r" : "42",
+                        "s" : [ {
+                           "r" : "40",
+                           "s" : [ {
+                              "value" : [ "\"MCV Supplementary Dose Status\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " ","="," " ]
+                        }, {
+                           "r" : "41",
+                           "s" : [ {
+                              "value" : [ "'Eligible'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "59",
+                        "s" : [ {
+                           "r" : "57",
+                           "s" : [ {
+                              "value" : [ "\"MCV Supplementary Dose Due Date\"" ]
+                           } ]
+                        }, {
+                           "r" : "59",
+                           "value" : [ " ","on or before"," " ]
+                        }, {
+                           "r" : "58",
+                           "s" : [ {
+                              "value" : [ "Today" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "60",
+               "locator" : "37:3-38:60",
+               "type" : "And",
+               "operand" : [ {
+                  "localId" : "42",
+                  "locator" : "37:3-37:46",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "40",
+                     "locator" : "37:3-37:33",
+                     "name" : "MCV Supplementary Dose Status",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "41",
+                     "locator" : "37:37-37:46",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Eligible",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "localId" : "59",
+                  "locator" : "38:9-38:60",
+                  "type" : "SameOrBefore",
+                  "signature" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "57",
+                     "locator" : "38:9-38:41",
+                     "name" : "MCV Supplementary Dose Due Date",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "58",
+                     "locator" : "38:56-38:60",
+                     "name" : "Today",
+                     "type" : "ParameterRef"
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "65",
+            "locator" : "55:1-56:14",
+            "name" : "MCV Supplementary Schedule Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "65",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV Supplementary Schedule Date\"",":\n  " ]
+                  }, {
+                     "r" : "64",
+                     "s" : [ {
+                        "r" : "62",
+                        "value" : [ "null"," as " ]
+                     }, {
+                        "r" : "63",
+                        "s" : [ {
+                           "value" : [ "Date" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "64",
+               "locator" : "56:3-56:14",
+               "strict" : false,
+               "type" : "As",
+               "operand" : {
+                  "localId" : "62",
+                  "locator" : "56:3-56:6",
+                  "type" : "Null"
+               },
+               "asTypeSpecifier" : {
+                  "localId" : "63",
+                  "locator" : "56:11-56:14",
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         }, {
+            "localId" : "69",
+            "locator" : "58:1-59:14",
+            "name" : "MCV Supplementary Expiration Date",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "69",
+                  "s" : [ {
+                     "value" : [ "","define ","\"MCV Supplementary Expiration Date\"",":\n  " ]
+                  }, {
+                     "r" : "68",
+                     "s" : [ {
+                        "r" : "66",
+                        "value" : [ "null"," as " ]
+                     }, {
+                        "r" : "67",
+                        "s" : [ {
+                           "value" : [ "Date" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "68",
+               "locator" : "59:3-59:14",
+               "strict" : false,
+               "type" : "As",
+               "operand" : {
+                  "localId" : "66",
+                  "locator" : "59:3-59:6",
+                  "type" : "Null"
+               },
+               "asTypeSpecifier" : {
+                  "localId" : "67",
+                  "locator" : "59:11-59:14",
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      }
+   }
+}

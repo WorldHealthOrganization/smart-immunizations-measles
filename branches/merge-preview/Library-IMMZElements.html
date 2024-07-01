@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>IMMZElements - WHO SMART Guidelines - Measles Immunization v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.22"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.22"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART Guidelines - Measles Immunization</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b>IMMZElements</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART Guidelines - Measles Immunization, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://smart.who.int/immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Library-IMMZElements.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-IMMZElements.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-IMMZElements.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">Library: IMMZElements
+(Experimental)
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://smart.who.int/immunizations-measles/Library/IMMZElements<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://smart.who.int/immunizations-measles/Library/IMMZElements"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://smart.who.int/immunizations-measles/Library/IMMZElements|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2024-06-07
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">IMMZElements</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>This library defines context-independent elements used throughout the Immunization CPG</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="Library-IMMZElements.xml.html">XML</a>, <a href="Library-IMMZElements.json.html">JSON</a>, <a href="Library-IMMZElements.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Related Artifacts</h2><table class="grid"><tr><td>depends-on</td><td>Library FC</td><td><code>http://fhir.org/guides/cqf/common/Library/FHIRCommon</code></td></tr><tr><td>depends-on</td><td>Library WHOConcepts</td><td><code>http://smart.who.int/immunizations-measles/Library/WHOConcepts</code></td></tr><tr><td>depends-on</td><td>Library WC</td><td><code>http://smart.who.int/immunizations-measles/Library/WHOCommon</code></td></tr><tr><td>depends-on</td><td>Library WE</td><td><code>http://smart.who.int/immunizations-measles/Library/WHOElements</code></td></tr><tr><td>depends-on</td><td>Library Concepts</td><td><a href="Library-IMMZConcepts.html">IMMZConcepts</a></td></tr><tr><td>depends-on</td><td>Library IC</td><td><a href="Library-IMMZCommon.html">IMMZCommon</a></td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library IMMZElements
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include fhir.cqf.common.FHIRCommon called FC
+
+include WHOConcepts
+include WHOCommon called WC
+include WHOElements called WE
+
+include IMMZConcepts called Concepts
+include IMMZCommon called IC
+
+context Patient
+
+/*
+ * Measles elements
+ */
+define &quot;MCV Dose&quot;:
+  [Immunization: Concepts.&quot;MCV Vaccine&quot;] MCV
+    where MCV.status = 'completed'
+      and MCV.isSubpotent is not true
+
+define &quot;MCV Primary Series Dose&quot;:
+  &quot;MCV Dose&quot; MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'primary'
+    )
+
+define &quot;MCV Supplementary Dose&quot;:
+  &quot;MCV Dose&quot; MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'supplementary'
+    )
+
+define &quot;MCV Dose 0 Dose&quot;:
+  &quot;MCV Dose&quot; MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'dose 0'
+    )
+
+define &quot;MCV Immunization Proposal&quot;:
+  [MedicationRequest: medication in Concepts.&quot;MCV Vaccine&quot;] MCV
+    where MCV.intent = 'proposal'
+
+//TODO: Check patient is alive
+
+// Givens:
+// &quot;Currently Pregnant&quot; Data Element
+// Modeled as part of
+// IMMZ.D.DE161: Potential contraindications
+  // D.DE162: Currently pregnant
+  // D.DE165: Severly immunosuppressed
+  // D.DE166: History of anaphylactic reactions
+  // D.DE168: Sympotmatic HIV infection
+// ANC.B4.DE1: Pregnancy confirmed
+// UV.IPS.PregnancyStatus:
+  // LOINC#82810-3 Pregnancy status
+    // LOINC#LA15173-0 Pregnant
+    // LOINC#LA26683-5 Not pregnant
+    // LOINC#LA4489-6 Unknown
+// &quot;Pregnancy Status&quot; Observations in IPS
+
+/*
+@dataElement: IMMZConcepts#D4.DE161
+*/
+define &quot;Potential Contraindications&quot;:
+  &quot;Currently Pregnant&quot;
+    or &quot;Severely Immunosuppressed&quot;
+    or &quot;History Of Anaphylactic Reactions&quot;
+    or &quot;Severe Allergic Reactions&quot;
+    or &quot;Symptomatic HIV Infection&quot;
+
+/*
+@dataElement: IMMZConcepts#D4.DE162
+*/
+define &quot;Currently Pregnant&quot;: 
+  exists &quot;Currently Pregnant Observation&quot;
+    or exists &quot;Currently Pregnant Condition&quot;
+    or exists WE.&quot;Pregnant Observation&quot;
+
+// TODO: Should this be related to the mother's record?
+define &quot;Currently Pregnant Observation&quot;:
+  [Observation: Concepts.&quot;Potential contraindications&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value ~ Concepts.&quot;Currently pregnant&quot;
+
+// TODO: Should this be related to the mother's record?
+define &quot;Currently Pregnant Condition&quot;:
+  [Condition: Concepts.&quot;Currently pregnant&quot;] C
+
+/*
+define &quot;Patient Has Active Sickle-cell disease&quot;:
+  exists([Condition: code = Concepts.&quot;Sickle-cell Disease Condition&quot;] C
+  where C.clinicalStatus in FC.&quot;Active Condition&quot;
+  and C.abatement is null)
+*/
+
+//Seronegative. Relevant for Dengue 
+/*
+define &quot;Individual is Seronegative for Dengue&quot;:
+  [Observation] O
+    where (O.value as CodeableConcept) in Concepts.Seronegative
+*/
+
+// TODO: Should this be related to the mother's record?
+//Total number of births including abortions, stillbirths and live births.
+define &quot;Patient Mother's Pregnancy Outcome Observation&quot;:
+  [Observation: code ~ Concepts.&quot;[#] Births total&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+
+define &quot;Patient Mother's Pregnancy Outcome Observation Value&quot;:
+  Last(
+    &quot;Patient Mother's Pregnancy Outcome Observation&quot; O
+      sort by start of effective.toInterval()
+  ).value
+
+// TODO: Should this be related to the mother's record
+// Total number of children whose birth occurred through the end of the last day of the 37th week (259th day) 
+// following onset of the last menstrual period
+define &quot;Preterm Births Observation&quot;:
+  [Observation: code ~ Concepts.&quot;[#] Births.preterm&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+
+define &quot;Preterm&quot;:
+  Last(
+    &quot;Preterm Births Observation&quot; O
+      sort by start of effective.toInterval()
+  ).value
+
+// TODO: This does not seem right, what is the code of the observation?
+//Observed Preterm birth
+define &quot;Preterm Birth&quot;:
+  [Observation] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value in Concepts.PretermBirth
+
+//@dataElement Adverse Event:
+define &quot;Adverse Event&quot;:
+  from [Immunization] I, [Observation] O
+    where I.reaction.detail.references(O)
+    return O
+
+/* 
+ * @dataElement Allergy = True
+ */
+define &quot;Allergy = True&quot;:
+  exists &quot;Active Confirmed Allergy&quot;
+
+define &quot;Active Confirmed Allergy&quot;:
+	[AllergyIntolerance] A
+    where A.clinicalStatus ~ FC.&quot;allergy-active&quot;
+      and	A.verificationStatus ~ FC.&quot;allergy-confirmed&quot;
+
+/* 
+ * @dataElement Immunocompromised = True
+ */
+define &quot;Immunocompromised = True&quot;:
+	exists &quot;Immunocompromised Condition&quot;
+
+define &quot;Immunocompromised Condition&quot;:
+  [Condition: Concepts.&quot;Immunocompromised&quot;] C 
+    where C.clinicalStatus in FC.&quot;Active Condition&quot;
+      and	C.verificationStatus ~ FC.&quot;confirmed&quot;
+
+/**
+ * @dataElement All Doses Administered to Patient to patient ordered newest to oldest
+ */
+define &quot;Doses Administered to Patient&quot;:
+  [Immunization] I
+    where I.status = 'completed'
+    sort by start of occurrence.toInterval() desc
+
+/**
+ * Contraindications 
+ */
+define &quot;Severely Immunosuppressed&quot;:
+  exists &quot;Severely Immunosuppressed Observation&quot;
+    or exists &quot;Severely Immunosuppressed Condition&quot;
+
+define &quot;Severely Immunosuppressed Observation&quot;:
+  [Observation: Concepts.&quot;Potential contraindications&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value ~ Concepts.&quot;Severely immunosuppressed&quot;
+
+define &quot;Severely Immunosuppressed Condition&quot;:
+  [Condition: Concepts.&quot;Severely immunosuppressed&quot;]
+
+define &quot;History Of Anaphylactic Reactions&quot;:
+  exists &quot;History Of Anaphylactic Reactions Condition&quot;
+
+define &quot;History Of Anaphylactic Reactions Observation&quot;:
+  [Observation: Concepts.&quot;Potential contraindications&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value ~ Concepts.&quot;History of anaphylactic reactions&quot;
+
+define &quot;History Of Anaphylactic Reactions Condition&quot;:
+  [Condition: Concepts.&quot;History of anaphylactic reactions&quot;]
+
+define &quot;Severe Allergic Reactions&quot;:
+  exists &quot;Severe Allergic Reactions Observation&quot;
+    or exists &quot;Severe Allergic Reactions Condition&quot;
+
+define &quot;Severe Allergic Reactions Observation&quot;:
+  [Observation: Concepts.&quot;Potential contraindications&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value ~ Concepts.&quot;Severe allergic reactions&quot;
+
+define &quot;Severe Allergic Reactions Condition&quot;:
+  [Condition: Concepts.&quot;Severe allergic reactions&quot;]
+
+define &quot;Symptomatic HIV Infection&quot;:
+  exists &quot;Symptomatic HIV Infection Observation&quot;
+    or exists &quot;Symptomatic HIV Infection Condition&quot;
+
+define &quot;Symptomatic HIV Infection Observation&quot;:
+  [Observation: Concepts.&quot;Potential contraindications&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value ~ Concepts.&quot;Symptomatic HIV infection&quot;
+
+define &quot;Symptomatic HIV Infection Condition&quot;:
+  [Condition: Concepts.&quot;Symptomatic HIV infection&quot;]
+
+/******************************
+ * Test Results
+ */
+
+define &quot;Patient Birth Weight Observation&quot;:
+  [Observation: Concepts.&quot;Patient birth weight observation&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+
+define &quot;Patient Birth Weight Observation Value&quot;:
+  Last(
+    &quot;Patient Birth Weight Observation&quot; O
+      sort by start of effective.toInterval()
+  ).value as FHIR.Quantity
+
+/** 
+ * @dataElement Patient age in years
+ */
+define &quot;Current Patient Age In Years&quot;:
+  AgeInYearsAt(Today())
+
+/** 
+ * @dataElement Patient age in weeks
+ */
+define &quot;Current Patient Age In Weeks&quot;:
+  AgeInWeeksAt(Today())
+
+/** 
+ * @dataElement Patient age in months
+ */
+define &quot;Current Patient Age In Months&quot;:
+  AgeInMonthsAt(Today())
+
+/** 
+ * @dataElement Patient biological sex used for deciding vaccine eligibility
+ * TODO: &quot;Gender&quot; of patient in FHIR is the administrative gender - or can we expect that this will be biological sex and administrative
+ *        gender identity will be captured using the gender identity extension?
+ */
+define &quot;Patient Biological Sex&quot;:
+  Patient.gender
+
+define &quot;HAART Medication Administration&quot;:
+  [MedicationAdministration] A 
+    where IC.ExtractMedicationCode(A.medication) in Concepts.&quot;ARV Drugs&quot; 
+      and A.status in { 'active', 'complete' }
+  
+define &quot;Patient HAART Treatment Start Date&quot;:
+  Last(
+      &quot;HAART Medication Administration&quot; A
+        sort by start of effective.toInterval()
+  ).effective.toInterval().low
+
+define &quot;Patient HAART Treatment Started 6 to 12 Months Ago&quot;:
+  &quot;Patient HAART Treatment Start Date&quot; between Now() - 12 months and Now() - 6 months
+
+/**
+ * @dataElement The patient has a medication record which indicates that they are receiving ARV
+ */
+define &quot;Patient is receiving HAART&quot;:
+  exists(
+    [MedicationAdministration] A 
+      where IC.ExtractMedicationCode(A.medication) in Concepts.&quot;ARV Drugs&quot; 
+        and A.status = 'in-progress'
+  )
+
+/*
+  @dataElement HIV Status observations of the patient most recent first
+*/
+define &quot;HIV Status&quot;:
+  Last(
+    &quot;HIV Status Observation&quot; O
+      sort by start of effective.toInterval()
+  ).value as FHIR.CodeableConcept
+
+define &quot;HIV Status Observation&quot;:
+  [Observation: Concepts.&quot;HIV status&quot;] O
+    where O.status in { 'final', 'amended', 'corrected' }
+
+define &quot;Live vaccine dose&quot;:
+  [Immunization: Concepts.&quot;Live Attenuated&quot;] LV
+    where LV.status = 'completed'
+      and LV.isSubpotent is not true
+
+/*
+  @dataElement Date and time of last live attenuated vaccine
+*/
+define &quot;Live Attenuated Vaccines&quot;:
+  &quot;Doses Administered to Patient&quot; I where I.vaccineCode in Concepts.&quot;Live Attenuated&quot;
+
+define &quot;Date of Latest Live Attenuated Vaccine&quot;:
+  Last(
+    &quot;Live Attenuated Vaccines&quot; V
+      sort by start of occurrence.toInterval()
+  ).occurrence as FHIR.dateTime
+
+</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 155Kb )</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 280Kb )</p></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 7, 2024 12:26+0000">2024-06-07</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

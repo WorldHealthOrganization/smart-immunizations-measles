@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="VaccineTypes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-ICD11.html"><code>http://id.who.int/icd11/mms</code></a></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/ig/smart-immunizations-measles/ValueSet/VaccineTypes"/>
+  <version value="0.1.0"/>
+  <name value="VaccineTypes"/>
+  <title value="Vaccine Type ValueSet"/>
+  <status value="draft"/>
+  <date value="2023-10-18T20:43:12+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Vaccine type Codes, containing the different types of antigens used in vaccine guidelines."/>
+  <compose>
+    <include>
+      <system value="http://id.who.int/icd11/mms"/>
+    </include>
+  </compose>
+</ValueSet>

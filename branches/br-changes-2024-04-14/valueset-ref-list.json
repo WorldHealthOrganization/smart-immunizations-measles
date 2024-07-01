@@ -1,0 +1,293 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/ARVDrugs-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ARVDrugsvalues",
+      "title" : "ARV Drugs values",
+      "description" : "Codes representing ARV Drugs values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/AllVaccineTypes",
+      "version" : null,
+      "status" : "active",
+      "name" : "AllVaccineTypes",
+      "title" : "Vaccine Type ValueSet",
+      "description" : "Vaccine type Codes, containing the different types of antigens used in vaccine guidelines.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/AllVaccineTypes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "AllVaccineTypes",
+      "title" : "Vaccine Type ValueSet",
+      "description" : "Vaccine type Codes, containing the different types of antigens used in vaccine guidelines.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/Birthweight-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Birthweightvalues",
+      "title" : "Birthweight valueset",
+      "description" : "Codes representing Birthweight values",
+      "systems" : ["http://loinc.org", "http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/HIVstatus-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "HIVstatusvalues",
+      "title" : "HIV status values",
+      "description" : "Codes representing HIV status values",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.C.DE5",
+      "version" : null,
+      "status" : "active",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ.C.DE5 ValueSet for Sex",
+      "description" : "ValueSet for Sex for IMMZ.C.DE5.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.C.DE5",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_C_DE5",
+      "title" : "IMMZ.C.DE5 ValueSet for Sex",
+      "description" : "ValueSet for Sex for IMMZ.C.DE5.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZCRegisterClient.html" : "IMMZ.C Register Client"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE10",
+      "version" : null,
+      "status" : "active",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "description" : "ValueSet for HIV Status for IMMZ.D1.DE10.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE10",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_D1_DE10",
+      "title" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "description" : "ValueSet for HIV Status for IMMZ.D1.DE10.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZD1ClientHistoryMeasles.html" : "IMMZ.D1 Capture Client History for Measles"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE1VS",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZD1DE1VS",
+      "title" : "IMMZ.D1.DE1 CodeSystem for Immunization status",
+      "description" : "CodeSystem for IMMZ.D1.DE1 Immunization status",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZDUpdateVaccinationRecord.html" : "IMMZ.D Update Vaccination Record"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D1.DE5VS",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZD1DE5VS",
+      "title" : "IMMZ.D1.DE5 values for Reason Not Done",
+      "description" : "Values for IMMZ.D1.DE5 Reason Not Done",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZDUpdateVaccinationRecord.html" : "IMMZ.D Update Vaccination Record"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D4.DE161",
+      "version" : null,
+      "status" : "active",
+      "name" : "IMMZ_D4_DE161",
+      "title" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "description" : "ValueSet for Potential Contraindications for IMMZ.D4.DE161.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.D4.DE161",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZ_D4_DE161",
+      "title" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "description" : "ValueSet for Potential Contraindications for IMMZ.D4.DE161.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZD4CheckContraindicationsMeasles.html" : "IMMZ.D4 Check Contraindications for Measles"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE9",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZZDE9",
+      "title" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "description" : "ValueSet for Measles Vaccines for IMMZ.Z.DE9",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZD1ClientHistoryMeasles.html" : "IMMZ.D1 Capture Client History for Measles"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/Immunocompromised-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Immunocompromisedvalues",
+      "title" : "Immunocompromised valueset",
+      "description" : "Codes representing Immunocompromised values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/LiveAttenuatedVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "LiveAttenuatedVaccines",
+      "title" : "Set of live attenuated vaccines",
+      "description" : "Codes representing live attenuated vaccines",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/Negativetestresult-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Negativetestresultvalues",
+      "title" : "Negative Test Results",
+      "description" : "Codes representing negative test result values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/PositiveTestResult-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PositiveTestResultvalues",
+      "title" : "Positive Test Result valuest",
+      "description" : "Codes representing Positive Test Result values",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/SGImmunizationStatusCodes",
+      "version" : null,
+      "status" : "draft",
+      "name" : "SGImmunizationStatusCodes",
+      "title" : "Immunization Status Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+      "systems" : ["http://hl7.org/fhir/event-status"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/SGImmunizationStatusCodes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "SGImmunizationStatusCodes",
+      "title" : "Immunization Status Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+      "systems" : ["http://hl7.org/fhir/event-status"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/VSMeaslesVaccineProducts",
+      "version" : null,
+      "status" : "draft",
+      "name" : "VSMeaslesVaccineProducts",
+      "title" : "MeaslesVaccine Products ValueSet",
+      "description" : "Vaccine Product Codes - representing the codes of the products currently available.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/VSMeaslesVaccineProducts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VSMeaslesVaccineProducts",
+      "title" : "MeaslesVaccine Products ValueSet",
+      "description" : "Vaccine Product Codes - representing the codes of the products currently available.",
+      "systems" : [
+        "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/VaccineTypes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineTypes",
+      "title" : "Measles Vaccine Type ValueSet",
+      "description" : "Measles Vaccine type Codes, containing the different types of antigens used in vaccine guidelines.",
+      "systems" : [
+        "http://id.who.int/icd/release/11/mms",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-SGMedicationClassification.html" : "SGMedicationClassification",
+      "StructureDefinition-SGVaccineProposal.html" : "An order for immunization (for a disease, not a specific product)"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/pregnancystatus-values",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PregnancyStatusValues",
+      "title" : "Pregnancy status values",
+      "description" : "Codes representing possible values for the Pregnancy status element",
+      "systems" : ["http://loinc.org", "http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/ValueSet/sgcountry",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "SGCountryValueSet",
+      "title" : "Country ValueSet",
+      "description" : "This value set defines a base set of codes for countries.   \n\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "uses" : {
+      },
+      "StructureDefinition-IMMZDUpdateVaccinationRecord.html" : "IMMZ.D Update Vaccination Record"
+    }
+  ]
+}

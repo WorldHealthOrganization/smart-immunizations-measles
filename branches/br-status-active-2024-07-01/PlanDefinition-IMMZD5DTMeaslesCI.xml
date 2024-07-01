@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="IMMZD5DTMeaslesCI"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PlanDefinition IMMZD5DTMeaslesCI</b></p><a name="IMMZD5DTMeaslesCI"> </a><a name="hcIMMZD5DTMeaslesCI"> </a><a name="hcIMMZD5DTMeaslesCI-en-US"> </a><p><b>url</b>: <a href="PlanDefinition-IMMZD5DTMeaslesCI.html">PlanDefinition IMMZ.D5.DT.Measles.Contraindication</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZD5DTMeaslesContraindication</p><p><b>title</b>: IMMZ.D5.DT.Measles.Contraindication</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type eca-rule}">ECA Rule</span></p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-07-01 13:21:26+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: </p><div><p>Check contraindications for Measles vaccine</p>
+</div><h3>RelatedArtifacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style="display: none">*</td><td>Citation</td><td><div><p>WHO recommendations for routine immunization - summary tables (March 2023)</p>
+</div></td></tr></table><p><b>library</b>: <a href="Library-IMMZD5DTMeaslesCILogic.html">IMMZD5DTMeaslesCILogic</a></p><blockquote><p><b>action</b></p><p><b>title</b>: Check Contraindication for Measles Immunization</p><p><b>description</b>: Contraindication for measles immunization</p><blockquote><p><b>condition</b></p><p><b>kind</b>: Applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>MCV Dose Contraindicated</td><td>text/cql-identifier</td><td>MCV Dose Contraindicated</td></tr></table></blockquote><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/action-type update}">Update</span></p><p><b>definition</b>: <a href="ActivityDefinition-IMMZD2DTMeaslesCIMR.html">IMMZ.D2.DT.Measles.Contraindication</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: Evaluate Contraindication for Measles</p><p><b>description</b>: Provide further evaluation for measles contraindication</p><blockquote><p><b>condition</b></p><p><b>kind</b>: Applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>Contraindication Evaluation of the MCV dose</td><td>text/cql-identifier</td><td>Contraindication Evaluation of the MCV dose</td></tr></table></blockquote><p><b>definition</b>: <a href="ActivityDefinition-IMMZD2DTMeaslesEval.html">IMMZ.D2.DT.Measles.Eval</a></p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD5DTMeaslesCI"/>
+  <version value="0.1.0"/>
+  <name value="IMMZD5DTMeaslesContraindication"/>
+  <title value="IMMZ.D5.DT.Measles.Contraindication"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-07-01T13:21:26+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Check contraindications for Measles vaccine"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="WHO recommendations for routine immunization - summary tables (March 2023)"/>
+  </relatedArtifact>
+  <library value="http://smart.who.int/immunizations-measles/Library/IMMZD5DTMeaslesCILogic"/>
+  <action>
+    <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+      <valueMarkdown value="While vaccines are universally recommended, some clients may have contraindications to particular vaccines.&lt;br/&gt;Additional contraindications may be included in WHO position papers for the vaccine - Measles vaccines: WHO position paper (April 2017)."/>
+    </extension>
+    <title value="Check Contraindication for Measles Immunization"/>
+    <description value="Contraindication for measles immunization"/>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <description value="MCV Dose Contraindicated"/>
+        <language value="text/cql-identifier"/>
+        <expression value="MCV Dose Contraindicated"/>
+      </expression>
+    </condition>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/action-type"/>
+        <code value="update"/>
+      </coding>
+    </type>
+    <definitionCanonical value="http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesCIMR"/>
+  </action>
+  <action>
+    <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+      <valueMarkdown value="While vaccines are universally recommended, some clients may have contraindications to particular vaccines.&lt;br/&gt;Additional contraindications may be included in WHO position papers for the vaccine - Measles vaccines: WHO position paper (April 2017)."/>
+    </extension>
+    <title value="Evaluate Contraindication for Measles"/>
+    <description value="Provide further evaluation for measles contraindication"/>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <description value="Contraindication Evaluation of the MCV dose"/>
+        <language value="text/cql-identifier"/>
+        <expression value="Contraindication Evaluation of the MCV dose"/>
+      </expression>
+    </condition>
+    <definitionCanonical value="http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesEval"/>
+  </action>
+</PlanDefinition>

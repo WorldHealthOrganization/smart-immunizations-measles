@@ -1,0 +1,1738 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "141",
+            "s" : [ {
+               "value" : [ "","library IMMZCommon" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZCommon",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "5:1-5:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "7",
+            "locator" : "11:1-12:26",
+            "name" : "Only",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "7",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Fetches a singleton protocol applied from an immunization\n * @comment The protocol list from the immunization\n */\n","define function Only(protocols List<FHIR.Immunization.ProtocolApplied>):\n  " ]
+                  }, {
+                     "r" : "6",
+                     "s" : [ {
+                        "r" : "6",
+                        "s" : [ {
+                           "value" : [ "singleton from " ]
+                        }, {
+                           "r" : "5",
+                           "s" : [ {
+                              "value" : [ "protocols" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "6",
+               "locator" : "12:3-12:26",
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "localId" : "5",
+                  "locator" : "12:18-12:26",
+                  "name" : "protocols",
+                  "type" : "OperandRef"
+               }
+            },
+            "operand" : [ {
+               "name" : "protocols",
+               "operandTypeSpecifier" : {
+                  "localId" : "4",
+                  "locator" : "11:32-11:70",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "3",
+                     "locator" : "11:37-11:69",
+                     "name" : "{http://hl7.org/fhir}Immunization.ProtocolApplied",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
+            } ]
+         }, {
+            "localId" : "12",
+            "locator" : "18:1-19:26",
+            "name" : "only",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Fetches a singleton protocol applied from an immunization\n * @comment The protocol list from the immunization\n */\n","define fluent function only(protocols List<FHIR.Immunization.ProtocolApplied>):\n  " ]
+                  }, {
+                     "r" : "11",
+                     "s" : [ {
+                        "r" : "11",
+                        "s" : [ {
+                           "value" : [ "singleton from " ]
+                        }, {
+                           "r" : "10",
+                           "s" : [ {
+                              "value" : [ "protocols" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "11",
+               "locator" : "19:3-19:26",
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "localId" : "10",
+                  "locator" : "19:18-19:26",
+                  "name" : "protocols",
+                  "type" : "OperandRef"
+               }
+            },
+            "operand" : [ {
+               "name" : "protocols",
+               "operandTypeSpecifier" : {
+                  "localId" : "9",
+                  "locator" : "18:39-18:77",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "8",
+                     "locator" : "18:44-18:76",
+                     "name" : "{http://hl7.org/fhir}Immunization.ProtocolApplied",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
+            } ]
+         }, {
+            "localId" : "32",
+            "locator" : "24:1-30:4",
+            "name" : "ToDate",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "32",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Takes the date choice of a date/string choice (for Immunization date)\n */\n","define function ToDate(choice Choice<FHIR.date, FHIR.string>):\n  " ]
+                  }, {
+                     "r" : "31",
+                     "s" : [ {
+                        "r" : "31",
+                        "s" : [ {
+                           "value" : [ "case\n\t  " ]
+                        }, {
+                           "r" : "22",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "18",
+                              "s" : [ {
+                                 "r" : "16",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "17",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","date" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n    \t" ]
+                           }, {
+                              "r" : "21",
+                              "s" : [ {
+                                 "r" : "19",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "20",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","date" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t\telse\n      " ]
+                        }, {
+                           "r" : "30",
+                           "s" : [ {
+                              "value" : [ "Message","(" ]
+                           }, {
+                              "r" : "25",
+                              "s" : [ {
+                                 "r" : "23",
+                                 "value" : [ "null"," as " ]
+                              }, {
+                                 "r" : "24",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","date" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "r" : "26",
+                              "value" : [ ", ","true",", " ]
+                           }, {
+                              "r" : "27",
+                              "s" : [ {
+                                 "value" : [ "'1'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "28",
+                              "s" : [ {
+                                 "value" : [ "'Error'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "29",
+                              "s" : [ {
+                                 "value" : [ "'Cannot compute a date from a String value'" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\tend" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "31",
+               "locator" : "25:3-30:4",
+               "type" : "Case",
+               "caseItem" : [ {
+                  "localId" : "22",
+                  "locator" : "26:4-27:24",
+                  "when" : {
+                     "localId" : "18",
+                     "locator" : "26:9-26:27",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "16",
+                        "locator" : "26:9-26:14",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "17",
+                        "locator" : "26:19-26:27",
+                        "name" : "{http://hl7.org/fhir}date",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "localId" : "21",
+                     "locator" : "27:6-27:24",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "19",
+                        "locator" : "27:6-27:11",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "20",
+                        "locator" : "27:16-27:24",
+                        "name" : "{http://hl7.org/fhir}date",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               } ],
+               "else" : {
+                  "localId" : "30",
+                  "locator" : "29:7-29:97",
+                  "type" : "Message",
+                  "source" : {
+                     "localId" : "25",
+                     "locator" : "29:15-29:31",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "23",
+                        "locator" : "29:15-29:18",
+                        "type" : "Null"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "24",
+                        "locator" : "29:23-29:31",
+                        "name" : "{http://hl7.org/fhir}date",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "condition" : {
+                     "localId" : "26",
+                     "locator" : "29:34-29:37",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "true",
+                     "type" : "Literal"
+                  },
+                  "code" : {
+                     "localId" : "27",
+                     "locator" : "29:40-29:42",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "severity" : {
+                     "localId" : "28",
+                     "locator" : "29:45-29:51",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Error",
+                     "type" : "Literal"
+                  },
+                  "message" : {
+                     "localId" : "29",
+                     "locator" : "29:54-29:96",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Cannot compute a date from a String value",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "operand" : [ {
+               "name" : "choice",
+               "operandTypeSpecifier" : {
+                  "localId" : "15",
+                  "locator" : "24:31-24:60",
+                  "type" : "ChoiceTypeSpecifier",
+                  "choice" : [ {
+                     "localId" : "13",
+                     "locator" : "24:38-24:46",
+                     "name" : "{http://hl7.org/fhir}date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "14",
+                     "locator" : "24:49-24:59",
+                     "name" : "{http://hl7.org/fhir}string",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "52",
+            "locator" : "35:1-41:4",
+            "name" : "ToDateTime",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "52",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Takes the date choice of a date/string choice (for Immunization date)\n */\n","define function ToDateTime(choice Choice<FHIR.dateTime, FHIR.string>):\n  " ]
+                  }, {
+                     "r" : "51",
+                     "s" : [ {
+                        "r" : "51",
+                        "s" : [ {
+                           "value" : [ "case\n\t  " ]
+                        }, {
+                           "r" : "42",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "38",
+                              "s" : [ {
+                                 "r" : "36",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "37",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n    \t" ]
+                           }, {
+                              "r" : "41",
+                              "s" : [ {
+                                 "r" : "39",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "40",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t\telse\n      " ]
+                        }, {
+                           "r" : "50",
+                           "s" : [ {
+                              "value" : [ "Message","(" ]
+                           }, {
+                              "r" : "45",
+                              "s" : [ {
+                                 "r" : "43",
+                                 "value" : [ "null"," as " ]
+                              }, {
+                                 "r" : "44",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "r" : "46",
+                              "value" : [ ", ","true",", " ]
+                           }, {
+                              "r" : "47",
+                              "s" : [ {
+                                 "value" : [ "'1'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "48",
+                              "s" : [ {
+                                 "value" : [ "'Error'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "49",
+                              "s" : [ {
+                                 "value" : [ "'Cannot compute a date from a String value'" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\tend" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "51",
+               "locator" : "36:3-41:4",
+               "type" : "Case",
+               "caseItem" : [ {
+                  "localId" : "42",
+                  "locator" : "37:4-38:28",
+                  "when" : {
+                     "localId" : "38",
+                     "locator" : "37:9-37:31",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "36",
+                        "locator" : "37:9-37:14",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "37",
+                        "locator" : "37:19-37:31",
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "localId" : "41",
+                     "locator" : "38:6-38:28",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "39",
+                        "locator" : "38:6-38:11",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "40",
+                        "locator" : "38:16-38:28",
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               } ],
+               "else" : {
+                  "localId" : "50",
+                  "locator" : "40:7-40:101",
+                  "type" : "Message",
+                  "signature" : [ {
+                     "name" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "source" : {
+                     "localId" : "45",
+                     "locator" : "40:15-40:35",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "43",
+                        "locator" : "40:15-40:18",
+                        "type" : "Null"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "44",
+                        "locator" : "40:23-40:35",
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "condition" : {
+                     "localId" : "46",
+                     "locator" : "40:38-40:41",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "true",
+                     "type" : "Literal"
+                  },
+                  "code" : {
+                     "localId" : "47",
+                     "locator" : "40:44-40:46",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "severity" : {
+                     "localId" : "48",
+                     "locator" : "40:49-40:55",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Error",
+                     "type" : "Literal"
+                  },
+                  "message" : {
+                     "localId" : "49",
+                     "locator" : "40:58-40:100",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Cannot compute a date from a String value",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "operand" : [ {
+               "name" : "choice",
+               "operandTypeSpecifier" : {
+                  "localId" : "35",
+                  "locator" : "35:35-35:68",
+                  "type" : "ChoiceTypeSpecifier",
+                  "choice" : [ {
+                     "localId" : "33",
+                     "locator" : "35:42-35:54",
+                     "name" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "34",
+                     "locator" : "35:57-35:67",
+                     "name" : "{http://hl7.org/fhir}string",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "72",
+            "locator" : "47:1-53:4",
+            "name" : "ToPositiveInt",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "72",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Takes a choice of FHIR.string and FHIR.positiveInt and ensures the result is a FHIR.positiveInt\n */\n","define function ToPositiveInt(choice Choice<FHIR.positiveInt, FHIR.string>):\n  " ]
+                  }, {
+                     "r" : "71",
+                     "s" : [ {
+                        "r" : "71",
+                        "s" : [ {
+                           "value" : [ "case\n\t  " ]
+                        }, {
+                           "r" : "62",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "58",
+                              "s" : [ {
+                                 "r" : "56",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "57",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","positiveInt" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n    \t" ]
+                           }, {
+                              "r" : "61",
+                              "s" : [ {
+                                 "r" : "59",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "60",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","positiveInt" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t\telse\n      " ]
+                        }, {
+                           "r" : "70",
+                           "s" : [ {
+                              "value" : [ "Message","(" ]
+                           }, {
+                              "r" : "65",
+                              "s" : [ {
+                                 "r" : "63",
+                                 "value" : [ "null"," as " ]
+                              }, {
+                                 "r" : "64",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","positiveInt" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "r" : "66",
+                              "value" : [ ", ","true",", " ]
+                           }, {
+                              "r" : "67",
+                              "s" : [ {
+                                 "value" : [ "'1'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "68",
+                              "s" : [ {
+                                 "value" : [ "'Error'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "69",
+                              "s" : [ {
+                                 "value" : [ "'Cannot compute a positive from a String value'" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ " // TODO: I'm sure that this is supported somehow?\n\tend" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "71",
+               "locator" : "48:3-53:4",
+               "type" : "Case",
+               "caseItem" : [ {
+                  "localId" : "62",
+                  "locator" : "49:4-50:31",
+                  "when" : {
+                     "localId" : "58",
+                     "locator" : "49:9-49:34",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "56",
+                        "locator" : "49:9-49:14",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "57",
+                        "locator" : "49:19-49:34",
+                        "name" : "{http://hl7.org/fhir}positiveInt",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "localId" : "61",
+                     "locator" : "50:6-50:31",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "59",
+                        "locator" : "50:6-50:11",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "60",
+                        "locator" : "50:16-50:31",
+                        "name" : "{http://hl7.org/fhir}positiveInt",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               } ],
+               "else" : {
+                  "localId" : "70",
+                  "locator" : "52:7-52:108",
+                  "type" : "Message",
+                  "signature" : [ {
+                     "name" : "{http://hl7.org/fhir}positiveInt",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "source" : {
+                     "localId" : "65",
+                     "locator" : "52:15-52:38",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "63",
+                        "locator" : "52:15-52:18",
+                        "type" : "Null"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "64",
+                        "locator" : "52:23-52:38",
+                        "name" : "{http://hl7.org/fhir}positiveInt",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "condition" : {
+                     "localId" : "66",
+                     "locator" : "52:41-52:44",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "true",
+                     "type" : "Literal"
+                  },
+                  "code" : {
+                     "localId" : "67",
+                     "locator" : "52:47-52:49",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "severity" : {
+                     "localId" : "68",
+                     "locator" : "52:52-52:58",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Error",
+                     "type" : "Literal"
+                  },
+                  "message" : {
+                     "localId" : "69",
+                     "locator" : "52:61-52:107",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Cannot compute a positive from a String value",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "operand" : [ {
+               "name" : "choice",
+               "operandTypeSpecifier" : {
+                  "localId" : "55",
+                  "locator" : "47:38-47:74",
+                  "type" : "ChoiceTypeSpecifier",
+                  "choice" : [ {
+                     "localId" : "53",
+                     "locator" : "47:45-47:60",
+                     "name" : "{http://hl7.org/fhir}positiveInt",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "54",
+                     "locator" : "47:63-47:73",
+                     "name" : "{http://hl7.org/fhir}string",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "113",
+            "locator" : "59:1-69:4",
+            "name" : "ExtractMedicationCode",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "113",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Takes a choice between a Medication and a CodeableConcept and returns just the code of the medication\n */\n","define function ExtractMedicationCode(choice Choice<FHIR.CodeableConcept, FHIR.Reference>):\n  " ]
+                  }, {
+                     "r" : "112",
+                     "s" : [ {
+                        "r" : "112",
+                        "s" : [ {
+                           "value" : [ "case\n\t  " ]
+                        }, {
+                           "r" : "82",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "78",
+                              "s" : [ {
+                                 "r" : "76",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "77",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","CodeableConcept" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n    \t" ]
+                           }, {
+                              "r" : "81",
+                              "s" : [ {
+                                 "r" : "79",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "80",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","CodeableConcept" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "103",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "85",
+                              "s" : [ {
+                                 "r" : "83",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "84",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","Reference" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n      " ]
+                           }, {
+                              "r" : "102",
+                              "s" : [ {
+                                 "value" : [ "First","(" ]
+                              }, {
+                                 "r" : "101",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "r" : "87",
+                                       "s" : [ {
+                                          "r" : "86",
+                                          "s" : [ {
+                                             "r" : "86",
+                                             "s" : [ {
+                                                "value" : [ "[","Medication","]" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " ","M" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " \n        " ]
+                                 }, {
+                                    "r" : "95",
+                                    "s" : [ {
+                                       "value" : [ "where " ]
+                                    }, {
+                                       "r" : "95",
+                                       "s" : [ {
+                                          "r" : "89",
+                                          "s" : [ {
+                                             "r" : "88",
+                                             "s" : [ {
+                                                "value" : [ "M" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "89",
+                                             "s" : [ {
+                                                "value" : [ "id" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " ","="," " ]
+                                       }, {
+                                          "r" : "94",
+                                          "s" : [ {
+                                             "value" : [ "Last","(" ]
+                                          }, {
+                                             "r" : "93",
+                                             "s" : [ {
+                                                "value" : [ "Split","(" ]
+                                             }, {
+                                                "r" : "91",
+                                                "s" : [ {
+                                                   "r" : "90",
+                                                   "s" : [ {
+                                                      "value" : [ "choice" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "91",
+                                                   "s" : [ {
+                                                      "value" : [ "reference" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ", " ]
+                                             }, {
+                                                "r" : "92",
+                                                "s" : [ {
+                                                   "value" : [ "'/'" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ ")" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "r" : "100",
+                                    "s" : [ {
+                                       "value" : [ "return " ]
+                                    }, {
+                                       "r" : "99",
+                                       "s" : [ {
+                                          "r" : "97",
+                                          "s" : [ {
+                                             "r" : "96",
+                                             "s" : [ {
+                                                "value" : [ "M" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "97",
+                                             "s" : [ {
+                                                "value" : [ "code" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " as " ]
+                                       }, {
+                                          "r" : "98",
+                                          "s" : [ {
+                                             "value" : [ "FHIR",".","CodeableConcept" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t\telse\n      " ]
+                        }, {
+                           "r" : "111",
+                           "s" : [ {
+                              "value" : [ "Message","(" ]
+                           }, {
+                              "r" : "106",
+                              "s" : [ {
+                                 "r" : "104",
+                                 "value" : [ "null"," as " ]
+                              }, {
+                                 "r" : "105",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","CodeableConcept" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "r" : "107",
+                              "value" : [ ", ","true",", " ]
+                           }, {
+                              "r" : "108",
+                              "s" : [ {
+                                 "value" : [ "'1'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "109",
+                              "s" : [ {
+                                 "value" : [ "'Error'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "110",
+                              "s" : [ {
+                                 "value" : [ "'Cannot compute a medication code'" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ " // TODO: I'm sure that this is supported somehow?\n\tend" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "112",
+               "locator" : "60:3-69:4",
+               "type" : "Case",
+               "caseItem" : [ {
+                  "localId" : "82",
+                  "locator" : "61:4-62:35",
+                  "when" : {
+                     "localId" : "78",
+                     "locator" : "61:9-61:38",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "76",
+                        "locator" : "61:9-61:14",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "77",
+                        "locator" : "61:19-61:38",
+                        "name" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "localId" : "81",
+                     "locator" : "62:6-62:35",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "79",
+                        "locator" : "62:6-62:11",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "80",
+                        "locator" : "62:16-62:35",
+                        "name" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               }, {
+                  "localId" : "103",
+                  "locator" : "63:5-66:46",
+                  "when" : {
+                     "localId" : "85",
+                     "locator" : "63:10-63:33",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "83",
+                        "locator" : "63:10-63:15",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "84",
+                        "locator" : "63:20-63:33",
+                        "name" : "{http://hl7.org/fhir}Reference",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "localId" : "102",
+                     "locator" : "64:7-66:46",
+                     "type" : "First",
+                     "source" : {
+                        "localId" : "101",
+                        "locator" : "64:13-66:45",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "87",
+                           "locator" : "64:13-64:26",
+                           "alias" : "M",
+                           "expression" : {
+                              "localId" : "86",
+                              "locator" : "64:13-64:24",
+                              "dataType" : "{http://hl7.org/fhir}Medication",
+                              "templateId" : "http://hl7.org/fhir/StructureDefinition/Medication",
+                              "type" : "Retrieve"
+                           }
+                        } ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "95",
+                           "locator" : "65:9-65:55",
+                           "type" : "Equal",
+                           "signature" : [ {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "name" : "{http://hl7.org/fhir}string",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "89",
+                                 "locator" : "65:15-65:18",
+                                 "path" : "id",
+                                 "scope" : "M",
+                                 "type" : "Property"
+                              } ]
+                           }, {
+                              "localId" : "94",
+                              "locator" : "65:22-65:55",
+                              "type" : "Last",
+                              "source" : {
+                                 "localId" : "93",
+                                 "locator" : "65:27-65:54",
+                                 "type" : "Split",
+                                 "stringToSplit" : {
+                                    "name" : "ToString",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ {
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "91",
+                                       "locator" : "65:33-65:48",
+                                       "path" : "reference",
+                                       "type" : "Property",
+                                       "source" : {
+                                          "localId" : "90",
+                                          "locator" : "65:33-65:38",
+                                          "name" : "choice",
+                                          "type" : "OperandRef"
+                                       }
+                                    } ]
+                                 },
+                                 "separator" : {
+                                    "localId" : "92",
+                                    "locator" : "65:51-65:53",
+                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                    "value" : "/",
+                                    "type" : "Literal"
+                                 }
+                              }
+                           } ]
+                        },
+                        "return" : {
+                           "localId" : "100",
+                           "locator" : "66:9-66:45",
+                           "expression" : {
+                              "localId" : "99",
+                              "locator" : "66:16-66:45",
+                              "strict" : false,
+                              "type" : "As",
+                              "operand" : {
+                                 "localId" : "97",
+                                 "locator" : "66:16-66:21",
+                                 "path" : "code",
+                                 "scope" : "M",
+                                 "type" : "Property"
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "98",
+                                 "locator" : "66:26-66:45",
+                                 "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        }
+                     }
+                  }
+               } ],
+               "else" : {
+                  "localId" : "111",
+                  "locator" : "68:7-68:99",
+                  "type" : "Message",
+                  "signature" : [ {
+                     "name" : "{http://hl7.org/fhir}CodeableConcept",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "source" : {
+                     "localId" : "106",
+                     "locator" : "68:15-68:42",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "104",
+                        "locator" : "68:15-68:18",
+                        "type" : "Null"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "105",
+                        "locator" : "68:23-68:42",
+                        "name" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "condition" : {
+                     "localId" : "107",
+                     "locator" : "68:45-68:48",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "true",
+                     "type" : "Literal"
+                  },
+                  "code" : {
+                     "localId" : "108",
+                     "locator" : "68:51-68:53",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "severity" : {
+                     "localId" : "109",
+                     "locator" : "68:56-68:62",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Error",
+                     "type" : "Literal"
+                  },
+                  "message" : {
+                     "localId" : "110",
+                     "locator" : "68:65-68:98",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "Cannot compute a medication code",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "operand" : [ {
+               "name" : "choice",
+               "operandTypeSpecifier" : {
+                  "localId" : "75",
+                  "locator" : "59:46-59:89",
+                  "type" : "ChoiceTypeSpecifier",
+                  "choice" : [ {
+                     "localId" : "73",
+                     "locator" : "59:53-59:72",
+                     "name" : "{http://hl7.org/fhir}CodeableConcept",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "74",
+                     "locator" : "59:75-59:88",
+                     "name" : "{http://hl7.org/fhir}Reference",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "141",
+            "locator" : "75:1-83:4",
+            "name" : "ExtractMedicationInitiationDate",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "141",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description Takes a choice between a Medication and a CodeableConcept and returns just the code of the medication\n */\n","define function ExtractMedicationInitiationDate(choice Choice<FHIR.dateTime, FHIR.Period>):\n  " ]
+                  }, {
+                     "r" : "140",
+                     "s" : [ {
+                        "r" : "140",
+                        "s" : [ {
+                           "value" : [ "case\n\t  " ]
+                        }, {
+                           "r" : "124",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "119",
+                              "s" : [ {
+                                 "r" : "117",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "118",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","Period" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n    \t" ]
+                           }, {
+                              "r" : "123",
+                              "s" : [ {
+                                 "value" : [ "start of " ]
+                              }, {
+                                 "r" : "122",
+                                 "s" : [ {
+                                    "value" : [ "(" ]
+                                 }, {
+                                    "r" : "122",
+                                    "s" : [ {
+                                       "r" : "120",
+                                       "s" : [ {
+                                          "value" : [ "choice" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "121",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","Period" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "131",
+                           "s" : [ {
+                              "value" : [ "when " ]
+                           }, {
+                              "r" : "127",
+                              "s" : [ {
+                                 "r" : "125",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is " ]
+                              }, {
+                                 "r" : "126",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " then\n      " ]
+                           }, {
+                              "r" : "130",
+                              "s" : [ {
+                                 "r" : "128",
+                                 "s" : [ {
+                                    "value" : [ "choice" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "129",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t\telse\n      " ]
+                        }, {
+                           "r" : "139",
+                           "s" : [ {
+                              "value" : [ "Message","(" ]
+                           }, {
+                              "r" : "134",
+                              "s" : [ {
+                                 "r" : "132",
+                                 "value" : [ "null"," as " ]
+                              }, {
+                                 "r" : "133",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "r" : "135",
+                              "value" : [ ", ","true",", " ]
+                           }, {
+                              "r" : "136",
+                              "s" : [ {
+                                 "value" : [ "'1'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "137",
+                              "s" : [ {
+                                 "value" : [ "'Error'" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "138",
+                              "s" : [ {
+                                 "value" : [ "'Cannot compute medication treatment initiation date'" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ " // TODO: I'm sure that this is supported somehow?\n\tend" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "140",
+               "locator" : "76:3-83:4",
+               "type" : "Case",
+               "caseItem" : [ {
+                  "localId" : "124",
+                  "locator" : "77:4-78:37",
+                  "when" : {
+                     "localId" : "119",
+                     "locator" : "77:9-77:29",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "117",
+                        "locator" : "77:9-77:14",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "118",
+                        "locator" : "77:19-77:29",
+                        "name" : "{http://hl7.org/fhir}Period",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "localId" : "123",
+                     "locator" : "78:6-78:37",
+                     "type" : "Start",
+                     "operand" : {
+                        "name" : "ToInterval",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ {
+                           "name" : "{http://hl7.org/fhir}Period",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "122",
+                           "locator" : "78:15-78:37",
+                           "strict" : false,
+                           "type" : "As",
+                           "operand" : {
+                              "localId" : "120",
+                              "locator" : "78:16-78:21",
+                              "name" : "choice",
+                              "type" : "OperandRef"
+                           },
+                           "asTypeSpecifier" : {
+                              "localId" : "121",
+                              "locator" : "78:26-78:36",
+                              "name" : "{http://hl7.org/fhir}Period",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  }
+               }, {
+                  "localId" : "131",
+                  "locator" : "79:5-80:29",
+                  "when" : {
+                     "localId" : "127",
+                     "locator" : "79:10-79:32",
+                     "type" : "Is",
+                     "operand" : {
+                        "localId" : "125",
+                        "locator" : "79:10-79:15",
+                        "name" : "choice",
+                        "type" : "OperandRef"
+                     },
+                     "isTypeSpecifier" : {
+                        "localId" : "126",
+                        "locator" : "79:20-79:32",
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "then" : {
+                     "name" : "ToDateTime",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "signature" : [ {
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "130",
+                        "locator" : "80:7-80:29",
+                        "strict" : false,
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "128",
+                           "locator" : "80:7-80:12",
+                           "name" : "choice",
+                           "type" : "OperandRef"
+                        },
+                        "asTypeSpecifier" : {
+                           "localId" : "129",
+                           "locator" : "80:17-80:29",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               } ],
+               "else" : {
+                  "name" : "ToDateTime",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ {
+                     "name" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "139",
+                     "locator" : "82:7-82:111",
+                     "type" : "Message",
+                     "signature" : [ {
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "source" : {
+                        "localId" : "134",
+                        "locator" : "82:15-82:35",
+                        "strict" : false,
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "132",
+                           "locator" : "82:15-82:18",
+                           "type" : "Null"
+                        },
+                        "asTypeSpecifier" : {
+                           "localId" : "133",
+                           "locator" : "82:23-82:35",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
+                     "condition" : {
+                        "localId" : "135",
+                        "locator" : "82:38-82:41",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "value" : "true",
+                        "type" : "Literal"
+                     },
+                     "code" : {
+                        "localId" : "136",
+                        "locator" : "82:44-82:46",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "1",
+                        "type" : "Literal"
+                     },
+                     "severity" : {
+                        "localId" : "137",
+                        "locator" : "82:49-82:55",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Error",
+                        "type" : "Literal"
+                     },
+                     "message" : {
+                        "localId" : "138",
+                        "locator" : "82:58-82:110",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Cannot compute medication treatment initiation date",
+                        "type" : "Literal"
+                     }
+                  } ]
+               }
+            },
+            "operand" : [ {
+               "name" : "choice",
+               "operandTypeSpecifier" : {
+                  "localId" : "116",
+                  "locator" : "75:56-75:89",
+                  "type" : "ChoiceTypeSpecifier",
+                  "choice" : [ {
+                     "localId" : "114",
+                     "locator" : "75:63-75:75",
+                     "name" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "115",
+                     "locator" : "75:78-75:88",
+                     "name" : "{http://hl7.org/fhir}Period",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               }
+            } ]
+         } ]
+      }
+   }
+}

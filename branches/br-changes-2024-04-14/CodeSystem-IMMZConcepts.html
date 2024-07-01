@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Immunizations Concepts CodeSystem - WHO SMART Guidelines - Measles Immunization v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.64"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.64"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART Guidelines - Measles Immunization</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b>Immunizations Concepts CodeSystem</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART Guidelines - Measles Immunization, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://smart.who.int/immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-IMMZConcepts.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-IMMZConcepts.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-IMMZConcepts.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">CodeSystem: Immunizations Concepts CodeSystem
+(Experimental)
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2024-06-06
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">IMMZConcepts</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>This code system defines concepts used in SMART Immunizations</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <p>
+  This Code system is referenced in the content logical definition of the following value sets:
+  </p>
+
+  
+<ul>
+ <li><a href="ValueSet-IMMZ.C.DE5.html">IMMZ_C_DE5</a></li>
+ <li><a href="ValueSet-IMMZ.D1.DE10.html">IMMZ_D1_DE10</a></li>
+ <li><a href="ValueSet-IMMZ.D1.DE1VS.html">IMMZD1DE1VS</a></li>
+ <li><a href="ValueSet-IMMZ.D1.DE5VS.html">IMMZD1DE5VS</a></li>
+ <li><a href="ValueSet-IMMZ.D4.DE161.html">IMMZ_D4_DE161</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This case-insensitive code system <code>http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts</code> defines the following codes:</p>
+<table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+<tr><td style="white-space:nowrap">C.DE1<a name="IMMZConcepts-C.46DE1"> </a></td>
+<td>Unique identifier</td>
+<td>Unique identifier for the client, according to the policies applicable to each country. There can be more than one unique identifier used to link records (e.g. national ID, health ID, immunization information system ID, medical record ID).</td></tr>
+<tr><td style="white-space:nowrap">C.DE2<a name="IMMZConcepts-C.46DE2"> </a></td>
+<td>Name</td>
+<td>The full name of the client</td></tr>
+<tr><td style="white-space:nowrap">C.DE3<a name="IMMZConcepts-C.46DE3"> </a></td>
+<td>First name</td>
+<td>Client's first name or given name</td></tr>
+<tr><td style="white-space:nowrap">C.DE4<a name="IMMZConcepts-C.46DE4"> </a></td>
+<td>Family name</td>
+<td>Client's family name or last name</td></tr>
+<tr><td style="white-space:nowrap">C.DE5<a name="IMMZConcepts-C.46DE5"> </a></td>
+<td>Sex</td>
+<td>Documentation of a specific instance of sex information for the client</td></tr>
+<tr><td style="white-space:nowrap">C.DE6<a name="IMMZConcepts-C.46DE6"> </a></td>
+<td>Male</td>
+<td>Client's biological sex is male</td></tr>
+<tr><td style="white-space:nowrap">C.DE7<a name="IMMZConcepts-C.46DE7"> </a></td>
+<td>Female</td>
+<td>Client's biological sex is female</td></tr>
+<tr><td style="white-space:nowrap">C.DE8<a name="IMMZConcepts-C.46DE8"> </a></td>
+<td>Biological sex not specified</td>
+<td>Client's biological sex is not specified</td></tr>
+<tr><td style="white-space:nowrap">C.DE9<a name="IMMZConcepts-C.46DE9"> </a></td>
+<td>Intersex</td>
+<td>Client's biological sex is intersex</td></tr>
+<tr><td style="white-space:nowrap">C.DE10<a name="IMMZConcepts-C.46DE10"> </a></td>
+<td>Date of birth</td>
+<td>Client's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes</td></tr>
+<tr><td style="white-space:nowrap">C.DE13<a name="IMMZConcepts-C.46DE13"> </a></td>
+<td>Age</td>
+<td>The client's calculated age (presented as number of years, months, days) based on the date of birth (DOB) and the visit date</td></tr>
+<tr><td style="white-space:nowrap">C.DE14<a name="IMMZConcepts-C.46DE14"> </a></td>
+<td>Caregivers (multiple)</td>
+<td>The client's caregiver (person) which could be next of kin (e.g. partner, husband, mother, sibling, etc.)</td></tr>
+<tr><td style="white-space:nowrap">C.DE15<a name="IMMZConcepts-C.46DE15"> </a></td>
+<td>Caregiver's full name</td>
+<td>The full name of the client's caregiver</td></tr>
+<tr><td style="white-space:nowrap">C.DE16<a name="IMMZConcepts-C.46DE16"> </a></td>
+<td>Caregiver's first name</td>
+<td>First or given name of the client's caregiver</td></tr>
+<tr><td style="white-space:nowrap">C.DE17<a name="IMMZConcepts-C.46DE17"> </a></td>
+<td>Caregiver's family name</td>
+<td>Family name or last name of the client's caregiver</td></tr>
+<tr><td style="white-space:nowrap">C.DE18<a name="IMMZConcepts-C.46DE18"> </a></td>
+<td>Contact phone number</td>
+<td>Client's phone number</td></tr>
+<tr><td style="white-space:nowrap">C.DE19<a name="IMMZConcepts-C.46DE19"> </a></td>
+<td>Administrative area</td>
+<td>The name of the city/municipality/town/village of where the client lives</td></tr>
+<tr><td style="white-space:nowrap">C.DE20<a name="IMMZConcepts-C.46DE20"> </a></td>
+<td>Active health worker</td>
+<td>Is the client an active and participating health worker. This data element is used mainly for reporting and indicators purposes.</td></tr>
+<tr><td style="white-space:nowrap">D.DE1<a name="IMMZConcepts-D.46DE1"> </a></td>
+<td>Immunization event status</td>
+<td>The current status of the individual immunization event</td></tr>
+<tr><td style="white-space:nowrap">D.DE2<a name="IMMZConcepts-D.46DE2"> </a></td>
+<td>Completed</td>
+<td>The immunization event was successfully carried out as intended</td></tr>
+<tr><td style="white-space:nowrap">D.DE3<a name="IMMZConcepts-D.46DE3"> </a></td>
+<td>Entered in error</td>
+<td>Immunization event record has been mistakenly created or entered into system. Recorded information is incorrect or should not have been documented, though it is possible that real-world decisions were based on it</td></tr>
+<tr><td style="white-space:nowrap">D.DE4<a name="IMMZConcepts-D.46DE4"> </a></td>
+<td>Not Done</td>
+<td>Planned immunization event was not carried out for some reason</td></tr>
+<tr><td style="white-space:nowrap">D.DE5<a name="IMMZConcepts-D.46DE5"> </a></td>
+<td>Reason vaccine was not administered</td>
+<td>The reason this immunization event was not performed</td></tr>
+<tr><td style="white-space:nowrap">D.DE6<a name="IMMZConcepts-D.46DE6"> </a></td>
+<td>Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization</td>
+<td></td></tr>
+<tr><td style="white-space:nowrap">D.DE7<a name="IMMZConcepts-D.46DE7"> </a></td>
+<td>Medical precaution</td>
+<td>The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted</td></tr>
+<tr><td style="white-space:nowrap">D.DE8<a name="IMMZConcepts-D.46DE8"> </a></td>
+<td>Product out of stock</td>
+<td>There was no supply of the product on hand to perform the service</td></tr>
+<tr><td style="white-space:nowrap">D.DE9<a name="IMMZConcepts-D.46DE9"> </a></td>
+<td>Client objection</td>
+<td>The client or their guardian objects to receiving the vaccine</td></tr>
+<tr><td style="white-space:nowrap">D.DE10<a name="IMMZConcepts-D.46DE10"> </a></td>
+<td>Caregiver refusal</td>
+<td>The client's caregiver refused the vaccine</td></tr>
+<tr><td style="white-space:nowrap">D.DE11<a name="IMMZConcepts-D.46DE11"> </a></td>
+<td>Unspecified reason</td>
+<td>The immunization event was not carried out for an unspecified reason</td></tr>
+<tr><td style="white-space:nowrap">D.DE12<a name="IMMZConcepts-D.46DE12"> </a></td>
+<td>Client allergy to vaccine or component</td>
+<td>The immunization event was not carried out because of client allergy to vaccine or component</td></tr>
+<tr><td style="white-space:nowrap">D.DE13<a name="IMMZConcepts-D.46DE13"> </a></td>
+<td>Immunocompromised</td>
+<td>The immunization event was not carried out because the client is immunocompromised</td></tr>
+<tr><td style="white-space:nowrap">D.DE14<a name="IMMZConcepts-D.46DE14"> </a></td>
+<td>Chronic illness or condition</td>
+<td>The immunization event was not carried out due a chronic illness or condition of the client</td></tr>
+<tr><td style="white-space:nowrap">D.DE15<a name="IMMZConcepts-D.46DE15"> </a></td>
+<td>Acute illness</td>
+<td>The immunization event was not carried out due to an acute illness present in the client</td></tr>
+<tr><td style="white-space:nowrap">D.DE16<a name="IMMZConcepts-D.46DE16"> </a></td>
+<td>Had the disease</td>
+<td>The immunization event was not carried out due to the client having had the disease</td></tr>
+<tr><td style="white-space:nowrap">D.DE17<a name="IMMZConcepts-D.46DE17"> </a></td>
+<td>Immunization not carried out for other reasons</td>
+<td>The immunization event was not carried out for other reasons</td></tr>
+<tr><td style="white-space:nowrap">D.DE18<a name="IMMZConcepts-D.46DE18"> </a></td>
+<td>Vaccine brand</td>
+<td>The brand or trade name used to refer to the vaccine received</td></tr>
+<tr><td style="white-space:nowrap">D.DE173<a name="IMMZConcepts-D.46DE173"> </a></td>
+<td>Live attenuated vaccine</td>
+<td>Uses a living but weakened version of the virus or one that’s very similar</td></tr>
+<tr><td style="white-space:nowrap">D.DE19<a name="IMMZConcepts-D.46DE19"> </a></td>
+<td>Vaccine type</td>
+<td>Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element</td></tr>
+<tr><td style="white-space:nowrap">D.DE20<a name="IMMZConcepts-D.46DE20"> </a></td>
+<td>Date and time of vaccination</td>
+<td>Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client</td></tr>
+<tr><td style="white-space:nowrap">D.DE21<a name="IMMZConcepts-D.46DE21"> </a></td>
+<td>Country of vaccination</td>
+<td>The service delivery country where the vaccine administration occurred</td></tr>
+<tr><td style="white-space:nowrap">D.DE22<a name="IMMZConcepts-D.46DE22"> </a></td>
+<td>Vaccination location</td>
+<td>The service delivery location where the vaccine administration occurred</td></tr>
+<tr><td style="white-space:nowrap">D.DE23<a name="IMMZConcepts-D.46DE23"> </a></td>
+<td>Vaccine manufacturer</td>
+<td>The manufacturer of the vaccine product</td></tr>
+<tr><td style="white-space:nowrap">D.DE24<a name="IMMZConcepts-D.46DE24"> </a></td>
+<td>Vaccine batch number</td>
+<td>Batch number or lot number of vaccine</td></tr>
+<tr><td style="white-space:nowrap">D.DE25<a name="IMMZConcepts-D.46DE25"> </a></td>
+<td>Vaccine market authorization holder</td>
+<td>Name of the market authorization holder of the vaccine received. If market authorization holder is unknown, vaccine manufacturer is REQUIRED</td></tr>
+<tr><td style="white-space:nowrap">D.DE26<a name="IMMZConcepts-D.46DE26"> </a></td>
+<td>Expiration date</td>
+<td>The expiration date of the vaccine</td></tr>
+<tr><td style="white-space:nowrap">D.DE34<a name="IMMZConcepts-D.46DE34"> </a></td>
+<td>Dose quantity</td>
+<td>The quantity of vaccine product that was administered</td></tr>
+<tr><td style="white-space:nowrap">D.DE35<a name="IMMZConcepts-D.46DE35"> </a></td>
+<td>Health worker identifier</td>
+<td>The person, organization, or role of the entity that performed the act of giving the vaccine to the client. The implementing system can choose to populate this field using data from a health worker registry or health facility registry</td></tr>
+<tr><td style="white-space:nowrap">D.DE124<a name="IMMZConcepts-D.46DE124"> </a></td>
+<td>Dose number</td>
+<td>Vaccine dose number including dose number within series</td></tr>
+<tr><td style="white-space:nowrap">D.DE125<a name="IMMZConcepts-D.46DE125"> </a></td>
+<td>Total doses in series</td>
+<td>The recommended number of doses for immunity according to the national protocol</td></tr>
+<tr><td style="white-space:nowrap">D1.DE80<a name="IMMZConcepts-D1.46DE80"> </a></td>
+<td>Dose 0 administered</td>
+<td>Indicates if the client has received a birth dose and/or supplementary dose</td></tr>
+<tr><td style="white-space:nowrap">D1.DE8<a name="IMMZConcepts-D1.46DE8"> </a></td>
+<td>Completed the primary vaccination series</td>
+<td>Indicates if the client has completed the primary vaccination series of a product/antigen. If the client has not yet completed their primary series, it means they may be expected to receive more doses to complete their vaccination regimen for the respective product/antigen.</td></tr>
+<tr><td style="white-space:nowrap">D1.DE81<a name="IMMZConcepts-D1.46DE81"> </a></td>
+<td>Date when primary vaccination series was completed</td>
+<td>The date when the client completed the primary vaccination series (per product/antigen)</td></tr>
+<tr><td style="white-space:nowrap">D1.DE10<a name="IMMZConcepts-D1.46DE10"> </a></td>
+<td>HIV status</td>
+<td>The current human immunodeficiency virus (HIV) status of the client</td></tr>
+<tr><td style="white-space:nowrap">D1.DE11<a name="IMMZConcepts-D1.46DE11"> </a></td>
+<td>HIV-positive</td>
+<td>The client is known to be HIV positive</td></tr>
+<tr><td style="white-space:nowrap">D1.DE12<a name="IMMZConcepts-D1.46DE12"> </a></td>
+<td>HIV-negative</td>
+<td>The client is known to be HIV negative</td></tr>
+<tr><td style="white-space:nowrap">D1.DE13<a name="IMMZConcepts-D1.46DE13"> </a></td>
+<td>Unknown</td>
+<td>The client's HIV status is unknown</td></tr>
+<tr><td style="white-space:nowrap">D1.DE15<a name="IMMZConcepts-D1.46DE15"> </a></td>
+<td>Preterm birth</td>
+<td>The infant was preterm; the mother gave birth to the infant when gestational age was less than 37 weeks</td></tr>
+<tr><td style="white-space:nowrap">D1.DE92<a name="IMMZConcepts-D1.46DE92"> </a></td>
+<td>Severely immunosuppressed</td>
+<td>The client is known to be severely immunocompromised or immunosuppressed</td></tr>
+<tr><td style="white-space:nowrap">D1.DE49<a name="IMMZConcepts-D1.46DE49"> </a></td>
+<td>ART start date</td>
+<td>The date on which the client started or restarted antiretroviral therapy (ART)</td></tr>
+<tr><td style="white-space:nowrap">D1.DE19<a name="IMMZConcepts-D1.46DE19"> </a></td>
+<td>Vaccine type</td>
+<td>Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element</td></tr>
+<tr><td style="white-space:nowrap">D1.DE20<a name="IMMZConcepts-D1.46DE20"> </a></td>
+<td>Date and time of vaccination</td>
+<td>Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client</td></tr>
+<tr><td style="white-space:nowrap">D4.DE161<a name="IMMZConcepts-D4.46DE161"> </a></td>
+<td>Potential contraindications</td>
+<td>Specific situations or medical conditions in which it is advised or recommended to avoid or delay administering a particular vaccine</td></tr>
+<tr><td style="white-space:nowrap">D4.DE162<a name="IMMZConcepts-D4.46DE162"> </a></td>
+<td>Currently pregnant</td>
+<td>The client is currently pregnant</td></tr>
+<tr><td style="white-space:nowrap">D4.DE165<a name="IMMZConcepts-D4.46DE165"> </a></td>
+<td>Severely immunosuppressed</td>
+<td>The client is known to be severely immunocompromised or immunosuppressed</td></tr>
+<tr><td style="white-space:nowrap">D4.DE166<a name="IMMZConcepts-D4.46DE166"> </a></td>
+<td>History of anaphylactic reactions</td>
+<td>The client is known to have history of anaphylaxis in the past. Anaphylaxis is a severe and potentially life-threatening allergic reaction that can occur rapidly after exposure to an allergen or vaccine component.</td></tr>
+<tr><td style="white-space:nowrap">D4.DE167<a name="IMMZConcepts-D4.46DE167"> </a></td>
+<td>Severe allergic reactions</td>
+<td>The client is known to have severe allergic reaction to vaccine</td></tr>
+<tr><td style="white-space:nowrap">D4.DE168<a name="IMMZConcepts-D4.46DE168"> </a></td>
+<td>Symptomatic HIV infection</td>
+<td>The client is experiencing HIV-related symptoms</td></tr></table></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 6, 2024 23:41+0000">2024-06-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,147 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesDose0> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZD2DTMeaslesDose0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PlanDefinition IMMZD2DTMeaslesDose0</b></p><a name=\"IMMZD2DTMeaslesDose0\"> </a><a name=\"hcIMMZD2DTMeaslesDose0\"> </a><a name=\"hcIMMZD2DTMeaslesDose0-en-US\"> </a><p><b>url</b>: <a href=\"PlanDefinition-IMMZD2DTMeaslesDose0.html\">PlanDefinition IMMZ.D2.DT.Measles MCV Dose 0</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZD2DTMeaslesDose0</p><p><b>title</b>: IMMZ.D2.DT.Measles MCV Dose 0</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type eca-rule}\">ECA Rule</span></p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-07-01 13:21:26+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: </p><div><p>If the child or patient has not been given MCV0 between 6 and 9 months</p>\n</div><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style=\"display: none\">*</td><td>Citation</td><td><div><p>WHO recommendations for routine immunization - summary tables (March 2023)</p>\n</div></td></tr></table><p><b>library</b>: <a href=\"Library-IMMZD2DTMeaslesDose0Logic.html\">IMMZD2DTMeaslesDose0Logic</a></p><blockquote><p><b>action</b></p><p><b>title</b>: Immunize patient for Measles</p><blockquote><p><b>condition</b></p><p><b>kind</b>: Applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Measles Routine Immunization Schedule Incomplete</td></tr></table></blockquote><blockquote><p><b>action</b></p></blockquote><blockquote><p><b>action</b></p></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesDose0"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZD2DTMeaslesDose0"] ; # 
+  fhir:title [ fhir:v "IMMZ.D2.DT.Measles MCV Dose 0"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "eca-rule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-01T13:21:26+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "If the child or patient has not been given MCV0 between 6 and 9 months"] ; # 
+  fhir:relatedArtifact ( [
+     fhir:type [ fhir:v "citation" ] ;
+     fhir:citation [ fhir:v "WHO recommendations for routine immunization - summary tables (March 2023)" ]
+  ] ) ; # 
+  fhir:library ( [
+     fhir:v "http://smart.who.int/immunizations-measles/Library/IMMZD2DTMeaslesDose0Logic"^^xsd:anyURI ;
+     fhir:link <http://smart.who.int/immunizations-measles/Library/IMMZD2DTMeaslesDose0Logic>
+  ] ) ; # 
+  fhir:action ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Note: The countries should apply the national immunization policy for MCV0 dose and adjust this logic accordingly.<br/>A supplementary dose of MCV (recorded as MCV0) should be considered for infants known to be exposed (i.e. born to an HIV-infected woman) or soon after diagnosis of HIV infection in children older than 6 months who are not receiving HAART and for whom the risk of measles is high, with the aim of providing partial protection until they are revaccinated after immune reconstitution with HAART.<br/>In the following situations, a supplementary dose of MCV should be given to infants from 6 months of age:<br/>* (1) during a measles outbreak as part of intensified service delivery;<br/>* (2) during campaigns in settings where the risk of measles among infants < 9 months of age remains high (e.g. in endemic countries experiencing regular outbreaks);<br/>* (3) for internally displaced populations and refugees, and populations in conflict zones;<br/>* (4) for individual infants at high risk of contracting measles (e.g. contacts of known measles cases or in settings with increased risk of exposure during outbreaks such as day-care facilities);<br/>* (5)for infants travelling to countries experiencing measles outbreaks;<br/>* (6) infants known to be HIV-infected or exposed (i.e. born to an HIV-infected woman).<br/>In areas where there is a high incidence of both HIV infection and measles, an initial dose of MCV may be offered as early as age 6 months (recorded as MCV0). The 2 routine doses of MCV (MCV1 and MCV2) should then be administered to these children according to the national immunization schedule.<br/>As a general rule, live vaccines should be given either simultaneously or at intervals of 4 weeks. An exception to this rule is OPV, which can be given at any time before or after measles vaccination without interference in the response to either vaccine." ]
+     ] ) ;
+     fhir:title [ fhir:v "Immunize patient for Measles" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Measles Routine Immunization Schedule Incomplete" ]
+       ]
+     ] ) ;
+     fhir:action ( [
+       fhir:title [ fhir:v "Consider MCV0 Dose" ] ;
+       fhir:condition ( [
+         fhir:kind [ fhir:v "applicability" ] ;
+         fhir:expression [
+           fhir:language [ fhir:v "text/cql-identifier" ] ;
+           fhir:expression [ fhir:v "No MCV0 Doses Administered" ]
+         ]
+       ] ) ;
+       fhir:action ( [
+         fhir:title [ fhir:v "Client Age Less Than 6 Months" ] ;
+         fhir:description [ fhir:v "Should not vaccinate client for MCV0 as client is less than 6 months. Check for any vaccines due, and inform the caregiver of when to come back for MCV0." ] ;
+         fhir:condition ( [
+           fhir:kind [ fhir:v "applicability" ] ;
+           fhir:expression [
+             fhir:language [ fhir:v "text/cql-identifier" ] ;
+             fhir:expression [ fhir:v "Client Age Less Than 6 Months" ]
+           ]
+         ] )
+       ] [
+         fhir:title [ fhir:v "Last Live Vaccine Administered Within 4 Weeks" ] ;
+         fhir:description [ fhir:v "Should not vaccinate client for MCV0 as live vaccine was administered in the last 4 weeks. Check for any vaccines due, and inform the caregiver of when to come back for MCV0." ] ;
+         fhir:condition ( [
+           fhir:kind [ fhir:v "applicability" ] ;
+           fhir:expression [
+             fhir:language [ fhir:v "text/cql-identifier" ] ;
+             fhir:expression [ fhir:v "Last Live Vaccine Administered Within 4 Weeks" ]
+           ]
+         ] )
+       ] [
+         fhir:title [ fhir:v "Provide Measles Vaccine" ] ;
+         fhir:description [ fhir:v "May vaccinate client for MCV0 as client is within appropriate age range, MCV0 was not administered and no live vaccine was administered in the last 4 weeks. Check if one of the MCV0 specific scenarios is applicable." ] ;
+         fhir:condition ( [
+           fhir:kind [ fhir:v "applicability" ] ;
+           fhir:expression [
+             fhir:language [ fhir:v "text/cql-identifier" ] ;
+             fhir:expression [ fhir:v "Client Is Due For MCV0" ]
+           ]
+         ] ) ;
+         fhir:definition [
+           fhir:v "http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesMR"^^xsd:anyURI ;
+           fhir:link <http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesMR>
+         ] ;
+         fhir:dynamicValue ( [
+           fhir:path [ fhir:v "dispenseRequest.validityPeriod.start" ] ;
+           fhir:expression [
+             fhir:description [ fhir:v "Due date of the dose" ] ;
+             fhir:language [ fhir:v "text/cql-identifier" ] ;
+             fhir:expression [ fhir:v "MCV0 Schedule Date" ]
+           ]
+         ] [
+           fhir:path [ fhir:v "dispenseRequest.validityPeriod.end" ] ;
+           fhir:expression [
+             fhir:description [ fhir:v "Expiration date for MCV dose" ] ;
+             fhir:language [ fhir:v "text/cql-identifier" ] ;
+             fhir:expression [ fhir:v "MCV0 Expiration Date" ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:title [ fhir:v "MCV0 Dose Administered" ] ;
+       fhir:description [ fhir:v "MCV0 was administered. Check measles routine immunization schedule." ] ;
+       fhir:condition ( [
+         fhir:kind [ fhir:v "applicability" ] ;
+         fhir:expression [
+           fhir:language [ fhir:v "text/cql-identifier" ] ;
+           fhir:expression [ fhir:v "MCV0 Dose Administered" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

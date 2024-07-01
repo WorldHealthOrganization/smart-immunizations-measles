@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="26">
+         <a:s>/*
+ * Library: IMMZ.IND.13 Logic
+ * Immunization coverage for Measles and rubella containing vaccine, 2nd dose
+ * The percentage in the target population who have received second dose of measles and rubella vaccine during reporting period
+ * 
+ * Numerator: Number of measles and rubella doses (2nd dose) administered through routine services during reporting period
+ * Numerator COUNT of immunization events WHERE &quot;Vaccine type&quot; = &quot;Measles and rubella containing vaccines&quot; for the second dose in the primary series AND &quot;Date and time of vaccination&quot; is during the reporting period 
+ * Denominator: Number in target group
+ * Denominator Computation: As defined by the Member States
+ * 
+ * Disaggregation:
+ *   - Administrative area
+ *   - Sex
+ *   - Age in years
+ *   - Age group (depending on schedule) 
+ * 
+ * References: WHO Immunization facility analysis guide;WHO Handbook on immunization data
+ */
+library IMMZIND13Logic</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZIND13Logic" system="http://smart.who.int/immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="29:1-29:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>/*
+NOTE: This is an estimated denominator measure, meaning that all we are contributing from the site perspective is a count
+towards the numerator, actual processing of this data to determine a proportion measure would be done by downstream analytics
+
+For this reason, this measure is modeled as a cohort measure where membership in the cohort is determine by administration of
+a measles containing vaccine.
+*/
+
+using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="31:1-31:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="33:1-33:27" localIdentifier="WC" path="http://smart.who.int/immunizations-measles/WHOCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>WHOCommon</a:s>
+               </a:s>
+               <a:s> called WC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="34:1-34:32" localIdentifier="Common" path="http://smart.who.int/immunizations-measles/IMMZCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZCommon</a:s>
+               </a:s>
+               <a:s> called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="35:1-35:36" localIdentifier="Concepts" path="http://smart.who.int/immunizations-measles/IMMZConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConcepts</a:s>
+               </a:s>
+               <a:s> called Concepts</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="36:1-36:32" localIdentifier="Config" path="http://smart.who.int/immunizations-measles/IMMZConfig">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConfig</a:s>
+               </a:s>
+               <a:s> called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="7" locator="37:1-37:45" localIdentifier="Elements" path="http://smart.who.int/immunizations-measles/IMMZIndicatorElements">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZIndicatorElements</a:s>
+               </a:s>
+               <a:s> called Elements</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="8" locator="38:1-38:48" localIdentifier="VaccineLibrary" path="http://smart.who.int/immunizations-measles/IMMZVaccineLibrary">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZVaccineLibrary</a:s>
+               </a:s>
+               <a:s> called VaccineLibrary</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="11" locator="40:1-40:45" name="Measurement Period" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="11">
+               <a:s>parameter &quot;Measurement Period&quot; </a:s>
+               <a:s r="10">
+                  <a:s>Interval&lt;</a:s>
+                  <a:s r="9">
+                     <a:s>Date</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="10" locator="40:32-40:45" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="9" locator="40:41-40:44" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def locator="42:1-42:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="42:1-42:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="42:1-42:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="13" locator="47:1-48:6" name="Initial Population" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="13">
+               <a:s r="12">/*
+ * As defined by Member State
+ */
+define &quot;Initial Population&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="12" locator="48:3-48:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="15" locator="53:1-54:6" name="Denominator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="15">
+               <a:s r="14">/*
+ * As defined by Member State
+ */
+define &quot;Denominator&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="14" locator="54:3-54:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="26" locator="60:1-64:3" name="Numerator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="26">
+               <a:s>/*
+ * Numerator: Number of measles and rubella doses (2nd dose) administered through routine services during reporting period
+ * Numerator COUNT of immunization events WHERE &quot;Vaccine type&quot; = &quot;Measles and rubella containing vaccines&quot; for the second dose in the primary series AND &quot;Date and time of vaccination&quot; is during the reporting period 
+ */
+define &quot;Numerator&quot;:
+  </a:s>
+               <a:s r="25">
+                  <a:s>exists </a:s>
+                  <a:s r="24">
+                     <a:s>(
+	</a:s>
+                     <a:s r="24">
+                        <a:s>
+                           <a:s r="17">
+                              <a:s r="16">
+                                 <a:s>
+                                    <a:s>Elements.&quot;MCV Doses Administered to Patient During Measurement Period&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> I</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+	  </a:s>
+                        <a:s r="23">
+                           <a:s>where </a:s>
+                           <a:s r="23">
+                              <a:s r="21">
+                                 <a:s r="20">
+                                    <a:s r="19">
+                                       <a:s r="18">
+                                          <a:s>I</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="19">
+                                          <a:s>protocolApplied</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="20">
+                                       <a:s>only()</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="21">
+                                    <a:s>doseNumber</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s r="22"> = 2</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="25" locator="61:3-64:3" xsi:type="Exists">
+            <operand localId="24" locator="61:10-64:3" xsi:type="Query">
+               <source localId="17" locator="62:2-62:73" alias="I">
+                  <expression localId="16" locator="62:2-62:71" name="MCV Doses Administered to Patient During Measurement Period" libraryName="Elements" xsi:type="ExpressionRef"/>
+               </source>
+               <where localId="23" locator="63:4-63:48" xsi:type="Equal">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand xsi:type="ToInteger">
+                     <operand localId="21" locator="63:10-63:44" path="doseNumber" xsi:type="Property">
+                        <source localId="20" locator="63:10-63:33" name="only" libraryName="Common" xsi:type="FunctionRef">
+                           <operand localId="19" locator="63:10-63:26" path="protocolApplied" scope="I" xsi:type="Property"/>
+                        </source>
+                     </operand>
+                  </operand>
+                  <operand localId="22" locator="63:48" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               </where>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

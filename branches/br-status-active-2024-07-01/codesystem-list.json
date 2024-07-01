@@ -1,0 +1,28 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://id.who.int/icd/release/11/mms",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ICD11",
+      "title" : "ICD-11",
+      "description" : "ICD-11."
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "IMMZConcepts",
+      "title" : "Immunizations Concepts CodeSystem",
+      "description" : "This code system defines concepts used in SMART Immunizations"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineProducts",
+      "title" : "Vaccine Product codes CodeSet",
+      "description" : "Vaccine Product codes, containing the different available products."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/Medication/Vaccine-MSDMMRVaxPro> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Vaccine-MSDMMRVaxPro"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://smart.who.int/ig/smart-immunizations-measles/StructureDefinition/SGVaccineProduct"^^xsd:anyURI ;
+       fhir:link <http://smart.who.int/ig/smart-immunizations-measles/StructureDefinition/SGVaccineProduct>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Medication</b><a name=\"Vaccine-MSDMMRVaxPro\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Medication &quot;Vaccine-MSDMMRVaxPro&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-SGVaccineProduct.html\">SGVaccineProduct</a></p></div><p><b>SGMedicationClassification</b>: Measles, live attenuated <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ICD11.html\">ICD-11</a>#XM8L15)</span></p><p><b>SGMedicationClassification</b>: Mumps, live attenuated <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-ICD11.html\">ICD-11</a>#XM2340)</span></p><p><b>code</b>: M-M-RvaxPRO <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-VaccineProducts.html\">Vaccine Product codes CodeSet</a>#7680007030014)</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/StructureDefinition/SGMedicationClassification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-11/mms"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XM8L15" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/StructureDefinition/SGMedicationClassification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-11/mms"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XM2340" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7680007030014" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

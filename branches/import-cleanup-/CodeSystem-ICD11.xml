@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ICD11"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Properties</b></p><p><b>This code system  defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td></tr><tr><td>parent</td><td>http://hl7.org/fhir/concept-properties#parent</td><td>code</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>http://id.who.int/icd11/mms</code> defines the following codes in an undefined heirarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Parent</b></td></tr><tr><td>1</td><td style="white-space:nowrap">XM28X5<a name="ICD11-XM28X5"> </a></td><td>Measles vaccines</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  XM8L15<a name="ICD11-XM8L15"> </a></td><td>Measles, live attenuated</td><td><a href="#ICD11-XM28X5">XM28X5</a></td></tr><tr><td>2</td><td style="white-space:nowrap">  XM9439<a name="ICD11-XM9439"> </a></td><td>Measles, combinations with mumps, live attenuated</td><td><a href="#ICD11-XM28X5">XM28X5</a></td></tr><tr><td>2</td><td style="white-space:nowrap">  XM8TF3<a name="ICD11-XM8TF3"> </a></td><td>Measles, combinations with mumps and rubella, live attenuated</td><td><a href="#ICD11-XM28X5">XM28X5</a></td></tr><tr><td>2</td><td style="white-space:nowrap">  XM21H2<a name="ICD11-XM21H2"> </a></td><td>Measles, combinations with rubella, live attenuated</td><td><a href="#ICD11-XM28X5">XM28X5</a></td></tr><tr><td>2</td><td style="white-space:nowrap">  XM4AJ8<a name="ICD11-XM4AJ8"> </a></td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td><td><a href="#ICD11-XM28X5">XM28X5</a></td></tr><tr><td>1</td><td style="white-space:nowrap">XM1131<a name="ICD11-XM1131"> </a></td><td>Mumps vaccines</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  XM2340<a name="ICD11-XM2340"> </a></td><td>Mumps, live attenuated</td><td><a href="#ICD11-XM1131">XM1131</a></td></tr><tr><td>1</td><td style="white-space:nowrap">XX45B7<a name="ICD11-XX45B7"> </a></td><td>Intersex</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XX2PX3<a name="ICD11-XX2PX3"> </a></td><td>Biological sex not specified</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XX2V25<a name="ICD11-XX2V25"> </a></td><td>Female</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XX2UQ8<a name="ICD11-XX2UQ8"> </a></td><td>Male</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">1B1Z<a name="ICD11-1B1Z"> </a></td><td>Tuberculosis</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">1C62.Z<a name="ICD11-1C62.46Z"> </a></td><td>Human immunodeficiency virus disease without mention of tuberculosis or malaria</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">1H0Z<a name="ICD11-1H0Z"> </a></td><td>Certain infectious or parasitic diseases</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">3A51<a name="ICD11-3A51"> </a></td><td>Sickle cell disorders or other haemoglobinopathies</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">4B4Z<a name="ICD11-4B4Z"> </a></td><td>Diseases of the immune system</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">KA21.4<a name="ICD11-KA21.464"> </a></td><td>Preterm newborn</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QA02.0<a name="ICD11-QA02.460"> </a></td><td>Observation for suspected tuberculosis, ruled out</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QA02.Y<a name="ICD11-QA02.46Y"> </a></td><td>Medical observation or evaluation for suspected diseases or conditions, ruled out</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QA48.1<a name="ICD11-QA48.461"> </a></td><td>Care or examination of lactating mother</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QC60<a name="ICD11-QC60"> </a></td><td>Family history of infectious diseases</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM18Y8<a name="ICD11-XM18Y8"> </a></td><td>Meningococcus C, purified polysaccharides antigen conjugated vaccines</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM2280<a name="ICD11-XM2280"> </a></td><td>Meningococcus A, purified polysaccharides antigen conjugated vaccines</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM33K4<a name="ICD11-XM33K4"> </a></td><td>Typhoid, oral, live attenuated vaccines</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM3KQ4<a name="ICD11-XM3KQ4"> </a></td><td>Interferon gamma</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM3SF6<a name="ICD11-XM3SF6"> </a></td><td>Typhoid, purified polysaccharide antigen vaccines</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM47S0<a name="ICD11-XM47S0"> </a></td><td>Encephalitis, Japanese, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM5V19<a name="ICD11-XM5V19"> </a></td><td>Poliomyelitis, trivalent, inactivated, whole virus</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM79H3<a name="ICD11-XM79H3"> </a></td><td>Poliomyelitis oral, bivalent, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM7PF6<a name="ICD11-XM7PF6"> </a></td><td>Tuberculin</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XT0S<a name="ICD11-XT0S"> </a></td><td>Pregnancy</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QA41<a name="ICD11-QA41"> </a></td><td>Pregnant state</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QC44.0<a name="ICD11-QC44.460"> </a></td><td>Personal history of anaphylaxis</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">QC44.2<a name="ICD11-QC44.462"> </a></td><td>Personal history of allergy to drugs, medicaments or biological substances</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">1C62.1<a name="ICD11-1C62.461"> </a></td><td>HIV disease clinical stage 2 without mention of tuberculosis or malaria</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">MA14.0<a name="ICD11-MA14.460"> </a></td><td>Laboratory evidence of human immunodeficiency virus</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM8142<a name="ICD11-XM8142"> </a></td><td>Tuberculosis, live attenuated vaccines</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM72A0<a name="ICD11-XM72A0"> </a></td><td>Cholera, live attenuated vaccines</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM0VX8<a name="ICD11-XM0VX8"> </a></td><td>Poliomyelitis oral, monovalent live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM0KZ1<a name="ICD11-XM0KZ1"> </a></td><td>Poliomyelitis oral, trivalent, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM4GV0<a name="ICD11-XM4GV0"> </a></td><td>Rota virus, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM9PS9<a name="ICD11-XM9PS9"> </a></td><td>Rubella, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM3B09<a name="ICD11-XM3B09"> </a></td><td>Rubella, combinations with mumps, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM5V64<a name="ICD11-XM5V64"> </a></td><td>Influenza vaccines, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM0NS8<a name="ICD11-XM0NS8"> </a></td><td>Varicella, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM3418<a name="ICD11-XM3418"> </a></td><td>Yellow Fever, live attenuated</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">XM5DF6<a name="ICD11-XM5DF6"> </a></td><td>COVID-19 vaccines, live attenuated virus</td><td/></tr></table></div>
+  </text>
+  <url value="http://id.who.int/icd11/mms"/>
+  <version value="0.1.0"/>
+  <name value="ICD11"/>
+  <title value="ICD-11"/>
+  <status value="draft"/>
+  <date value="2023-10-24T11:42:42+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="ICD-11."/>
+  <content value="complete"/>
+  <count value="48"/>
+  <property>
+    <code value="parent"/>
+    <uri value="http://hl7.org/fhir/concept-properties#parent"/>
+    <type value="code"/>
+  </property>
+  <concept>
+    <code value="XM28X5"/>
+    <display value="Measles vaccines"/>
+    <concept>
+      <code value="XM8L15"/>
+      <display value="Measles, live attenuated"/>
+      <property>
+        <code value="parent"/>
+        <valueCode value="XM28X5"/>
+      </property>
+    </concept>
+    <concept>
+      <code value="XM9439"/>
+      <display value="Measles, combinations with mumps, live attenuated"/>
+      <property>
+        <code value="parent"/>
+        <valueCode value="XM28X5"/>
+      </property>
+    </concept>
+    <concept>
+      <code value="XM8TF3"/>
+      <display value="Measles, combinations with mumps and rubella, live attenuated"/>
+      <property>
+        <code value="parent"/>
+        <valueCode value="XM28X5"/>
+      </property>
+    </concept>
+    <concept>
+      <code value="XM21H2"/>
+      <display value="Measles, combinations with rubella, live attenuated"/>
+      <property>
+        <code value="parent"/>
+        <valueCode value="XM28X5"/>
+      </property>
+    </concept>
+    <concept>
+      <code value="XM4AJ8"/>
+      <display value="Measles, combinations with mumps, rubella and varicella, live attenuated"/>
+      <property>
+        <code value="parent"/>
+        <valueCode value="XM28X5"/>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="XM1131"/>
+    <display value="Mumps vaccines"/>
+    <concept>
+      <code value="XM2340"/>
+      <display value="Mumps, live attenuated"/>
+      <property>
+        <code value="parent"/>
+        <valueCode value="XM1131"/>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="XX45B7"/>
+    <display value="Intersex"/>
+  </concept>
+  <concept>
+    <code value="XX2PX3"/>
+    <display value="Biological sex not specified"/>
+  </concept>
+  <concept>
+    <code value="XX2V25"/>
+    <display value="Female"/>
+  </concept>
+  <concept>
+    <code value="XX2UQ8"/>
+    <display value="Male"/>
+  </concept>
+  <concept>
+    <code value="1B1Z"/>
+    <display value="Tuberculosis"/>
+  </concept>
+  <concept>
+    <code value="1C62.Z"/>
+    <display value="Human immunodeficiency virus disease without mention of tuberculosis or malaria"/>
+  </concept>
+  <concept>
+    <code value="1H0Z"/>
+    <display value="Certain infectious or parasitic diseases"/>
+  </concept>
+  <concept>
+    <code value="3A51"/>
+    <display value="Sickle cell disorders or other haemoglobinopathies"/>
+  </concept>
+  <concept>
+    <code value="4B4Z"/>
+    <display value="Diseases of the immune system"/>
+  </concept>
+  <concept>
+    <code value="KA21.4"/>
+    <display value="Preterm newborn"/>
+  </concept>
+  <concept>
+    <code value="QA02.0"/>
+    <display value="Observation for suspected tuberculosis, ruled out"/>
+  </concept>
+  <concept>
+    <code value="QA02.Y"/>
+    <display value="Medical observation or evaluation for suspected diseases or conditions, ruled out"/>
+  </concept>
+  <concept>
+    <code value="QA48.1"/>
+    <display value="Care or examination of lactating mother"/>
+  </concept>
+  <concept>
+    <code value="QC60"/>
+    <display value="Family history of infectious diseases"/>
+  </concept>
+  <concept>
+    <code value="XM18Y8"/>
+    <display value="Meningococcus C, purified polysaccharides antigen conjugated vaccines"/>
+  </concept>
+  <concept>
+    <code value="XM2280"/>
+    <display value="Meningococcus A, purified polysaccharides antigen conjugated vaccines"/>
+  </concept>
+  <concept>
+    <code value="XM33K4"/>
+    <display value="Typhoid, oral, live attenuated vaccines"/>
+  </concept>
+  <concept>
+    <code value="XM3KQ4"/>
+    <display value="Interferon gamma"/>
+  </concept>
+  <concept>
+    <code value="XM3SF6"/>
+    <display value="Typhoid, purified polysaccharide antigen vaccines"/>
+  </concept>
+  <concept>
+    <code value="XM47S0"/>
+    <display value="Encephalitis, Japanese, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM5V19"/>
+    <display value="Poliomyelitis, trivalent, inactivated, whole virus"/>
+  </concept>
+  <concept>
+    <code value="XM79H3"/>
+    <display value="Poliomyelitis oral, bivalent, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM7PF6"/>
+    <display value="Tuberculin"/>
+  </concept>
+  <concept>
+    <code value="XT0S"/>
+    <display value="Pregnancy"/>
+  </concept>
+  <concept>
+    <code value="QA41"/>
+    <display value="Pregnant state"/>
+  </concept>
+  <concept>
+    <code value="QC44.0"/>
+    <display value="Personal history of anaphylaxis"/>
+  </concept>
+  <concept>
+    <code value="QC44.2"/>
+    <display value="Personal history of allergy to drugs, medicaments or biological substances"/>
+  </concept>
+  <concept>
+    <code value="1C62.1"/>
+    <display value="HIV disease clinical stage 2 without mention of tuberculosis or malaria"/>
+  </concept>
+  <concept>
+    <code value="MA14.0"/>
+    <display value="Laboratory evidence of human immunodeficiency virus"/>
+  </concept>
+  <concept>
+    <code value="XM8142"/>
+    <display value="Tuberculosis, live attenuated vaccines"/>
+  </concept>
+  <concept>
+    <code value="XM72A0"/>
+    <display value="Cholera, live attenuated vaccines"/>
+  </concept>
+  <concept>
+    <code value="XM0VX8"/>
+    <display value="Poliomyelitis oral, monovalent live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM0KZ1"/>
+    <display value="Poliomyelitis oral, trivalent, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM4GV0"/>
+    <display value="Rota virus, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM9PS9"/>
+    <display value="Rubella, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM3B09"/>
+    <display value="Rubella, combinations with mumps, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM5V64"/>
+    <display value="Influenza vaccines, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM0NS8"/>
+    <display value="Varicella, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM3418"/>
+    <display value="Yellow Fever, live attenuated"/>
+  </concept>
+  <concept>
+    <code value="XM5DF6"/>
+    <display value="COVID-19 vaccines, live attenuated virus"/>
+  </concept>
+</CodeSystem>

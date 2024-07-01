@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="53">
+         <a:s>/*
+ * Library: IMMZ.IND.08
+ * Immunization coverage for Measles containing vaccine (Estimated Denominator) 
+ * Compares the administered doses of measles containing vaccines (MCV) with the estimated number of surviving infants (if dose 1) or a country supplied denominator (if dose 2) expressed as a percentage. 
+ * 
+ * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period 
+ * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period
+ * Denominator: Estimated number of surviving infants (for dose 1) and country supplied denominator for dose sequence 2 (see comments)
+ * Denominator Computation: PARAMETER number of surviving infants (if Dose Sequence = 1) or PARAMETER of country supplied denominator (if Dose Sequence = 2)
+ * 
+ * Disaggregation:
+ *   - Dose Sequence (1, 2)
+ *   - Age Group (&lt; 1 year or > 1 year)
+ *   - Geographic Region
+ *   - Administrative Gender (or Biological Sex)
+ * 
+ * References: WHO Immunization Facility Analysis Guide (1), WHO / UNICEF Joint Reporting Form (3 - elements 4240 and 4260 )
+ */
+library IMMZIND08</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZIND08" system="http://smart.who.int/immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="28:1-28:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>/*
+NOTE: This is an estimated denominator measure, meaning that all we are contributing from the site perspective is a count
+towards the numerator, actual processing of this data to determine a proportion measure would be done by downstream analytics
+
+For this reason, this measure is modeled as a continuous variable measure where the contribution from each patient is the count of events (1)
+*/
+
+using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="30:1-30:35" localIdentifier="FHIRHelpers" path="http://smart.who.int/immunizations-measles/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="31:1-31:28" localIdentifier="FC" path="http://smart.who.int/immunizations-measles/FHIRCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRCommon</a:s>
+               </a:s>
+               <a:s> called FC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="33:1-33:32" localIdentifier="Common" path="http://smart.who.int/immunizations-measles/IMMZCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZCommon</a:s>
+               </a:s>
+               <a:s> called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="34:1-34:36" localIdentifier="Concepts" path="http://smart.who.int/immunizations-measles/IMMZConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConcepts</a:s>
+               </a:s>
+               <a:s> called Concepts</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="35:1-35:32" localIdentifier="Config" path="http://smart.who.int/immunizations-measles/IMMZConfig">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConfig</a:s>
+               </a:s>
+               <a:s> called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="7" locator="36:1-36:45" localIdentifier="Elements" path="http://smart.who.int/immunizations-measles/IMMZIndicatorElements">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZIndicatorElements</a:s>
+               </a:s>
+               <a:s> called Elements</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="8" locator="37:1-37:48" localIdentifier="VaccineLibrary" path="http://smart.who.int/immunizations-measles/IMMZVaccineLibrary">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZVaccineLibrary</a:s>
+               </a:s>
+               <a:s> called VaccineLibrary</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="11" locator="39:1-39:45" name="Measurement Period" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="11">
+               <a:s>parameter &quot;Measurement Period&quot; </a:s>
+               <a:s r="10">
+                  <a:s>Interval&lt;</a:s>
+                  <a:s r="9">
+                     <a:s>Date</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="10" locator="39:32-39:45" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="9" locator="39:41-39:44" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def locator="41:1-41:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="41:1-41:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="41:1-41:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="13" locator="46:1-47:6" name="Initial Population" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="13">
+               <a:s r="12">/*
+ * As defined by Member States
+ */
+define &quot;Initial Population&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="12" locator="47:3-47:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="17" locator="49:1-50:79" name="Measure Population" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="17">
+               <a:s>define &quot;Measure Population&quot;:
+  </a:s>
+               <a:s r="16">
+                  <a:s>exists </a:s>
+                  <a:s r="15">
+                     <a:s r="14">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="15">
+                        <a:s>&quot;MCV Doses Administered to Patient During Measurement Period&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="16" locator="50:3-50:79" xsi:type="Exists">
+            <operand localId="15" locator="50:10-50:79" name="MCV Doses Administered to Patient During Measurement Period" libraryName="Elements" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="20" locator="57:1-58:3" name="Measure Observation" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="20">
+               <a:s>/*
+ * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period
+ * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period
+ * NOTE: Modeled as a Continuous Variable measure because this is an estimated denominator proportion measure
+ */
+define function &quot;Measure Observation&quot;(Patient &quot;Patient&quot;):
+  </a:s>
+               <a:s r="19">
+                  <a:s r="19">1</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="19" locator="58:3" valueType="t:Integer" value="1" xsi:type="Literal"/>
+         <operand name="Patient">
+            <operandTypeSpecifier localId="18" locator="57:47-57:55" name="fhir:Patient" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="29" locator="63:1-65:53" name="Dose Sequence Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="29">
+               <a:s>/*
+ * Disaggregator: Dose Sequence (1, 2)
+ */
+define &quot;Dose Sequence Stratifier&quot;:
+	</a:s>
+               <a:s r="28">
+                  <a:s>
+                     <a:s r="22">
+                        <a:s r="21">
+                           <a:s>
+                              <a:s>Elements.&quot;MCV Doses Administered to Patient During Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+	</a:s>
+                  <a:s r="27">
+                     <a:s>return </a:s>
+                     <a:s r="26">
+                        <a:s r="25">
+                           <a:s>(</a:s>
+                           <a:s r="25">
+                              <a:s>singleton from </a:s>
+                              <a:s r="24">
+                                 <a:s r="23">
+                                    <a:s>I</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="24">
+                                    <a:s>protocolApplied</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="26">
+                           <a:s>doseNumber</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="28" locator="64:2-65:53" xsi:type="Query">
+            <source localId="22" locator="64:2-64:73" alias="I">
+               <expression localId="21" locator="64:2-64:71" name="MCV Doses Administered to Patient During Measurement Period" libraryName="Elements" xsi:type="ExpressionRef"/>
+            </source>
+            <return localId="27" locator="65:2-65:53">
+               <expression localId="26" locator="65:9-65:53" path="doseNumber" xsi:type="Property">
+                  <source localId="25" locator="65:9-65:42" xsi:type="SingletonFrom">
+                     <operand localId="24" locator="65:25-65:41" path="protocolApplied" scope="I" xsi:type="Property"/>
+                  </source>
+               </expression>
+            </return>
+         </expression>
+      </def>
+      <def localId="32" locator="70:1-71:36" name="Age Group Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="32">
+               <a:s>/*
+ * Disaggregator: Age Group (&lt;24H of Birth, &lt; 2 weeks)
+ */
+define &quot;Age Group Stratifier&quot;:
+	</a:s>
+               <a:s r="31">
+                  <a:s r="30">
+                     <a:s>Elements</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="31">
+                     <a:s>&quot;Infant By Age Stratifier&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="31" locator="71:2-71:36" name="Infant By Age Stratifier" libraryName="Elements" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="35" locator="76:1-77:43" name="Geographic Region Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="35">
+               <a:s>/*
+ * Disaggregator: Geographic Region
+ */
+define &quot;Geographic Region Stratifier&quot;:
+	</a:s>
+               <a:s r="34">
+                  <a:s r="33">
+                     <a:s>Elements</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="34">
+                     <a:s>&quot;By Geographic Region Stratifier&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="34" locator="77:2-77:43" name="By Geographic Region Stratifier" libraryName="Elements" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="38" locator="82:1-83:47" name="Administrative Gender Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="38">
+               <a:s>/*
+ * Disaggregator: Administrative Gender (or Biological Sex)
+ */
+define &quot;Administrative Gender Stratifier&quot;:
+	</a:s>
+               <a:s r="37">
+                  <a:s r="36">
+                     <a:s>Elements</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="37">
+                     <a:s>&quot;By Administrative Gender Stratifier&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="37" locator="83:2-83:47" name="By Administrative Gender Stratifier" libraryName="Elements" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="53" locator="88:1-91:51" name="Stratification" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="53">
+               <a:s>/*
+ * Combined stratifiers
+ */
+define &quot;Stratification&quot;:
+  </a:s>
+               <a:s r="52">
+                  <a:s r="49">
+                     <a:s r="47">
+                        <a:s r="43">
+                           <a:s r="41">
+                              <a:s r="40">
+                                 <a:s r="39">
+                                    <a:s>Elements</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="40">
+                                    <a:s>&quot;By Administrative Gender Stratifier&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="41">
+                                 <a:s>code</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> 
+    + </a:s>
+                           <a:s r="42">
+                              <a:s>':'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> + </a:s>
+                        <a:s r="46">
+                           <a:s r="45">
+                              <a:s r="44">
+                                 <a:s>Elements</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="45">
+                                 <a:s>&quot;Toddler By Age Stratifier&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="46">
+                              <a:s>code</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> 
+	+ </a:s>
+                     <a:s r="48">
+                        <a:s>':'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> + </a:s>
+                  <a:s r="51">
+                     <a:s r="50">
+                        <a:s>Elements</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="51">
+                        <a:s>&quot;By Geographic Region Stratifier&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="52" locator="89:3-91:51" xsi:type="Concatenate">
+            <operand localId="49" locator="89:3-91:6" xsi:type="Concatenate">
+               <operand localId="47" locator="89:3-90:53" xsi:type="Concatenate">
+                  <operand localId="43" locator="89:3-90:9" xsi:type="Concatenate">
+                     <operand localId="41" locator="89:3-89:53" path="code" xsi:type="Property">
+                        <source localId="40" locator="89:3-89:48" name="By Administrative Gender Stratifier" libraryName="Elements" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="42" locator="90:7-90:9" valueType="t:String" value=":" xsi:type="Literal"/>
+                  </operand>
+                  <operand localId="46" locator="90:13-90:53" path="code" xsi:type="Property">
+                     <source localId="45" locator="90:13-90:48" name="Toddler By Age Stratifier" libraryName="Elements" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="48" locator="91:4-91:6" valueType="t:String" value=":" xsi:type="Literal"/>
+            </operand>
+            <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <signature name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="51" locator="91:10-91:51" name="By Geographic Region Stratifier" libraryName="Elements" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

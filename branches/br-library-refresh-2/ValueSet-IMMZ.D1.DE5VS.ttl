@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE5VS> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZ.D1.DE5VS"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-IMMZ.D1.DE5.html\"><code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE6\">IMMZ.D.DE6</a></td><td style=\"color: #cccccc\">Immunity Testing has shown that the client already has immunity to the agent targeted by the immunization</td><td/></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE7\">IMMZ.D.DE7</a></td><td style=\"color: #cccccc\">Medical precaution</td><td>The client currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE8\">IMMZ.D.DE8</a></td><td style=\"color: #cccccc\">Product out of stock</td><td>There was no supply of the product on hand to perform the service</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE9\">IMMZ.D.DE9</a></td><td style=\"color: #cccccc\">Client objection</td><td>The client or their guardian objects to receiving the vaccine</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE10\">IMMZ.D.DE10</a></td><td style=\"color: #cccccc\">Caregiver refusal</td><td>The client's caregiver refused the vaccine</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE11\">IMMZ.D.DE11</a></td><td style=\"color: #cccccc\">Unspecified reason</td><td>The immunization event was not carried out for an unspecified reason</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE12\">IMMZ.D.DE12</a></td><td style=\"color: #cccccc\">Client allergy to vaccine or component</td><td>The immunization event was not carried out because of client allergy to vaccine or component</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE13\">IMMZ.D.DE13</a></td><td style=\"color: #cccccc\">Immunocompromised</td><td>The immunization event was not carried out because the client is immunocompromised</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE14\">IMMZ.D.DE14</a></td><td style=\"color: #cccccc\">Chronic illness or condition</td><td>The immunization event was not carried out due a chronic illness or condition of the client</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE15\">IMMZ.D.DE15</a></td><td style=\"color: #cccccc\">Acute illness</td><td>The immunization event was not carried out due to an acute illness present in the client</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE16\">IMMZ.D.DE16</a></td><td style=\"color: #cccccc\">Had the disease</td><td>The immunization event was not carried out due to the client having had the disease</td></tr><tr><td><a href=\"CodeSystem-IMMZ.D1.DE5.html#IMMZ.D1.DE5-IMMZ.46D.46DE17\">IMMZ.D.DE17</a></td><td style=\"color: #cccccc\">Immunization not carried out for other reasons</td><td>The immunization event was not carried out for other reasons</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE5VS"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZ.D1.DE5VS"] ; # 
+  fhir:title [ fhir:v "IMMZ.D1.DE5 CodeSystem for Reason Not Done"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-24T07:09:07+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem for IMMZ.D1.DE5 Reason Not Done"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/IMMZ.D1.DE5"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "IMMZ.D.DE6" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE7" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE8" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE9" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE10" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE11" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE12" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE13" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE14" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE15" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE16" ]
+       ] [
+         fhir:code [ fhir:v "IMMZ.D.DE17" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "SGImmunizationStatusCodes",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet SGImmunizationStatusCodes</b></p><a name=\"SGImmunizationStatusCodes\"> </a><a name=\"hcSGImmunizationStatusCodes\"> </a><a name=\"hcSGImmunizationStatusCodes-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-event-status.html\"><code>http://hl7.org/fhir/event-status</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-event-status.html#event-status-completed\">completed</a></td><td style=\"color: #cccccc\">Completed</td><td>The event has now concluded.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-event-status.html#event-status-entered-in-error\">entered-in-error</a></td><td style=\"color: #cccccc\">Entered in Error</td><td>This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be &quot;stopped&quot; rather than &quot;entered-in-error&quot;.).</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-event-status.html#event-status-not-done\">not-done</a></td><td style=\"color: #cccccc\">Not Done</td><td>The event was terminated prior to any activity beyond preparation.  I.e. The 'main' activity has not yet begun.  The boundary between preparatory and the 'main' activity is context-specific.</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/immunizations-measles/ValueSet/SGImmunizationStatusCodes",
+  "version" : "0.1.0",
+  "name" : "SGImmunizationStatusCodes",
+  "title" : "Immunization Status Codes",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2024-07-01T13:21:26+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/event-status",
+      "concept" : [{
+        "code" : "completed"
+      },
+      {
+        "code" : "entered-in-error"
+      },
+      {
+        "code" : "not-done"
+      }]
+    }]
+  }
+}

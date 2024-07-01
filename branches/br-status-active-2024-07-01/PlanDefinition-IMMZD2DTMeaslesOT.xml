@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="IMMZD2DTMeaslesOT"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PlanDefinition IMMZD2DTMeaslesOT</b></p><a name="IMMZD2DTMeaslesOT"> </a><a name="hcIMMZD2DTMeaslesOT"> </a><a name="hcIMMZD2DTMeaslesOT-en-US"> </a><p><b>url</b>: <a href="PlanDefinition-IMMZD2DTMeaslesOT.html">PlanDefinition IMMZ.D2.DT.Measles Ongoing Transmission</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZD2DTMeaslesOT</p><p><b>title</b>: IMMZ.D2.DT.Measles Ongoing Transmission</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type eca-rule}">ECA Rule</span></p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-07-01 13:21:26+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: </p><div><p>If the child or patient has not been given MCV1 (at 9 months) and MCV2 (between 15-18 months) vaccination</p>
+</div><h3>RelatedArtifacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style="display: none">*</td><td>Citation</td><td><div><p>WHO recommendations for routine immunization - summary tables (March 2023)</p>
+</div></td></tr></table><p><b>library</b>: <a href="Library-IMMZD2DTMeaslesOTLogic.html">IMMZD2DTMeaslesOTLogic</a></p><blockquote><p><b>action</b></p><p><b>title</b>: Immunize patient for Measles</p><blockquote><p><b>condition</b></p><p><b>kind</b>: Applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Measles Routine Immunization Schedule Incomplete</td></tr></table></blockquote><blockquote><p><b>action</b></p></blockquote><blockquote><p><b>action</b></p></blockquote><blockquote><p><b>action</b></p></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesOT"/>
+  <version value="0.1.0"/>
+  <name value="IMMZD2DTMeaslesOT"/>
+  <title value="IMMZ.D2.DT.Measles Ongoing Transmission"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-07-01T13:21:26+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="If the child or patient has not been given MCV1 (at 9 months) and MCV2 (between 15-18 months) vaccination"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="WHO recommendations for routine immunization - summary tables (March 2023)"/>
+  </relatedArtifact>
+  <library value="http://smart.who.int/immunizations-measles/Library/IMMZD2DTMeaslesOTLogic"/>
+  <action>
+    <title value="Immunize patient for Measles"/>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <language value="text/cql-identifier"/>
+        <expression value="Measles Routine Immunization Schedule Incomplete"/>
+      </expression>
+    </condition>
+    <action>
+      <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+        <valueMarkdown value="In countries with ongoing transmission in which the risk of measles mortality remains high, MCV1 should be given at age 9 months.&lt;br/&gt;As a general rule, live vaccines should be given either simultaneously or at intervals of 4 weeks. An exception to this rule is OPV, which can be given at any time before or after measles vaccination without interference in the response to either vaccine."/>
+      </extension>
+      <title value="Provide primary series measles vaccination (MCV1)"/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="No Primary Series Doses Administered"/>
+        </expression>
+      </condition>
+      <action>
+        <title value="Client Age Less Than 9 Months"/>
+        <description value="Should not vaccinate client as client's age is less than 9 months. Check for any vaccines due, and inform the caregiver of when to come back for MCV1."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Age Less Than 9 Months"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Last Live Vaccine Administered Within 4 Weeks"/>
+        <description value="Should not vaccinate client for MCV1 as live vaccine was administered in the last 4 weeks. Check for any vaccines due and inform the caregiver of when to come back for MCV1."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Last Live Vaccine Administered Within 4 Weeks"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Provide Measles Vaccine"/>
+        <description value="Should vaccinate client for MCV1 as no measles doses were administered, client is within appropriate age range and no live vaccine administered in the last 4 weeks. Check for contraindications."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Is Due For MCV1"/>
+          </expression>
+        </condition>
+        <definitionCanonical value="http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesMR"/>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.start"/>
+          <expression>
+            <description value="Due date of the dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV1 Schedule Date"/>
+          </expression>
+        </dynamicValue>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.end"/>
+          <expression>
+            <description value="Expiration date for MCV dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV1 Expiration Date"/>
+          </expression>
+        </dynamicValue>
+      </action>
+    </action>
+    <action>
+      <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+        <valueMarkdown value="In countries with ongoing transmission in which the risk of measles mortality remains high, MCV2 should be given between 15-18 months. The minimum interval between MCV1 and MCV2 is 4 weeks.&lt;br/&gt;As a general rule, live vaccines should be given either simultaneously or at intervals of 4 weeks. An exception to this rule is OPV, which can be given at any time before or after measles vaccination without interference in the response to either vaccine."/>
+      </extension>
+      <title value="Provide primary series measles vaccination (MCV2)"/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="One Primary Series Dose Administered"/>
+        </expression>
+      </condition>
+      <action>
+        <title value="Client Age Less Than 15 Months"/>
+        <description value="Should not vaccinate client for MCV2 as client's age is less than 15 months. Check for any vaccines due, and inform the caregiver of when to come back for MCV2."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Age Less Than 15 Months"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Last Live Vaccine Administered Within 4 Weeks"/>
+        <description value="Should not vaccinate client for MCV2 as live vaccine was administered in the last 4 weeks. Check for any vaccines due, and inform the caregiver of when to come back for MCV2."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Last Live Vaccine Administered Within 4 Weeks"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Provide Measles Vaccine"/>
+        <description value="Should vaccinate client for MCV2 as client is within appropriate age range and no live vaccine administered in the last 4 weeks. Check for contraindications."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Is Due For MCV2"/>
+          </expression>
+        </condition>
+        <definitionCanonical value="http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesMR"/>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.start"/>
+          <expression>
+            <description value="Due date of the dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV2 Schedule Date"/>
+          </expression>
+        </dynamicValue>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.end"/>
+          <expression>
+            <description value="Expiration date for MCV dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV2 Expiration Date"/>
+          </expression>
+        </dynamicValue>
+      </action>
+    </action>
+    <action>
+      <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+        <valueMarkdown value="An additional dose of MCV should be administered to HIV-infected children receiving HAART following immune reconstitution. If CD4+ T lymphocyte counts are monitored, an additional dose of MCV should be administered when immune reconstitution has been achieved, e.g. when the CD4+ T lymphocyte count reaches 20–25%. Where CD4+ T lymphocyte monitoring is not available, children should receive an additional dose of MCV 6–12 months after initiation of HAART."/>
+      </extension>
+      <title value="Measles primary series is complete"/>
+      <description value="Measles primary series is complete. Two measles primary series doses were administered. Check if a measles supplementary dose is appropriate for the client."/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="Two Primary Series Doses Administered"/>
+        </expression>
+      </condition>
+    </action>
+  </action>
+</PlanDefinition>

@@ -1,0 +1,411 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>IMMZIndicatorCommon - JSON Representation -  v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.15"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b>IMMZIndicatorCommon</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">SMART, published by WHO. This is not an authorized publication; it is the continuous build for version 0.1.0). This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://smart.who.int/ig/smart-immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Library-IMMZIndicatorCommon.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Library-IMMZIndicatorCommon.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-IMMZIndicatorCommon.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: IMMZIndicatorCommon - JSON Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2023-10-23
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="Library-IMMZIndicatorCommon.json" no-download="true">Raw json</a> | <a href="Library-IMMZIndicatorCommon.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; overflow: hidden"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/library.html#Library">resourceType</a>" : "Library",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a>" : "IMMZIndicatorCommon",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code&gt;/**\r\n * Immunization Common Stratifiers by Patients as Context\r\n */\r\n\r\nlibrary IMMZIndicatorCommon\r\n\r\nusing FHIR version '4.0.1'\r\n\r\ninclude FHIRHelpers version '4.0.1'\r\ninclude FHIRCommon called FC\r\ninclude IMMZCommon called IMMZCom\r\ninclude IMMZConcepts called IMMZc\r\ninclude WHOCommon called WCom\r\ninclude WHOConcepts called WC\r\ncodesystem &amp;quot;ISO-8601-Derived Periods&amp;quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods'\r\nparameter &amp;quot;Measurement Period&amp;quot; Interval&amp;lt;Date&amp;gt; default Interval[@2020-01-01, @2020-12-31]\r\n\r\n// Age Groups for Vaccines for infants\r\ncode &amp;quot;P0Y--P1Y&amp;quot;: 'P0Y--P1Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;lt; 1 year'\r\ncode &amp;quot;P1Y--P9999Y&amp;quot;: 'P1Y--P9999Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;gt; 1 year'\r\n\r\n// Age Groups for Vaccines for Toddlers\r\ncode &amp;quot;P0Y--P2Y&amp;quot;: 'P0Y--P2Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;lt; 2 years'\r\ncode &amp;quot;P2Y--P9999Y&amp;quot;: 'P2Y--P9999Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;gt; 2 years'\r\n\r\n// Age groups for newborns\r\ncode &amp;quot;PT0H--PT24H&amp;quot;: 'PT0H--PT24H' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display 'Within 24H of Birth'\r\ncode &amp;quot;PT24H--P2W&amp;quot;: 'PT24H--P2W' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;lt; 2 Weeks'\r\ncode &amp;quot;P2W--P9999Y&amp;quot;: 'P2W--P9999Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;gt; 2 Weeks'\r\n\r\n// Age groups for adolescent\r\ncode &amp;quot;P0Y--P9Y&amp;quot;: 'P0Y--P9Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;lt; 9 years'\r\ncode &amp;quot;P9Y--P14Y&amp;quot;: 'P9Y--P14Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '9 - 14 years'\r\ncode &amp;quot;P15Y--P9999Y&amp;quot;: 'P15Y--P9999Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;gt; 15 years'\r\n\r\n// RCV Startifiers\r\ncode &amp;quot;P0M--P9M&amp;quot;: 'P0M--P9M' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;lt; 9 months'\r\ncode &amp;quot;P9M--P18M&amp;quot;: 'P9M--P18M' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '9 - 18 months'\r\ncode &amp;quot;P18M--P15Y&amp;quot;: 'P18M--P15Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '18 months - 15 years'\r\n\r\n// Varicella Age groups\r\ncode &amp;quot;P0M--P12M&amp;quot;: 'P0M--P12M' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;lt; 12 months'\r\ncode &amp;quot;P12M--P18M&amp;quot;: 'P12M--P18M' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '12 - 18 months'\r\ncode &amp;quot;P18M--P36M&amp;quot;: 'P18M--P36M' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '18 - 36 months'\r\ncode &amp;quot;P36M--P12Y&amp;quot;: 'P36M--P12Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '36 months - 12 years'\r\ncode &amp;quot;P12Y--P9999Y&amp;quot;: 'P12Y--P9999Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;gt; 12 years'\r\n\r\n// Influenza Age Groups\r\ncode &amp;quot;P1Y--P15Y&amp;quot;: 'P1Y--P15Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '1 year - 15 years'\r\ncode &amp;quot;P15Y--P60Y&amp;quot;: 'P15Y--P60Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '15 years - 60 years'\r\ncode &amp;quot;P60Y--P9999Y&amp;quot;: 'P60Y--P9999Y' from &amp;quot;ISO-8601-Derived Periods&amp;quot; display '&amp;gt; 60 years'\r\n\r\ncodesystem &amp;quot;Administrative Gender Codes&amp;quot;: 'http://hl7.org/fhir/administrative-gender'\r\ncode &amp;quot;Males&amp;quot; : 'male' from &amp;quot;Administrative Gender Codes&amp;quot; display 'Males'\r\ncode &amp;quot;Females&amp;quot; : 'female' from &amp;quot;Administrative Gender Codes&amp;quot; display 'Females'\r\ncode &amp;quot;Other&amp;quot; : 'other' from &amp;quot;Administrative Gender Codes&amp;quot; display 'Other/NA'\r\ncontext Patient\r\n\r\n\r\n/** \r\n * Infant disaggregations by age\r\n */\r\ndefine &amp;quot;Newborn By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInHoursAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt;= 24 then &amp;quot;PT0H--PT24H&amp;quot;\r\n        when AgeInWeeksAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt;= 2 then &amp;quot;PT24H--P2W&amp;quot;\r\n        when AgeInWeeksAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt; 2 then &amp;quot;P2W--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n\r\n/** \r\n * Infant disaggregations by age\r\n */\r\ndefine &amp;quot;Infant By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 1 then &amp;quot;P0Y--P1Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 1 then &amp;quot;P1Y--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n\r\n/** \r\n * Toddler By Age Stratifiers\r\n */\r\ndefine &amp;quot;Toddler By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 2 then &amp;quot;P0Y--P2Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 2 then &amp;quot;P2Y--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n\r\n\r\n/** \r\n * Toddler By Age Stratifiers\r\n */\r\ndefine &amp;quot;Adolescent By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 9 then &amp;quot;P0Y--P9Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt;= 14 then &amp;quot;P9Y--P14Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt; 14 then &amp;quot;P15Y--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n\r\n/** \r\n * RCV age disaggregators\r\n */\r\ndefine &amp;quot;RCV By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInMonthsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 9 then &amp;quot;P0M--P9M&amp;quot;\r\n        when AgeInMonthsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 18 then &amp;quot;P9M--P18M&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 15 then &amp;quot;P18M--P15Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 15 then &amp;quot;P15Y--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n\r\n/** \r\n * Varicella age disaggregators\r\n */\r\ndefine &amp;quot;Varicella By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInMonthsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 12 then &amp;quot;P0M--P12M&amp;quot;\r\n        when AgeInMonthsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 18 then &amp;quot;P12M--P18M&amp;quot;\r\n        when AgeInMonthsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 36 then &amp;quot;P18M--P36M&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 12 then &amp;quot;P36M--P12Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 12 then &amp;quot;P12Y--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n\r\n\r\n/** \r\n * Seasonal Influenza age disaggregators\r\n */\r\ndefine &amp;quot;Seasonal Influenza By Age Stratifier&amp;quot;:\r\n    case \r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 1 then &amp;quot;P0Y--P1Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 15 then &amp;quot;P1Y--P15Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;lt; 60 then &amp;quot;P15Y--P60Y&amp;quot;\r\n        when AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 60 then &amp;quot;P60Y--P9999Y&amp;quot;\r\n        else null\r\n    end\r\n/*\r\n * BCG Doses administered to the patient during the measurement period\r\n */\r\ndefine &amp;quot;BCG Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;BCG Doses Administered to Patient&amp;quot; I\r\n\t\twhere IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/*\r\n * DTP Doses administered to the patient during the measurement period\r\n */\r\ndefine &amp;quot;DTP Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;DTP Doses Administered to Patient&amp;quot; I\r\n\t\twhere IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/*\r\n * HepB Doses administered to the patient during the measurement period\r\n */\r\ndefine &amp;quot;HepB Birth Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;HepB Doses Administered to Patient&amp;quot; I\r\n\t\twhere IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n        and (singleton from I.protocolApplied).doseNumber = 0\r\n\r\n/**\r\n * Non-Birth HepB doses administered to patient\r\n */\r\ndefine &amp;quot;HepB Non-Birth Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;HepB Doses Administered to Patient&amp;quot; I\r\n\t\twhere IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n        and (singleton from I.protocolApplied).doseNumber &amp;gt; 0\r\n\r\n/**\r\n * IPV Doses Administered to Patient\r\n */\r\ndefine &amp;quot;IPV Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;IPV Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\ndefine &amp;quot;Seasonal Influenza Doses Administered to Patient During Reporting Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Seasonal Influenza Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * OPV Birth Doses Administered to Patient\r\n */\r\ndefine &amp;quot;bOPV Birth Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;bOPV Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n    and (singleton from I.protocolApplied).doseNumber = 0\r\n\r\n/**\r\n * OPV Non-Birth Doses Administered to Patient\r\n */\r\ndefine &amp;quot;bOPV Non-Birth Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;bOPV Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n    and (singleton from I.protocolApplied).doseNumber &amp;gt; 0\r\n\r\n\r\n/**\r\n * MCV Doses Administered to Patient\r\n */\r\ndefine &amp;quot;MCV Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;MCV Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * HPV Doses Administered to Patient\r\n */\r\ndefine &amp;quot;HPV Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;HPV Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * Meningococcal Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Meningococcal Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Meningococcal Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * Pneumococcal Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Pneumococcal Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Pneumococcal Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * HIB Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Hib Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Hib Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * Rotavirus Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Rotavirus Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Rotavirus Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * RCV Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Rubella Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Rubella Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * Varicella Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Varicella Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Varicella Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n\r\n/**\r\n * Diptheria Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Diphtheria Booster Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Diphtheria Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n        and (singleton from I.protocolApplied).doseNumber &amp;gt; 3\r\n\r\n/**\r\n * Pertussis Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Pertussis Booster Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Diphtheria Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n        and (singleton from I.protocolApplied).doseNumber &amp;gt; 3\r\n\r\n\r\n/**\r\n * Tetanus Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Tetanus Booster Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Tetanus Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n        and (singleton from I.protocolApplied).doseNumber &amp;gt; 4\r\n\r\n\r\n/**\r\n * Yellow Fever Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Yellow Fever Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Yellow Fever Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n\r\n/**\r\n * Japanese Encephalitis  Doses Administered to Patient\r\n */\r\ndefine &amp;quot;JE Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;JE Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/**\r\n * Typhoid Encephalitis  Doses Administered to Patient\r\n */\r\ndefine &amp;quot;Typhoid Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Typhoid Doses Administered to Patient&amp;quot; I \r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/** \r\n * HPV Doses recommended during reporting period - \r\n *  This is used since the country should define the rules which recommend an HPV dose (age, sex, etc.)\r\n */\r\ndefine &amp;quot;HPV Doses Recommended During Reporting Period&amp;quot;:\r\n    [ImmunizationRecommendation] IR\r\n    where exists(IR.recommendation RC where exists(RC.dateCriterion DC where date from DC.value during &amp;quot;Measurement Period&amp;quot;)\r\n    and RC.vaccineCode in IMMZc.&amp;quot;HPV Vaccine&amp;quot;)\r\n\r\n\r\n/** \r\n * Rubella Doses recommended during reporting period - \r\n *  This is used since the country should define the rules which recommend an Rubella dose (configuration, age, sex, etc.)\r\n */\r\ndefine &amp;quot;Rubella Doses Recommended During Reporting Period&amp;quot;:\r\n    [ImmunizationRecommendation] IR\r\n    where exists(IR.recommendation RC where exists(RC.dateCriterion DC where date from DC.value during &amp;quot;Measurement Period&amp;quot;)\r\n    and RC.vaccineCode in IMMZc.&amp;quot;Rubella Vaccine&amp;quot;)\r\n\r\n/** \r\n * Varicella Doses recommended during reporting period - \r\n *  This is used since the country should define the rules which recommend an Varicella dose (configuration, age, sex, etc.)\r\n */\r\ndefine &amp;quot;Varicella Doses Recommended During Reporting Period&amp;quot;:\r\n    [ImmunizationRecommendation] IR\r\n    where exists(IR.recommendation RC where exists(RC.dateCriterion DC where date from DC.value during &amp;quot;Measurement Period&amp;quot;)\r\n    and RC.vaccineCode in IMMZc.&amp;quot;Varicella Vaccine&amp;quot;)\r\n\r\n/** \r\n * Diphtheria Booster Doses recommended during reporting period - \r\n *  This is used since the country should define the rules which recommend an Diphtheria booster dose (configuration, age, sex, etc.)\r\n */\r\ndefine &amp;quot;Diphtheria Booster Doses Recommended During Reporting Period&amp;quot;:\r\n    [ImmunizationRecommendation] IR\r\n    where exists(IR.recommendation RC where exists(RC.dateCriterion DC where date from DC.value during &amp;quot;Measurement Period&amp;quot;)\r\n    and RC.doseNumber &amp;gt; 3\r\n    and RC.vaccineCode in IMMZc.&amp;quot;Diphtheria Vaccine&amp;quot;)\r\n\r\n/** \r\n * Pertussis Booster Doses recommended during reporting period - \r\n *  This is used since the country should define the rules which recommend an Pertussis booster dose (configuration, age, sex, etc.)\r\n */\r\ndefine &amp;quot;Pertussis Booster Doses Recommended During Reporting Period&amp;quot;:\r\n    [ImmunizationRecommendation] IR\r\n    where exists(IR.recommendation RC where exists(RC.dateCriterion DC where date from DC.value during &amp;quot;Measurement Period&amp;quot;)\r\n    and RC.doseNumber &amp;gt; 3\r\n    and RC.vaccineCode in IMMZc.&amp;quot;Pertussis Vaccine&amp;quot;)\r\n\r\n\r\n/** \r\n * Tetanus Booster Doses recommended during reporting period - \r\n *  This is used since the country should define the rules which recommend an Tetanus booster dose (configuration, age, sex, etc.)\r\n */\r\ndefine &amp;quot;Tetanus Booster Doses Recommended During Reporting Period&amp;quot;:\r\n    [ImmunizationRecommendation] IR\r\n    where exists(IR.recommendation RC where exists(RC.dateCriterion DC where date from DC.value during &amp;quot;Measurement Period&amp;quot;)\r\n    and RC.doseNumber &amp;gt; 3\r\n    and RC.vaccineCode in IMMZc.&amp;quot;Tetanus Vaccine&amp;quot;)\r\n\r\n\r\n/**\r\n * By Administrative Gender of Patient Stratifier\r\n */\r\ndefine &amp;quot;By Administrative Gender Stratifier&amp;quot;:\r\n    case \r\n        when Patient.gender = 'male' then &amp;quot;Males&amp;quot;\r\n        when Patient.gender = 'female' then &amp;quot;Females&amp;quot;\r\n        else &amp;quot;Other&amp;quot;\r\n    end\r\n\r\n/**\r\n * By Administrative Gender of Patient Stratifier\r\n */\r\ndefine &amp;quot;By Geographic Region Stratifier&amp;quot;:\r\n    First(Patient.address A where A.use in { 'home' }).state\r\n\r\n/** \r\n * @dataElement Patient is deceased\r\n */\r\ndefine &amp;quot;Patient Deceased During Measurement Period&amp;quot;:\r\n  case \r\n    when Patient.deceased is FHIR.boolean then Patient.deceased as FHIR.boolean\r\n    when Patient.deceased is FHIR.dateTime then Patient.deceased as FHIR.dateTime before end of &amp;quot;Measurement Period&amp;quot;\r\n    else false\r\n  end\r\n\r\n/** \r\n * Patient was born during measurement period\r\n */\r\ndefine &amp;quot;Patient Born During Measurement Period&amp;quot;:\r\n    Patient.birthDate during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/** \r\n * Patient is &amp;lt; 12 months old at the end of the measurement period\r\n */\r\ndefine &amp;quot;Patient Under 12 Months Old During Measurement Period&amp;quot;:\r\n    Patient.birthDate more than 12 month before end of &amp;quot;Measurement Period&amp;quot;\r\n\r\n/** \r\n * Patient is &amp;lt; 12 years old at the end of the measurement period\r\n */\r\ndefine &amp;quot;Patient Under 2 Years Old During Measurement Period&amp;quot;:\r\n    Patient.birthDate more than 2 year before end of &amp;quot;Measurement Period&amp;quot;\r\n\r\n\r\n/** \r\n * @define Adverse events for immunizations which occurred during (or observed) during measurement period\r\n */\r\ndefine &amp;quot;Immunizations with Adverse Events During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Doses Administered to Patient&amp;quot; I\r\n    with [Observation: code in WC.&amp;quot;Adverse Events&amp;quot;] O\r\n    such that exists(I.reaction R where O.id = Last(Split(R.detail.reference, '/')))\r\n    and FC.ToInterval(O.effective) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n\r\n/** \r\n * @define Adverse events for immunizations which occurred during (or observed) during measurement period\r\n */\r\ndefine &amp;quot;Adverse Event Reactions During Measurement Period&amp;quot;:\r\n    [Observation: code in WC.&amp;quot;Adverse Events&amp;quot;] O\r\n    with IMMZCom.&amp;quot;Doses Administered to Patient&amp;quot; I\r\n    such that exists(I.reaction R where O.id = Last(Split(R.detail.reference, '/')))\r\n    where FC.ToInterval(O.effective) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/** \r\n * @define Doses which were \r\n */\r\ndefine &amp;quot;Doses Administered to Patient During Measurement Period&amp;quot;:\r\n    IMMZCom.&amp;quot;Doses Administered to Patient&amp;quot;  I\r\n    where IMMZCom.ToDate(I.occurrence) during &amp;quot;Measurement Period&amp;quot;\r\n\r\n/** \r\n * @function\r\n * @param immunization The immunization record for which the location should be retrieved\r\n * @return FHIR.address The location that the immunization event occurred\r\n */\r\ndefine function GetGeographicRegionForImmunization(immunization Immunization):\r\n    WCom.Official([Location] L \r\n        where L.id = Last(Split(immunization.location.reference, '/'))\r\n        return L.address).state&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Device/cqf-tooling"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a>" : "http://smart.who.int/ig/smart-immunizations-measles/Library/IMMZIndicatorCommon",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a>" : "IMMZIndicatorCommon",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/library-type",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "logic-library"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a>" : "2023-10-23T19:19:30+00:00",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a>" : "WHO",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "WHO",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://who.int"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "text/cql",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>" : "LyoqDQogKiBJbW11bml6YXRpb24gQ29tbW9uIFN0cmF0aWZpZXJzIGJ5IFBhdGllbnRzIGFzIENvbnRleHQNCiAqLw0KDQpsaWJyYXJ5IElNTVpJbmRpY2F0b3JDb21tb24NCg0KdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScNCg0KaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScNCmluY2x1ZGUgRkhJUkNvbW1vbiBjYWxsZWQgRkMNCmluY2x1ZGUgSU1NWkNvbW1vbiBjYWxsZWQgSU1NWkNvbQ0KaW5jbHVkZSBJTU1aQ29uY2VwdHMgY2FsbGVkIElNTVpjDQppbmNsdWRlIFdIT0NvbW1vbiBjYWxsZWQgV0NvbQ0KaW5jbHVkZSBXSE9Db25jZXB0cyBjYWxsZWQgV0MNCmNvZGVzeXN0ZW0gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyI6ICdodHRwOi8vb2hpZS5vcmcvQ29kZVN5c3RlbS9pc28tODYwMS1kZXJpdmVkLXBlcmlvZHMnDQpwYXJhbWV0ZXIgIk1lYXN1cmVtZW50IFBlcmlvZCIgSW50ZXJ2YWw8RGF0ZT4gZGVmYXVsdCBJbnRlcnZhbFtAMjAyMC0wMS0wMSwgQDIwMjAtMTItMzFdDQoNCi8vIEFnZSBHcm91cHMgZm9yIFZhY2NpbmVzIGZvciBpbmZhbnRzDQpjb2RlICJQMFktLVAxWSI6ICdQMFktLVAxWScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICc8IDEgeWVhcicNCmNvZGUgIlAxWS0tUDk5OTlZIjogJ1AxWS0tUDk5OTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJz4gMSB5ZWFyJw0KDQovLyBBZ2UgR3JvdXBzIGZvciBWYWNjaW5lcyBmb3IgVG9kZGxlcnMNCmNvZGUgIlAwWS0tUDJZIjogJ1AwWS0tUDJZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzwgMiB5ZWFycycNCmNvZGUgIlAyWS0tUDk5OTlZIjogJ1AyWS0tUDk5OTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJz4gMiB5ZWFycycNCg0KLy8gQWdlIGdyb3VwcyBmb3IgbmV3Ym9ybnMNCmNvZGUgIlBUMEgtLVBUMjRIIjogJ1BUMEgtLVBUMjRIJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJ1dpdGhpbiAyNEggb2YgQmlydGgnDQpjb2RlICJQVDI0SC0tUDJXIjogJ1BUMjRILS1QMlcnIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnPCAyIFdlZWtzJw0KY29kZSAiUDJXLS1QOTk5OVkiOiAnUDJXLS1QOTk5OVknIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnPiAyIFdlZWtzJw0KDQovLyBBZ2UgZ3JvdXBzIGZvciBhZG9sZXNjZW50DQpjb2RlICJQMFktLVA5WSI6ICdQMFktLVA5WScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICc8IDkgeWVhcnMnDQpjb2RlICJQOVktLVAxNFkiOiAnUDlZLS1QMTRZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzkgLSAxNCB5ZWFycycNCmNvZGUgIlAxNVktLVA5OTk5WSI6ICdQMTVZLS1QOTk5OVknIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnPiAxNSB5ZWFycycNCg0KLy8gUkNWIFN0YXJ0aWZpZXJzDQpjb2RlICJQME0tLVA5TSI6ICdQME0tLVA5TScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICc8IDkgbW9udGhzJw0KY29kZSAiUDlNLS1QMThNIjogJ1A5TS0tUDE4TScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICc5IC0gMTggbW9udGhzJw0KY29kZSAiUDE4TS0tUDE1WSI6ICdQMThNLS1QMTVZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzE4IG1vbnRocyAtIDE1IHllYXJzJw0KDQovLyBWYXJpY2VsbGEgQWdlIGdyb3Vwcw0KY29kZSAiUDBNLS1QMTJNIjogJ1AwTS0tUDEyTScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICc8IDEyIG1vbnRocycNCmNvZGUgIlAxMk0tLVAxOE0iOiAnUDEyTS0tUDE4TScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICcxMiAtIDE4IG1vbnRocycNCmNvZGUgIlAxOE0tLVAzNk0iOiAnUDE4TS0tUDM2TScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICcxOCAtIDM2IG1vbnRocycNCmNvZGUgIlAzNk0tLVAxMlkiOiAnUDM2TS0tUDEyWScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICczNiBtb250aHMgLSAxMiB5ZWFycycNCmNvZGUgIlAxMlktLVA5OTk5WSI6ICdQMTJZLS1QOTk5OVknIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnPiAxMiB5ZWFycycNCg0KLy8gSW5mbHVlbnphIEFnZSBHcm91cHMNCmNvZGUgIlAxWS0tUDE1WSI6ICdQMVktLVAxNVknIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnMSB5ZWFyIC0gMTUgeWVhcnMnDQpjb2RlICJQMTVZLS1QNjBZIjogJ1AxNVktLVA2MFknIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnMTUgeWVhcnMgLSA2MCB5ZWFycycNCmNvZGUgIlA2MFktLVA5OTk5WSI6ICdQNjBZLS1QOTk5OVknIGZyb20gIklTTy04NjAxLURlcml2ZWQgUGVyaW9kcyIgZGlzcGxheSAnPiA2MCB5ZWFycycNCg0KY29kZXN5c3RlbSAiQWRtaW5pc3RyYXRpdmUgR2VuZGVyIENvZGVzIjogJ2h0dHA6Ly9obDcub3JnL2ZoaXIvYWRtaW5pc3RyYXRpdmUtZ2VuZGVyJw0KY29kZSAiTWFsZXMiIDogJ21hbGUnIGZyb20gIkFkbWluaXN0cmF0aXZlIEdlbmRlciBDb2RlcyIgZGlzcGxheSAnTWFsZXMnDQpjb2RlICJGZW1hbGVzIiA6ICdmZW1hbGUnIGZyb20gIkFkbWluaXN0cmF0aXZlIEdlbmRlciBDb2RlcyIgZGlzcGxheSAnRmVtYWxlcycNCmNvZGUgIk90aGVyIiA6ICdvdGhlcicgZnJvbSAiQWRtaW5pc3RyYXRpdmUgR2VuZGVyIENvZGVzIiBkaXNwbGF5ICdPdGhlci9OQScNCmNvbnRleHQgUGF0aWVudA0KDQoNCi8qKiANCiAqIEluZmFudCBkaXNhZ2dyZWdhdGlvbnMgYnkgYWdlDQogKi8NCmRlZmluZSAiTmV3Ym9ybiBCeSBBZ2UgU3RyYXRpZmllciI6DQogICAgY2FzZSANCiAgICAgICAgd2hlbiBBZ2VJbkhvdXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDw9IDI0IHRoZW4gIlBUMEgtLVBUMjRIIg0KICAgICAgICB3aGVuIEFnZUluV2Vla3NBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPD0gMiB0aGVuICJQVDI0SC0tUDJXIg0KICAgICAgICB3aGVuIEFnZUluV2Vla3NBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPiAyIHRoZW4gIlAyVy0tUDk5OTlZIg0KICAgICAgICBlbHNlIG51bGwNCiAgICBlbmQNCg0KLyoqIA0KICogSW5mYW50IGRpc2FnZ3JlZ2F0aW9ucyBieSBhZ2UNCiAqLw0KZGVmaW5lICJJbmZhbnQgQnkgQWdlIFN0cmF0aWZpZXIiOg0KICAgIGNhc2UgDQogICAgICAgIHdoZW4gQWdlSW5ZZWFyc0F0KHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSA8IDEgdGhlbiAiUDBZLS1QMVkiDQogICAgICAgIHdoZW4gQWdlSW5ZZWFyc0F0KHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSA+PSAxIHRoZW4gIlAxWS0tUDk5OTlZIg0KICAgICAgICBlbHNlIG51bGwNCiAgICBlbmQNCg0KLyoqIA0KICogVG9kZGxlciBCeSBBZ2UgU3RyYXRpZmllcnMNCiAqLw0KZGVmaW5lICJUb2RkbGVyIEJ5IEFnZSBTdHJhdGlmaWVyIjoNCiAgICBjYXNlIA0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPCAyIHRoZW4gIlAwWS0tUDJZIg0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPj0gMiB0aGVuICJQMlktLVA5OTk5WSINCiAgICAgICAgZWxzZSBudWxsDQogICAgZW5kDQoNCg0KLyoqIA0KICogVG9kZGxlciBCeSBBZ2UgU3RyYXRpZmllcnMNCiAqLw0KZGVmaW5lICJBZG9sZXNjZW50IEJ5IEFnZSBTdHJhdGlmaWVyIjoNCiAgICBjYXNlIA0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPCA5IHRoZW4gIlAwWS0tUDlZIg0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPD0gMTQgdGhlbiAiUDlZLS1QMTRZIg0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPiAxNCB0aGVuICJQMTVZLS1QOTk5OVkiDQogICAgICAgIGVsc2UgbnVsbA0KICAgIGVuZA0KDQovKiogDQogKiBSQ1YgYWdlIGRpc2FnZ3JlZ2F0b3JzDQogKi8NCmRlZmluZSAiUkNWIEJ5IEFnZSBTdHJhdGlmaWVyIjoNCiAgICBjYXNlIA0KICAgICAgICB3aGVuIEFnZUluTW9udGhzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDwgOSB0aGVuICJQME0tLVA5TSINCiAgICAgICAgd2hlbiBBZ2VJbk1vbnRoc0F0KHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSA8IDE4IHRoZW4gIlA5TS0tUDE4TSINCiAgICAgICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDwgMTUgdGhlbiAiUDE4TS0tUDE1WSINCiAgICAgICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpID49IDE1IHRoZW4gIlAxNVktLVA5OTk5WSINCiAgICAgICAgZWxzZSBudWxsDQogICAgZW5kDQoNCi8qKiANCiAqIFZhcmljZWxsYSBhZ2UgZGlzYWdncmVnYXRvcnMNCiAqLw0KZGVmaW5lICJWYXJpY2VsbGEgQnkgQWdlIFN0cmF0aWZpZXIiOg0KICAgIGNhc2UgDQogICAgICAgIHdoZW4gQWdlSW5Nb250aHNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPCAxMiB0aGVuICJQME0tLVAxMk0iDQogICAgICAgIHdoZW4gQWdlSW5Nb250aHNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPCAxOCB0aGVuICJQMTJNLS1QMThNIg0KICAgICAgICB3aGVuIEFnZUluTW9udGhzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDwgMzYgdGhlbiAiUDE4TS0tUDM2TSINCiAgICAgICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDwgMTIgdGhlbiAiUDM2TS0tUDEyWSINCiAgICAgICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpID49IDEyIHRoZW4gIlAxMlktLVA5OTk5WSINCiAgICAgICAgZWxzZSBudWxsDQogICAgZW5kDQoNCg0KLyoqIA0KICogU2Vhc29uYWwgSW5mbHVlbnphIGFnZSBkaXNhZ2dyZWdhdG9ycw0KICovDQpkZWZpbmUgIlNlYXNvbmFsIEluZmx1ZW56YSBCeSBBZ2UgU3RyYXRpZmllciI6DQogICAgY2FzZSANCiAgICAgICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDwgMSB0aGVuICJQMFktLVAxWSINCiAgICAgICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpIDwgMTUgdGhlbiAiUDFZLS1QMTVZIg0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPCA2MCB0aGVuICJQMTVZLS1QNjBZIg0KICAgICAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgPj0gNjAgdGhlbiAiUDYwWS0tUDk5OTlZIg0KICAgICAgICBlbHNlIG51bGwNCiAgICBlbmQNCi8qDQogKiBCQ0cgRG9zZXMgYWRtaW5pc3RlcmVkIHRvIHRoZSBwYXRpZW50IGR1cmluZyB0aGUgbWVhc3VyZW1lbnQgcGVyaW9kDQogKi8NCmRlZmluZSAiQkNHIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIkJDRyBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSQ0KCQl3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQovKg0KICogRFRQIERvc2VzIGFkbWluaXN0ZXJlZCB0byB0aGUgcGF0aWVudCBkdXJpbmcgdGhlIG1lYXN1cmVtZW50IHBlcmlvZA0KICovDQpkZWZpbmUgIkRUUCBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJEVFAgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiIEkNCgkJd2hlcmUgSU1NWkNvbS5Ub0RhdGUoSS5vY2N1cnJlbmNlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KLyoNCiAqIEhlcEIgRG9zZXMgYWRtaW5pc3RlcmVkIHRvIHRoZSBwYXRpZW50IGR1cmluZyB0aGUgbWVhc3VyZW1lbnQgcGVyaW9kDQogKi8NCmRlZmluZSAiSGVwQiBCaXJ0aCBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJIZXBCIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJDQoJCXdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQogICAgICAgIGFuZCAoc2luZ2xldG9uIGZyb20gSS5wcm90b2NvbEFwcGxpZWQpLmRvc2VOdW1iZXIgPSAwDQoNCi8qKg0KICogTm9uLUJpcnRoIEhlcEIgZG9zZXMgYWRtaW5pc3RlcmVkIHRvIHBhdGllbnQNCiAqLw0KZGVmaW5lICJIZXBCIE5vbi1CaXJ0aCBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJIZXBCIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJDQoJCXdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQogICAgICAgIGFuZCAoc2luZ2xldG9uIGZyb20gSS5wcm90b2NvbEFwcGxpZWQpLmRvc2VOdW1iZXIgPiAwDQoNCi8qKg0KICogSVBWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiSVBWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIklQViBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQpkZWZpbmUgIlNlYXNvbmFsIEluZmx1ZW56YSBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgUmVwb3J0aW5nIFBlcmlvZCI6DQogICAgSU1NWkNvbS4iU2Vhc29uYWwgSW5mbHVlbnphIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQoNCi8qKg0KICogT1BWIEJpcnRoIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiYk9QViBCaXJ0aCBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJiT1BWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQogICAgYW5kIChzaW5nbGV0b24gZnJvbSBJLnByb3RvY29sQXBwbGllZCkuZG9zZU51bWJlciA9IDANCg0KLyoqDQogKiBPUFYgTm9uLUJpcnRoIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiYk9QViBOb24tQmlydGggRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iYk9QViBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KICAgIGFuZCAoc2luZ2xldG9uIGZyb20gSS5wcm90b2NvbEFwcGxpZWQpLmRvc2VOdW1iZXIgPiAwDQoNCg0KLyoqDQogKiBNQ1YgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJNQ1YgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iTUNWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQoNCi8qKg0KICogSFBWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiSFBWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIkhQViBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQovKioNCiAqIE1lbmluZ29jb2NjYWwgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJNZW5pbmdvY29jY2FsIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIk1lbmluZ29jb2NjYWwgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiIEkgDQogICAgd2hlcmUgSU1NWkNvbS5Ub0RhdGUoSS5vY2N1cnJlbmNlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KLyoqDQogKiBQbmV1bW9jb2NjYWwgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJQbmV1bW9jb2NjYWwgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iUG5ldW1vY29jY2FsIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQoNCi8qKg0KICogSElCIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiSGliIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIkhpYiBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQovKioNCiAqIFJvdGF2aXJ1cyBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudA0KICovDQpkZWZpbmUgIlJvdGF2aXJ1cyBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJSb3RhdmlydXMgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiIEkgDQogICAgd2hlcmUgSU1NWkNvbS5Ub0RhdGUoSS5vY2N1cnJlbmNlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KLyoqDQogKiBSQ1YgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJSdWJlbGxhIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIlJ1YmVsbGEgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiIEkgDQogICAgd2hlcmUgSU1NWkNvbS5Ub0RhdGUoSS5vY2N1cnJlbmNlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KLyoqDQogKiBWYXJpY2VsbGEgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJWYXJpY2VsbGEgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iVmFyaWNlbGxhIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQoNCg0KLyoqDQogKiBEaXB0aGVyaWEgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJEaXBodGhlcmlhIEJvb3N0ZXIgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iRGlwaHRoZXJpYSBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KICAgICAgICBhbmQgKHNpbmdsZXRvbiBmcm9tIEkucHJvdG9jb2xBcHBsaWVkKS5kb3NlTnVtYmVyID4gMw0KDQovKioNCiAqIFBlcnR1c3NpcyBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudA0KICovDQpkZWZpbmUgIlBlcnR1c3NpcyBCb29zdGVyIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIkRpcGh0aGVyaWEgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiIEkgDQogICAgd2hlcmUgSU1NWkNvbS5Ub0RhdGUoSS5vY2N1cnJlbmNlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCiAgICAgICAgYW5kIChzaW5nbGV0b24gZnJvbSBJLnByb3RvY29sQXBwbGllZCkuZG9zZU51bWJlciA+IDMNCg0KDQovKioNCiAqIFRldGFudXMgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQNCiAqLw0KZGVmaW5lICJUZXRhbnVzIEJvb3N0ZXIgRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iVGV0YW51cyBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KICAgICAgICBhbmQgKHNpbmdsZXRvbiBmcm9tIEkucHJvdG9jb2xBcHBsaWVkKS5kb3NlTnVtYmVyID4gNA0KDQoNCi8qKg0KICogWWVsbG93IEZldmVyIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiWWVsbG93IEZldmVyIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIlllbGxvdyBGZXZlciBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSSANCiAgICB3aGVyZSBJTU1aQ29tLlRvRGF0ZShJLm9jY3VycmVuY2UpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQoNCi8qKg0KICogSmFwYW5lc2UgRW5jZXBoYWxpdGlzICBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudA0KICovDQpkZWZpbmUgIkpFIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIElNTVpDb20uIkpFIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQoNCi8qKg0KICogVHlwaG9pZCBFbmNlcGhhbGl0aXMgIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50DQogKi8NCmRlZmluZSAiVHlwaG9pZCBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJUeXBob2lkIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IiBJIA0KICAgIHdoZXJlIElNTVpDb20uVG9EYXRlKEkub2NjdXJyZW5jZSkgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiDQoNCi8qKiANCiAqIEhQViBEb3NlcyByZWNvbW1lbmRlZCBkdXJpbmcgcmVwb3J0aW5nIHBlcmlvZCAtIA0KICogIFRoaXMgaXMgdXNlZCBzaW5jZSB0aGUgY291bnRyeSBzaG91bGQgZGVmaW5lIHRoZSBydWxlcyB3aGljaCByZWNvbW1lbmQgYW4gSFBWIGRvc2UgKGFnZSwgc2V4LCBldGMuKQ0KICovDQpkZWZpbmUgIkhQViBEb3NlcyBSZWNvbW1lbmRlZCBEdXJpbmcgUmVwb3J0aW5nIFBlcmlvZCI6DQogICAgW0ltbXVuaXphdGlvblJlY29tbWVuZGF0aW9uXSBJUg0KICAgIHdoZXJlIGV4aXN0cyhJUi5yZWNvbW1lbmRhdGlvbiBSQyB3aGVyZSBleGlzdHMoUkMuZGF0ZUNyaXRlcmlvbiBEQyB3aGVyZSBkYXRlIGZyb20gREMudmFsdWUgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiKQ0KICAgIGFuZCBSQy52YWNjaW5lQ29kZSBpbiBJTU1aYy4iSFBWIFZhY2NpbmUiKQ0KDQoNCi8qKiANCiAqIFJ1YmVsbGEgRG9zZXMgcmVjb21tZW5kZWQgZHVyaW5nIHJlcG9ydGluZyBwZXJpb2QgLSANCiAqICBUaGlzIGlzIHVzZWQgc2luY2UgdGhlIGNvdW50cnkgc2hvdWxkIGRlZmluZSB0aGUgcnVsZXMgd2hpY2ggcmVjb21tZW5kIGFuIFJ1YmVsbGEgZG9zZSAoY29uZmlndXJhdGlvbiwgYWdlLCBzZXgsIGV0Yy4pDQogKi8NCmRlZmluZSAiUnViZWxsYSBEb3NlcyBSZWNvbW1lbmRlZCBEdXJpbmcgUmVwb3J0aW5nIFBlcmlvZCI6DQogICAgW0ltbXVuaXphdGlvblJlY29tbWVuZGF0aW9uXSBJUg0KICAgIHdoZXJlIGV4aXN0cyhJUi5yZWNvbW1lbmRhdGlvbiBSQyB3aGVyZSBleGlzdHMoUkMuZGF0ZUNyaXRlcmlvbiBEQyB3aGVyZSBkYXRlIGZyb20gREMudmFsdWUgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiKQ0KICAgIGFuZCBSQy52YWNjaW5lQ29kZSBpbiBJTU1aYy4iUnViZWxsYSBWYWNjaW5lIikNCg0KLyoqIA0KICogVmFyaWNlbGxhIERvc2VzIHJlY29tbWVuZGVkIGR1cmluZyByZXBvcnRpbmcgcGVyaW9kIC0gDQogKiAgVGhpcyBpcyB1c2VkIHNpbmNlIHRoZSBjb3VudHJ5IHNob3VsZCBkZWZpbmUgdGhlIHJ1bGVzIHdoaWNoIHJlY29tbWVuZCBhbiBWYXJpY2VsbGEgZG9zZSAoY29uZmlndXJhdGlvbiwgYWdlLCBzZXgsIGV0Yy4pDQogKi8NCmRlZmluZSAiVmFyaWNlbGxhIERvc2VzIFJlY29tbWVuZGVkIER1cmluZyBSZXBvcnRpbmcgUGVyaW9kIjoNCiAgICBbSW1tdW5pemF0aW9uUmVjb21tZW5kYXRpb25dIElSDQogICAgd2hlcmUgZXhpc3RzKElSLnJlY29tbWVuZGF0aW9uIFJDIHdoZXJlIGV4aXN0cyhSQy5kYXRlQ3JpdGVyaW9uIERDIHdoZXJlIGRhdGUgZnJvbSBEQy52YWx1ZSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCIpDQogICAgYW5kIFJDLnZhY2NpbmVDb2RlIGluIElNTVpjLiJWYXJpY2VsbGEgVmFjY2luZSIpDQoNCi8qKiANCiAqIERpcGh0aGVyaWEgQm9vc3RlciBEb3NlcyByZWNvbW1lbmRlZCBkdXJpbmcgcmVwb3J0aW5nIHBlcmlvZCAtIA0KICogIFRoaXMgaXMgdXNlZCBzaW5jZSB0aGUgY291bnRyeSBzaG91bGQgZGVmaW5lIHRoZSBydWxlcyB3aGljaCByZWNvbW1lbmQgYW4gRGlwaHRoZXJpYSBib29zdGVyIGRvc2UgKGNvbmZpZ3VyYXRpb24sIGFnZSwgc2V4LCBldGMuKQ0KICovDQpkZWZpbmUgIkRpcGh0aGVyaWEgQm9vc3RlciBEb3NlcyBSZWNvbW1lbmRlZCBEdXJpbmcgUmVwb3J0aW5nIFBlcmlvZCI6DQogICAgW0ltbXVuaXphdGlvblJlY29tbWVuZGF0aW9uXSBJUg0KICAgIHdoZXJlIGV4aXN0cyhJUi5yZWNvbW1lbmRhdGlvbiBSQyB3aGVyZSBleGlzdHMoUkMuZGF0ZUNyaXRlcmlvbiBEQyB3aGVyZSBkYXRlIGZyb20gREMudmFsdWUgZHVyaW5nICJNZWFzdXJlbWVudCBQZXJpb2QiKQ0KICAgIGFuZCBSQy5kb3NlTnVtYmVyID4gMw0KICAgIGFuZCBSQy52YWNjaW5lQ29kZSBpbiBJTU1aYy4iRGlwaHRoZXJpYSBWYWNjaW5lIikNCg0KLyoqIA0KICogUGVydHVzc2lzIEJvb3N0ZXIgRG9zZXMgcmVjb21tZW5kZWQgZHVyaW5nIHJlcG9ydGluZyBwZXJpb2QgLSANCiAqICBUaGlzIGlzIHVzZWQgc2luY2UgdGhlIGNvdW50cnkgc2hvdWxkIGRlZmluZSB0aGUgcnVsZXMgd2hpY2ggcmVjb21tZW5kIGFuIFBlcnR1c3NpcyBib29zdGVyIGRvc2UgKGNvbmZpZ3VyYXRpb24sIGFnZSwgc2V4LCBldGMuKQ0KICovDQpkZWZpbmUgIlBlcnR1c3NpcyBCb29zdGVyIERvc2VzIFJlY29tbWVuZGVkIER1cmluZyBSZXBvcnRpbmcgUGVyaW9kIjoNCiAgICBbSW1tdW5pemF0aW9uUmVjb21tZW5kYXRpb25dIElSDQogICAgd2hlcmUgZXhpc3RzKElSLnJlY29tbWVuZGF0aW9uIFJDIHdoZXJlIGV4aXN0cyhSQy5kYXRlQ3JpdGVyaW9uIERDIHdoZXJlIGRhdGUgZnJvbSBEQy52YWx1ZSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCIpDQogICAgYW5kIFJDLmRvc2VOdW1iZXIgPiAzDQogICAgYW5kIFJDLnZhY2NpbmVDb2RlIGluIElNTVpjLiJQZXJ0dXNzaXMgVmFjY2luZSIpDQoNCg0KLyoqIA0KICogVGV0YW51cyBCb29zdGVyIERvc2VzIHJlY29tbWVuZGVkIGR1cmluZyByZXBvcnRpbmcgcGVyaW9kIC0gDQogKiAgVGhpcyBpcyB1c2VkIHNpbmNlIHRoZSBjb3VudHJ5IHNob3VsZCBkZWZpbmUgdGhlIHJ1bGVzIHdoaWNoIHJlY29tbWVuZCBhbiBUZXRhbnVzIGJvb3N0ZXIgZG9zZSAoY29uZmlndXJhdGlvbiwgYWdlLCBzZXgsIGV0Yy4pDQogKi8NCmRlZmluZSAiVGV0YW51cyBCb29zdGVyIERvc2VzIFJlY29tbWVuZGVkIER1cmluZyBSZXBvcnRpbmcgUGVyaW9kIjoNCiAgICBbSW1tdW5pemF0aW9uUmVjb21tZW5kYXRpb25dIElSDQogICAgd2hlcmUgZXhpc3RzKElSLnJlY29tbWVuZGF0aW9uIFJDIHdoZXJlIGV4aXN0cyhSQy5kYXRlQ3JpdGVyaW9uIERDIHdoZXJlIGRhdGUgZnJvbSBEQy52YWx1ZSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCIpDQogICAgYW5kIFJDLmRvc2VOdW1iZXIgPiAzDQogICAgYW5kIFJDLnZhY2NpbmVDb2RlIGluIElNTVpjLiJUZXRhbnVzIFZhY2NpbmUiKQ0KDQoNCi8qKg0KICogQnkgQWRtaW5pc3RyYXRpdmUgR2VuZGVyIG9mIFBhdGllbnQgU3RyYXRpZmllcg0KICovDQpkZWZpbmUgIkJ5IEFkbWluaXN0cmF0aXZlIEdlbmRlciBTdHJhdGlmaWVyIjoNCiAgICBjYXNlIA0KICAgICAgICB3aGVuIFBhdGllbnQuZ2VuZGVyID0gJ21hbGUnIHRoZW4gIk1hbGVzIg0KICAgICAgICB3aGVuIFBhdGllbnQuZ2VuZGVyID0gJ2ZlbWFsZScgdGhlbiAiRmVtYWxlcyINCiAgICAgICAgZWxzZSAiT3RoZXIiDQogICAgZW5kDQoNCi8qKg0KICogQnkgQWRtaW5pc3RyYXRpdmUgR2VuZGVyIG9mIFBhdGllbnQgU3RyYXRpZmllcg0KICovDQpkZWZpbmUgIkJ5IEdlb2dyYXBoaWMgUmVnaW9uIFN0cmF0aWZpZXIiOg0KICAgIEZpcnN0KFBhdGllbnQuYWRkcmVzcyBBIHdoZXJlIEEudXNlIGluIHsgJ2hvbWUnIH0pLnN0YXRlDQoNCi8qKiANCiAqIEBkYXRhRWxlbWVudCBQYXRpZW50IGlzIGRlY2Vhc2VkDQogKi8NCmRlZmluZSAiUGF0aWVudCBEZWNlYXNlZCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgY2FzZSANCiAgICB3aGVuIFBhdGllbnQuZGVjZWFzZWQgaXMgRkhJUi5ib29sZWFuIHRoZW4gUGF0aWVudC5kZWNlYXNlZCBhcyBGSElSLmJvb2xlYW4NCiAgICB3aGVuIFBhdGllbnQuZGVjZWFzZWQgaXMgRkhJUi5kYXRlVGltZSB0aGVuIFBhdGllbnQuZGVjZWFzZWQgYXMgRkhJUi5kYXRlVGltZSBiZWZvcmUgZW5kIG9mICJNZWFzdXJlbWVudCBQZXJpb2QiDQogICAgZWxzZSBmYWxzZQ0KICBlbmQNCg0KLyoqIA0KICogUGF0aWVudCB3YXMgYm9ybiBkdXJpbmcgbWVhc3VyZW1lbnQgcGVyaW9kDQogKi8NCmRlZmluZSAiUGF0aWVudCBCb3JuIER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIFBhdGllbnQuYmlydGhEYXRlIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQovKiogDQogKiBQYXRpZW50IGlzIDwgMTIgbW9udGhzIG9sZCBhdCB0aGUgZW5kIG9mIHRoZSBtZWFzdXJlbWVudCBwZXJpb2QNCiAqLw0KZGVmaW5lICJQYXRpZW50IFVuZGVyIDEyIE1vbnRocyBPbGQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgUGF0aWVudC5iaXJ0aERhdGUgbW9yZSB0aGFuIDEyIG1vbnRoIGJlZm9yZSBlbmQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KLyoqIA0KICogUGF0aWVudCBpcyA8IDEyIHllYXJzIG9sZCBhdCB0aGUgZW5kIG9mIHRoZSBtZWFzdXJlbWVudCBwZXJpb2QNCiAqLw0KZGVmaW5lICJQYXRpZW50IFVuZGVyIDIgWWVhcnMgT2xkIER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiOg0KICAgIFBhdGllbnQuYmlydGhEYXRlIG1vcmUgdGhhbiAyIHllYXIgYmVmb3JlIGVuZCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQoNCi8qKiANCiAqIEBkZWZpbmUgQWR2ZXJzZSBldmVudHMgZm9yIGltbXVuaXphdGlvbnMgd2hpY2ggb2NjdXJyZWQgZHVyaW5nIChvciBvYnNlcnZlZCkgZHVyaW5nIG1lYXN1cmVtZW50IHBlcmlvZA0KICovDQpkZWZpbmUgIkltbXVuaXphdGlvbnMgd2l0aCBBZHZlcnNlIEV2ZW50cyBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBJTU1aQ29tLiJEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCIgSQ0KICAgIHdpdGggW09ic2VydmF0aW9uOiBjb2RlIGluIFdDLiJBZHZlcnNlIEV2ZW50cyJdIE8NCiAgICBzdWNoIHRoYXQgZXhpc3RzKEkucmVhY3Rpb24gUiB3aGVyZSBPLmlkID0gTGFzdChTcGxpdChSLmRldGFpbC5yZWZlcmVuY2UsICcvJykpKQ0KICAgIGFuZCBGQy5Ub0ludGVydmFsKE8uZWZmZWN0aXZlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KDQovKiogDQogKiBAZGVmaW5lIEFkdmVyc2UgZXZlbnRzIGZvciBpbW11bml6YXRpb25zIHdoaWNoIG9jY3VycmVkIGR1cmluZyAob3Igb2JzZXJ2ZWQpIGR1cmluZyBtZWFzdXJlbWVudCBwZXJpb2QNCiAqLw0KZGVmaW5lICJBZHZlcnNlIEV2ZW50IFJlYWN0aW9ucyBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIjoNCiAgICBbT2JzZXJ2YXRpb246IGNvZGUgaW4gV0MuIkFkdmVyc2UgRXZlbnRzIl0gTw0KICAgIHdpdGggSU1NWkNvbS4iRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiIEkNCiAgICBzdWNoIHRoYXQgZXhpc3RzKEkucmVhY3Rpb24gUiB3aGVyZSBPLmlkID0gTGFzdChTcGxpdChSLmRldGFpbC5yZWZlcmVuY2UsICcvJykpKQ0KICAgIHdoZXJlIEZDLlRvSW50ZXJ2YWwoTy5lZmZlY3RpdmUpIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIg0KDQovKiogDQogKiBAZGVmaW5lIERvc2VzIHdoaWNoIHdlcmUgDQogKi8NCmRlZmluZSAiRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQgRHVyaW5nIE1lYXN1cmVtZW50IFBlcmlvZCI6DQogICAgSU1NWkNvbS4iRG9zZXMgQWRtaW5pc3RlcmVkIHRvIFBhdGllbnQiICBJDQogICAgd2hlcmUgSU1NWkNvbS5Ub0RhdGUoSS5vY2N1cnJlbmNlKSBkdXJpbmcgIk1lYXN1cmVtZW50IFBlcmlvZCINCg0KLyoqIA0KICogQGZ1bmN0aW9uDQogKiBAcGFyYW0gaW1tdW5pemF0aW9uIFRoZSBpbW11bml6YXRpb24gcmVjb3JkIGZvciB3aGljaCB0aGUgbG9jYXRpb24gc2hvdWxkIGJlIHJldHJpZXZlZA0KICogQHJldHVybiBGSElSLmFkZHJlc3MgVGhlIGxvY2F0aW9uIHRoYXQgdGhlIGltbXVuaXphdGlvbiBldmVudCBvY2N1cnJlZA0KICovDQpkZWZpbmUgZnVuY3Rpb24gR2V0R2VvZ3JhcGhpY1JlZ2lvbkZvckltbXVuaXphdGlvbihpbW11bml6YXRpb24gSW1tdW5pemF0aW9uKToNCiAgICBXQ29tLk9mZmljaWFsKFtMb2NhdGlvbl0gTCANCiAgICAgICAgd2hlcmUgTC5pZCA9IExhc3QoU3BsaXQoaW1tdW5pemF0aW9uLmxvY2F0aW9uLnJlZmVyZW5jZSwgJy8nKSkNCiAgICAgICAgcmV0dXJuIEwuYWRkcmVzcykuc3RhdGU="
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package who.fhir.smart-immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 23, 2023 19:19+0000">2023-10-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/ig/smart-immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

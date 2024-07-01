@@ -1,0 +1,831 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "t" : [ {
+            "name" : "Description",
+            "value" : "Common logic used in all the measles decisions"
+         } ],
+         "s" : {
+            "r" : "57",
+            "s" : [ {
+               "value" : [ "/*\n@Description: Common logic used in all the measles decisions\n*/\n","library IMMZD2DTMeaslesLogic" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZD2DTMeaslesLogic",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "6:1-6:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "8:1-8:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "10:1-10:27",
+            "localIdentifier" : "WC",
+            "path" : "http://smart.who.int/immunizations-measles/WHOCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "WHOCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","WC" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "11:1-11:36",
+            "localIdentifier" : "Concepts",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZConcepts",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConcepts" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Concepts" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "5",
+            "locator" : "12:1-12:32",
+            "localIdentifier" : "Common",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "6",
+            "locator" : "13:1-13:32",
+            "localIdentifier" : "Config",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZConfig",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Config" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "7",
+            "locator" : "14:1-14:45",
+            "localIdentifier" : "Elements",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZEncounterElements",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "7",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZEncounterElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Elements" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "9",
+            "locator" : "16:1-16:31",
+            "name" : "Today",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "9",
+                  "s" : [ {
+                     "value" : [ "","parameter ","Today"," default " ]
+                  }, {
+                     "r" : "8",
+                     "s" : [ {
+                        "value" : [ "Today","()" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "8",
+               "locator" : "16:25-16:31",
+               "type" : "Today"
+            }
+         }, {
+            "localId" : "12",
+            "locator" : "19:1-19:83",
+            "name" : "Individual is at high risk of contracting measles",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "value" : [ "// TODO: Should these be data elements?\n","parameter ","\"Individual is at high risk of contracting measles\""," " ]
+                  }, {
+                     "r" : "11",
+                     "s" : [ {
+                        "value" : [ "Boolean" ]
+                     } ]
+                  }, {
+                     "r" : "10",
+                     "value" : [ " default ","false" ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "10",
+               "locator" : "19:79-19:83",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "11",
+               "locator" : "19:63-19:69",
+               "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "NamedTypeSpecifier"
+            }
+         }, {
+            "localId" : "15",
+            "locator" : "20:1-20:102",
+            "name" : "Individual is travelling to a country experiencing measles outbreaks",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "15",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Individual is travelling to a country experiencing measles outbreaks\""," " ]
+                  }, {
+                     "r" : "14",
+                     "s" : [ {
+                        "value" : [ "Boolean" ]
+                     } ]
+                  }, {
+                     "r" : "13",
+                     "value" : [ " default ","false" ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "13",
+               "locator" : "20:98-20:102",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "14",
+               "locator" : "20:82-20:88",
+               "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "NamedTypeSpecifier"
+            }
+         }, {
+            "localId" : "18",
+            "locator" : "21:1-21:83",
+            "name" : "Individual is known to be HIV-infected or exposed",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "18",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Individual is known to be HIV-infected or exposed\""," " ]
+                  }, {
+                     "r" : "17",
+                     "s" : [ {
+                        "value" : [ "Boolean" ]
+                     } ]
+                  }, {
+                     "r" : "16",
+                     "value" : [ " default ","false" ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "16",
+               "locator" : "21:79-21:83",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "17",
+               "locator" : "21:63-21:69",
+               "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "NamedTypeSpecifier"
+            }
+         }, {
+            "localId" : "21",
+            "locator" : "22:1-22:68",
+            "name" : "Immune reconstitution was achieved",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "21",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Immune reconstitution was achieved\""," " ]
+                  }, {
+                     "r" : "20",
+                     "s" : [ {
+                        "value" : [ "Boolean" ]
+                     } ]
+                  }, {
+                     "r" : "19",
+                     "value" : [ " default ","false" ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "19",
+               "locator" : "22:64-22:68",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "20",
+               "locator" : "22:48-22:54",
+               "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "NamedTypeSpecifier"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "24:1-24:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "24:1-24:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "24:1-24:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "25",
+            "locator" : "26:1-27:43",
+            "name" : "Most Recent Live Vaccine Dose",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "25",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Most Recent Live Vaccine Dose\"",":\n  " ]
+                  }, {
+                     "r" : "24",
+                     "s" : [ {
+                        "r" : "23",
+                        "s" : [ {
+                           "r" : "22",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "23",
+                           "s" : [ {
+                              "value" : [ "\"Live vaccine dose\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "24",
+                        "s" : [ {
+                           "value" : [ "mostRecent","()" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "24",
+               "locator" : "27:3-27:43",
+               "name" : "mostRecent",
+               "libraryName" : "WC",
+               "type" : "FunctionRef",
+               "signature" : [ {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Immunization",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ],
+               "operand" : [ {
+                  "localId" : "23",
+                  "locator" : "27:3-27:30",
+                  "name" : "Live vaccine dose",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "31",
+            "locator" : "29:1-30:76",
+            "name" : "Date Last Live Vaccine Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "31",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Date Last Live Vaccine Administered\"",":\n  " ]
+                  }, {
+                     "r" : "30",
+                     "s" : [ {
+                        "value" : [ "date from " ]
+                     }, {
+                        "r" : "29",
+                        "s" : [ {
+                           "value" : [ "start of " ]
+                        }, {
+                           "r" : "28",
+                           "s" : [ {
+                              "r" : "27",
+                              "s" : [ {
+                                 "r" : "26",
+                                 "s" : [ {
+                                    "value" : [ "\"Most Recent Live Vaccine Dose\"" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "27",
+                                 "s" : [ {
+                                    "value" : [ "occurrence" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "28",
+                              "s" : [ {
+                                 "value" : [ "toInterval","()" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "30",
+               "locator" : "30:3-30:76",
+               "type" : "DateFrom",
+               "operand" : {
+                  "localId" : "29",
+                  "locator" : "30:13-30:76",
+                  "type" : "Start",
+                  "operand" : {
+                     "localId" : "28",
+                     "locator" : "30:22-30:76",
+                     "name" : "toInterval",
+                     "libraryName" : "WC",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "localId" : "27",
+                        "locator" : "30:22-30:63",
+                        "path" : "occurrence",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "26",
+                           "locator" : "30:22-30:52",
+                           "name" : "Most Recent Live Vaccine Dose",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "34",
+            "locator" : "32:1-33:47",
+            "name" : "No Live Vaccine Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "34",
+                  "s" : [ {
+                     "value" : [ "","define ","\"No Live Vaccine Administered\"",":\n  " ]
+                  }, {
+                     "r" : "33",
+                     "s" : [ {
+                        "r" : "32",
+                        "s" : [ {
+                           "value" : [ "\"Date Last Live Vaccine Administered\"" ]
+                        } ]
+                     }, {
+                        "value" : [ " is null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "33",
+               "locator" : "33:3-33:47",
+               "type" : "IsNull",
+               "operand" : {
+                  "localId" : "32",
+                  "locator" : "33:3-33:39",
+                  "name" : "Date Last Live Vaccine Administered",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "38",
+            "locator" : "35:1-36:35",
+            "name" : "Number Of MCV0 Doses Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "38",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Number Of MCV0 Doses Administered\"",":\n  " ]
+                  }, {
+                     "r" : "37",
+                     "s" : [ {
+                        "value" : [ "Count","(" ]
+                     }, {
+                        "r" : "36",
+                        "s" : [ {
+                           "r" : "35",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "36",
+                           "s" : [ {
+                              "value" : [ "\"MCV Dose 0 Dose\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "37",
+               "locator" : "36:3-36:35",
+               "type" : "Count",
+               "source" : {
+                  "localId" : "36",
+                  "locator" : "36:9-36:34",
+                  "name" : "MCV Dose 0 Dose",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "42",
+            "locator" : "38:1-39:43",
+            "name" : "Number Of Primary Series Doses Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "42",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Number Of Primary Series Doses Administered\"",":\n  " ]
+                  }, {
+                     "r" : "41",
+                     "s" : [ {
+                        "value" : [ "Count","(" ]
+                     }, {
+                        "r" : "40",
+                        "s" : [ {
+                           "r" : "39",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "40",
+                           "s" : [ {
+                              "value" : [ "\"MCV Primary Series Dose\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "41",
+               "locator" : "39:3-39:43",
+               "type" : "Count",
+               "source" : {
+                  "localId" : "40",
+                  "locator" : "39:9-39:42",
+                  "name" : "MCV Primary Series Dose",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "46",
+            "locator" : "41:1-42:52",
+            "name" : "Measles Routine Immunization Schedule Complete",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "46",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Measles Routine Immunization Schedule Complete\"",":\n  " ]
+                  }, {
+                     "r" : "45",
+                     "s" : [ {
+                        "r" : "43",
+                        "s" : [ {
+                           "value" : [ "\"Number Of Primary Series Doses Administered\"" ]
+                        } ]
+                     }, {
+                        "r" : "44",
+                        "value" : [ " ",">="," ","2" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "45",
+               "locator" : "42:3-42:52",
+               "type" : "GreaterOrEqual",
+               "signature" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "43",
+                  "locator" : "42:3-42:47",
+                  "name" : "Number Of Primary Series Doses Administered",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "44",
+                  "locator" : "42:52",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "2",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "49",
+            "locator" : "44:1-45:54",
+            "name" : "Measles Routine Immunization Schedule Incomplete",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "49",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Measles Routine Immunization Schedule Incomplete\"",":\n  " ]
+                  }, {
+                     "r" : "48",
+                     "s" : [ {
+                        "value" : [ "not " ]
+                     }, {
+                        "r" : "47",
+                        "s" : [ {
+                           "value" : [ "\"Measles Routine Immunization Schedule Complete\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "48",
+               "locator" : "45:3-45:54",
+               "type" : "Not",
+               "operand" : {
+                  "localId" : "47",
+                  "locator" : "45:7-45:54",
+                  "name" : "Measles Routine Immunization Schedule Complete",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "53",
+            "locator" : "47:1-48:42",
+            "name" : "Number Of Supplementary Doses Administered",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "53",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Number Of Supplementary Doses Administered\"",":\n  " ]
+                  }, {
+                     "r" : "52",
+                     "s" : [ {
+                        "value" : [ "Count","(" ]
+                     }, {
+                        "r" : "51",
+                        "s" : [ {
+                           "r" : "50",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "51",
+                           "s" : [ {
+                              "value" : [ "\"MCV Supplementary Dose\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "52",
+               "locator" : "48:3-48:42",
+               "type" : "Count",
+               "source" : {
+                  "localId" : "51",
+                  "locator" : "48:9-48:41",
+                  "name" : "MCV Supplementary Dose",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "57",
+            "locator" : "50:1-51:53",
+            "name" : "Draft Medication Request ID for MCV dose",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "57",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Draft Medication Request ID for MCV dose\"",":\n  " ]
+                  }, {
+                     "r" : "56",
+                     "s" : [ {
+                        "r" : "55",
+                        "s" : [ {
+                           "r" : "54",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "55",
+                           "s" : [ {
+                              "value" : [ "\"Most Recent MCV Immunization Proposal\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "56",
+                        "s" : [ {
+                           "value" : [ "id" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "56",
+               "locator" : "51:3-51:53",
+               "path" : "id",
+               "type" : "Property",
+               "source" : {
+                  "localId" : "55",
+                  "locator" : "51:3-51:50",
+                  "name" : "Most Recent MCV Immunization Proposal",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               }
+            }
+         } ]
+      }
+   }
+}

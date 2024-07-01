@@ -1,0 +1,127 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/PlanDefinition/IMMZDTImmunizationStrategy> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZDTImmunizationStrategy"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PlanDefinition IMMZDTImmunizationStrategy</b></p><a name=\"IMMZDTImmunizationStrategy\"> </a><a name=\"hcIMMZDTImmunizationStrategy\"> </a><a name=\"hcIMMZDTImmunizationStrategy-en-US\"> </a><p><b>url</b>: <a href=\"PlanDefinition-IMMZDTImmunizationStrategy.html\">PlanDefinition IMMZ.DT.Immunization Strategy</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZDTImmunizationStrategy</p><p><b>title</b>: IMMZ.DT.Immunization Strategy</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type workflow-definition}\">Workflow Definition</span></p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-07-01 13:21:26+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: </p><div><p>Provide vaccinations according to the recommended schedule</p>\n</div><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style=\"display: none\">*</td><td>Citation</td><td><div><p>WHO recommendations for routine immunization - summary tables (March 2023)</p>\n</div></td></tr></table><blockquote><p><b>action</b></p><p><b>title</b>: Check Immunizations</p><p><b>description</b>: Check immunization plan definitions to see what is required.</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs dispense-medications}\">Dispense Medications</span></p><p><b>selectionBehavior</b>: All</p><h3>Actions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Title</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>SelectionBehavior</b></td><td><b>Definition[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Measles Dose 0</td><td>Consider measles dose 0 immunization</td><td><span title=\"Codes:{http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs dispense-medications}\">Dispense Medications</span></td><td>All</td><td><a href=\"PlanDefinition-IMMZD2DTMeaslesDose0.html\">IMMZ.D2.DT.Measles MCV Dose 0</a></td></tr><tr><td style=\"display: none\">*</td><td>Measles Routine Immunization</td><td>Provide measles routine immunization</td><td><span title=\"Codes:{http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs dispense-medications}\">Dispense Medications</span></td><td>All</td><td><a href=\"PlanDefinition-IMMZD2DTMeaslesOT.html\">IMMZ.D2.DT.Measles Ongoing Transmission</a></td></tr><tr><td style=\"display: none\">*</td><td>Measles Supplementary Dose</td><td>Consider measles supplementary dose</td><td><span title=\"Codes:{http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs dispense-medications}\">Dispense Medications</span></td><td>All</td><td><a href=\"PlanDefinition-IMMZD2DTMeaslesSupplementary.html\">IMMZ.D2.DT.Measles MCV Dose 0</a></td></tr><tr><td style=\"display: none\">*</td><td>Measles Contraindications</td><td>Check measles contraindications</td><td><span title=\"Codes:{http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs dispense-medications}\">Dispense Medications</span></td><td>All</td><td><a href=\"PlanDefinition-IMMZD5DTMeaslesCI.html\">IMMZ.D5.DT.Measles.Contraindication</a></td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/PlanDefinition/IMMZDTImmunizationStrategy"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZDTImmunizationStrategy"] ; # 
+  fhir:title [ fhir:v "IMMZ.DT.Immunization Strategy"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "workflow-definition" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-01T13:21:26+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Provide vaccinations according to the recommended schedule"] ; # 
+  fhir:relatedArtifact ( [
+     fhir:type [ fhir:v "citation" ] ;
+     fhir:citation [ fhir:v "WHO recommendations for routine immunization - summary tables (March 2023)" ]
+  ] ) ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "Check Immunizations" ] ;
+     fhir:description [ fhir:v "Check immunization plan definitions to see what is required." ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "dispense-medications" ]
+       ] )
+     ] ) ;
+     fhir:selectionBehavior [ fhir:v "all" ] ;
+     fhir:action ( [
+       fhir:title [ fhir:v "Measles Dose 0" ] ;
+       fhir:description [ fhir:v "Consider measles dose 0 immunization" ] ;
+       fhir:code ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "dispense-medications" ]
+         ] )
+       ] ) ;
+       fhir:selectionBehavior [ fhir:v "all" ] ;
+       fhir:definition [
+         fhir:v "http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesDose0"^^xsd:anyURI ;
+         fhir:link <http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesDose0>
+       ]
+     ] [
+       fhir:title [ fhir:v "Measles Routine Immunization" ] ;
+       fhir:description [ fhir:v "Provide measles routine immunization" ] ;
+       fhir:code ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "dispense-medications" ]
+         ] )
+       ] ) ;
+       fhir:selectionBehavior [ fhir:v "all" ] ;
+       fhir:definition [
+         fhir:v "http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesOT"^^xsd:anyURI ;
+         fhir:link <http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesOT>
+       ]
+     ] [
+       fhir:title [ fhir:v "Measles Supplementary Dose" ] ;
+       fhir:description [ fhir:v "Consider measles supplementary dose" ] ;
+       fhir:code ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "dispense-medications" ]
+         ] )
+       ] ) ;
+       fhir:selectionBehavior [ fhir:v "all" ] ;
+       fhir:definition [
+         fhir:v "http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesSupplementary"^^xsd:anyURI ;
+         fhir:link <http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesSupplementary>
+       ]
+     ] [
+       fhir:title [ fhir:v "Measles Contraindications" ] ;
+       fhir:description [ fhir:v "Check measles contraindications" ] ;
+       fhir:code ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "dispense-medications" ]
+         ] )
+       ] ) ;
+       fhir:selectionBehavior [ fhir:v "all" ] ;
+       fhir:definition [
+         fhir:v "http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD5DTMeaslesCI"^^xsd:anyURI ;
+         fhir:link <http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD5DTMeaslesCI>
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

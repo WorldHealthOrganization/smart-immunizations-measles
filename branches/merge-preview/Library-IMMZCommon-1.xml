@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="141">
+         <a:s>library IMMZCommon</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZCommon" system="http://smart.who.int/immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <statements>
+      <def localId="7" locator="11:1-12:26" name="Only" context="Unfiltered" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>/**
+ * @description Fetches a singleton protocol applied from an immunization
+ * @comment The protocol list from the immunization
+ */
+define function Only(protocols List&lt;FHIR.Immunization.ProtocolApplied>):
+  </a:s>
+               <a:s r="6">
+                  <a:s r="6">
+                     <a:s>singleton from </a:s>
+                     <a:s r="5">
+                        <a:s>protocols</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="6" locator="12:3-12:26" xsi:type="SingletonFrom">
+            <operand localId="5" locator="12:18-12:26" name="protocols" xsi:type="OperandRef"/>
+         </expression>
+         <operand name="protocols">
+            <operandTypeSpecifier localId="4" locator="11:32-11:70" xsi:type="ListTypeSpecifier">
+               <elementType localId="3" locator="11:37-11:69" name="fhir:Immunization.ProtocolApplied" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="12" locator="18:1-19:26" name="only" context="Unfiltered" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>/**
+ * @description Fetches a singleton protocol applied from an immunization
+ * @comment The protocol list from the immunization
+ */
+define fluent function only(protocols List&lt;FHIR.Immunization.ProtocolApplied>):
+  </a:s>
+               <a:s r="11">
+                  <a:s r="11">
+                     <a:s>singleton from </a:s>
+                     <a:s r="10">
+                        <a:s>protocols</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="11" locator="19:3-19:26" xsi:type="SingletonFrom">
+            <operand localId="10" locator="19:18-19:26" name="protocols" xsi:type="OperandRef"/>
+         </expression>
+         <operand name="protocols">
+            <operandTypeSpecifier localId="9" locator="18:39-18:77" xsi:type="ListTypeSpecifier">
+               <elementType localId="8" locator="18:44-18:76" name="fhir:Immunization.ProtocolApplied" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="32" locator="24:1-30:4" name="ToDate" context="Unfiltered" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="32">
+               <a:s>/**
+ * @description Takes the date choice of a date/string choice (for Immunization date)
+ */
+define function ToDate(choice Choice&lt;FHIR.date, FHIR.string>):
+  </a:s>
+               <a:s r="31">
+                  <a:s r="31">
+                     <a:s>case
+	  </a:s>
+                     <a:s r="22">
+                        <a:s>when </a:s>
+                        <a:s r="18">
+                           <a:s r="16">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="17">
+                              <a:s>FHIR.date</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+    	</a:s>
+                        <a:s r="21">
+                           <a:s r="19">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="20">
+                              <a:s>FHIR.date</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+		else
+      </a:s>
+                     <a:s r="30">
+                        <a:s>Message(</a:s>
+                        <a:s r="25">
+                           <a:s r="23">null as </a:s>
+                           <a:s r="24">
+                              <a:s>FHIR.date</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="26">, true, </a:s>
+                        <a:s r="27">
+                           <a:s>'1'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="28">
+                           <a:s>'Error'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="29">
+                           <a:s>'Cannot compute a date from a String value'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>
+	end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="31" locator="25:3-30:4" xsi:type="Case">
+            <caseItem localId="22" locator="26:4-27:24">
+               <when localId="18" locator="26:9-26:27" xsi:type="Is">
+                  <operand localId="16" locator="26:9-26:14" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="17" locator="26:19-26:27" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="21" locator="27:6-27:24" strict="false" xsi:type="As">
+                  <operand localId="19" locator="27:6-27:11" name="choice" xsi:type="OperandRef"/>
+                  <asTypeSpecifier localId="20" locator="27:16-27:24" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+               </then>
+            </caseItem>
+            <else localId="30" locator="29:7-29:97" xsi:type="Message">
+               <source localId="25" locator="29:15-29:31" strict="false" xsi:type="As">
+                  <operand localId="23" locator="29:15-29:18" xsi:type="Null"/>
+                  <asTypeSpecifier localId="24" locator="29:23-29:31" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+               </source>
+               <condition localId="26" locator="29:34-29:37" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+               <code localId="27" locator="29:40-29:42" valueType="t:String" value="1" xsi:type="Literal"/>
+               <severity localId="28" locator="29:45-29:51" valueType="t:String" value="Error" xsi:type="Literal"/>
+               <message localId="29" locator="29:54-29:96" valueType="t:String" value="Cannot compute a date from a String value" xsi:type="Literal"/>
+            </else>
+         </expression>
+         <operand name="choice">
+            <operandTypeSpecifier localId="15" locator="24:31-24:60" xsi:type="ChoiceTypeSpecifier">
+               <choice localId="13" locator="24:38-24:46" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+               <choice localId="14" locator="24:49-24:59" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="52" locator="35:1-41:4" name="ToDateTime" context="Unfiltered" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="52">
+               <a:s>/**
+ * @description Takes the date choice of a date/string choice (for Immunization date)
+ */
+define function ToDateTime(choice Choice&lt;FHIR.dateTime, FHIR.string>):
+  </a:s>
+               <a:s r="51">
+                  <a:s r="51">
+                     <a:s>case
+	  </a:s>
+                     <a:s r="42">
+                        <a:s>when </a:s>
+                        <a:s r="38">
+                           <a:s r="36">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="37">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+    	</a:s>
+                        <a:s r="41">
+                           <a:s r="39">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="40">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+		else
+      </a:s>
+                     <a:s r="50">
+                        <a:s>Message(</a:s>
+                        <a:s r="45">
+                           <a:s r="43">null as </a:s>
+                           <a:s r="44">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="46">, true, </a:s>
+                        <a:s r="47">
+                           <a:s>'1'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="48">
+                           <a:s>'Error'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="49">
+                           <a:s>'Cannot compute a date from a String value'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>
+	end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="51" locator="36:3-41:4" xsi:type="Case">
+            <caseItem localId="42" locator="37:4-38:28">
+               <when localId="38" locator="37:9-37:31" xsi:type="Is">
+                  <operand localId="36" locator="37:9-37:14" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="37" locator="37:19-37:31" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="41" locator="38:6-38:28" strict="false" xsi:type="As">
+                  <operand localId="39" locator="38:6-38:11" name="choice" xsi:type="OperandRef"/>
+                  <asTypeSpecifier localId="40" locator="38:16-38:28" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               </then>
+            </caseItem>
+            <else localId="50" locator="40:7-40:101" xsi:type="Message">
+               <signature name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <source localId="45" locator="40:15-40:35" strict="false" xsi:type="As">
+                  <operand localId="43" locator="40:15-40:18" xsi:type="Null"/>
+                  <asTypeSpecifier localId="44" locator="40:23-40:35" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               </source>
+               <condition localId="46" locator="40:38-40:41" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+               <code localId="47" locator="40:44-40:46" valueType="t:String" value="1" xsi:type="Literal"/>
+               <severity localId="48" locator="40:49-40:55" valueType="t:String" value="Error" xsi:type="Literal"/>
+               <message localId="49" locator="40:58-40:100" valueType="t:String" value="Cannot compute a date from a String value" xsi:type="Literal"/>
+            </else>
+         </expression>
+         <operand name="choice">
+            <operandTypeSpecifier localId="35" locator="35:35-35:68" xsi:type="ChoiceTypeSpecifier">
+               <choice localId="33" locator="35:42-35:54" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               <choice localId="34" locator="35:57-35:67" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="72" locator="47:1-53:4" name="ToPositiveInt" context="Unfiltered" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="72">
+               <a:s>/**
+ * @description Takes a choice of FHIR.string and FHIR.positiveInt and ensures the result is a FHIR.positiveInt
+ */
+define function ToPositiveInt(choice Choice&lt;FHIR.positiveInt, FHIR.string>):
+  </a:s>
+               <a:s r="71">
+                  <a:s r="71">
+                     <a:s>case
+	  </a:s>
+                     <a:s r="62">
+                        <a:s>when </a:s>
+                        <a:s r="58">
+                           <a:s r="56">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="57">
+                              <a:s>FHIR.positiveInt</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+    	</a:s>
+                        <a:s r="61">
+                           <a:s r="59">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="60">
+                              <a:s>FHIR.positiveInt</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+		else
+      </a:s>
+                     <a:s r="70">
+                        <a:s>Message(</a:s>
+                        <a:s r="65">
+                           <a:s r="63">null as </a:s>
+                           <a:s r="64">
+                              <a:s>FHIR.positiveInt</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="66">, true, </a:s>
+                        <a:s r="67">
+                           <a:s>'1'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="68">
+                           <a:s>'Error'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="69">
+                           <a:s>'Cannot compute a positive from a String value'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s> // TODO: I'm sure that this is supported somehow?
+	end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="71" locator="48:3-53:4" xsi:type="Case">
+            <caseItem localId="62" locator="49:4-50:31">
+               <when localId="58" locator="49:9-49:34" xsi:type="Is">
+                  <operand localId="56" locator="49:9-49:14" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="57" locator="49:19-49:34" name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="61" locator="50:6-50:31" strict="false" xsi:type="As">
+                  <operand localId="59" locator="50:6-50:11" name="choice" xsi:type="OperandRef"/>
+                  <asTypeSpecifier localId="60" locator="50:16-50:31" name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+               </then>
+            </caseItem>
+            <else localId="70" locator="52:7-52:108" xsi:type="Message">
+               <signature name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <source localId="65" locator="52:15-52:38" strict="false" xsi:type="As">
+                  <operand localId="63" locator="52:15-52:18" xsi:type="Null"/>
+                  <asTypeSpecifier localId="64" locator="52:23-52:38" name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+               </source>
+               <condition localId="66" locator="52:41-52:44" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+               <code localId="67" locator="52:47-52:49" valueType="t:String" value="1" xsi:type="Literal"/>
+               <severity localId="68" locator="52:52-52:58" valueType="t:String" value="Error" xsi:type="Literal"/>
+               <message localId="69" locator="52:61-52:107" valueType="t:String" value="Cannot compute a positive from a String value" xsi:type="Literal"/>
+            </else>
+         </expression>
+         <operand name="choice">
+            <operandTypeSpecifier localId="55" locator="47:38-47:74" xsi:type="ChoiceTypeSpecifier">
+               <choice localId="53" locator="47:45-47:60" name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+               <choice localId="54" locator="47:63-47:73" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="113" locator="59:1-69:4" name="ExtractMedicationCode" context="Unfiltered" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="113">
+               <a:s>/**
+ * @description Takes a choice between a Medication and a CodeableConcept and returns just the code of the medication
+ */
+define function ExtractMedicationCode(choice Choice&lt;FHIR.CodeableConcept, FHIR.Reference>):
+  </a:s>
+               <a:s r="112">
+                  <a:s r="112">
+                     <a:s>case
+	  </a:s>
+                     <a:s r="82">
+                        <a:s>when </a:s>
+                        <a:s r="78">
+                           <a:s r="76">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="77">
+                              <a:s>FHIR.CodeableConcept</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+    	</a:s>
+                        <a:s r="81">
+                           <a:s r="79">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="80">
+                              <a:s>FHIR.CodeableConcept</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="103">
+                        <a:s>when </a:s>
+                        <a:s r="85">
+                           <a:s r="83">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="84">
+                              <a:s>FHIR.Reference</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+      </a:s>
+                        <a:s r="102">
+                           <a:s>First(</a:s>
+                           <a:s r="101">
+                              <a:s>
+                                 <a:s r="87">
+                                    <a:s r="86">
+                                       <a:s r="86">
+                                          <a:s>[Medication]</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> M</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> 
+        </a:s>
+                              <a:s r="95">
+                                 <a:s>where </a:s>
+                                 <a:s r="95">
+                                    <a:s r="89">
+                                       <a:s r="88">
+                                          <a:s>M</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="89">
+                                          <a:s>id</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> = </a:s>
+                                    <a:s r="94">
+                                       <a:s>Last(</a:s>
+                                       <a:s r="93">
+                                          <a:s>Split(</a:s>
+                                          <a:s r="91">
+                                             <a:s r="90">
+                                                <a:s>choice</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="91">
+                                                <a:s>reference</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>, </a:s>
+                                          <a:s r="92">
+                                             <a:s>'/'</a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        </a:s>
+                              <a:s r="100">
+                                 <a:s>return </a:s>
+                                 <a:s r="99">
+                                    <a:s r="97">
+                                       <a:s r="96">
+                                          <a:s>M</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="97">
+                                          <a:s>code</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> as </a:s>
+                                    <a:s r="98">
+                                       <a:s>FHIR.CodeableConcept</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+		else
+      </a:s>
+                     <a:s r="111">
+                        <a:s>Message(</a:s>
+                        <a:s r="106">
+                           <a:s r="104">null as </a:s>
+                           <a:s r="105">
+                              <a:s>FHIR.CodeableConcept</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="107">, true, </a:s>
+                        <a:s r="108">
+                           <a:s>'1'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="109">
+                           <a:s>'Error'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="110">
+                           <a:s>'Cannot compute a medication code'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s> // TODO: I'm sure that this is supported somehow?
+	end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="112" locator="60:3-69:4" xsi:type="Case">
+            <caseItem localId="82" locator="61:4-62:35">
+               <when localId="78" locator="61:9-61:38" xsi:type="Is">
+                  <operand localId="76" locator="61:9-61:14" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="77" locator="61:19-61:38" name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="81" locator="62:6-62:35" strict="false" xsi:type="As">
+                  <operand localId="79" locator="62:6-62:11" name="choice" xsi:type="OperandRef"/>
+                  <asTypeSpecifier localId="80" locator="62:16-62:35" name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+               </then>
+            </caseItem>
+            <caseItem localId="103" locator="63:5-66:46">
+               <when localId="85" locator="63:10-63:33" xsi:type="Is">
+                  <operand localId="83" locator="63:10-63:15" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="84" locator="63:20-63:33" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="102" locator="64:7-66:46" xsi:type="First">
+                  <source localId="101" locator="64:13-66:45" xsi:type="Query">
+                     <source localId="87" locator="64:13-64:26" alias="M">
+                        <expression localId="86" locator="64:13-64:24" dataType="fhir:Medication" templateId="http://hl7.org/fhir/StructureDefinition/Medication" xsi:type="Retrieve"/>
+                     </source>
+                     <where localId="95" locator="65:9-65:55" xsi:type="Equal">
+                        <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                        <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                        <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <signature name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="89" locator="65:15-65:18" path="id" scope="M" xsi:type="Property"/>
+                        </operand>
+                        <operand localId="94" locator="65:22-65:55" xsi:type="Last">
+                           <source localId="93" locator="65:27-65:54" xsi:type="Split">
+                              <stringToSplit name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <signature name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="91" locator="65:33-65:48" path="reference" xsi:type="Property">
+                                    <source localId="90" locator="65:33-65:38" name="choice" xsi:type="OperandRef"/>
+                                 </operand>
+                              </stringToSplit>
+                              <separator localId="92" locator="65:51-65:53" valueType="t:String" value="/" xsi:type="Literal"/>
+                           </source>
+                        </operand>
+                     </where>
+                     <return localId="100" locator="66:9-66:45">
+                        <expression localId="99" locator="66:16-66:45" strict="false" xsi:type="As">
+                           <operand localId="97" locator="66:16-66:21" path="code" scope="M" xsi:type="Property"/>
+                           <asTypeSpecifier localId="98" locator="66:26-66:45" name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                        </expression>
+                     </return>
+                  </source>
+               </then>
+            </caseItem>
+            <else localId="111" locator="68:7-68:99" xsi:type="Message">
+               <signature name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+               <source localId="106" locator="68:15-68:42" strict="false" xsi:type="As">
+                  <operand localId="104" locator="68:15-68:18" xsi:type="Null"/>
+                  <asTypeSpecifier localId="105" locator="68:23-68:42" name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+               </source>
+               <condition localId="107" locator="68:45-68:48" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+               <code localId="108" locator="68:51-68:53" valueType="t:String" value="1" xsi:type="Literal"/>
+               <severity localId="109" locator="68:56-68:62" valueType="t:String" value="Error" xsi:type="Literal"/>
+               <message localId="110" locator="68:65-68:98" valueType="t:String" value="Cannot compute a medication code" xsi:type="Literal"/>
+            </else>
+         </expression>
+         <operand name="choice">
+            <operandTypeSpecifier localId="75" locator="59:46-59:89" xsi:type="ChoiceTypeSpecifier">
+               <choice localId="73" locator="59:53-59:72" name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+               <choice localId="74" locator="59:75-59:88" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="141" locator="75:1-83:4" name="ExtractMedicationInitiationDate" context="Unfiltered" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="141">
+               <a:s>/**
+ * @description Takes a choice between a Medication and a CodeableConcept and returns just the code of the medication
+ */
+define function ExtractMedicationInitiationDate(choice Choice&lt;FHIR.dateTime, FHIR.Period>):
+  </a:s>
+               <a:s r="140">
+                  <a:s r="140">
+                     <a:s>case
+	  </a:s>
+                     <a:s r="124">
+                        <a:s>when </a:s>
+                        <a:s r="119">
+                           <a:s r="117">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="118">
+                              <a:s>FHIR.Period</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+    	</a:s>
+                        <a:s r="123">
+                           <a:s>start of </a:s>
+                           <a:s r="122">
+                              <a:s>(</a:s>
+                              <a:s r="122">
+                                 <a:s r="120">
+                                    <a:s>choice</a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="121">
+                                    <a:s>FHIR.Period</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="131">
+                        <a:s>when </a:s>
+                        <a:s r="127">
+                           <a:s r="125">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> is </a:s>
+                           <a:s r="126">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+      </a:s>
+                        <a:s r="130">
+                           <a:s r="128">
+                              <a:s>choice</a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="129">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+		else
+      </a:s>
+                     <a:s r="139">
+                        <a:s>Message(</a:s>
+                        <a:s r="134">
+                           <a:s r="132">null as </a:s>
+                           <a:s r="133">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="135">, true, </a:s>
+                        <a:s r="136">
+                           <a:s>'1'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="137">
+                           <a:s>'Error'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="138">
+                           <a:s>'Cannot compute medication treatment initiation date'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s> // TODO: I'm sure that this is supported somehow?
+	end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="140" locator="76:3-83:4" xsi:type="Case">
+            <caseItem localId="124" locator="77:4-78:37">
+               <when localId="119" locator="77:9-77:29" xsi:type="Is">
+                  <operand localId="117" locator="77:9-77:14" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="118" locator="77:19-77:29" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="123" locator="78:6-78:37" xsi:type="Start">
+                  <operand name="ToInterval" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <signature name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="122" locator="78:15-78:37" strict="false" xsi:type="As">
+                        <operand localId="120" locator="78:16-78:21" name="choice" xsi:type="OperandRef"/>
+                        <asTypeSpecifier localId="121" locator="78:26-78:36" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     </operand>
+                  </operand>
+               </then>
+            </caseItem>
+            <caseItem localId="131" locator="79:5-80:29">
+               <when localId="127" locator="79:10-79:32" xsi:type="Is">
+                  <operand localId="125" locator="79:10-79:15" name="choice" xsi:type="OperandRef"/>
+                  <isTypeSpecifier localId="126" locator="79:20-79:32" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <signature name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="130" locator="80:7-80:29" strict="false" xsi:type="As">
+                     <operand localId="128" locator="80:7-80:12" name="choice" xsi:type="OperandRef"/>
+                     <asTypeSpecifier localId="129" locator="80:17-80:29" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  </operand>
+               </then>
+            </caseItem>
+            <else name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <signature name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="139" locator="82:7-82:111" xsi:type="Message">
+                  <signature name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Boolean" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <source localId="134" locator="82:15-82:35" strict="false" xsi:type="As">
+                     <operand localId="132" locator="82:15-82:18" xsi:type="Null"/>
+                     <asTypeSpecifier localId="133" locator="82:23-82:35" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  </source>
+                  <condition localId="135" locator="82:38-82:41" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+                  <code localId="136" locator="82:44-82:46" valueType="t:String" value="1" xsi:type="Literal"/>
+                  <severity localId="137" locator="82:49-82:55" valueType="t:String" value="Error" xsi:type="Literal"/>
+                  <message localId="138" locator="82:58-82:110" valueType="t:String" value="Cannot compute medication treatment initiation date" xsi:type="Literal"/>
+               </operand>
+            </else>
+         </expression>
+         <operand name="choice">
+            <operandTypeSpecifier localId="116" locator="75:56-75:89" xsi:type="ChoiceTypeSpecifier">
+               <choice localId="114" locator="75:63-75:75" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               <choice localId="115" locator="75:78-75:88" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+   </statements>
+</library>

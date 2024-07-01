@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "VaccineProducts"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Properties</b></p><p><b>This code system  defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td></tr><tr><td>classification</td><td>http://smart.who.int/ig/smart-immunizations-measles#classification</td><td>code</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">20009060/2<a name=\"VaccineProducts-20009060.472\"> </a></td><td>Serum Institute of India Measles vaccine</td></tr><tr><td style=\"white-space:nowrap\">7680007030014<a name=\"VaccineProducts-7680007030014\"> </a></td><td>M-M-RvaxPRO</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles/CodeSystem/VaccineProducts"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VaccineProducts"] ; # 
+  fhir:title [ fhir:v "Vaccine Product codes CodeSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2023-10-18T20:43:12+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Vaccine Product codes, containing the different available products."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "classification" ] ;
+     fhir:uri [ fhir:v "http://smart.who.int/ig/smart-immunizations-measles#classification"^^xsd:anyURI ] ;
+     fhir:type [ fhir:v "code" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "20009060/2" ] ;
+     fhir:display [ fhir:v "Serum Institute of India Measles vaccine" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "classification" ] ;
+       fhir:value [ fhir:v "XM8L15" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "7680007030014" ] ;
+     fhir:display [ fhir:v "M-M-RvaxPRO" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "classification" ] ;
+       fhir:value [ fhir:v "XM8TF3" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

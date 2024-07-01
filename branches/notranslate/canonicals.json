@@ -1,0 +1,210 @@
+[
+  {
+    "id" : "IMMZ-DT-08-Measles-MR",
+    "type" : "ActivityDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ActivityDefinition/IMMZ.DT.08.Measles.MR",
+    "version" : "0.1.0",
+    "name" : "IMMZ-DT-08-Measles-MR"
+  },
+  {
+    "id" : "CommunityHealthWorker",
+    "type" : "ActorDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition/CommunityHealthWorker",
+    "version" : "0.1.0",
+    "name" : "Community Health Worker"
+  },
+  {
+    "id" : "EPIManager",
+    "type" : "ActorDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition/EPIManager",
+    "version" : "0.1.0",
+    "name" : "Expanded Programme on Immunization (EPI) Manager"
+  },
+  {
+    "id" : "HealthWorker",
+    "type" : "ActorDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition/HealthWorker",
+    "version" : "0.1.0",
+    "name" : "HealthcareWorker"
+  },
+  {
+    "id" : "IMMZ-C",
+    "type" : "CodeSystem",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-C",
+    "version" : "0.1.0",
+    "name" : "IMMZ_C"
+  },
+  {
+    "id" : "IMMZ-D1",
+    "type" : "CodeSystem",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1"
+  },
+  {
+    "id" : "IMMZ-D1.ConceptMap",
+    "type" : "ConceptMap",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ConceptMap/IMMZ-D1.ConceptMap",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_ConceptMap"
+  },
+  {
+    "id" : "IMMZ.C.ConceptMap",
+    "type" : "ConceptMap",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ConceptMap/IMMZ.C.ConceptMap",
+    "version" : "0.1.0",
+    "name" : "IMMZ_C_ConceptMap"
+  },
+  {
+    "id" : "IMMZCSexToAdministrativeGender",
+    "type" : "ConceptMap",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ConceptMap/IMMZCSexToAdministrativeGender",
+    "version" : "0.1.0",
+    "name" : "IMMZCSexToAdministrativeGender"
+  },
+  {
+    "id" : "smart-immunizations-measles",
+    "type" : "ImplementationGuide",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ImplementationGuide/smart-immunizations-measles",
+    "version" : "0.1.0",
+    "name" : "SMART"
+  },
+  {
+    "id" : "IMMZ-DT-08-Measles",
+    "type" : "PlanDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/PlanDefinition/IMMZ-DT-08-Measles",
+    "version" : "0.1.0",
+    "name" : "IMMZ.DT.08.Measles"
+  },
+  {
+    "id" : "Questionnaire-IMMZCRegisterClient",
+    "type" : "Questionnaire",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/Questionnaire/Questionnaire-IMMZCRegisterClient",
+    "version" : "0.1.0",
+    "name" : "ClientRegistrationQuestionnaire"
+  },
+  {
+    "id" : "Questionnaire-IMMZD1ClientHistory",
+    "type" : "Questionnaire",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/Questionnaire/Questionnaire-IMMZD1ClientHistory",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "immz-e-fxnreq",
+    "type" : "Requirements",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/Requirements/immz-e-fxnreq",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "IMMZ-D1-client-history-measles",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/StructureDefinition/IMMZ-D1-client-history-measles",
+    "version" : "0.1.0",
+    "name" : "ClientHistoryMeasles"
+  },
+  {
+    "id" : "IMMZCRegisterClient",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/StructureDefinition/IMMZCRegisterClient",
+    "version" : "0.1.0",
+    "name" : "IMMZCRegisterClient"
+  },
+  {
+    "id" : "IMMZCLMToPatient",
+    "type" : "StructureMap",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/StructureMap/IMMZCLMToPatient",
+    "version" : "0.1.0",
+    "name" : "IMMZCLMToPatient"
+  },
+  {
+    "id" : "IMMZCQRToLM",
+    "type" : "StructureMap",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/StructureMap/IMMZCQRToLM",
+    "version" : "0.1.0",
+    "name" : "IMMZCQRToLM"
+  },
+  {
+    "id" : "IMMZCQRToPatient",
+    "type" : "StructureMap",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/StructureMap/IMMZCQRToPatient",
+    "version" : "0.1.0",
+    "name" : "IMMZCQRToPatient"
+  },
+  {
+    "id" : "IMMZ-C-DE5",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-C-DE5",
+    "version" : "0.1.0",
+    "name" : "IMMZ_C_DE5"
+  },
+  {
+    "id" : "IMMZ-D1.DE10",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE10",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE10"
+  },
+  {
+    "id" : "IMMZ-D1.DE35",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE35",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE35"
+  },
+  {
+    "id" : "IMMZ-D1.DE52",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE52",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE52"
+  },
+  {
+    "id" : "IMMZ-D1.DE56",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE56",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE56"
+  },
+  {
+    "id" : "IMMZ-D1.DE61",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE61",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE61"
+  },
+  {
+    "id" : "IMMZ-D1.DE65",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE65",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE65"
+  },
+  {
+    "id" : "IMMZ-D1.DE68",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE68",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE68"
+  },
+  {
+    "id" : "IMMZ-D1.DE73",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE73",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE73"
+  },
+  {
+    "id" : "IMMZ-D1.DE84",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE84",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE84"
+  },
+  {
+    "id" : "IMMZ-D1.DE87",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-immunizations-measles/ValueSet/IMMZ-D1.DE87",
+    "version" : "0.1.0",
+    "name" : "IMMZ_D1_DE87"
+  }
+]

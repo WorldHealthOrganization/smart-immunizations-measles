@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="IMMZD2DTMeaslesSupplementary"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PlanDefinition IMMZD2DTMeaslesSupplementary</b></p><a name="IMMZD2DTMeaslesSupplementary"> </a><a name="hcIMMZD2DTMeaslesSupplementary"> </a><a name="hcIMMZD2DTMeaslesSupplementary-en-US"> </a><p><b>url</b>: <a href="PlanDefinition-IMMZD2DTMeaslesSupplementary.html">PlanDefinition IMMZ.D2.DT.Measles MCV Dose 0</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZD2DTMeaslesSupplementary</p><p><b>title</b>: IMMZ.D2.DT.Measles MCV Dose 0</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type eca-rule}">ECA Rule</span></p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-06-28 14:17:27+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: </p><div><p>If the child or patient has not been given a supplementary dose</p>
+</div><h3>RelatedArtifacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style="display: none">*</td><td>Citation</td><td><div><p>WHO recommendations for routine immunization - summary tables (March 2023)</p>
+</div></td></tr></table><p><b>library</b>: <a href="Library-IMMZD2DTMeaslesSupplementaryLogic.html">IMMZD2DTMeaslesSupplementaryLogic</a></p><blockquote><p><b>action</b></p><p><b>title</b>: Immunize patient for Measles</p><blockquote><p><b>condition</b></p><p><b>kind</b>: Applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Measles Routine Immunization Schedule Complete</td></tr></table></blockquote><blockquote><p><b>action</b></p></blockquote><blockquote><p><b>action</b></p></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesSupplementary"/>
+  <version value="0.1.0"/>
+  <name value="IMMZD2DTMeaslesSupplementary"/>
+  <title value="IMMZ.D2.DT.Measles MCV Dose 0"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-06-28T14:17:27+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="If the child or patient has not been given a supplementary dose"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="WHO recommendations for routine immunization - summary tables (March 2023)"/>
+  </relatedArtifact>
+  <library value="http://smart.who.int/immunizations-measles/Library/IMMZD2DTMeaslesSupplementaryLogic"/>
+  <action>
+    <title value="Immunize patient for Measles"/>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <language value="text/cql-identifier"/>
+        <expression value="Measles Routine Immunization Schedule Complete"/>
+      </expression>
+    </condition>
+    <action>
+      <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+        <valueMarkdown value="An additional dose of MCV should be administered to HIV-infected children receiving HAART following immune reconstitution. If CD4+ T lymphocyte counts are monitored, an additional dose of MCV should be administered when immune reconstitution has been achieved, e.g. when the CD4+ T lymphocyte count reaches 20–25%. Where CD4+ T lymphocyte monitoring is not available, children should receive an additional dose of MCV 6–12 months after initiation of HAART.&lt;br/&gt;As a general rule, live vaccines should be given either simultaneously or at intervals of 4 weeks. An exception to this rule is OPV, which can be given at any time before or after measles vaccination without interference in the response to either vaccine"/>
+      </extension>
+      <title value="Consider supplementary dose"/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="No Supplementary Dose Administered"/>
+        </expression>
+      </condition>
+      <action>
+        <title value="Last Live Vaccine Administered Within 4 Weeks"/>
+        <description value="Should not vaccinate client for measles supplementary dose as live vaccine was administered in the last 4 weeks. Check for any vaccines due, and inform the caregiver of when to come back for supplementary dose."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Last Live Vaccine Administered Within 4 Weeks"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Provide Measles Vaccine"/>
+        <description value="May vaccinate client for measles supplementary dose as supplementary dose was not administered, measles routine immunization schedule is complete and no live vaccine administered in the last 4 weeks. Check if one of the measles supplementary dose specific scenarios is applicable."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Is Due For Supplementary Dose"/>
+          </expression>
+        </condition>
+        <definitionCanonical value="http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesMR"/>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.start"/>
+          <expression>
+            <description value="Due date of the dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV Supplementary Schedule Date"/>
+          </expression>
+        </dynamicValue>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.end"/>
+          <expression>
+            <description value="Expiration date for MCV dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV Supplementary Expiration Date"/>
+          </expression>
+        </dynamicValue>
+      </action>
+    </action>
+    <action>
+      <title value="Supplementary Dose Administered"/>
+      <description value="Measles immunization schedule is complete. Measles supplementary dose was administered."/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="Supplementary Dose Administered"/>
+        </expression>
+      </condition>
+    </action>
+  </action>
+</PlanDefinition>

@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/Library/IMMZIND08> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZIND08"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Contents</h2><p><code>text/cql</code></p><pre><code class=\"language-sql\">/*\r\n * Library: IMMZ.IND.08\r\n * Immunization coverage for Measles containing vaccine (Estimated Denominator) \r\n * Compares the administered doses of measles containing vaccines (MCV) with the estimated number of surviving infants (if dose 1) or a country supplied denominator (if dose 2) expressed as a percentage. \r\n * \r\n * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period \r\n * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period\r\n * Denominator: Estimated number of surviving infants (for dose 1) and country supplied denominator for dose sequence 2 (see comments)\r\n * Denominator Computation: PARAMETER number of surviving infants (if Dose Sequence = 1) or PARAMETER of country supplied denominator (if Dose Sequence = 2)\r\n * \r\n * Disaggregation:\r\n *   - Dose Sequence (1, 2)\r\n *   - Age Group (&lt; 1 year or &gt; 1 year)\r\n *   - Geographic Region\r\n *   - Administrative Gender (or Biological Sex)\r\n * \r\n * References: WHO Immunization Facility Analysis Guide (1), WHO / UNICEF Joint Reporting Form (3 - elements 4240 and 4260 )\r\n */\r\n\r\nlibrary IMMZIND08\r\n\r\n// Start Skeleton CQL\r\nusing FHIR version '4.0.1'\r\ninclude FHIRHelpers version '4.0.1'\r\ninclude IMMZCommon called IMMZCom\r\ninclude IMMZConcepts called IMMZc\r\ninclude IMMZConfig called IMMZCon\r\ninclude IMMZIndicatorCommon called IMMZIndCom\r\ninclude IMMZVaccineLibrary called IMMZvl\r\ninclude FHIRCommon called FC\r\n// End Skeleton CQL\r\nparameter &quot;Measurement Period&quot; Interval&lt;Date&gt;\r\n\r\ncontext Patient\r\n\r\n/*\r\n * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period\r\n * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period\r\n */\r\ndefine &quot;measure-population&quot;:\r\n	exists(IMMZIndCom.&quot;MCV Doses Administered to Patient During Measurement Period&quot;)\r\n\r\n/*\r\n * Disaggregator: Dose Sequence (1, 2)\r\n */\r\ndefine &quot;Dose Sequence  Stratifier&quot;:\r\n	IMMZIndCom.&quot;MCV Doses Administered to Patient During Measurement Period&quot; I\r\n	return (singleton from I.protocolApplied).doseNumber\r\n\r\n/*\r\n * Disaggregator: Age Group (&lt;24H of Birth, &lt; 2 weeks)\r\n */\r\ndefine &quot;Age Group Stratifier&quot;:\r\n	IMMZIndCom.&quot;Infant By Age Stratifier&quot;\r\n\r\n/*\r\n * Disaggregator: Geographic Region\r\n */\r\ndefine &quot;Geographic Region Stratifier&quot;:\r\n	IMMZIndCom.&quot;By Geographic Region Stratifier&quot;\r\n\r\n/*\r\n * Disaggregator: Administrative Gender (or Biological Sex)\r\n */\r\ndefine &quot;Administrative Gender Stratifier&quot;:\r\n	IMMZIndCom.&quot;By Administrative Gender Stratifier&quot;\r\n\r\n/* End of IMMZ.IND.08 */\r\n</code></pre><p><code>No Content</code> (<code>application/elm+xml</code>)</p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/Library/IMMZIND08"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZIND08"] ; # 
+  fhir:title [ fhir:v "IMMZIND08"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2024-03-30T08:20:30+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This library defines population criteria for the IND.08 indicator in the Immunization CPG"] ; # 
+  fhir:content ( [
+     fhir:contentType [ fhir:v "text/cql" ] ;
+     fhir:data [ fhir:v "LyoNCiAqIExpYnJhcnk6IElNTVouSU5ELjA4DQogKiBJbW11bml6YXRpb24gY292ZXJhZ2UgZm9yIE1lYXNsZXMgY29udGFpbmluZyB2YWNjaW5lIChFc3RpbWF0ZWQgRGVub21pbmF0b3IpIA0KICogQ29tcGFyZXMgdGhlIGFkbWluaXN0ZXJlZCBkb3NlcyBvZiBtZWFzbGVzIGNvbnRhaW5pbmcgdmFjY2luZXMgKE1DVikgd2l0aCB0aGUgZXN0aW1hdGVkIG51bWJlciBvZiBzdXJ2aXZpbmcgaW5mYW50cyAoaWYgZG9zZSAxKSBvciBhIGNvdW50cnkgc3VwcGxpZWQgZGVub21pbmF0b3IgKGlmIGRvc2UgMikgZXhwcmVzc2VkIGFzIGEgcGVyY2VudGFnZS4gDQogKiANCiAqIE51bWVyYXRvcjogTnVtYmVyIG9mIGFkbWluaXN0cmF0aW9ucyBvZiB2YWNjaW5hdGlvbnMgY29udGFpbmluZyBhIE1lYXNsZXMgY29tcG9uZW50IGR1cmluZyByZXBvcnRpbmcgcGVyaW9kIA0KICogTnVtZXJhdG9yIENvbXB1dGF0aW9uOiBDT1VOVCBpbW11bml6YXRpb24gZXZlbnRzIFdIRVJFIGFkbWluaXN0ZXJlZCBwcm9kdWN0IGlzIGEgTWVhc2xlcyB2YWNjaW5lIChJTU1aLkExLkRFOSkgZHVyaW5nIHJlcG9ydGluZyBwZXJpb2QNCiAqIERlbm9taW5hdG9yOiBFc3RpbWF0ZWQgbnVtYmVyIG9mIHN1cnZpdmluZyBpbmZhbnRzIChmb3IgZG9zZSAxKSBhbmQgY291bnRyeSBzdXBwbGllZCBkZW5vbWluYXRvciBmb3IgZG9zZSBzZXF1ZW5jZSAyIChzZWUgY29tbWVudHMpDQogKiBEZW5vbWluYXRvciBDb21wdXRhdGlvbjogUEFSQU1FVEVSIG51bWJlciBvZiBzdXJ2aXZpbmcgaW5mYW50cyAoaWYgRG9zZSBTZXF1ZW5jZSA9IDEpIG9yIFBBUkFNRVRFUiBvZiBjb3VudHJ5IHN1cHBsaWVkIGRlbm9taW5hdG9yIChpZiBEb3NlIFNlcXVlbmNlID0gMikNCiAqIA0KICogRGlzYWdncmVnYXRpb246DQogKiAgIC0gRG9zZSBTZXF1ZW5jZSAoMSwgMikNCiAqICAgLSBBZ2UgR3JvdXAgKDwgMSB5ZWFyIG9yID4gMSB5ZWFyKQ0KICogICAtIEdlb2dyYXBoaWMgUmVnaW9uDQogKiAgIC0gQWRtaW5pc3RyYXRpdmUgR2VuZGVyIChvciBCaW9sb2dpY2FsIFNleCkNCiAqIA0KICogUmVmZXJlbmNlczogV0hPIEltbXVuaXphdGlvbiBGYWNpbGl0eSBBbmFseXNpcyBHdWlkZSAoMSksIFdITyAvIFVOSUNFRiBKb2ludCBSZXBvcnRpbmcgRm9ybSAoMyAtIGVsZW1lbnRzIDQyNDAgYW5kIDQyNjAgKQ0KICovDQoNCmxpYnJhcnkgSU1NWklORDA4DQoNCi8vIFN0YXJ0IFNrZWxldG9uIENRTA0KdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScNCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnDQppbmNsdWRlIElNTVpDb21tb24gY2FsbGVkIElNTVpDb20NCmluY2x1ZGUgSU1NWkNvbmNlcHRzIGNhbGxlZCBJTU1aYw0KaW5jbHVkZSBJTU1aQ29uZmlnIGNhbGxlZCBJTU1aQ29uDQppbmNsdWRlIElNTVpJbmRpY2F0b3JDb21tb24gY2FsbGVkIElNTVpJbmRDb20NCmluY2x1ZGUgSU1NWlZhY2NpbmVMaWJyYXJ5IGNhbGxlZCBJTU1admwNCmluY2x1ZGUgRkhJUkNvbW1vbiBjYWxsZWQgRkMNCi8vIEVuZCBTa2VsZXRvbiBDUUwNCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlPg0KDQpjb250ZXh0IFBhdGllbnQNCg0KLyoNCiAqIE51bWVyYXRvcjogTnVtYmVyIG9mIGFkbWluaXN0cmF0aW9ucyBvZiB2YWNjaW5hdGlvbnMgY29udGFpbmluZyBhIE1lYXNsZXMgY29tcG9uZW50IGR1cmluZyByZXBvcnRpbmcgcGVyaW9kDQogKiBOdW1lcmF0b3IgQ29tcHV0YXRpb246IENPVU5UIGltbXVuaXphdGlvbiBldmVudHMgV0hFUkUgYWRtaW5pc3RlcmVkIHByb2R1Y3QgaXMgYSBNZWFzbGVzIHZhY2NpbmUgKElNTVouQTEuREU5KSBkdXJpbmcgcmVwb3J0aW5nIHBlcmlvZA0KICovDQpkZWZpbmUgIm1lYXN1cmUtcG9wdWxhdGlvbiI6DQoJZXhpc3RzKElNTVpJbmRDb20uIk1DViBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIikNCg0KLyoNCiAqIERpc2FnZ3JlZ2F0b3I6IERvc2UgU2VxdWVuY2UgKDEsIDIpDQogKi8NCmRlZmluZSAiRG9zZSBTZXF1ZW5jZSAgU3RyYXRpZmllciI6DQoJSU1NWkluZENvbS4iTUNWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiIEkNCglyZXR1cm4gKHNpbmdsZXRvbiBmcm9tIEkucHJvdG9jb2xBcHBsaWVkKS5kb3NlTnVtYmVyDQoNCi8qDQogKiBEaXNhZ2dyZWdhdG9yOiBBZ2UgR3JvdXAgKDwyNEggb2YgQmlydGgsIDwgMiB3ZWVrcykNCiAqLw0KZGVmaW5lICJBZ2UgR3JvdXAgU3RyYXRpZmllciI6DQoJSU1NWkluZENvbS4iSW5mYW50IEJ5IEFnZSBTdHJhdGlmaWVyIg0KDQovKg0KICogRGlzYWdncmVnYXRvcjogR2VvZ3JhcGhpYyBSZWdpb24NCiAqLw0KZGVmaW5lICJHZW9ncmFwaGljIFJlZ2lvbiBTdHJhdGlmaWVyIjoNCglJTU1aSW5kQ29tLiJCeSBHZW9ncmFwaGljIFJlZ2lvbiBTdHJhdGlmaWVyIg0KDQovKg0KICogRGlzYWdncmVnYXRvcjogQWRtaW5pc3RyYXRpdmUgR2VuZGVyIChvciBCaW9sb2dpY2FsIFNleCkNCiAqLw0KZGVmaW5lICJBZG1pbmlzdHJhdGl2ZSBHZW5kZXIgU3RyYXRpZmllciI6DQoJSU1NWkluZENvbS4iQnkgQWRtaW5pc3RyYXRpdmUgR2VuZGVyIFN0cmF0aWZpZXIiDQoNCi8qIEVuZCBvZiBJTU1aLklORC4wOCAqLw0K"^^xsd:base64Binary ]
+  ] [
+     fhir:contentType [ fhir:v "application/elm+xml" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

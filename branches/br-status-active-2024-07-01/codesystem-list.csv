@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://id.who.int/icd/release/11/mms,0.1.0,active,,ICD11,ICD-11,"ICD-11.",
+http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts,0.1.0,active,,IMMZConcepts,Immunizations Concepts CodeSystem,"This code system defines concepts used in SMART Immunizations",
+http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts,0.1.0,active,,VaccineProducts,Vaccine Product codes CodeSet,"Vaccine Product codes, containing the different available products.",

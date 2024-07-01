@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="IMMZ-D1.ConceptMap"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2023-08-09 by WHO (WHO: <a href="http://who.int">http://who.int</a>). </p><div><p>Mapping to and from IMMZ-D1 Data Dictionary to other codesystems.</p>
+</div><br/><p><b>Group 1</b>Mapping from <a href="CodeSystem-IMMZ-D1.html">IMMZ-D1 CodeSystem for Data Elements</a> to <code>http://hl7.org/fhir/sid/icd-11</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>DE88 (Positive)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>1B1Z</td></tr><tr><td>DE11 (HIV-positive)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>1C62.Z</td></tr><tr><td>DE13 (Unknown)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>1H0Z</td></tr><tr><td>DE40 (Sickle-cell disease)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>3A51</td></tr><tr><td>DE16 (Immunocompromised)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>4B4Z</td></tr><tr><td>DE15 (Preterm birth)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>KA21.4</td></tr><tr><td>DE89 (Negative)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>QA02.0</td></tr><tr><td>DE12 (HIV-negative)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>QA02.Y</td></tr><tr><td>DE82 (Breastfeeding)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>QA48.1</td></tr><tr><td>DE90 (HIV-exposed infant)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>QC60</td></tr><tr><td>DE70 (Monovalent MenC conjugate)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XM18Y8</td></tr><tr><td>DE69 (MenA conjugate vaccine (5µg))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XM2280</td></tr><tr><td>DE64 (Ty21a)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>XM33K4</td></tr><tr><td>DE85 (IGRA)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>XM3KQ4</td></tr><tr><td>DE63 (ViPS)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>XM3SF6</td></tr><tr><td>DE54 (Live attenuated vaccine)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XM47S0</td></tr><tr><td>DE36 (IPV)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XM5V19</td></tr><tr><td>DE37 (bOPV)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XM79H3</td></tr><tr><td>DE86 (TST)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>XM7PF6</td></tr><tr><td>DE9 (Currently pregnant)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XT0S</td></tr></table><hr/><p><b>Group 2</b>Mapping from <code>http://hl7.org/fhir/sid/icd-11</code> to <a href="CodeSystem-IMMZ-D1.html">IMMZ-D1 CodeSystem for Data Elements</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>1B1Z</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE88 (Positive)</td></tr><tr><td>1C62.Z</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE11 (HIV-positive)</td></tr><tr><td>1H0Z</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE13 (Unknown)</td></tr><tr><td>3A51</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE40 (Sickle-cell disease)</td></tr><tr><td>4B4Z</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE16 (Immunocompromised)</td></tr><tr><td>KA21.4</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE15 (Preterm birth)</td></tr><tr><td>QA02.0</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE89 (Negative)</td></tr><tr><td>QA02.Y</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE12 (HIV-negative)</td></tr><tr><td>QA48.1</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE82 (Breastfeeding)</td></tr><tr><td>QC60</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE90 (HIV-exposed infant)</td></tr><tr><td>XM18Y8</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE70 (Monovalent MenC conjugate)</td></tr><tr><td>XM2280</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE69 (MenA conjugate vaccine (5µg))</td></tr><tr><td>XM33K4</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE64 (Ty21a)</td></tr><tr><td>XM3KQ4</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE85 (IGRA)</td></tr><tr><td>XM3SF6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE63 (ViPS)</td></tr><tr><td>XM47S0</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE54 (Live attenuated vaccine)</td></tr><tr><td>XM5V19</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE36 (IPV)</td></tr><tr><td>XM79H3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE37 (bOPV)</td></tr><tr><td>XM7PF6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE86 (TST)</td></tr><tr><td>XT0S</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE9 (Currently pregnant)</td></tr></table><hr/><p><b>Group 3</b>Mapping from <a href="CodeSystem-IMMZ-D1.html">IMMZ-D1 CodeSystem for Data Elements</a> to <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>DE90 (HIV-exposed infant)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>10157-6</td></tr><tr><td>DE85 (IGRA)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>27415-9</td></tr><tr><td>DE86 (TST)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>39263-9</td></tr><tr><td>DE88 (Positive)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>45241-7</td></tr><tr><td>DE11 (HIV-positive)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>45683-0</td></tr><tr><td>DE10 (HIV status)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>55277-8</td></tr><tr><td>DE82 (Breastfeeding)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>63895-7</td></tr><tr><td>DE15 (Preterm birth)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>76517-2</td></tr><tr><td>DE9 (Currently pregnant)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>82810-3</td></tr><tr><td>DE29 (Birth weight in grams)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>8339-4</td></tr><tr><td>DE16 (Immunocompromised)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>96381-9</td></tr><tr><td>DE92 (Severely immunosuppressed)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>96381-9</td></tr></table><hr/><p><b>Group 4</b>Mapping from <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a> to <a href="CodeSystem-IMMZ-D1.html">IMMZ-D1 CodeSystem for Data Elements</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>10157-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE90 (HIV-exposed infant)</td></tr><tr><td>27415-9</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE85 (IGRA)</td></tr><tr><td>39263-9</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE86 (TST)</td></tr><tr><td>45241-7</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE88 (Positive)</td></tr><tr><td>45683-0</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE11 (HIV-positive)</td></tr><tr><td>55277-8</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE10 (HIV status)</td></tr><tr><td>63895-7</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE82 (Breastfeeding)</td></tr><tr><td>76517-2</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE15 (Preterm birth)</td></tr><tr><td>82810-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE9 (Currently pregnant)</td></tr><tr><td>8339-4</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE29 (Birth weight in grams)</td></tr><tr><td>96381-9</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE16 (Immunocompromised)</td></tr><tr><td>96381-9</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DE92 (Severely immunosuppressed)</td></tr></table><hr/><p><b>Group 5</b>Mapping from <a href="CodeSystem-IMMZ-D1.html">IMMZ-D1 CodeSystem for Data Elements</a> to <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>DE88 (Positive)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>10828004</td></tr><tr><td>DE86 (TST)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>28163009</td></tr><tr><td>DE85 (IGRA)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>68311008</td></tr><tr><td>DE82 (Breastfeeding)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>69840006</td></tr><tr><td>DE9 (Currently pregnant)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>77386006</td></tr><tr><td>DE12 (HIV-negative)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>165815009</td></tr><tr><td>DE11 (HIV-positive)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>165816005</td></tr><tr><td>DE89 (Negative)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>260385009</td></tr><tr><td>DE13 (Unknown)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>261665006</td></tr><tr><td>DE10 (HIV status)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>278977008</td></tr><tr><td>DE16 (Immunocompromised)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>370388006</td></tr><tr><td>DE15 (Preterm birth)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>395507008</td></tr><tr><td>DE40 (Sickle-cell disease)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>417357006</td></tr><tr><td>DE90 (HIV-exposed infant)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>438998000</td></tr><tr><td>DE36 (IPV)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>871740006</td></tr></table><hr/><p><b>Group 6</b>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a> to <a href="CodeSystem-IMMZ-D1.html">IMMZ-D1 CodeSystem for Data Elements</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>10828004</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE88 (Positive)</td></tr><tr><td>28163009</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE86 (TST)</td></tr><tr><td>68311008</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE85 (IGRA)</td></tr><tr><td>69840006</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE82 (Breastfeeding)</td></tr><tr><td>77386006</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE9 (Currently pregnant)</td></tr><tr><td>165815009</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE12 (HIV-negative)</td></tr><tr><td>165816005</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE11 (HIV-positive)</td></tr><tr><td>260385009</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE89 (Negative)</td></tr><tr><td>261665006</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE13 (Unknown)</td></tr><tr><td>278977008</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE10 (HIV status)</td></tr><tr><td>370388006</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE16 (Immunocompromised)</td></tr><tr><td>395507008</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE15 (Preterm birth)</td></tr><tr><td>417357006</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE40 (Sickle-cell disease)</td></tr><tr><td>438998000</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>DE90 (HIV-exposed infant)</td></tr><tr><td>871740006</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DE36 (IPV)</td></tr></table></div>
+  </text>
+  <url value="http://worldhealthorganization.github.io/smart-immunizations-measles/ConceptMap/IMMZ-D1.ConceptMap"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ_D1_ConceptMap"/>
+  <title value="ConceptMap to and from IMMZ-D1 DataElements"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-08-09"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Mapping to and from IMMZ-D1 Data Dictionary to other codesystems."/>
+  <group>
+    <source value="http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+    <target value="http://hl7.org/fhir/sid/icd-11"/>
+    <element>
+      <code value="DE88"/>
+      <target>
+        <code value="1B1Z"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE11"/>
+      <target>
+        <code value="1C62.Z"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE13"/>
+      <target>
+        <code value="1H0Z"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE40"/>
+      <target>
+        <code value="3A51"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE16"/>
+      <target>
+        <code value="4B4Z"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE15"/>
+      <target>
+        <code value="KA21.4"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE89"/>
+      <target>
+        <code value="QA02.0"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE12"/>
+      <target>
+        <code value="QA02.Y"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE82"/>
+      <target>
+        <code value="QA48.1"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE90"/>
+      <target>
+        <code value="QC60"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE70"/>
+      <target>
+        <code value="XM18Y8"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE69"/>
+      <target>
+        <code value="XM2280"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE64"/>
+      <target>
+        <code value="XM33K4"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE85"/>
+      <target>
+        <code value="XM3KQ4"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE63"/>
+      <target>
+        <code value="XM3SF6"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE54"/>
+      <target>
+        <code value="XM47S0"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE36"/>
+      <target>
+        <code value="XM5V19"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE37"/>
+      <target>
+        <code value="XM79H3"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE86"/>
+      <target>
+        <code value="XM7PF6"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE9"/>
+      <target>
+        <code value="XT0S"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/sid/icd-11"/>
+    <target value="http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+    <element>
+      <code value="1B1Z"/>
+      <target>
+        <code value="DE88"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="1C62.Z"/>
+      <target>
+        <code value="DE11"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1H0Z"/>
+      <target>
+        <code value="DE13"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3A51"/>
+      <target>
+        <code value="DE40"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4B4Z"/>
+      <target>
+        <code value="DE16"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="KA21.4"/>
+      <target>
+        <code value="DE15"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="QA02.0"/>
+      <target>
+        <code value="DE89"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="QA02.Y"/>
+      <target>
+        <code value="DE12"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="QA48.1"/>
+      <target>
+        <code value="DE82"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="QC60"/>
+      <target>
+        <code value="DE90"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM18Y8"/>
+      <target>
+        <code value="DE70"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM2280"/>
+      <target>
+        <code value="DE69"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM33K4"/>
+      <target>
+        <code value="DE64"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM3KQ4"/>
+      <target>
+        <code value="DE85"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM3SF6"/>
+      <target>
+        <code value="DE63"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM47S0"/>
+      <target>
+        <code value="DE54"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM5V19"/>
+      <target>
+        <code value="DE36"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM79H3"/>
+      <target>
+        <code value="DE37"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XM7PF6"/>
+      <target>
+        <code value="DE86"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="XT0S"/>
+      <target>
+        <code value="DE9"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+    <target value="http://loinc.org"/>
+    <element>
+      <code value="DE90"/>
+      <target>
+        <code value="10157-6"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE85"/>
+      <target>
+        <code value="27415-9"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE86"/>
+      <target>
+        <code value="39263-9"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE88"/>
+      <target>
+        <code value="45241-7"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE11"/>
+      <target>
+        <code value="45683-0"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE10"/>
+      <target>
+        <code value="55277-8"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE82"/>
+      <target>
+        <code value="63895-7"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE15"/>
+      <target>
+        <code value="76517-2"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE9"/>
+      <target>
+        <code value="82810-3"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE29"/>
+      <target>
+        <code value="8339-4"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE16"/>
+      <target>
+        <code value="96381-9"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE92"/>
+      <target>
+        <code value="96381-9"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://loinc.org"/>
+    <target value="http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+    <element>
+      <code value="10157-6"/>
+      <target>
+        <code value="DE90"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="27415-9"/>
+      <target>
+        <code value="DE85"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="39263-9"/>
+      <target>
+        <code value="DE86"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="45241-7"/>
+      <target>
+        <code value="DE88"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="45683-0"/>
+      <target>
+        <code value="DE11"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="55277-8"/>
+      <target>
+        <code value="DE10"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="63895-7"/>
+      <target>
+        <code value="DE82"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="76517-2"/>
+      <target>
+        <code value="DE15"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="82810-3"/>
+      <target>
+        <code value="DE9"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="8339-4"/>
+      <target>
+        <code value="DE29"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="96381-9"/>
+      <target>
+        <code value="DE16"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="96381-9"/>
+      <target>
+        <code value="DE92"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+    <target value="http://snomed.info/sct"/>
+    <element>
+      <code value="DE88"/>
+      <target>
+        <code value="10828004"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE86"/>
+      <target>
+        <code value="28163009"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE85"/>
+      <target>
+        <code value="68311008"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE82"/>
+      <target>
+        <code value="69840006"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE9"/>
+      <target>
+        <code value="77386006"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE12"/>
+      <target>
+        <code value="165815009"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE11"/>
+      <target>
+        <code value="165816005"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE89"/>
+      <target>
+        <code value="260385009"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE13"/>
+      <target>
+        <code value="261665006"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE10"/>
+      <target>
+        <code value="278977008"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE16"/>
+      <target>
+        <code value="370388006"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE15"/>
+      <target>
+        <code value="395507008"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE40"/>
+      <target>
+        <code value="417357006"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE90"/>
+      <target>
+        <code value="438998000"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DE36"/>
+      <target>
+        <code value="871740006"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://worldhealthorganization.github.io/smart-immunizations-measles/CodeSystem/IMMZ-D1"/>
+    <element>
+      <code value="10828004"/>
+      <target>
+        <code value="DE88"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="28163009"/>
+      <target>
+        <code value="DE86"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="68311008"/>
+      <target>
+        <code value="DE85"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="69840006"/>
+      <target>
+        <code value="DE82"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="77386006"/>
+      <target>
+        <code value="DE9"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="165815009"/>
+      <target>
+        <code value="DE12"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="165816005"/>
+      <target>
+        <code value="DE11"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="260385009"/>
+      <target>
+        <code value="DE89"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="261665006"/>
+      <target>
+        <code value="DE13"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="278977008"/>
+      <target>
+        <code value="DE10"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="370388006"/>
+      <target>
+        <code value="DE16"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="395507008"/>
+      <target>
+        <code value="DE15"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="417357006"/>
+      <target>
+        <code value="DE40"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="438998000"/>
+      <target>
+        <code value="DE90"/>
+        <equivalence value="narrower"/>
+      </target>
+    </element>
+    <element>
+      <code value="871740006"/>
+      <target>
+        <code value="DE36"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

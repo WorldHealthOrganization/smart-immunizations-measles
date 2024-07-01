@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/MedicationRequest/VaccineProposal1> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "VaccineProposal1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProposal"^^xsd:anyURI ;
+       fhir:link <http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProposal>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest VaccineProposal1</b></p><a name=\"VaccineProposal1\"> </a><a name=\"hcVaccineProposal1\"> </a><a name=\"hcVaccineProposal1-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>medication</b>: <span title=\"Codes:{http://id.who.int/icd/release/11/mms XM28X5}\">Measles vaccines</span></p><p><b>subject</b>: <a href=\"Patient-P123456.html\">Test Patient Female, DoB: 2023-03-02 ( 123456)</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://id.who.int/icd/release/11/mms"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "XM28X5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://smart.who.int/immunizations-measles/Patient/P123456> ;
+     fhir:reference [ fhir:v "Patient/P123456" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

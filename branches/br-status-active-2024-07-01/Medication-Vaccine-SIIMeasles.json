@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Medication",
+  "id" : "Vaccine-SIIMeasles",
+  "meta" : {
+    "profile" : ["http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication Vaccine-SIIMeasles</b></p><a name=\"Vaccine-SIIMeasles\"> </a><a name=\"hcVaccine-SIIMeasles\"> </a><a name=\"hcVaccine-SIIMeasles-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts 20009060/2}\">Serum Institute of India Measles vaccine</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "XM8L15"
+      }]
+    }
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts",
+      "code" : "20009060/2"
+    }]
+  }
+}

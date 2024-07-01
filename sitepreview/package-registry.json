@@ -1,0 +1,23 @@
+{
+  "packages" : [
+    {
+      "path" : "immunizations-measles/package-list.json",
+      "package-id" : "smart.who.int.immunizations-measles",
+      "title" : "  Immunization - Measles",
+      "canonical" : "http://smart.who.int/immunizations-measles",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-immunizations-measles",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2024-01-26",
+        "path" : "http://smart.who.int/immunizations-measles/0.1.0"
+      },
+      "milestone" : {
+        "version" : "0.1.0",
+        "date" : "2024-01-26",
+        "path" : "http://smart.who.int/immunizations-measles/0.1.0"
+      }
+    }
+  ]
+}

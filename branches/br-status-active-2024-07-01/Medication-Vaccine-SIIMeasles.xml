@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Vaccine-SIIMeasles"/>
+  <meta>
+    <profile value="http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication Vaccine-SIIMeasles</b></p><a name="Vaccine-SIIMeasles"> </a><a name="hcVaccine-SIIMeasles"> </a><a name="hcVaccine-SIIMeasles-en-US"> </a><p><b>code</b>: <span title="Codes:{http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts 20009060/2}">Serum Institute of India Measles vaccine</span></p></div>
+  </text>
+  <extension url="http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://id.who.int/icd/release/11/mms"/>
+        <code value="XM8L15"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"/>
+      <code value="20009060/2"/>
+    </coding>
+  </code>
+</Medication>

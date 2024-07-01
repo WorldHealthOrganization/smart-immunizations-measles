@@ -1,0 +1,19 @@
+{
+  "url" : "http://smart.who.int/immunizations-measles/ImplementationGuide/smart.who.int.immunizations-measles",
+  "name" : "ImmunizationsMeasles",
+  "title" : "WHO SMART Guidelines - Measles Immunization",
+  "description" : "WHO SMART Guidelines - Measles Immunization (Demonstration specification)",
+  "status" : "draft",
+  "package-id" : "smart.who.int.immunizations-measles",
+  "ig-ver" : "0.1.0",
+  "date" : "Thu, 06 Jun, 2024 23:41:54 +0000",
+  "dateISO8601" : "2024-06-06T23:41:54+00:00",
+  "errs" : 53,
+  "warnings" : 115,
+  "hints" : 248,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2873670592
+}

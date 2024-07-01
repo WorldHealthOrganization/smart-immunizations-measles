@@ -1,0 +1,88 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "IMMZ-C-SexToAdministrativeGender",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url" : "http://worldhealthorganization.github.io/smart-immunizations-mini/ConceptMap/IMMZ-C-SexToAdministrativeGender",
+  "version" : "0.1.0",
+  "name" : "IMMZ_C_SexToAdministrativeGender",
+  "title" : "ConceptMap to and From IMMZ.C sex to administrative gender",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-08-09",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Mapping to and from IMMZ.C sex coding to FHIR Administrative Gender.",
+  "group" : [{
+    "source" : "http://worldhealthorganization.github.io/smart-immunizations-mini/CodeSystem/IMMZ-C",
+    "target" : "http://hl7.org/fhir/administrative-gender",
+    "element" : [{
+      "code" : "DE6",
+      "target" : [{
+        "code" : "male",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "DE7",
+      "target" : [{
+        "code" : "female",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "DE8",
+      "target" : [{
+        "code" : "unknown",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "DE9",
+      "target" : [{
+        "code" : "other",
+        "equivalence" : "wider"
+      }]
+    }]
+  },
+  {
+    "source" : "http://hl7.org/fhir/administrative-gender",
+    "target" : "http://worldhealthorganization.github.io/smart-immunizations-mini/CodeSystem/IMMZ-C",
+    "element" : [{
+      "code" : "male",
+      "target" : [{
+        "code" : "DE6",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "female",
+      "target" : [{
+        "code" : "DE7",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "unknown",
+      "target" : [{
+        "code" : "DE8",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "other",
+      "target" : [{
+        "code" : "DE9",
+        "equivalence" : "narrower"
+      }]
+    }]
+  }]
+}

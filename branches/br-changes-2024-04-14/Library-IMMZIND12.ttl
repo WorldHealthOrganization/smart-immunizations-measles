@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/Library/IMMZIND12> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IMMZIND12"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Contents</h2><p><code>text/cql</code></p><pre><code class=\"language-sql\">/*\n * Library: IMMZ.IND.12\n * Immunization coverage for Measles and rubella containing vaccine, 1st dose \n * The percentage in the target population who have received one dose of measles and rubella vaccine during reporting period\n * \n * Numerator: Number of measles and rubella doses (1st dose) administered through routine services during reporting period\n * Numerator Computation: COUNT of immunization events WHERE &quot;Vaccine type&quot; = &quot;Measles and rubella containing vaccines&quot;  for the first dose in the primary series AND &quot;Date and time of vaccination&quot; is during the reporting period\n * Denominator: Number in target group\n * Denominator Computation: As defined by the Member States\n * \n * Disaggregation:\n *   - Administrative area\n *   - Sex\n *   - Age in years\n *   - Age group (depending on schedule) \n * \n * References: WHO Immunization facility analysis guide;WHO Handbook on immunization data\n */\nlibrary IMMZIND08\n\n/*\nNOTE: This is an estimated denominator measure, meaning that all we are contributing from the site perspective is a count\ntowards the numerator, actual processing of this data to determine a proportion measure would be done by downstream analytics\n\nFor this reason, this measure is modeled as a cohort measure where membership in the cohort is determine by administration of\na measles containing vaccine.\n*/\n\nusing FHIR version '4.0.1'\n\ninclude FHIRHelpers version '4.0.1'\ninclude FHIRCommon called FC\n\ninclude IMMZCommon called Common\ninclude IMMZConcepts called Concepts\ninclude IMMZConfig called Config\ninclude IMMZIndicatorElements called Elements\ninclude IMMZVaccineLibrary called VaccineLibrary\n\nparameter &quot;Measurement Period&quot; Interval&lt;Date&gt;\n\ncontext Patient\n\n/*\n * As defined by Member State\n */\ndefine &quot;Initial Population&quot;:\n  true\n\n/*\n * As defined by Member State\n */\ndefine &quot;Denominator&quot;:\n  true\n\n/*\n * Numerator: Number of measles and rubella doses (1st dose) administered through routine services during reporting period\n * Numerator Computation: COUNT of immunization events WHERE &quot;Vaccine type&quot; = &quot;Measles and rubella containing vaccines&quot;  for the first dose in the primary series AND &quot;Date and time of vaccination&quot; is during the reporting period\n */\ndefine &quot;Numerator&quot;:\n  exists (\n	Elements.&quot;MCV Doses Administered to Patient During Measurement Period&quot; I\n	  where I.protocolApplied.only().doseNumber = 1\n  )\n</code></pre><p><code>No Content</code> (<code>application/elm+xml</code>)</p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/Library/IMMZIND12"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IMMZIND12"] ; # 
+  fhir:title [ fhir:v "IMMZIND12"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2024-05-22T19:29:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This library defines population criteria logic for the IND.12 indicator in the Immunization CPG"] ; # 
+  fhir:content ( [
+     fhir:contentType [ fhir:v "text/cql" ] ;
+     fhir:data [ fhir:v "LyoKICogTGlicmFyeTogSU1NWi5JTkQuMTIKICogSW1tdW5pemF0aW9uIGNvdmVyYWdlIGZvciBNZWFzbGVzIGFuZCBydWJlbGxhIGNvbnRhaW5pbmcgdmFjY2luZSwgMXN0IGRvc2UgCiAqIFRoZSBwZXJjZW50YWdlIGluIHRoZSB0YXJnZXQgcG9wdWxhdGlvbiB3aG8gaGF2ZSByZWNlaXZlZCBvbmUgZG9zZSBvZiBtZWFzbGVzIGFuZCBydWJlbGxhIHZhY2NpbmUgZHVyaW5nIHJlcG9ydGluZyBwZXJpb2QKICogCiAqIE51bWVyYXRvcjogTnVtYmVyIG9mIG1lYXNsZXMgYW5kIHJ1YmVsbGEgZG9zZXMgKDFzdCBkb3NlKSBhZG1pbmlzdGVyZWQgdGhyb3VnaCByb3V0aW5lIHNlcnZpY2VzIGR1cmluZyByZXBvcnRpbmcgcGVyaW9kCiAqIE51bWVyYXRvciBDb21wdXRhdGlvbjogQ09VTlQgb2YgaW1tdW5pemF0aW9uIGV2ZW50cyBXSEVSRSAiVmFjY2luZSB0eXBlIiA9ICJNZWFzbGVzIGFuZCBydWJlbGxhIGNvbnRhaW5pbmcgdmFjY2luZXMiICBmb3IgdGhlIGZpcnN0IGRvc2UgaW4gdGhlIHByaW1hcnkgc2VyaWVzIEFORCAiRGF0ZSBhbmQgdGltZSBvZiB2YWNjaW5hdGlvbiIgaXMgZHVyaW5nIHRoZSByZXBvcnRpbmcgcGVyaW9kCiAqIERlbm9taW5hdG9yOiBOdW1iZXIgaW4gdGFyZ2V0IGdyb3VwCiAqIERlbm9taW5hdG9yIENvbXB1dGF0aW9uOiBBcyBkZWZpbmVkIGJ5IHRoZSBNZW1iZXIgU3RhdGVzCiAqIAogKiBEaXNhZ2dyZWdhdGlvbjoKICogICAtIEFkbWluaXN0cmF0aXZlIGFyZWEKICogICAtIFNleAogKiAgIC0gQWdlIGluIHllYXJzCiAqICAgLSBBZ2UgZ3JvdXAgKGRlcGVuZGluZyBvbiBzY2hlZHVsZSkgCiAqIAogKiBSZWZlcmVuY2VzOiBXSE8gSW1tdW5pemF0aW9uIGZhY2lsaXR5IGFuYWx5c2lzIGd1aWRlO1dITyBIYW5kYm9vayBvbiBpbW11bml6YXRpb24gZGF0YQogKi8KbGlicmFyeSBJTU1aSU5EMDgKCi8qCk5PVEU6IFRoaXMgaXMgYW4gZXN0aW1hdGVkIGRlbm9taW5hdG9yIG1lYXN1cmUsIG1lYW5pbmcgdGhhdCBhbGwgd2UgYXJlIGNvbnRyaWJ1dGluZyBmcm9tIHRoZSBzaXRlIHBlcnNwZWN0aXZlIGlzIGEgY291bnQKdG93YXJkcyB0aGUgbnVtZXJhdG9yLCBhY3R1YWwgcHJvY2Vzc2luZyBvZiB0aGlzIGRhdGEgdG8gZGV0ZXJtaW5lIGEgcHJvcG9ydGlvbiBtZWFzdXJlIHdvdWxkIGJlIGRvbmUgYnkgZG93bnN0cmVhbSBhbmFseXRpY3MKCkZvciB0aGlzIHJlYXNvbiwgdGhpcyBtZWFzdXJlIGlzIG1vZGVsZWQgYXMgYSBjb2hvcnQgbWVhc3VyZSB3aGVyZSBtZW1iZXJzaGlwIGluIHRoZSBjb2hvcnQgaXMgZGV0ZXJtaW5lIGJ5IGFkbWluaXN0cmF0aW9uIG9mCmEgbWVhc2xlcyBjb250YWluaW5nIHZhY2NpbmUuCiovCgp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwoKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSQ29tbW9uIGNhbGxlZCBGQwoKaW5jbHVkZSBJTU1aQ29tbW9uIGNhbGxlZCBDb21tb24KaW5jbHVkZSBJTU1aQ29uY2VwdHMgY2FsbGVkIENvbmNlcHRzCmluY2x1ZGUgSU1NWkNvbmZpZyBjYWxsZWQgQ29uZmlnCmluY2x1ZGUgSU1NWkluZGljYXRvckVsZW1lbnRzIGNhbGxlZCBFbGVtZW50cwppbmNsdWRlIElNTVpWYWNjaW5lTGlicmFyeSBjYWxsZWQgVmFjY2luZUxpYnJhcnkKCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlPgoKY29udGV4dCBQYXRpZW50CgovKgogKiBBcyBkZWZpbmVkIGJ5IE1lbWJlciBTdGF0ZQogKi8KZGVmaW5lICJJbml0aWFsIFBvcHVsYXRpb24iOgogIHRydWUKCi8qCiAqIEFzIGRlZmluZWQgYnkgTWVtYmVyIFN0YXRlCiAqLwpkZWZpbmUgIkRlbm9taW5hdG9yIjoKICB0cnVlCgovKgogKiBOdW1lcmF0b3I6IE51bWJlciBvZiBtZWFzbGVzIGFuZCBydWJlbGxhIGRvc2VzICgxc3QgZG9zZSkgYWRtaW5pc3RlcmVkIHRocm91Z2ggcm91dGluZSBzZXJ2aWNlcyBkdXJpbmcgcmVwb3J0aW5nIHBlcmlvZAogKiBOdW1lcmF0b3IgQ29tcHV0YXRpb246IENPVU5UIG9mIGltbXVuaXphdGlvbiBldmVudHMgV0hFUkUgIlZhY2NpbmUgdHlwZSIgPSAiTWVhc2xlcyBhbmQgcnViZWxsYSBjb250YWluaW5nIHZhY2NpbmVzIiAgZm9yIHRoZSBmaXJzdCBkb3NlIGluIHRoZSBwcmltYXJ5IHNlcmllcyBBTkQgIkRhdGUgYW5kIHRpbWUgb2YgdmFjY2luYXRpb24iIGlzIGR1cmluZyB0aGUgcmVwb3J0aW5nIHBlcmlvZAogKi8KZGVmaW5lICJOdW1lcmF0b3IiOgogIGV4aXN0cyAoCglFbGVtZW50cy4iTUNWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiIEkKCSAgd2hlcmUgSS5wcm90b2NvbEFwcGxpZWQub25seSgpLmRvc2VOdW1iZXIgPSAxCiAgKQo="^^xsd:base64Binary ]
+  ] [
+     fhir:contentType [ fhir:v "application/elm+xml" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

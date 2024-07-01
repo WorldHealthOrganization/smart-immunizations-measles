@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/Medication/Vaccine-SIIMeasles> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Vaccine-SIIMeasles"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct"^^xsd:anyURI ;
+       fhir:link <http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication Vaccine-SIIMeasles</b></p><a name=\"Vaccine-SIIMeasles\"> </a><a name=\"hcVaccine-SIIMeasles\"> </a><a name=\"hcVaccine-SIIMeasles-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts 20009060/2}\">Serum Institute of India Measles vaccine</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://id.who.int/icd/release/11/mms"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XM8L15" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "20009060/2" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

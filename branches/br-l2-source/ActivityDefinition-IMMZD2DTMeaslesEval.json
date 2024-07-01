@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ActivityDefinition",
+  "id" : "IMMZD2DTMeaslesEval",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ActivityDefinition IMMZD2DTMeaslesEval</b></p><a name=\"IMMZD2DTMeaslesEval\"> </a><a name=\"hcIMMZD2DTMeaslesEval\"> </a><a name=\"hcIMMZD2DTMeaslesEval-en-US\"> </a><p><b>url</b>: <a href=\"ActivityDefinition-IMMZD2DTMeaslesEval.html\">ActivityDefinition IMMZ.D2.DT.Measles.Eval</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZD2DTMeaslesContraindicationEvaluation</p><p><b>title</b>: IMMZ.D2.DT.Measles.Eval</p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2023-10-03</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: </p><div><p>Provide measles immunization</p>\n</div><p><b>library</b>: <a href=\"Library-IMMZD2DTMeaslesLogic.html\">IMMZD2DTMeaslesLogic</a></p><p><b>kind</b>: ServiceRequest</p><p><b>profile</b>: <a href=\"https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-servicerequest.html\">CPG Service Request</a></p><p><b>intent</b>: Proposal</p><p><b>doNotPerform</b>: false</p><blockquote><p><b>dynamicValue</b></p><p><b>path</b>: code.coding</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>Measles Code</td><td>CQL</td><td>Code { system: 'http://id.who.int/icd/release/11/mms', code: 'XM28X5' }</td></tr></table></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "computable"
+  }],
+  "url" : "http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesEval",
+  "version" : "0.1.0",
+  "name" : "IMMZD2DTMeaslesContraindicationEvaluation",
+  "title" : "IMMZ.D2.DT.Measles.Eval",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2023-10-03",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Provide measles immunization",
+  "library" : ["http://smart.who.int/immunizations-measles/Library/IMMZD2DTMeaslesLogic"],
+  "kind" : "ServiceRequest",
+  "profile" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequest",
+  "intent" : "proposal",
+  "doNotPerform" : false,
+  "dynamicValue" : [{
+    "path" : "code.coding",
+    "expression" : {
+      "description" : "Measles Code",
+      "language" : "text/cql",
+      "expression" : "Code { system: 'http://id.who.int/icd/release/11/mms', code: 'XM28X5' }"
+    }
+  }]
+}

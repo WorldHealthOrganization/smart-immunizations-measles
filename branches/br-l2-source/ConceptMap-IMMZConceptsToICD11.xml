@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="IMMZConceptsToICD11"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap IMMZConceptsToICD11</b></p><a name="IMMZConceptsToICD11"> </a><a name="hcIMMZConceptsToICD11"> </a><a name="hcIMMZConceptsToICD11-en-US"> </a><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE (not intended for production usage). Published on 2024-06-28 14:17:27+0000 by WHO  (WHO: <a href="http://who.int">http://who.int</a>). </p><div><p>Mapping to and from IMMZ Concepts to ICD-11</p>
+</div><br/><p><b>Group 1 </b>Mapping from <a href="CodeSystem-IMMZConcepts.html">Immunizations Concepts CodeSystem</a> to <a href="CodeSystem-ICD11.html">ICD-11</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>C.DE6 (Male)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XX2UQ8 (Male)</td></tr><tr><td>C.DE7 (Female)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XX2V25 (Female)</td></tr><tr><td>C.DE8 (Biological sex not specified)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XX2PX3 (Biological sex not specified)</td></tr><tr><td>C.DE9 (Intersex)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>XX45B7 (Intersex)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="CodeSystem-ICD11.html">ICD-11</a> to <a href="CodeSystem-IMMZConcepts.html">Immunizations Concepts CodeSystem</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>XX2UQ8 (Male)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>C.DE6 (Male)</td></tr><tr><td>XX2V25 (Female)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>C.DE7 (Female)</td></tr><tr><td>XX2PX3 (Biological sex not specified)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>C.DE8 (Biological sex not specified)</td></tr><tr><td>XX45B7 (Intersex)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>C.DE9 (Intersex)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href="CodeSystem-IMMZConcepts.html">Immunizations Concepts CodeSystem</a> to <a href="CodeSystem-ICD11.html">ICD-11</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>D1.DE11 (HIV-positive)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td>1C62.Z (Human immunodeficiency virus disease without mention of tuberculosis or malaria)</td><td>The source concept is more specific than the target</td></tr><tr><td>D1.DE12 (HIV-negative)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>QA02.Y (Medical observation or evaluation for suspected diseases or conditions, ruled out)</td><td/></tr><tr><td>D1.DE15 (Preterm birth)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>KA21.4 (Preterm newborn)</td><td/></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href="CodeSystem-ICD11.html">ICD-11</a> to <a href="CodeSystem-IMMZConcepts.html">Immunizations Concepts CodeSystem</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>1C62.Z (Human immunodeficiency virus disease without mention of tuberculosis or malaria)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td>D1.DE11 (HIV-positive)</td></tr><tr><td>QA02.Y (Medical observation or evaluation for suspected diseases or conditions, ruled out)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>D1.DE12 (HIV-negative)</td></tr><tr><td>KA21.4 (Preterm newborn)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>D1.DE15 (Preterm birth)</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href="CodeSystem-IMMZConcepts.html">Immunizations Concepts CodeSystem</a> to <a href="CodeSystem-ICD11.html">ICD-11</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>D4.DE162 (Currently pregnant)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>QA41 (Pregnant state)</td></tr><tr><td>D4.DE165 (Severely immunosuppressed)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>4B4Z (Diseases of the immune system)</td></tr><tr><td>D4.DE166 (History of anaphylactic reactions)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>QC44.0 (Personal history of anaphylaxis)</td></tr><tr><td>D4.DE167 (Severe allergic reactions)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>QC44.2 (Personal history of allergy to drugs, medicaments or biological substances)</td></tr><tr><td>D4.DE168 (Symptomatic HIV infection)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>1C62.1 (HIV disease clinical stage 2 without mention of tuberculosis or malaria)</td></tr></table><hr/><p><b>Group 6 </b>Mapping from <a href="CodeSystem-ICD11.html">ICD-11</a> to <a href="CodeSystem-IMMZConcepts.html">Immunizations Concepts CodeSystem</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>QA41 (Pregnant state)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>D4.DE162 (Currently pregnant)</td></tr><tr><td>4B4Z (Diseases of the immune system)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>D4.DE165 (Severely immunosuppressed)</td></tr><tr><td>QC44.0 (Personal history of anaphylaxis)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>D4.DE166 (History of anaphylactic reactions)</td></tr><tr><td>QC44.2 (Personal history of allergy to drugs, medicaments or biological substances)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>D4.DE167 (Severe allergic reactions)</td></tr><tr><td>1C62.1 (HIV disease clinical stage 2 without mention of tuberculosis or malaria)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>D4.DE168 (Symptomatic HIV infection)</td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/immunizations-measles/ConceptMap/IMMZConceptsToICD11"/>
+  <version value="0.1.0"/>
+  <name value="IMMZConceptsToICD11"/>
+  <title value="ConceptMap to and from ICD-11"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-06-28T14:17:27+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Mapping to and from IMMZ Concepts to ICD-11"/>
+  <group>
+    <source value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+    <target value="http://id.who.int/icd/release/11/mms"/>
+    <element>
+      <code value="C.DE6"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="XX2UQ8"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="C.DE7"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="XX2V25"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="C.DE8"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="XX2PX3"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="C.DE9"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="XX45B7"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://id.who.int/icd/release/11/mms"/>
+    <target value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+    <element>
+      <code value="XX2UQ8"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="C.DE6"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XX2V25"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="C.DE7"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XX2PX3"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="C.DE8"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="XX45B7"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="C.DE9"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+    <target value="http://id.who.int/icd/release/11/mms"/>
+    <element>
+      <code value="D1.DE11"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="narrower"/>
+        </modifierExtension>
+        <code value="1C62.Z"/>
+        <equivalence value="narrower"/>
+        <comment value="The source concept is more specific than the target"/>
+      </target>
+    </element>
+    <element>
+      <code value="D1.DE12"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="relatedto"/>
+        </modifierExtension>
+        <code value="QA02.Y"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="D1.DE15"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="KA21.4"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://id.who.int/icd/release/11/mms"/>
+    <target value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+    <element>
+      <code value="1C62.Z"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="wider"/>
+        </modifierExtension>
+        <code value="D1.DE11"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="QA02.Y"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="relatedto"/>
+        </modifierExtension>
+        <code value="D1.DE12"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="KA21.4"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="D1.DE15"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+    <target value="http://id.who.int/icd/release/11/mms"/>
+    <element>
+      <code value="D4.DE162"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="QA41"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="D4.DE165"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="relatedto"/>
+        </modifierExtension>
+        <code value="4B4Z"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="D4.DE166"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="QC44.0"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="D4.DE167"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="relatedto"/>
+        </modifierExtension>
+        <code value="QC44.2"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="D4.DE168"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="1C62.1"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://id.who.int/icd/release/11/mms"/>
+    <target value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+    <element>
+      <code value="QA41"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="D4.DE162"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4B4Z"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="relatedto"/>
+        </modifierExtension>
+        <code value="D4.DE165"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="QC44.0"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="D4.DE166"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="QC44.2"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="relatedto"/>
+        </modifierExtension>
+        <code value="D4.DE167"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="1C62.1"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="D4.DE168"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

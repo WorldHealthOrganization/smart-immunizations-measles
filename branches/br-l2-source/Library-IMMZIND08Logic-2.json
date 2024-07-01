@@ -1,0 +1,755 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "52",
+            "s" : [ {
+               "value" : [ "/*\n * Library: IMMZ.IND.08 Logic\n * Immunization coverage for Measles containing vaccine (Estimated Denominator) \n * Compares the administered doses of measles containing vaccines (MCV) with the estimated number of surviving infants (if dose 1) or a country supplied denominator (if dose 2) expressed as a percentage. \n * \n * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period \n * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period\n * Denominator: Estimated number of surviving infants (for dose 1) and country supplied denominator for dose sequence 2 (see comments)\n * Denominator Computation: PARAMETER number of surviving infants (if Dose Sequence = 1) or PARAMETER of country supplied denominator (if Dose Sequence = 2)\n * \n * Disaggregation:\n *   - Dose Sequence (1, 2)\n *   - Age Group (< 1 year or > 1 year)\n *   - Geographic Region\n *   - Administrative Gender (or Biological Sex)\n * \n * References: WHO Immunization Facility Analysis Guide (1), WHO / UNICEF Joint Reporting Form (3 - elements 4240 and 4260 )\n */\n","library IMMZIND08Logic" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZIND08Logic",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "28:1-28:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "/*\nNOTE: This is an estimated denominator measure, meaning that all we are contributing from the site perspective is a count\ntowards the numerator, actual processing of this data to determine a proportion measure would be done by downstream analytics\n\nFor this reason, this measure is modeled as a continuous variable measure where the contribution from each patient is the count of events (1)\n*/\n\n","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "30:1-30:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "32:1-32:32",
+            "localIdentifier" : "Common",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "33:1-33:36",
+            "localIdentifier" : "Concepts",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZConcepts",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConcepts" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Concepts" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "5",
+            "locator" : "34:1-34:32",
+            "localIdentifier" : "Config",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZConfig",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Config" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "6",
+            "locator" : "35:1-35:45",
+            "localIdentifier" : "Elements",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZIndicatorElements",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZIndicatorElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Elements" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "7",
+            "locator" : "36:1-36:48",
+            "localIdentifier" : "VaccineLibrary",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZVaccineLibrary",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "7",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZVaccineLibrary" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","VaccineLibrary" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "10",
+            "locator" : "38:1-38:45",
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "10",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Measurement Period\""," " ]
+                  }, {
+                     "r" : "9",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "8",
+                        "s" : [ {
+                           "value" : [ "Date" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "parameterTypeSpecifier" : {
+               "localId" : "9",
+               "locator" : "38:32-38:45",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "8",
+                  "locator" : "38:41-38:44",
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "40:1-40:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "40:1-40:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "40:1-40:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "12",
+            "locator" : "45:1-46:6",
+            "name" : "Initial Population",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "r" : "11",
+                     "value" : [ "/*\n * As defined by Member States\n */\n","define ","\"Initial Population\"",":\n  ","true" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "11",
+               "locator" : "46:3-46:6",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "true",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "16",
+            "locator" : "48:1-49:79",
+            "name" : "Measure Population",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "16",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Measure Population\"",":\n  " ]
+                  }, {
+                     "r" : "15",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "14",
+                        "s" : [ {
+                           "r" : "13",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "14",
+                           "s" : [ {
+                              "value" : [ "\"MCV Doses Administered to Patient During Measurement Period\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "15",
+               "locator" : "49:3-49:79",
+               "type" : "Exists",
+               "operand" : {
+                  "localId" : "14",
+                  "locator" : "49:10-49:79",
+                  "name" : "MCV Doses Administered to Patient During Measurement Period",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "19",
+            "locator" : "56:1-57:3",
+            "name" : "Measure Observation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "19",
+                  "s" : [ {
+                     "value" : [ "/*\n * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period\n * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period\n * NOTE: Modeled as a Continuous Variable measure because this is an estimated denominator proportion measure\n */\n","define function \"Measure Observation\"(Patient \"Patient\"):\n  " ]
+                  }, {
+                     "r" : "18",
+                     "s" : [ {
+                        "r" : "18",
+                        "value" : [ "1" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "18",
+               "locator" : "57:3",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+               "value" : "1",
+               "type" : "Literal"
+            },
+            "operand" : [ {
+               "name" : "Patient",
+               "operandTypeSpecifier" : {
+                  "localId" : "17",
+                  "locator" : "56:47-56:55",
+                  "name" : "{http://hl7.org/fhir}Patient",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "28",
+            "locator" : "62:1-64:53",
+            "name" : "Dose Sequence Stratifier",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "28",
+                  "s" : [ {
+                     "value" : [ "/*\n * Disaggregator: Dose Sequence (1, 2)\n */\n","define ","\"Dose Sequence Stratifier\"",":\n\t" ]
+                  }, {
+                     "r" : "27",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "21",
+                           "s" : [ {
+                              "r" : "20",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "Elements",".","\"MCV Doses Administered to Patient During Measurement Period\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","I" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n\t" ]
+                     }, {
+                        "r" : "26",
+                        "s" : [ {
+                           "value" : [ "return " ]
+                        }, {
+                           "r" : "25",
+                           "s" : [ {
+                              "r" : "24",
+                              "s" : [ {
+                                 "value" : [ "(" ]
+                              }, {
+                                 "r" : "24",
+                                 "s" : [ {
+                                    "value" : [ "singleton from " ]
+                                 }, {
+                                    "r" : "23",
+                                    "s" : [ {
+                                       "r" : "22",
+                                       "s" : [ {
+                                          "value" : [ "I" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "23",
+                                       "s" : [ {
+                                          "value" : [ "protocolApplied" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "25",
+                              "s" : [ {
+                                 "value" : [ "doseNumber" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "27",
+               "locator" : "63:2-64:53",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "21",
+                  "locator" : "63:2-63:73",
+                  "alias" : "I",
+                  "expression" : {
+                     "localId" : "20",
+                     "locator" : "63:2-63:71",
+                     "name" : "MCV Doses Administered to Patient During Measurement Period",
+                     "libraryName" : "Elements",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "return" : {
+                  "localId" : "26",
+                  "locator" : "64:2-64:53",
+                  "expression" : {
+                     "localId" : "25",
+                     "locator" : "64:9-64:53",
+                     "path" : "doseNumber",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "24",
+                        "locator" : "64:9-64:42",
+                        "type" : "SingletonFrom",
+                        "operand" : {
+                           "localId" : "23",
+                           "locator" : "64:25-64:41",
+                           "path" : "protocolApplied",
+                           "scope" : "I",
+                           "type" : "Property"
+                        }
+                     }
+                  }
+               }
+            }
+         }, {
+            "localId" : "31",
+            "locator" : "69:1-70:36",
+            "name" : "Age Group Stratifier",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "31",
+                  "s" : [ {
+                     "value" : [ "/*\n * Disaggregator: Age Group (<24H of Birth, < 2 weeks)\n */\n","define ","\"Age Group Stratifier\"",":\n\t" ]
+                  }, {
+                     "r" : "30",
+                     "s" : [ {
+                        "r" : "29",
+                        "s" : [ {
+                           "value" : [ "Elements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "30",
+                        "s" : [ {
+                           "value" : [ "\"Infant By Age Stratifier\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "30",
+               "locator" : "70:2-70:36",
+               "name" : "Infant By Age Stratifier",
+               "libraryName" : "Elements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "34",
+            "locator" : "75:1-76:43",
+            "name" : "Geographic Region Stratifier",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "34",
+                  "s" : [ {
+                     "value" : [ "/*\n * Disaggregator: Geographic Region\n */\n","define ","\"Geographic Region Stratifier\"",":\n\t" ]
+                  }, {
+                     "r" : "33",
+                     "s" : [ {
+                        "r" : "32",
+                        "s" : [ {
+                           "value" : [ "Elements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "33",
+                        "s" : [ {
+                           "value" : [ "\"By Geographic Region Stratifier\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "33",
+               "locator" : "76:2-76:43",
+               "name" : "By Geographic Region Stratifier",
+               "libraryName" : "Elements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "37",
+            "locator" : "81:1-82:47",
+            "name" : "Administrative Gender Stratifier",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "37",
+                  "s" : [ {
+                     "value" : [ "/*\n * Disaggregator: Administrative Gender (or Biological Sex)\n */\n","define ","\"Administrative Gender Stratifier\"",":\n\t" ]
+                  }, {
+                     "r" : "36",
+                     "s" : [ {
+                        "r" : "35",
+                        "s" : [ {
+                           "value" : [ "Elements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "36",
+                        "s" : [ {
+                           "value" : [ "\"By Administrative Gender Stratifier\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "36",
+               "locator" : "82:2-82:47",
+               "name" : "By Administrative Gender Stratifier",
+               "libraryName" : "Elements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "52",
+            "locator" : "87:1-90:51",
+            "name" : "Stratification",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "52",
+                  "s" : [ {
+                     "value" : [ "/*\n * Combined stratifiers\n */\n","define ","\"Stratification\"",":\n  " ]
+                  }, {
+                     "r" : "51",
+                     "s" : [ {
+                        "r" : "48",
+                        "s" : [ {
+                           "r" : "46",
+                           "s" : [ {
+                              "r" : "42",
+                              "s" : [ {
+                                 "r" : "40",
+                                 "s" : [ {
+                                    "r" : "39",
+                                    "s" : [ {
+                                       "r" : "38",
+                                       "s" : [ {
+                                          "value" : [ "Elements" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "39",
+                                       "s" : [ {
+                                          "value" : [ "\"By Administrative Gender Stratifier\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "40",
+                                    "s" : [ {
+                                       "value" : [ "code" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " \n    + " ]
+                              }, {
+                                 "r" : "41",
+                                 "s" : [ {
+                                    "value" : [ "':'" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " + " ]
+                           }, {
+                              "r" : "45",
+                              "s" : [ {
+                                 "r" : "44",
+                                 "s" : [ {
+                                    "r" : "43",
+                                    "s" : [ {
+                                       "value" : [ "Elements" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "44",
+                                    "s" : [ {
+                                       "value" : [ "\"Toddler By Age Stratifier\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "45",
+                                 "s" : [ {
+                                    "value" : [ "code" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " \n\t+ " ]
+                        }, {
+                           "r" : "47",
+                           "s" : [ {
+                              "value" : [ "':'" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " + " ]
+                     }, {
+                        "r" : "50",
+                        "s" : [ {
+                           "r" : "49",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "50",
+                           "s" : [ {
+                              "value" : [ "\"By Geographic Region Stratifier\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "51",
+               "locator" : "88:3-90:51",
+               "type" : "Concatenate",
+               "operand" : [ {
+                  "localId" : "48",
+                  "locator" : "88:3-90:6",
+                  "type" : "Concatenate",
+                  "operand" : [ {
+                     "localId" : "46",
+                     "locator" : "88:3-89:53",
+                     "type" : "Concatenate",
+                     "operand" : [ {
+                        "localId" : "42",
+                        "locator" : "88:3-89:9",
+                        "type" : "Concatenate",
+                        "operand" : [ {
+                           "localId" : "40",
+                           "locator" : "88:3-88:53",
+                           "path" : "code",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "39",
+                              "locator" : "88:3-88:48",
+                              "name" : "By Administrative Gender Stratifier",
+                              "libraryName" : "Elements",
+                              "type" : "ExpressionRef"
+                           }
+                        }, {
+                           "localId" : "41",
+                           "locator" : "89:7-89:9",
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : ":",
+                           "type" : "Literal"
+                        } ]
+                     }, {
+                        "localId" : "45",
+                        "locator" : "89:13-89:53",
+                        "path" : "code",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "44",
+                           "locator" : "89:13-89:48",
+                           "name" : "Toddler By Age Stratifier",
+                           "libraryName" : "Elements",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  }, {
+                     "localId" : "47",
+                     "locator" : "90:4-90:6",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : ":",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "name" : "ToString",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ {
+                     "name" : "{http://hl7.org/fhir}string",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "50",
+                     "locator" : "90:10-90:51",
+                     "name" : "By Geographic Region Stratifier",
+                     "libraryName" : "Elements",
+                     "type" : "ExpressionRef"
+                  } ]
+               } ]
+            }
+         } ]
+      }
+   }
+}

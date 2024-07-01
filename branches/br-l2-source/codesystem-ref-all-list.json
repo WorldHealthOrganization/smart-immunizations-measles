@@ -1,0 +1,358 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/CodeSystem/medication-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Medication Status Codes",
+      "title" : "Medication  status  codes",
+      "description" : "Medication Status Codes",
+      "oids" : ["2.16.840.1.113883.4.642.4.1380"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medication-status.html" : "Medication  status  codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Intent",
+      "title" : "Medication request  intent",
+      "description" : "MedicationRequest Intent Codes",
+      "oids" : ["2.16.840.1.113883.4.642.4.1378"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medicationrequest-intent.html" : "Medication request  intent"
+    },
+    {
+      "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationrequest Status",
+      "title" : "Medicationrequest  status",
+      "description" : "MedicationRequest Status Codes",
+      "oids" : ["2.16.840.1.113883.4.642.4.1377"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medicationrequest-status.html" : "Medicationrequest  status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToAdministrativeGender.html" : "ConceptMap to and from Immunization Concepts to administrative gender"
+    },
+    {
+      "url" : "http://hl7.org/fhir/event-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EventStatus",
+      "title" : "EventStatus",
+      "description" : "Codes identifying the lifecycle stage of an event.",
+      "oids" : ["2.16.840.1.113883.4.642.4.110"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-status.html" : "Immunization Status Codes",
+      "ValueSet-QIMMZCAdministerVaccine_SGImmunizationStatusCodes.html" : "Immunization Status Codes",
+      "ValueSet-SGImmunizationStatusCodes.html" : "Immunization Status Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.116"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-request-priority.html" : "Request priority"
+    },
+    {
+      "url" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "4.0.0",
+      "status" : "active",
+      "name" : "CVX",
+      "title" : "Vaccine Administered Code Set (CVX)",
+      "description" : "The CDC's National Center of Immunization and Respiratory Diseases (NCIRD - see [https://www.cdc.gov/ncird/](https://www.cdc.gov/ncird/)) developed and maintains the CVX (vaccine administered) code set. It includes both active and inactive vaccines available in the US. CVX codes for inactive vaccines allow transmission of historical immunization records. When a MVX (manufacturer) code is paired with a CVX (vaccine administered) code, the specific trade named vaccine may be indicated. These codes should be used for immunization messages using either HL7 Version 2.3.1 or HL7 Version 2.5.1. CVX is the underlying Master Code System for V2 table 0292 (Vaccines Administered). The machine readable name for CVX in PHIN VADS is PH_VaccinesAdministeredCVX_CDC_NIP. The version of the CVX code set for certification can be found on the archive page:[https://www2a.cdc.gov/vaccines/iis/iisstandards/mu3versioned_codes.asp](https://www2a.cdc.gov/vaccines/iis/iisstandards/mu3versioned_codes.asp) \r\n\r\nThe Status column indicates if the vaccine is currently available in the United States.\r\n\r\n*  Active: A currently available administrable vaccine \r\n\r\n*  Inactive: An administrable vaccine formulation that is no longer available for patient administration, but can be found in historical patient records OR A historical record of a vaccine administered where the exact formulation is unknown \r\n\r\n*  Pending: A vaccine that is expected to become active in the future \r\n\r\n*  Non-US: A vaccine that available outside the US only \r\n\r\n*  Never Active: A vaccine that was never available and is not in the pipeline of new vaccines \r\n\r\nThe Last Updated column indicates the last time this particular vaccine code was updated in this table.\r\n\r\nQuestions regarding this table should be directed to the IIS Technical Assistance Team via iisinfo@cdc.gov (or use mailing address via [https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx#addr](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx#addr)) \r\n\r\nHL7 Implementers should note that 'Status' IS NOT CONCEPT STATUS as all codes are ACTIVE in this code system.\r\n\r\nThe current code system is available via [https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx)",
+      "oids" : ["2.16.840.1.113883.12.292"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-vaccine-code.html" : "Vaccine Administered Value Set"
+    },
+    {
+      "url" : "http://id.who.int/icd/release/11/mms",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICD11",
+      "title" : "ICD-11",
+      "description" : "ICD-11.",
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToICD11.html" : "ConceptMap to and from ICD-11",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-LiveAttenuatedVaccines.html" : "Set of live attenuated vaccines",
+      "ValueSet-HIVstatus-values.html" : "HIV status values",
+      "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "ValueSet-QIMMZCAdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToLOINC.html" : "ConceptMap to and from LOINC",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values",
+      "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "ValueSet-QIMMZCAdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZConcepts",
+      "title" : "Immunizations Concepts CodeSystem",
+      "description" : "This code system defines concepts used in SMART Immunizations",
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToICD11.html" : "ConceptMap to and from ICD-11",
+      "ConceptMap-IMMZConceptsToLOINC.html" : "ConceptMap to and from LOINC",
+      "ConceptMap-IMMZConceptsToSNOMED.html" : "ConceptMap to and from SNOMED",
+      "ValueSet-IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex",
+      "ValueSet-QIMMZCRegisterClient_IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex",
+      "ValueSet-QIMMZD1ClientHistoryMeasles_IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "ConceptMap-IMMZConceptsToAdministrativeGender.html" : "ConceptMap to and from Immunization Concepts to administrative gender",
+      "ValueSet-IMMZ.D4.DE161.html" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "ValueSet-QIMMZD4CheckContraindicationsMeasles_IMMZ.D4.DE161.html" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "ValueSet-IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "ValueSet-IMMZ.D1.DE5VS.html" : "IMMZ.D1.DE5 values for Reason Not Done",
+      "ValueSet-IMMZ.D1.DE1VS.html" : "IMMZ.D1.DE1 CodeSystem for Immunization status"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineProducts",
+      "title" : "Vaccine Product codes CodeSet",
+      "description" : "Vaccine Product codes, containing the different available products.",
+      "uses" : {
+      },
+      "ValueSet-QIMMZCAdministerVaccine_VSMeaslesVaccineProducts.html" : "MeaslesVaccine Products ValueSet",
+      "ValueSet-VSMeaslesVaccineProducts.html" : "MeaslesVaccine Products ValueSet"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-status-reason.html" : "Immunization Status Reason Codes",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+      "ConceptMap-IMMZConceptsToSNOMED.html" : "ConceptMap to and from SNOMED",
+      "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values",
+      "ValueSet-Immunocompromised-values.html" : "Immunocompromised valueset",
+      "http://hl7.org/fhir/R4/valueset-immunization-reason.html" : "Immunization Reason Codes",
+      "ValueSet-QIMMZCAdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+      "ValueSet-ARVDrugs-values.html" : "ARV Drugs values",
+      "ValueSet-PositiveTestResult-values.html" : "Positive Test Result valuest",
+      "ValueSet-HIVstatus-values.html" : "HIV status values",
+      "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "ValueSet-Negativetestresult-values.html" : "Negative Test Results",
+      "http://hl7.org/fhir/R4/valueset-medication-form-codes.html" : "SNOMED CT Form Codes",
+      "http://hl7.org/fhir/R4/valueset-immunization-target-disease.html" : "Immunization Target Disease Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/immunization-funding-source",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ImmunizationFundingSource",
+      "title" : "Immunization Funding Source",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1100"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-funding-source.html" : "Immunization Funding Source"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/immunization-origin",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ImmunizationOriginCodes",
+      "title" : "Immunization Origin Codes",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the data when the report of the immunization event is not based on information from the person, entity or organization who administered the vaccine. This value set is provided as a suggestive example.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1101"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-origin.html" : "Immunization Origin Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/immunization-program-eligibility",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ImmunizationProgramEligibility",
+      "title" : "Immunization Program Eligibility",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient's eligibility for a vaccination program. This value set is provided as a suggestive example.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1099"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-program-eligibility.html" : "Immunization Program Eligibility"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ImmunizationSubpotentReason",
+      "title" : "Immunization Subpotent Reason",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1098"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-subpotent-reason.html" : "Immunization Subpotent Reason"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "MedicationRequestCategoryCodes",
+      "title" : "MedicationRequest Category Codes",
+      "description" : "MedicationRequest Category Codes",
+      "oids" : ["2.16.840.1.113883.4.642.1.1323"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medicationrequest-category.html" : "Medication request  category  codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "MedicationRequestCourseOfTherapyCodes",
+      "title" : "MedicationRequest Course of Therapy Codes",
+      "description" : "MedicationRequest Course of Therapy Codes",
+      "oids" : ["2.16.840.1.113883.4.642.1.1327"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medicationrequest-course-of-therapy.html" : "Medication request  course of  therapy  codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "MedicationRequestStatusReasonCodes",
+      "title" : "MedicationRequest Status Reason Codes",
+      "description" : "MedicationRequest Status Reason Codes",
+      "oids" : ["2.16.840.1.113883.4.642.1.1325"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medicationrequest-status-reason.html" : "Medication request  status  reason  codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "ProviderRole",
+      "title" : "providerRole",
+      "description" : "Code system of concepts specifying the functional involvement with the activity being transmitted (e.g., Case Manager, Evaluator, Transcriber, Nurse Care Practitioner, Midwife, Physician Assistant, etc.).  Used in HL7 Version 2.x messaging in the ROL segment.",
+      "oids" : ["2.16.840.1.113883.18.283"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-function.html" : "Immunization Function Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActReason",
+      "title" : "ActReason",
+      "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+      "oids" : ["2.16.840.1.113883.5.8"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-status-reason.html" : "Immunization Status Reason Codes",
+      "http://terminology.hl7.org/5.5.0/ValueSet-v3-SubstanceAdminSubstitutionReason.html" : "SubstanceAdminSubstitutionReason"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActSite",
+      "title" : "ActSite",
+      "description" : "An anatomical location on an organism which can be the focus of an act.",
+      "oids" : ["2.16.840.1.113883.5.1052"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-site.html" : "Codes for Immunization Site of Administration"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "RouteOfAdministration",
+      "title" : "RouteOfAdministration",
+      "description" : "The path the administered medication takes to get into the body or into contact with the body.",
+      "oids" : ["2.16.840.1.113883.5.112"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-immunization-route.html" : "Immunization Route Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "SubstanceAdminSubstitution",
+      "title" : "Substance Admin Substitution",
+      "description" : "Identifies what sort of change is permitted or has occurred between the therapy that was ordered and the therapy that was/will be provided.",
+      "oids" : ["2.16.840.1.113883.5.1070"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/5.5.0/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html" : "ActSubstanceAdminSubstitutionCode"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
+    },
+    {
+      "url" : "urn:iso:std:iso:3166",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ISO3166Part1",
+      "title" : "ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code",
+      "description" : "ISO 3166-1 establishes codes that represent the current names of countries, dependencies, and other areas of particular geopolitical interest, on the basis of country names obtained from the United Nations.",
+      "oids" : ["1.0.3166.1"],
+      "uses" : {
+      },
+      "ValueSet-sgcountry.html" : "Country ValueSet"
+    }
+  ]
+}

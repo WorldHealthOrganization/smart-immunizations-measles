@@ -1,0 +1,133 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToAdministrativeGender.html" : "ConceptMap to and from Immunization Concepts to administrative gender"
+    },
+    {
+      "url" : "http://hl7.org/fhir/event-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EventStatus",
+      "title" : "EventStatus",
+      "description" : "Codes identifying the lifecycle stage of an event.",
+      "oids" : ["2.16.840.1.113883.4.642.4.110"],
+      "uses" : {
+      },
+      "ValueSet-QIMMZCAdministerVaccine_SGImmunizationStatusCodes.html" : "Immunization Status Codes",
+      "ValueSet-SGImmunizationStatusCodes.html" : "Immunization Status Codes"
+    },
+    {
+      "url" : "http://id.who.int/icd/release/11/mms",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICD11",
+      "title" : "ICD-11",
+      "description" : "ICD-11.",
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToICD11.html" : "ConceptMap to and from ICD-11",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-LiveAttenuatedVaccines.html" : "Set of live attenuated vaccines",
+      "ValueSet-HIVstatus-values.html" : "HIV status values",
+      "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "ValueSet-QIMMZCAdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToLOINC.html" : "ConceptMap to and from LOINC",
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values",
+      "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "ValueSet-QIMMZCAdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IMMZConcepts",
+      "title" : "Immunizations Concepts CodeSystem",
+      "description" : "This code system defines concepts used in SMART Immunizations",
+      "uses" : {
+      },
+      "ConceptMap-IMMZConceptsToICD11.html" : "ConceptMap to and from ICD-11",
+      "ConceptMap-IMMZConceptsToLOINC.html" : "ConceptMap to and from LOINC",
+      "ConceptMap-IMMZConceptsToSNOMED.html" : "ConceptMap to and from SNOMED",
+      "ValueSet-IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex",
+      "ValueSet-QIMMZCRegisterClient_IMMZ.C.DE5.html" : "IMMZ.C.DE5 ValueSet for Sex",
+      "ValueSet-QIMMZD1ClientHistoryMeasles_IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "ConceptMap-IMMZConceptsToAdministrativeGender.html" : "ConceptMap to and from Immunization Concepts to administrative gender",
+      "ValueSet-IMMZ.D4.DE161.html" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "ValueSet-QIMMZD4CheckContraindicationsMeasles_IMMZ.D4.DE161.html" : "IMMZ.D4.DE161 ValueSet for Potential Contraindications",
+      "ValueSet-IMMZ.D1.DE10.html" : "IMMZ.D1.DE10 ValueSet for HIV Status",
+      "ValueSet-IMMZ.D1.DE5VS.html" : "IMMZ.D1.DE5 values for Reason Not Done",
+      "ValueSet-IMMZ.D1.DE1VS.html" : "IMMZ.D1.DE1 CodeSystem for Immunization status"
+    },
+    {
+      "url" : "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineProducts",
+      "title" : "Vaccine Product codes CodeSet",
+      "description" : "Vaccine Product codes, containing the different available products.",
+      "uses" : {
+      },
+      "ValueSet-QIMMZCAdministerVaccine_VSMeaslesVaccineProducts.html" : "MeaslesVaccine Products ValueSet",
+      "ValueSet-VSMeaslesVaccineProducts.html" : "MeaslesVaccine Products ValueSet"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "ValueSet-AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ConceptMap-IMMZConceptsToSNOMED.html" : "ConceptMap to and from SNOMED",
+      "ValueSet-ARVDrugs-values.html" : "ARV Drugs values",
+      "ValueSet-PositiveTestResult-values.html" : "Positive Test Result valuest",
+      "ValueSet-HIVstatus-values.html" : "HIV status values",
+      "ValueSet-Birthweight-values.html" : "Birthweight valueset",
+      "ValueSet-pregnancystatus-values.html" : "Pregnancy status values",
+      "ValueSet-VaccineTypes.html" : "Measles Vaccine Type ValueSet",
+      "ValueSet-IMMZ.Z.DE9.html" : "IMMZ.Z.DE9 ValueSet for Measles Vaccines",
+      "ValueSet-Immunocompromised-values.html" : "Immunocompromised valueset",
+      "ValueSet-QIMMZCAdministerVaccine_AllVaccineTypes.html" : "Vaccine Type ValueSet",
+      "ValueSet-Negativetestresult-values.html" : "Negative Test Results"
+    },
+    {
+      "url" : "urn:iso:std:iso:3166",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ISO3166Part1",
+      "title" : "ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code",
+      "description" : "ISO 3166-1 establishes codes that represent the current names of countries, dependencies, and other areas of particular geopolitical interest, on the basis of country names obtained from the United Nations.",
+      "oids" : ["1.0.3166.1"],
+      "uses" : {
+      },
+      "ValueSet-sgcountry.html" : "Country ValueSet"
+    }
+  ]
+}

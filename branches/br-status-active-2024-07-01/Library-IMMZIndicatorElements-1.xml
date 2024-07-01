@@ -1,0 +1,2612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="391">
+         <a:s>/**
+ * Immunization Indicator Elements by Patients as Context
+ */
+
+library IMMZIndicatorElements</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="IMMZIndicatorElements" system="http://smart.who.int/immunizations-measles"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="7:1-7:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="9:1-9:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="11:1-11:19" localIdentifier="WHOConcepts" path="http://smart.who.int/immunizations-measles/WHOConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>WHOConcepts</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="12:1-12:27" localIdentifier="WC" path="http://smart.who.int/immunizations-measles/WHOCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>WHOCommon</a:s>
+               </a:s>
+               <a:s> called WC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="14:1-14:36" localIdentifier="Concepts" path="http://smart.who.int/immunizations-measles/IMMZConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZConcepts</a:s>
+               </a:s>
+               <a:s> called Concepts</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="15:1-15:32" localIdentifier="Common" path="http://smart.who.int/immunizations-measles/IMMZCommon">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZCommon</a:s>
+               </a:s>
+               <a:s> called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="7" locator="16:1-16:36" localIdentifier="Elements" path="http://smart.who.int/immunizations-measles/IMMZElements">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>IMMZElements</a:s>
+               </a:s>
+               <a:s> called Elements</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="65" locator="61:1-61:88" name="Measurement Period" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="65">
+               <a:s>parameter &quot;Measurement Period&quot; </a:s>
+               <a:s r="64">
+                  <a:s>Interval&lt;</a:s>
+                  <a:s r="63">
+                     <a:s>Date</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+               <a:s> default </a:s>
+               <a:s r="62">
+                  <a:s r="60">Interval[@2020-01-01, @2020-12-31]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="62" locator="61:55-61:88" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="60" locator="61:64-61:74" xsi:type="Date">
+               <year valueType="t:Integer" value="2020" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </low>
+            <high localId="61" locator="61:77-61:87" xsi:type="Date">
+               <year valueType="t:Integer" value="2020" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="12" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="31" xsi:type="Literal"/>
+            </high>
+         </default>
+         <parameterTypeSpecifier localId="64" locator="61:32-61:45" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="63" locator="61:41-61:44" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <codeSystems>
+      <def localId="8" locator="18:1-18:92" name="ISO-8601-Derived Periods" id="http://ohie.org/CodeSystem/iso-8601-derived-periods" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>codesystem &quot;ISO-8601-Derived Periods&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="53" locator="56:1-56:85" name="Administrative Gender Codes" id="http://hl7.org/fhir/administrative-gender" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="53">
+               <a:s>codesystem &quot;Administrative Gender Codes&quot;: 'http://hl7.org/fhir/administrative-gender'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <codes>
+      <def localId="10" locator="21:1-21:78" name="P0Y--P1Y" id="P0Y--P1Y" display="&lt; 1 year" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="10">
+               <a:s>// Age Groups for Vaccines for infants
+code &quot;P0Y--P1Y&quot;: 'P0Y--P1Y' from </a:s>
+               <a:s r="9">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '&lt; 1 year'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="9" locator="21:34-21:59" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="12" locator="22:1-22:84" name="P1Y--P9999Y" id="P1Y--P9999Y" display="> 1 year" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>code &quot;P1Y--P9999Y&quot;: 'P1Y--P9999Y' from </a:s>
+               <a:s r="11">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '> 1 year'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="11" locator="22:40-22:65" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="14" locator="25:1-25:79" name="P0Y--P2Y" id="P0Y--P2Y" display="&lt; 2 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="14">
+               <a:s>// Age Groups for Vaccines for Toddlers
+code &quot;P0Y--P2Y&quot;: 'P0Y--P2Y' from </a:s>
+               <a:s r="13">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '&lt; 2 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="13" locator="25:34-25:59" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="16" locator="26:1-26:76" name="P1Y--P2Y" id="P1Y--P2Y" display="1 year" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="16">
+               <a:s>code &quot;P1Y--P2Y&quot;: 'P1Y--P2Y' from </a:s>
+               <a:s r="15">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '1 year'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="15" locator="26:34-26:59" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="18" locator="27:1-27:85" name="P2Y--P9999Y" id="P2Y--P9999Y" display="> 2 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="18">
+               <a:s>code &quot;P2Y--P9999Y&quot;: 'P2Y--P9999Y' from </a:s>
+               <a:s r="17">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '> 2 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="17" locator="27:40-27:65" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="20" locator="30:1-30:95" name="PT0H--PT24H" id="PT0H--PT24H" display="Within 24H of Birth" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="20">
+               <a:s>// Age groups for newborns
+code &quot;PT0H--PT24H&quot;: 'PT0H--PT24H' from </a:s>
+               <a:s r="19">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display 'Within 24H of Birth'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="19" locator="30:40-30:65" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="22" locator="31:1-31:83" name="PT24H--P2W" id="PT24H--P2W" display="&lt; 2 Weeks" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="22">
+               <a:s>code &quot;PT24H--P2W&quot;: 'PT24H--P2W' from </a:s>
+               <a:s r="21">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '&lt; 2 Weeks'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="21" locator="31:38-31:63" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="24" locator="32:1-32:85" name="P2W--P9999Y" id="P2W--P9999Y" display="> 2 Weeks" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="24">
+               <a:s>code &quot;P2W--P9999Y&quot;: 'P2W--P9999Y' from </a:s>
+               <a:s r="23">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '> 2 Weeks'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="23" locator="32:40-32:65" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="26" locator="35:1-35:79" name="P0Y--P9Y" id="P0Y--P9Y" display="&lt; 9 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="26">
+               <a:s>// Age groups for adolescent
+code &quot;P0Y--P9Y&quot;: 'P0Y--P9Y' from </a:s>
+               <a:s r="25">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '&lt; 9 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="25" locator="35:34-35:59" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="28" locator="36:1-36:84" name="P9Y--P14Y" id="P9Y--P14Y" display="9 - 14 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="28">
+               <a:s>code &quot;P9Y--P14Y&quot;: 'P9Y--P14Y' from </a:s>
+               <a:s r="27">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '9 - 14 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="27" locator="36:36-36:61" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="30" locator="37:1-37:88" name="P15Y--P9999Y" id="P15Y--P9999Y" display="> 15 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="30">
+               <a:s>code &quot;P15Y--P9999Y&quot;: 'P15Y--P9999Y' from </a:s>
+               <a:s r="29">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '> 15 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="29" locator="37:42-37:67" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="32" locator="40:1-40:80" name="P0M--P9M" id="P0M--P9M" display="&lt; 9 months" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="32">
+               <a:s>// RCV Startifiers
+code &quot;P0M--P9M&quot;: 'P0M--P9M' from </a:s>
+               <a:s r="31">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '&lt; 9 months'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="31" locator="40:34-40:59" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="34" locator="41:1-41:85" name="P9M--P18M" id="P9M--P18M" display="9 - 18 months" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="34">
+               <a:s>code &quot;P9M--P18M&quot;: 'P9M--P18M' from </a:s>
+               <a:s r="33">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '9 - 18 months'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="33" locator="41:36-41:61" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="36" locator="42:1-42:94" name="P18M--P15Y" id="P18M--P15Y" display="18 months - 15 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="36">
+               <a:s>code &quot;P18M--P15Y&quot;: 'P18M--P15Y' from </a:s>
+               <a:s r="35">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '18 months - 15 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="35" locator="42:38-42:63" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="38" locator="45:1-45:83" name="P0M--P12M" id="P0M--P12M" display="&lt; 12 months" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="38">
+               <a:s>// Varicella Age groups
+code &quot;P0M--P12M&quot;: 'P0M--P12M' from </a:s>
+               <a:s r="37">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '&lt; 12 months'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="37" locator="45:36-45:61" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="40" locator="46:1-46:88" name="P12M--P18M" id="P12M--P18M" display="12 - 18 months" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="40">
+               <a:s>code &quot;P12M--P18M&quot;: 'P12M--P18M' from </a:s>
+               <a:s r="39">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '12 - 18 months'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="39" locator="46:38-46:63" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="42" locator="47:1-47:88" name="P18M--P36M" id="P18M--P36M" display="18 - 36 months" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="42">
+               <a:s>code &quot;P18M--P36M&quot;: 'P18M--P36M' from </a:s>
+               <a:s r="41">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '18 - 36 months'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="41" locator="47:38-47:63" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="44" locator="48:1-48:94" name="P36M--P12Y" id="P36M--P12Y" display="36 months - 12 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="44">
+               <a:s>code &quot;P36M--P12Y&quot;: 'P36M--P12Y' from </a:s>
+               <a:s r="43">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '36 months - 12 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="43" locator="48:38-48:63" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="46" locator="49:1-49:88" name="P12Y--P9999Y" id="P12Y--P9999Y" display="> 12 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="46">
+               <a:s>code &quot;P12Y--P9999Y&quot;: 'P12Y--P9999Y' from </a:s>
+               <a:s r="45">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '> 12 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="45" locator="49:42-49:67" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="48" locator="52:1-52:89" name="P1Y--P15Y" id="P1Y--P15Y" display="1 year - 15 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="48">
+               <a:s>// Influenza Age Groups
+code &quot;P1Y--P15Y&quot;: 'P1Y--P15Y' from </a:s>
+               <a:s r="47">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '1 year - 15 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="47" locator="52:36-52:61" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="50" locator="53:1-53:93" name="P15Y--P60Y" id="P15Y--P60Y" display="15 years - 60 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="50">
+               <a:s>code &quot;P15Y--P60Y&quot;: 'P15Y--P60Y' from </a:s>
+               <a:s r="49">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '15 years - 60 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="49" locator="53:38-53:63" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="52" locator="54:1-54:88" name="P60Y--P9999Y" id="P60Y--P9999Y" display="> 60 years" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="52">
+               <a:s>code &quot;P60Y--P9999Y&quot;: 'P60Y--P9999Y' from </a:s>
+               <a:s r="51">
+                  <a:s>&quot;ISO-8601-Derived Periods&quot;</a:s>
+               </a:s>
+               <a:s> display '> 60 years'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="51" locator="54:42-54:67" name="ISO-8601-Derived Periods"/>
+      </def>
+      <def localId="55" locator="57:1-57:72" name="Males" id="male" display="Males" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="55">
+               <a:s>code &quot;Males&quot; : 'male' from </a:s>
+               <a:s r="54">
+                  <a:s>&quot;Administrative Gender Codes&quot;</a:s>
+               </a:s>
+               <a:s> display 'Males'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="54" locator="57:28-57:56" name="Administrative Gender Codes"/>
+      </def>
+      <def localId="57" locator="58:1-58:78" name="Females" id="female" display="Females" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="57">
+               <a:s>code &quot;Females&quot; : 'female' from </a:s>
+               <a:s r="56">
+                  <a:s>&quot;Administrative Gender Codes&quot;</a:s>
+               </a:s>
+               <a:s> display 'Females'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="56" locator="58:32-58:60" name="Administrative Gender Codes"/>
+      </def>
+      <def localId="59" locator="59:1-59:76" name="Other" id="other" display="Other/NA" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="59">
+               <a:s>code &quot;Other&quot; : 'other' from </a:s>
+               <a:s r="58">
+                  <a:s>&quot;Administrative Gender Codes&quot;</a:s>
+               </a:s>
+               <a:s> display 'Other/NA'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="58" locator="59:29-59:57" name="Administrative Gender Codes"/>
+      </def>
+   </codes>
+   <contexts>
+      <def locator="63:1-63:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="63:1-63:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="63:1-63:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="89" locator="68:1-74:7" name="Newborn By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="89">
+               <a:s>/** 
+ * Infant disaggregations by age
+ */
+define &quot;Newborn By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="88">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="72">
+                     <a:s>when </a:s>
+                     <a:s r="70">
+                        <a:s r="68">
+                           <a:s>AgeInHoursAt(</a:s>
+                           <a:s r="67">
+                              <a:s>start of </a:s>
+                              <a:s r="66">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="69"> &lt;= 24</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="71">
+                        <a:s>&quot;PT0H--PT24H&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="79">
+                     <a:s>when </a:s>
+                     <a:s r="77">
+                        <a:s r="75">
+                           <a:s>AgeInWeeksAt(</a:s>
+                           <a:s r="74">
+                              <a:s>start of </a:s>
+                              <a:s r="73">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="76"> &lt;= 2</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="78">
+                        <a:s>&quot;PT24H--P2W&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="86">
+                     <a:s>when </a:s>
+                     <a:s r="84">
+                        <a:s r="82">
+                           <a:s>AgeInWeeksAt(</a:s>
+                           <a:s r="81">
+                              <a:s>start of </a:s>
+                              <a:s r="80">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="83"> > 2</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="85">
+                        <a:s>&quot;P2W--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="87">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="88" locator="69:5-74:7" xsi:type="Case">
+            <caseItem localId="72" locator="70:9-70:81">
+               <when localId="70" locator="70:14-70:62" xsi:type="LessOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="68" locator="70:14-70:56" precision="Hour" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="67" locator="70:27-70:55" xsi:type="Start">
+                        <operand localId="66" locator="70:36-70:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="69" locator="70:61-70:62" valueType="t:Integer" value="24" xsi:type="Literal"/>
+               </when>
+               <then localId="71" locator="70:69-70:81" name="PT0H--PT24H" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="79" locator="71:9-71:79">
+               <when localId="77" locator="71:14-71:61" xsi:type="LessOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="75" locator="71:14-71:56" precision="Week" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="74" locator="71:27-71:55" xsi:type="Start">
+                        <operand localId="73" locator="71:36-71:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="76" locator="71:61" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               </when>
+               <then localId="78" locator="71:68-71:79" name="PT24H--P2W" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="86" locator="72:9-72:79">
+               <when localId="84" locator="72:14-72:60" xsi:type="Greater">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="82" locator="72:14-72:56" precision="Week" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="81" locator="72:27-72:55" xsi:type="Start">
+                        <operand localId="80" locator="72:36-72:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="83" locator="72:60" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               </when>
+               <then localId="85" locator="72:67-72:79" name="P2W--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="87" locator="73:14-73:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="106" locator="79:1-84:7" name="Infant By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="106">
+               <a:s>/** 
+ * Infant disaggregations by age
+ */
+define &quot;Infant By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="105">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="96">
+                     <a:s>when </a:s>
+                     <a:s r="94">
+                        <a:s r="92">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="91">
+                              <a:s>start of </a:s>
+                              <a:s r="90">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="93"> &lt; 1</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="95">
+                        <a:s>&quot;P0Y--P1Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="103">
+                     <a:s>when </a:s>
+                     <a:s r="101">
+                        <a:s r="99">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="98">
+                              <a:s>start of </a:s>
+                              <a:s r="97">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="100"> >= 1</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="102">
+                        <a:s>&quot;P1Y--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="104">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="105" locator="80:5-84:7" xsi:type="Case">
+            <caseItem localId="96" locator="81:9-81:76">
+               <when localId="94" locator="81:14-81:60" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="92" locator="81:14-81:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="91" locator="81:27-81:55" xsi:type="Start">
+                        <operand localId="90" locator="81:36-81:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="93" locator="81:60" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               </when>
+               <then localId="95" locator="81:67-81:76" name="P0Y--P1Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="103" locator="82:9-82:80">
+               <when localId="101" locator="82:14-82:61" xsi:type="GreaterOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="99" locator="82:14-82:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="98" locator="82:27-82:55" xsi:type="Start">
+                        <operand localId="97" locator="82:36-82:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="100" locator="82:61" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               </when>
+               <then localId="102" locator="82:68-82:80" name="P1Y--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="104" locator="83:14-83:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="130" locator="89:1-95:7" name="Toddler By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="130">
+               <a:s>/** 
+ * Toddler By Age Stratifiers
+ */
+define &quot;Toddler By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="129">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="113">
+                     <a:s>when </a:s>
+                     <a:s r="111">
+                        <a:s r="109">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="108">
+                              <a:s>start of </a:s>
+                              <a:s r="107">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="110"> &lt; 1</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="112">
+                        <a:s>&quot;P0Y--P1Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="120">
+                     <a:s>when </a:s>
+                     <a:s r="118">
+                        <a:s r="116">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="115">
+                              <a:s>start of </a:s>
+                              <a:s r="114">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="117"> &lt; 2</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="119">
+                        <a:s>&quot;P1Y--P2Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="127">
+                     <a:s>when </a:s>
+                     <a:s r="125">
+                        <a:s r="123">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="122">
+                              <a:s>start of </a:s>
+                              <a:s r="121">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="124"> >= 2</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="126">
+                        <a:s>&quot;P2Y--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="128">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="129" locator="90:5-95:7" xsi:type="Case">
+            <caseItem localId="113" locator="91:9-91:76">
+               <when localId="111" locator="91:14-91:60" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="109" locator="91:14-91:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="108" locator="91:27-91:55" xsi:type="Start">
+                        <operand localId="107" locator="91:36-91:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="110" locator="91:60" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               </when>
+               <then localId="112" locator="91:67-91:76" name="P0Y--P1Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="120" locator="92:9-92:76">
+               <when localId="118" locator="92:14-92:60" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="116" locator="92:14-92:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="115" locator="92:27-92:55" xsi:type="Start">
+                        <operand localId="114" locator="92:36-92:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="117" locator="92:60" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               </when>
+               <then localId="119" locator="92:67-92:76" name="P1Y--P2Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="127" locator="93:9-93:80">
+               <when localId="125" locator="93:14-93:61" xsi:type="GreaterOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="123" locator="93:14-93:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="122" locator="93:27-93:55" xsi:type="Start">
+                        <operand localId="121" locator="93:36-93:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="124" locator="93:61" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               </when>
+               <then localId="126" locator="93:68-93:80" name="P2Y--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="128" locator="94:14-94:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="154" locator="101:1-107:7" name="Adolescent By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="154">
+               <a:s>/** 
+ * Toddler By Age Stratifiers
+ */
+define &quot;Adolescent By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="153">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="137">
+                     <a:s>when </a:s>
+                     <a:s r="135">
+                        <a:s r="133">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="132">
+                              <a:s>start of </a:s>
+                              <a:s r="131">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="134"> &lt; 9</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="136">
+                        <a:s>&quot;P0Y--P9Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="144">
+                     <a:s>when </a:s>
+                     <a:s r="142">
+                        <a:s r="140">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="139">
+                              <a:s>start of </a:s>
+                              <a:s r="138">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="141"> &lt;= 14</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="143">
+                        <a:s>&quot;P9Y--P14Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="151">
+                     <a:s>when </a:s>
+                     <a:s r="149">
+                        <a:s r="147">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="146">
+                              <a:s>start of </a:s>
+                              <a:s r="145">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="148"> > 14</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="150">
+                        <a:s>&quot;P15Y--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="152">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="153" locator="102:5-107:7" xsi:type="Case">
+            <caseItem localId="137" locator="103:9-103:76">
+               <when localId="135" locator="103:14-103:60" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="133" locator="103:14-103:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="132" locator="103:27-103:55" xsi:type="Start">
+                        <operand localId="131" locator="103:36-103:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="134" locator="103:60" valueType="t:Integer" value="9" xsi:type="Literal"/>
+               </when>
+               <then localId="136" locator="103:67-103:76" name="P0Y--P9Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="144" locator="104:9-104:79">
+               <when localId="142" locator="104:14-104:62" xsi:type="LessOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="140" locator="104:14-104:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="139" locator="104:27-104:55" xsi:type="Start">
+                        <operand localId="138" locator="104:36-104:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="141" locator="104:61-104:62" valueType="t:Integer" value="14" xsi:type="Literal"/>
+               </when>
+               <then localId="143" locator="104:69-104:79" name="P9Y--P14Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="151" locator="105:9-105:81">
+               <when localId="149" locator="105:14-105:61" xsi:type="Greater">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="147" locator="105:14-105:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="146" locator="105:27-105:55" xsi:type="Start">
+                        <operand localId="145" locator="105:36-105:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="148" locator="105:60-105:61" valueType="t:Integer" value="14" xsi:type="Literal"/>
+               </when>
+               <then localId="150" locator="105:68-105:81" name="P15Y--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="152" locator="106:14-106:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="185" locator="112:1-119:7" name="RCV By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="185">
+               <a:s>/** 
+ * RCV age disaggregators
+ */
+define &quot;RCV By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="184">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="161">
+                     <a:s>when </a:s>
+                     <a:s r="159">
+                        <a:s r="157">
+                           <a:s>AgeInMonthsAt(</a:s>
+                           <a:s r="156">
+                              <a:s>start of </a:s>
+                              <a:s r="155">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="158"> &lt; 9</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="160">
+                        <a:s>&quot;P0M--P9M&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="168">
+                     <a:s>when </a:s>
+                     <a:s r="166">
+                        <a:s r="164">
+                           <a:s>AgeInMonthsAt(</a:s>
+                           <a:s r="163">
+                              <a:s>start of </a:s>
+                              <a:s r="162">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="165"> &lt; 18</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="167">
+                        <a:s>&quot;P9M--P18M&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="175">
+                     <a:s>when </a:s>
+                     <a:s r="173">
+                        <a:s r="171">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="170">
+                              <a:s>start of </a:s>
+                              <a:s r="169">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="172"> &lt; 15</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="174">
+                        <a:s>&quot;P18M--P15Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="182">
+                     <a:s>when </a:s>
+                     <a:s r="180">
+                        <a:s r="178">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="177">
+                              <a:s>start of </a:s>
+                              <a:s r="176">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="179"> >= 15</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="181">
+                        <a:s>&quot;P15Y--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="183">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="184" locator="113:5-119:7" xsi:type="Case">
+            <caseItem localId="161" locator="114:9-114:77">
+               <when localId="159" locator="114:14-114:61" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="157" locator="114:14-114:57" precision="Month" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="156" locator="114:28-114:56" xsi:type="Start">
+                        <operand localId="155" locator="114:37-114:56" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="158" locator="114:61" valueType="t:Integer" value="9" xsi:type="Literal"/>
+               </when>
+               <then localId="160" locator="114:68-114:77" name="P0M--P9M" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="168" locator="115:9-115:79">
+               <when localId="166" locator="115:14-115:62" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="164" locator="115:14-115:57" precision="Month" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="163" locator="115:28-115:56" xsi:type="Start">
+                        <operand localId="162" locator="115:37-115:56" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="165" locator="115:61-115:62" valueType="t:Integer" value="18" xsi:type="Literal"/>
+               </when>
+               <then localId="167" locator="115:69-115:79" name="P9M--P18M" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="175" locator="116:9-116:79">
+               <when localId="173" locator="116:14-116:61" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="171" locator="116:14-116:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="170" locator="116:27-116:55" xsi:type="Start">
+                        <operand localId="169" locator="116:36-116:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="172" locator="116:60-116:61" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </when>
+               <then localId="174" locator="116:68-116:79" name="P18M--P15Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="182" locator="117:9-117:82">
+               <when localId="180" locator="117:14-117:62" xsi:type="GreaterOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="178" locator="117:14-117:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="177" locator="117:27-117:55" xsi:type="Start">
+                        <operand localId="176" locator="117:36-117:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="179" locator="117:61-117:62" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </when>
+               <then localId="181" locator="117:69-117:82" name="P15Y--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="183" locator="118:14-118:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="223" locator="124:1-132:7" name="Varicella By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="223">
+               <a:s>/** 
+ * Varicella age disaggregators
+ */
+define &quot;Varicella By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="222">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="192">
+                     <a:s>when </a:s>
+                     <a:s r="190">
+                        <a:s r="188">
+                           <a:s>AgeInMonthsAt(</a:s>
+                           <a:s r="187">
+                              <a:s>start of </a:s>
+                              <a:s r="186">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="189"> &lt; 12</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="191">
+                        <a:s>&quot;P0M--P12M&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="199">
+                     <a:s>when </a:s>
+                     <a:s r="197">
+                        <a:s r="195">
+                           <a:s>AgeInMonthsAt(</a:s>
+                           <a:s r="194">
+                              <a:s>start of </a:s>
+                              <a:s r="193">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="196"> &lt; 18</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="198">
+                        <a:s>&quot;P12M--P18M&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="206">
+                     <a:s>when </a:s>
+                     <a:s r="204">
+                        <a:s r="202">
+                           <a:s>AgeInMonthsAt(</a:s>
+                           <a:s r="201">
+                              <a:s>start of </a:s>
+                              <a:s r="200">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="203"> &lt; 36</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="205">
+                        <a:s>&quot;P18M--P36M&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="213">
+                     <a:s>when </a:s>
+                     <a:s r="211">
+                        <a:s r="209">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="208">
+                              <a:s>start of </a:s>
+                              <a:s r="207">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="210"> &lt; 12</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="212">
+                        <a:s>&quot;P36M--P12Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="220">
+                     <a:s>when </a:s>
+                     <a:s r="218">
+                        <a:s r="216">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="215">
+                              <a:s>start of </a:s>
+                              <a:s r="214">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="217"> >= 12</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="219">
+                        <a:s>&quot;P12Y--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="221">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="222" locator="125:5-132:7" xsi:type="Case">
+            <caseItem localId="192" locator="126:9-126:79">
+               <when localId="190" locator="126:14-126:62" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="188" locator="126:14-126:57" precision="Month" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="187" locator="126:28-126:56" xsi:type="Start">
+                        <operand localId="186" locator="126:37-126:56" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="189" locator="126:61-126:62" valueType="t:Integer" value="12" xsi:type="Literal"/>
+               </when>
+               <then localId="191" locator="126:69-126:79" name="P0M--P12M" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="199" locator="127:9-127:80">
+               <when localId="197" locator="127:14-127:62" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="195" locator="127:14-127:57" precision="Month" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="194" locator="127:28-127:56" xsi:type="Start">
+                        <operand localId="193" locator="127:37-127:56" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="196" locator="127:61-127:62" valueType="t:Integer" value="18" xsi:type="Literal"/>
+               </when>
+               <then localId="198" locator="127:69-127:80" name="P12M--P18M" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="206" locator="128:9-128:80">
+               <when localId="204" locator="128:14-128:62" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="202" locator="128:14-128:57" precision="Month" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="201" locator="128:28-128:56" xsi:type="Start">
+                        <operand localId="200" locator="128:37-128:56" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="203" locator="128:61-128:62" valueType="t:Integer" value="36" xsi:type="Literal"/>
+               </when>
+               <then localId="205" locator="128:69-128:80" name="P18M--P36M" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="213" locator="129:9-129:79">
+               <when localId="211" locator="129:14-129:61" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="209" locator="129:14-129:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="208" locator="129:27-129:55" xsi:type="Start">
+                        <operand localId="207" locator="129:36-129:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="210" locator="129:60-129:61" valueType="t:Integer" value="12" xsi:type="Literal"/>
+               </when>
+               <then localId="212" locator="129:68-129:79" name="P36M--P12Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="220" locator="130:9-130:82">
+               <when localId="218" locator="130:14-130:62" xsi:type="GreaterOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="216" locator="130:14-130:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="215" locator="130:27-130:55" xsi:type="Start">
+                        <operand localId="214" locator="130:36-130:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="217" locator="130:61-130:62" valueType="t:Integer" value="12" xsi:type="Literal"/>
+               </when>
+               <then localId="219" locator="130:69-130:82" name="P12Y--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="221" locator="131:14-131:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="254" locator="138:1-145:7" name="Seasonal Influenza By Age Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="254">
+               <a:s>/** 
+ * Seasonal Influenza age disaggregators
+ */
+define &quot;Seasonal Influenza By Age Stratifier&quot;:
+    </a:s>
+               <a:s r="253">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="230">
+                     <a:s>when </a:s>
+                     <a:s r="228">
+                        <a:s r="226">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="225">
+                              <a:s>start of </a:s>
+                              <a:s r="224">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="227"> &lt; 1</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="229">
+                        <a:s>&quot;P0Y--P1Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="237">
+                     <a:s>when </a:s>
+                     <a:s r="235">
+                        <a:s r="233">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="232">
+                              <a:s>start of </a:s>
+                              <a:s r="231">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="234"> &lt; 15</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="236">
+                        <a:s>&quot;P1Y--P15Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="244">
+                     <a:s>when </a:s>
+                     <a:s r="242">
+                        <a:s r="240">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="239">
+                              <a:s>start of </a:s>
+                              <a:s r="238">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="241"> &lt; 60</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="243">
+                        <a:s>&quot;P15Y--P60Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="251">
+                     <a:s>when </a:s>
+                     <a:s r="249">
+                        <a:s r="247">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="246">
+                              <a:s>start of </a:s>
+                              <a:s r="245">
+                                 <a:s>&quot;Measurement Period&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="248"> >= 60</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="250">
+                        <a:s>&quot;P60Y--P9999Y&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="252">
+        else null
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="253" locator="139:5-145:7" xsi:type="Case">
+            <caseItem localId="230" locator="140:9-140:76">
+               <when localId="228" locator="140:14-140:60" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="226" locator="140:14-140:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="225" locator="140:27-140:55" xsi:type="Start">
+                        <operand localId="224" locator="140:36-140:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="227" locator="140:60" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               </when>
+               <then localId="229" locator="140:67-140:76" name="P0Y--P1Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="237" locator="141:9-141:78">
+               <when localId="235" locator="141:14-141:61" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="233" locator="141:14-141:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="232" locator="141:27-141:55" xsi:type="Start">
+                        <operand localId="231" locator="141:36-141:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="234" locator="141:60-141:61" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </when>
+               <then localId="236" locator="141:68-141:78" name="P1Y--P15Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="244" locator="142:9-142:79">
+               <when localId="242" locator="142:14-142:61" xsi:type="Less">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="240" locator="142:14-142:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="239" locator="142:27-142:55" xsi:type="Start">
+                        <operand localId="238" locator="142:36-142:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="241" locator="142:60-142:61" valueType="t:Integer" value="60" xsi:type="Literal"/>
+               </when>
+               <then localId="243" locator="142:68-142:79" name="P15Y--P60Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="251" locator="143:9-143:82">
+               <when localId="249" locator="143:14-143:62" xsi:type="GreaterOrEqual">
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="247" locator="143:14-143:56" precision="Year" xsi:type="CalculateAgeAt">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="246" locator="143:27-143:55" xsi:type="Start">
+                        <operand localId="245" locator="143:36-143:55" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="248" locator="143:61-143:62" valueType="t:Integer" value="60" xsi:type="Literal"/>
+               </when>
+               <then localId="250" locator="143:69-143:82" name="P60Y--P9999Y" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="252" locator="144:14-144:17" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="269" locator="150:1-155:7" name="By Administrative Gender Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="269">
+               <a:s>/**
+ * By Administrative Gender of Patient Stratifier
+ */
+define &quot;By Administrative Gender Stratifier&quot;:
+    </a:s>
+               <a:s r="268">
+                  <a:s>case 
+        </a:s>
+                  <a:s r="260">
+                     <a:s>when </a:s>
+                     <a:s r="258">
+                        <a:s r="256">
+                           <a:s r="255">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="256">
+                              <a:s>gender</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="257">
+                           <a:s>'male'</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="259">
+                        <a:s>&quot;Males&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        </a:s>
+                  <a:s r="266">
+                     <a:s>when </a:s>
+                     <a:s r="264">
+                        <a:s r="262">
+                           <a:s r="261">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="262">
+                              <a:s>gender</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="263">
+                           <a:s>'female'</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="265">
+                        <a:s>&quot;Females&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+        else </a:s>
+                  <a:s r="267">
+                     <a:s>&quot;Other&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="268" locator="151:5-155:7" xsi:type="Case">
+            <caseItem localId="260" locator="152:9-152:49">
+               <when localId="258" locator="152:14-152:36" xsi:type="Equal">
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <signature name="fhir:AdministrativeGender" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="256" locator="152:14-152:27" path="gender" xsi:type="Property">
+                        <source localId="255" locator="152:14-152:20" name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="257" locator="152:31-152:36" valueType="t:String" value="male" xsi:type="Literal"/>
+               </when>
+               <then localId="259" locator="152:43-152:49" name="Males" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="266" locator="153:9-153:53">
+               <when localId="264" locator="153:14-153:38" xsi:type="Equal">
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <signature name="fhir:AdministrativeGender" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="262" locator="153:14-153:27" path="gender" xsi:type="Property">
+                        <source localId="261" locator="153:14-153:20" name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="263" locator="153:31-153:38" valueType="t:String" value="female" xsi:type="Literal"/>
+               </when>
+               <then localId="265" locator="153:45-153:53" name="Females" xsi:type="CodeRef"/>
+            </caseItem>
+            <else localId="267" locator="154:14-154:20" name="Other" xsi:type="CodeRef"/>
+         </expression>
+      </def>
+      <def localId="280" locator="160:1-161:60" name="By Geographic Region Stratifier" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="280">
+               <a:s>/**
+ * By Administrative Gender of Patient Stratifier
+ */
+define &quot;By Geographic Region Stratifier&quot;:
+    </a:s>
+               <a:s r="279">
+                  <a:s r="278">
+                     <a:s>First(</a:s>
+                     <a:s r="277">
+                        <a:s>
+                           <a:s r="271">
+                              <a:s r="270">
+                                 <a:s>
+                                    <a:s>Patient.address</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> A</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> </a:s>
+                        <a:s r="276">
+                           <a:s>where </a:s>
+                           <a:s r="276">
+                              <a:s r="273">
+                                 <a:s r="272">
+                                    <a:s>A</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="273">
+                                    <a:s>use</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> in </a:s>
+                              <a:s r="275">
+                                 <a:s>{ </a:s>
+                                 <a:s r="274">
+                                    <a:s>'home'</a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="279">
+                     <a:s>state</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="279" locator="161:5-161:60" path="state" xsi:type="Property">
+            <source localId="278" locator="161:5-161:54" xsi:type="First">
+               <source localId="277" locator="161:11-161:53" xsi:type="Query">
+                  <source localId="271" locator="161:11-161:27" alias="A">
+                     <expression localId="270" locator="161:11-161:25" path="address" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </expression>
+                  </source>
+                  <where localId="276" locator="161:29-161:53" xsi:type="In">
+                     <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <signature name="fhir:AddressUse" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="273" locator="161:35-161:39" path="use" scope="A" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="275" locator="161:44-161:53" xsi:type="List">
+                        <element localId="274" locator="161:46-161:51" valueType="t:String" value="home" xsi:type="Literal"/>
+                     </operand>
+                  </where>
+               </source>
+            </source>
+         </expression>
+      </def>
+      <def localId="304" locator="166:1-171:5" name="Patient Deceased During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="304">
+               <a:s>/** 
+ * @dataElement Patient is deceased
+ */
+define &quot;Patient Deceased During Measurement Period&quot;:
+  </a:s>
+               <a:s r="303">
+                  <a:s>case 
+    </a:s>
+                  <a:s r="289">
+                     <a:s>when </a:s>
+                     <a:s r="284">
+                        <a:s r="282">
+                           <a:s r="281">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="282">
+                              <a:s>deceased</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> is </a:s>
+                        <a:s r="283">
+                           <a:s>FHIR.boolean</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="288">
+                        <a:s r="286">
+                           <a:s r="285">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="286">
+                              <a:s>deceased</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> as </a:s>
+                        <a:s r="287">
+                           <a:s>FHIR.boolean</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="301">
+                     <a:s>when </a:s>
+                     <a:s r="293">
+                        <a:s r="291">
+                           <a:s r="290">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="291">
+                              <a:s>deceased</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> is </a:s>
+                        <a:s r="292">
+                           <a:s>FHIR.dateTime</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="300">
+                        <a:s r="297">
+                           <a:s r="295">
+                              <a:s r="294">
+                                 <a:s>Patient</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="295">
+                                 <a:s>deceased</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="296">
+                              <a:s>FHIR.dateTime</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="300"> before </a:s>
+                        <a:s r="299">
+                           <a:s>end of </a:s>
+                           <a:s r="298">
+                              <a:s>&quot;Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="302">
+    else false
+  end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="303" locator="167:3-171:5" xsi:type="Case">
+            <caseItem localId="289" locator="168:5-168:79">
+               <when localId="284" locator="168:10-168:41" xsi:type="Is">
+                  <operand localId="282" locator="168:10-168:25" path="deceased" xsi:type="Property">
+                     <source localId="281" locator="168:10-168:16" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <isTypeSpecifier localId="283" locator="168:30-168:41" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then name="ToBoolean" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="288" locator="168:48-168:79" strict="false" xsi:type="As">
+                     <operand localId="286" locator="168:48-168:63" path="deceased" xsi:type="Property">
+                        <source localId="285" locator="168:48-168:54" name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <asTypeSpecifier localId="287" locator="168:68-168:79" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                  </operand>
+               </then>
+            </caseItem>
+            <caseItem localId="301" locator="169:5-169:116">
+               <when localId="293" locator="169:10-169:42" xsi:type="Is">
+                  <operand localId="291" locator="169:10-169:25" path="deceased" xsi:type="Property">
+                     <source localId="290" locator="169:10-169:16" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <isTypeSpecifier localId="292" locator="169:30-169:42" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               </when>
+               <then localId="300" locator="169:49-169:116" xsi:type="Before">
+                  <signature name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+                  <signature name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+                  <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <signature name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="297" locator="169:49-169:81" strict="false" xsi:type="As">
+                        <operand localId="295" locator="169:49-169:64" path="deceased" xsi:type="Property">
+                           <source localId="294" locator="169:49-169:55" name="Patient" xsi:type="ExpressionRef"/>
+                        </operand>
+                        <asTypeSpecifier localId="296" locator="169:69-169:81" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                     </operand>
+                  </operand>
+                  <operand xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="299" locator="169:90-169:116" xsi:type="End">
+                        <operand localId="298" locator="169:97-169:116" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+               </then>
+            </caseItem>
+            <else localId="302" locator="170:10-170:14" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="309" locator="176:1-177:49" name="Patient Born During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="309">
+               <a:s>/** 
+ * Patient was born during measurement period
+ */
+define &quot;Patient Born During Measurement Period&quot;:
+    </a:s>
+               <a:s r="308">
+                  <a:s r="306">
+                     <a:s r="305">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="306">
+                        <a:s>birthDate</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="308"> during </a:s>
+                  <a:s r="307">
+                     <a:s>&quot;Measurement Period&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="308" locator="177:5-177:49" xsi:type="In">
+            <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+            <signature xsi:type="IntervalTypeSpecifier">
+               <pointType name="t:Date" xsi:type="NamedTypeSpecifier"/>
+            </signature>
+            <operand name="ToDate" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="306" locator="177:5-177:21" path="birthDate" xsi:type="Property">
+                  <source localId="305" locator="177:5-177:11" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand localId="307" locator="177:30-177:49" name="Measurement Period" xsi:type="ParameterRef"/>
+         </expression>
+      </def>
+      <def localId="316" locator="182:1-183:75" name="Patient Under 12 Months Old During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="316">
+               <a:s>/** 
+ * Patient is &lt; 12 months old at the end of the measurement period
+ */
+define &quot;Patient Under 12 Months Old During Measurement Period&quot;:
+    </a:s>
+               <a:s r="315">
+                  <a:s r="311">
+                     <a:s r="310">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="311">
+                        <a:s>birthDate</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> </a:s>
+                  <a:s r="315">
+                     <a:s>more than </a:s>
+                     <a:s r="314">
+                        <a:s>12 month</a:s>
+                     </a:s>
+                     <a:s> before</a:s>
+                  </a:s>
+                  <a:s> </a:s>
+                  <a:s r="313">
+                     <a:s>end of </a:s>
+                     <a:s r="312">
+                        <a:s>&quot;Measurement Period&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="315" locator="183:5-183:75" xsi:type="Before">
+            <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+            <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+            <operand name="ToDate" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="311" locator="183:5-183:21" path="birthDate" xsi:type="Property">
+                  <source localId="310" locator="183:5-183:11" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand locator="183:49-183:75" xsi:type="Subtract">
+               <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="313" locator="183:49-183:75" xsi:type="End">
+                  <operand localId="312" locator="183:56-183:75" name="Measurement Period" xsi:type="ParameterRef"/>
+               </operand>
+               <operand localId="314" locator="183:33-183:40" value="12" unit="month" xsi:type="Quantity"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="323" locator="188:1-189:73" name="Patient Under 2 Years Old During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="323">
+               <a:s>/** 
+ * Patient is &lt; 12 years old at the end of the measurement period
+ */
+define &quot;Patient Under 2 Years Old During Measurement Period&quot;:
+    </a:s>
+               <a:s r="322">
+                  <a:s r="318">
+                     <a:s r="317">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="318">
+                        <a:s>birthDate</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> </a:s>
+                  <a:s r="322">
+                     <a:s>more than </a:s>
+                     <a:s r="321">
+                        <a:s>2 year</a:s>
+                     </a:s>
+                     <a:s> before</a:s>
+                  </a:s>
+                  <a:s> </a:s>
+                  <a:s r="320">
+                     <a:s>end of </a:s>
+                     <a:s r="319">
+                        <a:s>&quot;Measurement Period&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="322" locator="189:5-189:73" xsi:type="Before">
+            <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+            <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+            <operand name="ToDate" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="318" locator="189:5-189:21" path="birthDate" xsi:type="Property">
+                  <source localId="317" locator="189:5-189:11" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand locator="189:47-189:73" xsi:type="Subtract">
+               <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="320" locator="189:47-189:73" xsi:type="End">
+                  <operand localId="319" locator="189:54-189:73" name="Measurement Period" xsi:type="ParameterRef"/>
+               </operand>
+               <operand localId="321" locator="189:33-189:38" value="2" unit="year" xsi:type="Quantity"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="332" locator="194:1-196:70" name="MCV Doses Administered to Patient During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="332">
+               <a:s>/**
+ * MCV doses which were administered during the measurement period
+ */
+define &quot;MCV Doses Administered to Patient During Measurement Period&quot;:
+  </a:s>
+               <a:s r="331">
+                  <a:s>
+                     <a:s r="325">
+                        <a:s r="324">
+                           <a:s>
+                              <a:s>Elements.&quot;MCV Dose&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="330">
+                     <a:s>where </a:s>
+                     <a:s r="330">
+                        <a:s r="328">
+                           <a:s r="327">
+                              <a:s r="326">
+                                 <a:s>I</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="327">
+                                 <a:s>occurrence</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="328">
+                              <a:s>toInterval()</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="330"> starts during </a:s>
+                        <a:s r="329">
+                           <a:s>&quot;Measurement Period&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="331" locator="195:3-196:70" xsi:type="Query">
+            <source localId="325" locator="195:3-195:23" alias="I">
+               <expression localId="324" locator="195:3-195:21" name="MCV Dose" libraryName="Elements" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="330" locator="196:5-196:70" xsi:type="In">
+               <signature name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+               <signature xsi:type="IntervalTypeSpecifier">
+                  <pointType name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <operand locator="196:37-196:42" xsi:type="Start">
+                  <signature xsi:type="IntervalTypeSpecifier">
+                     <pointType name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+                  </signature>
+                  <operand localId="328" locator="196:11-196:35" name="toInterval" libraryName="WC" xsi:type="FunctionRef">
+                     <operand localId="327" locator="196:11-196:22" path="occurrence" scope="I" xsi:type="Property"/>
+                  </operand>
+               </operand>
+               <operand xsi:type="Interval">
+                  <low xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="low" xsi:type="Property">
+                        <source localId="329" locator="196:51-196:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </low>
+                  <lowClosedExpression path="lowClosed" xsi:type="Property">
+                     <source localId="329" locator="196:51-196:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                  </lowClosedExpression>
+                  <high xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="high" xsi:type="Property">
+                        <source localId="329" locator="196:51-196:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </high>
+                  <highClosedExpression path="highClosed" xsi:type="Property">
+                     <source localId="329" locator="196:51-196:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                  </highClosedExpression>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="341" locator="201:1-203:70" name="Doses Administered to Patient During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="341">
+               <a:s>/** 
+ * @define Doses which were administered during the measurement period
+ */
+define &quot;Doses Administered to Patient During Measurement Period&quot;:
+  </a:s>
+               <a:s r="340">
+                  <a:s>
+                     <a:s r="334">
+                        <a:s r="333">
+                           <a:s>
+                              <a:s>Elements.&quot;Doses Administered to Patient&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>  I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="339">
+                     <a:s>where </a:s>
+                     <a:s r="339">
+                        <a:s r="337">
+                           <a:s r="336">
+                              <a:s r="335">
+                                 <a:s>I</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="336">
+                                 <a:s>occurrence</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="337">
+                              <a:s>toInterval()</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="339"> starts during </a:s>
+                        <a:s r="338">
+                           <a:s>&quot;Measurement Period&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="340" locator="202:3-203:70" xsi:type="Query">
+            <source localId="334" locator="202:3-202:45" alias="I">
+               <expression localId="333" locator="202:3-202:42" name="Doses Administered to Patient" libraryName="Elements" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="339" locator="203:5-203:70" xsi:type="In">
+               <signature name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+               <signature xsi:type="IntervalTypeSpecifier">
+                  <pointType name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <operand locator="203:37-203:42" xsi:type="Start">
+                  <signature xsi:type="IntervalTypeSpecifier">
+                     <pointType name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+                  </signature>
+                  <operand localId="337" locator="203:11-203:35" name="toInterval" libraryName="WC" xsi:type="FunctionRef">
+                     <operand localId="336" locator="203:11-203:22" path="occurrence" scope="I" xsi:type="Property"/>
+                  </operand>
+               </operand>
+               <operand xsi:type="Interval">
+                  <low xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="low" xsi:type="Property">
+                        <source localId="338" locator="203:51-203:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </low>
+                  <lowClosedExpression path="lowClosed" xsi:type="Property">
+                     <source localId="338" locator="203:51-203:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                  </lowClosedExpression>
+                  <high xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="high" xsi:type="Property">
+                        <source localId="338" locator="203:51-203:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </high>
+                  <highClosedExpression path="highClosed" xsi:type="Property">
+                     <source localId="338" locator="203:51-203:70" name="Measurement Period" xsi:type="ParameterRef"/>
+                  </highClosedExpression>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="350" locator="205:1-207:62" name="Adverse Events During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="350">
+               <a:s>define &quot;Adverse Events During Measurement Period&quot;:
+  </a:s>
+               <a:s r="349">
+                  <a:s>
+                     <a:s r="343">
+                        <a:s r="342">
+                           <a:s r="342">
+                              <a:s>[Observation: </a:s>
+                              <a:s>
+                                 <a:s>WHOConcepts.&quot;Adverse Events&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> O</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="348">
+                     <a:s>where </a:s>
+                     <a:s r="348">
+                        <a:s r="346">
+                           <a:s r="345">
+                              <a:s r="344">
+                                 <a:s>O</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="345">
+                                 <a:s>effective</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="346">
+                              <a:s>toInterval()</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="348"> during </a:s>
+                        <a:s r="347">
+                           <a:s>&quot;Measurement Period&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="349" locator="206:3-207:62" xsi:type="Query">
+            <source localId="343" locator="206:3-206:47" alias="O">
+               <expression localId="342" locator="206:3-206:45" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="in" xsi:type="Retrieve">
+                  <codes locator="206:17-206:44" name="Adverse Events" libraryName="WHOConcepts" xsi:type="ValueSetRef"/>
+               </expression>
+            </source>
+            <where localId="348" locator="207:5-207:62" xsi:type="IncludedIn">
+               <operand localId="346" locator="207:11-207:34" name="toInterval" libraryName="WC" xsi:type="FunctionRef">
+                  <operand localId="345" locator="207:11-207:21" path="effective" scope="O" xsi:type="Property"/>
+               </operand>
+               <operand xsi:type="Interval">
+                  <low xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="low" xsi:type="Property">
+                        <source localId="347" locator="207:43-207:62" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </low>
+                  <lowClosedExpression path="lowClosed" xsi:type="Property">
+                     <source localId="347" locator="207:43-207:62" name="Measurement Period" xsi:type="ParameterRef"/>
+                  </lowClosedExpression>
+                  <high xsi:type="ToDateTime">
+                     <signature name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand path="high" xsi:type="Property">
+                        <source localId="347" locator="207:43-207:62" name="Measurement Period" xsi:type="ParameterRef"/>
+                     </operand>
+                  </high>
+                  <highClosedExpression path="highClosed" xsi:type="Property">
+                     <source localId="347" locator="207:43-207:62" name="Measurement Period" xsi:type="ParameterRef"/>
+                  </highClosedExpression>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="365" locator="209:1-214:45" name="Immunizations And Adverse Events During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="365">
+               <a:s>define &quot;Immunizations And Adverse Events During Measurement Period&quot;:
+  </a:s>
+               <a:s r="364">
+                  <a:s>
+                     <a:s>from
+    </a:s>
+                     <a:s r="352">
+                        <a:s r="351">
+                           <a:s>
+                              <a:s>&quot;Doses Administered to Patient During Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                     <a:s>,
+    </a:s>
+                     <a:s r="354">
+                        <a:s r="353">
+                           <a:s>
+                              <a:s>&quot;Adverse Events During Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> O</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  </a:s>
+                  <a:s r="359">
+                     <a:s>where </a:s>
+                     <a:s r="359">
+                        <a:s r="357">
+                           <a:s r="356">
+                              <a:s r="355">
+                                 <a:s>I</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="356">
+                                 <a:s>reaction</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="357">
+                              <a:s>detail</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="359">
+                           <a:s>references(</a:s>
+                           <a:s r="358">
+                              <a:s>O</a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  </a:s>
+                  <a:s r="363">
+                     <a:s>return </a:s>
+                     <a:s r="362">
+                        <a:s>{ </a:s>
+                        <a:s>
+                           <a:s>immunization: </a:s>
+                           <a:s r="360">
+                              <a:s>I</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>adverseEvent: </a:s>
+                           <a:s r="361">
+                              <a:s>O</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="364" locator="210:3-214:45" xsi:type="Query">
+            <source localId="352" locator="211:5-211:63" alias="I">
+               <expression localId="351" locator="211:5-211:61" name="Doses Administered to Patient During Measurement Period" xsi:type="ExpressionRef"/>
+            </source>
+            <source localId="354" locator="212:5-212:48" alias="O">
+               <expression localId="353" locator="212:5-212:46" name="Adverse Events During Measurement Period" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="359" locator="213:3-213:39" name="references" libraryName="WC" xsi:type="FunctionRef">
+               <signature xsi:type="ListTypeSpecifier">
+                  <elementType name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <signature name="fhir:Resource" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="357" locator="213:9-213:25" xsi:type="Query">
+                  <source alias="$this">
+                     <expression localId="356" locator="213:9-213:18" path="reaction" scope="I" xsi:type="Property"/>
+                  </source>
+                  <where xsi:type="Not">
+                     <operand xsi:type="IsNull">
+                        <operand path="detail" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </operand>
+                     </operand>
+                  </where>
+                  <return distinct="false">
+                     <expression path="detail" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </expression>
+                  </return>
+               </operand>
+               <operand localId="358" locator="213:38" name="O" xsi:type="AliasRef"/>
+            </where>
+            <return localId="363" locator="214:3-214:45">
+               <expression localId="362" locator="214:10-214:45" xsi:type="Tuple">
+                  <element name="immunization">
+                     <value localId="360" locator="214:26" name="I" xsi:type="AliasRef"/>
+                  </element>
+                  <element name="adverseEvent">
+                     <value localId="361" locator="214:43" name="O" xsi:type="AliasRef"/>
+                  </element>
+               </expression>
+            </return>
+         </expression>
+      </def>
+      <def localId="372" locator="219:1-221:25" name="Immunizations with Adverse Events During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="372">
+               <a:s>/** 
+ * @define Adverse events for immunizations which occurred during (or observed) during measurement period
+ */
+define &quot;Immunizations with Adverse Events During Measurement Period&quot;:
+  </a:s>
+               <a:s r="371">
+                  <a:s>
+                     <a:s r="367">
+                        <a:s r="366">
+                           <a:s>
+                              <a:s>&quot;Immunizations And Adverse Events During Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="370">
+                     <a:s>return </a:s>
+                     <a:s r="369">
+                        <a:s r="368">
+                           <a:s>I</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="369">
+                           <a:s>immunization</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="371" locator="220:3-221:25" xsi:type="Query">
+            <source localId="367" locator="220:3-220:64" alias="I">
+               <expression localId="366" locator="220:3-220:62" name="Immunizations And Adverse Events During Measurement Period" xsi:type="ExpressionRef"/>
+            </source>
+            <return localId="370" locator="221:5-221:25">
+               <expression localId="369" locator="221:12-221:25" path="immunization" scope="I" xsi:type="Property"/>
+            </return>
+         </expression>
+      </def>
+      <def localId="379" locator="226:1-228:25" name="Adverse Event Reactions During Measurement Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="379">
+               <a:s>/** 
+ * @define Adverse events for immunizations which occurred during (or observed) during measurement period
+ */
+define &quot;Adverse Event Reactions During Measurement Period&quot;:
+  </a:s>
+               <a:s r="378">
+                  <a:s>
+                     <a:s r="374">
+                        <a:s r="373">
+                           <a:s>
+                              <a:s>&quot;Immunizations And Adverse Events During Measurement Period&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> I</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="377">
+                     <a:s>return </a:s>
+                     <a:s r="376">
+                        <a:s r="375">
+                           <a:s>I</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="376">
+                           <a:s>adverseEvent</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="378" locator="227:3-228:25" xsi:type="Query">
+            <source localId="374" locator="227:3-227:64" alias="I">
+               <expression localId="373" locator="227:3-227:62" name="Immunizations And Adverse Events During Measurement Period" xsi:type="ExpressionRef"/>
+            </source>
+            <return localId="377" locator="228:5-228:25">
+               <expression localId="376" locator="228:12-228:25" path="adverseEvent" scope="I" xsi:type="Property"/>
+            </return>
+         </expression>
+      </def>
+      <def localId="391" locator="235:1-239:24" name="GetGeographicRegionForImmunization" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:t name="function"/>
+            <a:s r="391">
+               <a:s>/** 
+ * @function
+ * @param immunization The immunization record for which the location should be retrieved
+ * @return FHIR.address The location that the immunization event occurred
+ */
+define function GetGeographicRegionForImmunization(immunization Immunization):
+  </a:s>
+               <a:s r="390">
+                  <a:s r="390">
+                     <a:s r="389">
+                        <a:s r="388">
+                           <a:s r="387">
+                              <a:s>(
+    </a:s>
+                              <a:s r="387">
+                                 <a:s>
+                                    <a:s r="382">
+                                       <a:s r="381">
+                                          <a:s r="381">
+                                             <a:s>[Location]</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> L</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>
+        </a:s>
+                                 <a:s r="386">
+                                    <a:s>where </a:s>
+                                    <a:s r="386">
+                                       <a:s r="384">
+                                          <a:s r="383">
+                                             <a:s>immunization</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="384">
+                                             <a:s>location</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="386">
+                                          <a:s>references(</a:s>
+                                          <a:s r="385">
+                                             <a:s>L</a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+  )</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="388">
+                              <a:s>only()</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="389">
+                           <a:s>address</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="390">
+                        <a:s>state</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="390" locator="236:3-239:24" path="state" xsi:type="Property">
+            <source localId="389" locator="236:3-239:18" path="address" xsi:type="Property">
+               <source localId="388" locator="236:3-239:10" name="only" libraryName="WC" xsi:type="FunctionRef">
+                  <signature xsi:type="ListTypeSpecifier">
+                     <elementType name="fhir:Location" xsi:type="NamedTypeSpecifier"/>
+                  </signature>
+                  <operand localId="387" locator="236:3-239:3" xsi:type="Query">
+                     <source localId="382" locator="237:5-237:16" alias="L">
+                        <expression localId="381" locator="237:5-237:14" dataType="fhir:Location" templateId="http://hl7.org/fhir/StructureDefinition/Location" xsi:type="Retrieve"/>
+                     </source>
+                     <where localId="386" locator="238:9-238:49" name="references" libraryName="WC" xsi:type="FunctionRef">
+                        <signature name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                        <signature name="fhir:Resource" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="384" locator="238:15-238:35" path="location" xsi:type="Property">
+                           <source localId="383" locator="238:15-238:26" name="immunization" xsi:type="OperandRef"/>
+                        </operand>
+                        <operand localId="385" locator="238:48" name="L" xsi:type="AliasRef"/>
+                     </where>
+                  </operand>
+               </source>
+            </source>
+         </expression>
+         <operand name="immunization">
+            <operandTypeSpecifier localId="380" locator="235:65-235:76" name="fhir:Immunization" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+   </statements>
+</library>

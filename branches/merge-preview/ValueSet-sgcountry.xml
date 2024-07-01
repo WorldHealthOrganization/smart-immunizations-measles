@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sgcountry"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-ISO3166Part1.html"><code>urn:iso:std:iso:3166</code></a></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/immunizations-measles/ValueSet/sgcountry"/>
+  <version value="0.1.0"/>
+  <name value="SGCountryValueSet"/>
+  <title value="Country ValueSet"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-06-07T12:26:37+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="This value set defines a base set of codes for countries.   &#xA;&#xA;   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)."/>
+  <compose>
+    <include>
+      <system value="urn:iso:std:iso:3166"/>
+    </include>
+  </compose>
+</ValueSet>

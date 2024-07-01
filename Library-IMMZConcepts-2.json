@@ -1,0 +1,680 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "44",
+            "s" : [ {
+               "value" : [ "","library IMMZConcepts" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZConcepts",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "1",
+            "locator" : "5:1-5:53",
+            "name" : "ICD-10",
+            "id" : "http://hl7.org/fhir/sid/icd-10",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "// Code Systems\n//Probably can delete these once imported WHOConcepts\n","codesystem ","\"ICD-10\"",": ","'http://hl7.org/fhir/sid/icd-10'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "2",
+            "locator" : "6:1-6:48",
+            "name" : "SNOMED-CT",
+            "id" : "http://snomed.info/sct",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"SNOMED-CT\"",": ","'http://snomed.info/sct'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "7:1-7:38",
+            "name" : "LOINC",
+            "id" : "http://loinc.org",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"LOINC\"",": ","'http://loinc.org'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "8:1-8:66",
+            "name" : "RxNorm",
+            "id" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"RxNorm\"",": ","'http://www.nlm.nih.gov/research/umls/rxnorm'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "5",
+            "locator" : "9:1-9:49",
+            "name" : "CIEL",
+            "id" : "http://hl7.org/fhir/sid/ciel",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"CIEL\"",": ","'http://hl7.org/fhir/sid/ciel'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "6",
+            "locator" : "10:1-10:59",
+            "name" : "ICD-11",
+            "id" : "http://id.who.int/icd/release/11/mms",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"ICD-11\"",": ","'http://id.who.int/icd/release/11/mms'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "7",
+            "locator" : "11:1-11:77",
+            "name" : "ICHI",
+            "id" : "https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "7",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"ICHI\"",": ","'https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "8",
+            "locator" : "12:1-12:50",
+            "name" : "ICF",
+            "id" : "http://hl7.org/fhir/sid/icf-nl",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "8",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"ICF\"",": ","'http://hl7.org/fhir/sid/icf-nl'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "9",
+            "locator" : "13:1-13:110",
+            "name" : "Extended Codes CodeSystem codes",
+            "id" : "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "9",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"Extended Codes CodeSystem codes\"",": ","'http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "10",
+            "locator" : "15:1-15:95",
+            "name" : "IMMZConcepts",
+            "id" : "http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "10",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"IMMZConcepts\"",": ","'http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "valueSets" : {
+         "def" : [ {
+            "localId" : "11",
+            "locator" : "18:1-18:71",
+            "name" : "WHO ATC",
+            "id" : "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "11",
+                  "s" : [ {
+                     "value" : [ "//WHO ATC IPS Valueset\n","valueset ","\"WHO ATC\"",": ","'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "12",
+            "locator" : "21:1-21:107",
+            "name" : "Negative Result",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/Negativetestresult-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "value" : [ "// General use ValueSets \n","valueset ","\"Negative Result\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/Negativetestresult-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "13",
+            "locator" : "22:1-22:107",
+            "name" : "Positive Result",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/PositiveTestResult-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "13",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Positive Result\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/PositiveTestResult-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "14",
+            "locator" : "23:1-23:108",
+            "name" : "Immunocompromised",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/Immunocompromised-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "14",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Immunocompromised\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/Immunocompromised-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "15",
+            "locator" : "24:1-24:117",
+            "name" : "Patient birth weight observation",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/Birthweight-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "15",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Patient birth weight observation\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/Birthweight-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "16",
+            "locator" : "25:1-25:93",
+            "name" : "PretermBirth",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/Preterm-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "16",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"PretermBirth\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/Preterm-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "17",
+            "locator" : "26:1-26:105",
+            "name" : "Live Attenuated",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/LiveAttenduatedVaccines",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "17",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Live Attenuated\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/LiveAttenduatedVaccines'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "18",
+            "locator" : "30:1-30:93",
+            "name" : "HIV status",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/HIVstatus-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "18",
+                  "s" : [ {
+                     "value" : [ "//valueset \"Target Disease\": 'http://hl7.org/fhir/ValueSet/immunization-target-disease'\n\n","valueset ","\"HIV status\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/HIVstatus-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "19",
+            "locator" : "31:1-31:103",
+            "name" : "HIV status - HIV positive Choices",
+            "id" : "http://fhir.org/guides/who/anc-cds/ValueSet/anc-b9-de46",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "19",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"HIV status - HIV positive Choices\"",": ","'http://fhir.org/guides/who/anc-cds/ValueSet/anc-b9-de46'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "20",
+            "locator" : "32:1-32:103",
+            "name" : "HIV status - HIV negative Choices",
+            "id" : "http://fhir.org/guides/who/anc-cds/ValueSet/anc-b9-de47",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "20",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"HIV status - HIV negative Choices\"",": ","'http://fhir.org/guides/who/anc-cds/ValueSet/anc-b9-de47'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "21",
+            "locator" : "34:1-34:91",
+            "name" : "ARV Drugs",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/ARVDrugs-values",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "21",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"ARV Drugs\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/ARVDrugs-values'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "22",
+            "locator" : "38:1-38:88",
+            "name" : "MCV Vaccine",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE9",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "22",
+                  "s" : [ {
+                     "value" : [ "// Vaccine Value Sets\n\n","valueset ","\"MCV Vaccine\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE9'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "23",
+            "locator" : "41:1-41:88",
+            "name" : "BCG Vaccine",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE1",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "23",
+                  "s" : [ {
+                     "value" : [ "// Plugin is complaining about not finding these so that should be resolved, but here until it can be fixed\n","valueset ","\"BCG Vaccine\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "24",
+            "locator" : "42:1-42:92",
+            "name" : "Cholera Vaccine",
+            "id" : "http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE2",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "24",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Cholera Vaccine\"",": ","'http://smart.who.int/immunizations-measles/ValueSet/IMMZ.Z.DE2'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "26",
+            "locator" : "44:1-44:90",
+            "name" : "Adverse Event Severity",
+            "id" : "246112005",
+            "display" : "Severity (attribute)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "26",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Adverse Event Severity\"",": ","'246112005'"," from " ]
+                  }, {
+                     "r" : "25",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Severity (attribute)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "25",
+               "locator" : "44:49-44:59",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "28",
+            "locator" : "45:1-45:95",
+            "name" : "Adverse Event Manifestation",
+            "id" : "246112005",
+            "display" : "Severity (attribute)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "28",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Adverse Event Manifestation\"",": ","'246112005'"," from " ]
+                  }, {
+                     "r" : "27",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Severity (attribute)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "27",
+               "locator" : "45:54-45:64",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "30",
+            "locator" : "47:1-47:104",
+            "name" : "Potential contraindications",
+            "id" : "D4.DE161",
+            "display" : "Potential contraindications",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "30",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Potential contraindications\"",": ","'D4.DE161'"," from " ]
+                  }, {
+                     "r" : "29",
+                     "s" : [ {
+                        "value" : [ "\"IMMZConcepts\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Potential contraindications'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "29",
+               "locator" : "47:53-47:66",
+               "name" : "IMMZConcepts"
+            }
+         }, {
+            "localId" : "32",
+            "locator" : "48:1-48:86",
+            "name" : "Currently pregnant",
+            "id" : "D4.DE162",
+            "display" : "Currently pregnant",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "32",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Currently pregnant\"",": ","'D4.DE162'"," from " ]
+                  }, {
+                     "r" : "31",
+                     "s" : [ {
+                        "value" : [ "\"IMMZConcepts\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Currently pregnant'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "31",
+               "locator" : "48:44-48:57",
+               "name" : "IMMZConcepts"
+            }
+         }, {
+            "localId" : "34",
+            "locator" : "49:1-49:100",
+            "name" : "Severely immunosuppressed",
+            "id" : "D4.DE165",
+            "display" : "Severely immunosuppressed",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "34",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Severely immunosuppressed\"",": ","'D4.DE165'"," from " ]
+                  }, {
+                     "r" : "33",
+                     "s" : [ {
+                        "value" : [ "\"IMMZConcepts\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Severely immunosuppressed'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "33",
+               "locator" : "49:51-49:64",
+               "name" : "IMMZConcepts"
+            }
+         }, {
+            "localId" : "36",
+            "locator" : "50:1-50:116",
+            "name" : "History of anaphylactic reactions",
+            "id" : "D4.DE166",
+            "display" : "History of anaphylactic reactions",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "36",
+                  "s" : [ {
+                     "value" : [ "","code ","\"History of anaphylactic reactions\"",": ","'D4.DE166'"," from " ]
+                  }, {
+                     "r" : "35",
+                     "s" : [ {
+                        "value" : [ "\"IMMZConcepts\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'History of anaphylactic reactions'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "35",
+               "locator" : "50:59-50:72",
+               "name" : "IMMZConcepts"
+            }
+         }, {
+            "localId" : "38",
+            "locator" : "51:1-51:100",
+            "name" : "Severe allergic reactions",
+            "id" : "D4.DE167",
+            "display" : "Severe allergic reactions",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "38",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Severe allergic reactions\"",": ","'D4.DE167'"," from " ]
+                  }, {
+                     "r" : "37",
+                     "s" : [ {
+                        "value" : [ "\"IMMZConcepts\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Severe allergic reactions'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "37",
+               "locator" : "51:51-51:64",
+               "name" : "IMMZConcepts"
+            }
+         }, {
+            "localId" : "40",
+            "locator" : "52:1-52:100",
+            "name" : "Symptomatic HIV infection",
+            "id" : "D4.DE168",
+            "display" : "Symptomatic HIV infection",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "40",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Symptomatic HIV infection\"",": ","'D4.DE168'"," from " ]
+                  }, {
+                     "r" : "39",
+                     "s" : [ {
+                        "value" : [ "\"IMMZConcepts\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Symptomatic HIV infection'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "39",
+               "locator" : "52:51-52:64",
+               "name" : "IMMZConcepts"
+            }
+         }, {
+            "localId" : "42",
+            "locator" : "54:1-54:75",
+            "name" : "[#] Births total",
+            "id" : "11640-0",
+            "display" : "Pregnancy outcome",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "42",
+                  "s" : [ {
+                     "value" : [ "","code ","\"[#] Births total\"",": ","'11640-0'"," from " ]
+                  }, {
+                     "r" : "41",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Pregnancy outcome'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "41",
+               "locator" : "54:41-54:47",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "44",
+            "locator" : "55:1-55:67",
+            "name" : "[#] Births.preterm",
+            "id" : "11637-6",
+            "display" : "Preterm",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "44",
+                  "s" : [ {
+                     "value" : [ "","code ","\"[#] Births.preterm\"",": ","'11637-6'"," from " ]
+                  }, {
+                     "r" : "43",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Preterm'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "43",
+               "locator" : "55:43-55:49",
+               "name" : "LOINC"
+            }
+         } ]
+      }
+   }
+}

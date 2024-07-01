@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="IMMZD2DTMeaslesDose0"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PlanDefinition </b><a name="IMMZD2DTMeaslesDose0"> </a><a name="hcIMMZD2DTMeaslesDose0"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">ResourcePlanDefinition &quot;IMMZD2DTMeaslesDose0&quot; </p><p style="margin-bottom: 0px">Profiles: <a href="https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-recommendationdefinition.html">CPG Recommendation Definition</a>, <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareableplandefinition.html">CRMI Shareable PlanDefinition</a>, <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishableplandefinition.html">CRMI Publishable PlanDefinition</a></p></div><p><b>CQF Knowledge capability</b>: computable</p><p><b>url</b>: <code>http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesDose0</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZD2DTMeaslesDose0</p><p><b>title</b>: IMMZ.D2.DT.Measles MCV Dose 0</p><p><b>type</b>: ECA Rule <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-06-07 12:26:37+0000</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: If the child or patient has not been given MCV0 between 6 and 9 months</p><h3>RelatedArtifacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style="display: none">*</td><td>citation</td><td>WHO recommendations for routine immunization - summary tables (March 2023)</td></tr></table><p><b>library</b>: <a href="Library-IMMZD2DTMeaslesDose0Logic.html">IMMZD2DTMeaslesDose0Logic</a></p><blockquote><p><b>action</b></p><p><b>CPG Rationale Extension</b>: Note: The countries should apply the national immunization policy for MCV0 dose and adjust this logic accordingly.&lt;br/&gt;A supplementary dose of MCV (recorded as MCV0) should be considered for infants known to be exposed (i.e. born to an HIV-infected woman) or soon after diagnosis of HIV infection in children older than 6 months who are not receiving HAART and for whom the risk of measles is high, with the aim of providing partial protection until they are revaccinated after immune reconstitution with HAART.&lt;br/&gt;In the following situations, a supplementary dose of MCV should be given to infants from 6 months of age:&lt;br/&gt;* (1) during a measles outbreak as part of intensified service delivery;&lt;br/&gt;* (2) during campaigns in settings where the risk of measles among infants &lt; 9 months of age remains high (e.g. in endemic countries experiencing regular outbreaks);&lt;br/&gt;* (3) for internally displaced populations and refugees, and populations in conflict zones;&lt;br/&gt;* (4) for individual infants at high risk of contracting measles (e.g. contacts of known measles cases or in settings with increased risk of exposure during outbreaks such as day-care facilities);&lt;br/&gt;* (5)for infants travelling to countries experiencing measles outbreaks;&lt;br/&gt;* (6) infants known to be HIV-infected or exposed (i.e. born to an HIV-infected woman).&lt;br/&gt;In areas where there is a high incidence of both HIV infection and measles, an initial dose of MCV may be offered as early as age 6 months (recorded as MCV0). The 2 routine doses of MCV (MCV1 and MCV2) should then be administered to these children according to the national immunization schedule.&lt;br/&gt;As a general rule, live vaccines should be given either simultaneously or at intervals of 4 weeks. An exception to this rule is OPV, which can be given at any time before or after measles vaccination without interference in the response to either vaccine.</p><p><b>title</b>: Immunize patient for Measles</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Measles Routine Immunization Schedule Incomplete</td></tr></table></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: Consider MCV0 Dose</p><blockquote><p><b>condition</b></p></blockquote><blockquote><p><b>action</b></p></blockquote><blockquote><p><b>action</b></p></blockquote><blockquote><p><b>action</b></p></blockquote></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: MCV0 Dose Administered</p><p><b>description</b>: MCV0 was administered. Check measles routine immunization schedule.</p><blockquote><p><b>condition</b></p></blockquote></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://smart.who.int/immunizations-measles/PlanDefinition/IMMZD2DTMeaslesDose0"/>
+  <version value="0.1.0"/>
+  <name value="IMMZD2DTMeaslesDose0"/>
+  <title value="IMMZ.D2.DT.Measles MCV Dose 0"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-06-07T12:26:37+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="If the child or patient has not been given MCV0 between 6 and 9 months"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="WHO recommendations for routine immunization - summary tables (March 2023)"/>
+  </relatedArtifact>
+  <library value="http://smart.who.int/immunizations-measles/Library/IMMZD2DTMeaslesDose0Logic"/>
+  <action>
+    <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale">
+      <valueMarkdown value="Note: The countries should apply the national immunization policy for MCV0 dose and adjust this logic accordingly.&lt;br/&gt;A supplementary dose of MCV (recorded as MCV0) should be considered for infants known to be exposed (i.e. born to an HIV-infected woman) or soon after diagnosis of HIV infection in children older than 6 months who are not receiving HAART and for whom the risk of measles is high, with the aim of providing partial protection until they are revaccinated after immune reconstitution with HAART.&lt;br/&gt;In the following situations, a supplementary dose of MCV should be given to infants from 6 months of age:&lt;br/&gt;* (1) during a measles outbreak as part of intensified service delivery;&lt;br/&gt;* (2) during campaigns in settings where the risk of measles among infants &lt; 9 months of age remains high (e.g. in endemic countries experiencing regular outbreaks);&lt;br/&gt;* (3) for internally displaced populations and refugees, and populations in conflict zones;&lt;br/&gt;* (4) for individual infants at high risk of contracting measles (e.g. contacts of known measles cases or in settings with increased risk of exposure during outbreaks such as day-care facilities);&lt;br/&gt;* (5)for infants travelling to countries experiencing measles outbreaks;&lt;br/&gt;* (6) infants known to be HIV-infected or exposed (i.e. born to an HIV-infected woman).&lt;br/&gt;In areas where there is a high incidence of both HIV infection and measles, an initial dose of MCV may be offered as early as age 6 months (recorded as MCV0). The 2 routine doses of MCV (MCV1 and MCV2) should then be administered to these children according to the national immunization schedule.&lt;br/&gt;As a general rule, live vaccines should be given either simultaneously or at intervals of 4 weeks. An exception to this rule is OPV, which can be given at any time before or after measles vaccination without interference in the response to either vaccine."/>
+    </extension>
+    <title value="Immunize patient for Measles"/>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <language value="text/cql-identifier"/>
+        <expression value="Measles Routine Immunization Schedule Incomplete"/>
+      </expression>
+    </condition>
+    <action>
+      <title value="Consider MCV0 Dose"/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="No MCV0 Doses Administered"/>
+        </expression>
+      </condition>
+      <action>
+        <title value="Client Age Less Than 6 Months"/>
+        <description value="Should not vaccinate client for MCV0 as client is less than 6 months. Check for any vaccines due, and inform the caregiver of when to come back for MCV0."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Age Less Than 6 Months"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Last Live Vaccine Administered Within 4 Weeks"/>
+        <description value="Should not vaccinate client for MCV0 as live vaccine was administered in the last 4 weeks. Check for any vaccines due, and inform the caregiver of when to come back for MCV0."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Last Live Vaccine Administered Within 4 Weeks"/>
+          </expression>
+        </condition>
+      </action>
+      <action>
+        <title value="Provide Measles Vaccine"/>
+        <description value="May vaccinate client for MCV0 as client is within appropriate age range, MCV0 was not administered and no live vaccine was administered in the last 4 weeks. Check if one of the MCV0 specific scenarios is applicable."/>
+        <condition>
+          <kind value="applicability"/>
+          <expression>
+            <language value="text/cql-identifier"/>
+            <expression value="Client Is Due For MCV0"/>
+          </expression>
+        </condition>
+        <definitionCanonical value="http://smart.who.int/immunizations-measles/ActivityDefinition/IMMZD2DTMeaslesMR"/>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.start"/>
+          <expression>
+            <description value="Due date of the dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV0 Schedule Date"/>
+          </expression>
+        </dynamicValue>
+        <dynamicValue>
+          <path value="dispenseRequest.validityPeriod.end"/>
+          <expression>
+            <description value="Expiration date for MCV dose"/>
+            <language value="text/cql-identifier"/>
+            <expression value="MCV0 Expiration Date"/>
+          </expression>
+        </dynamicValue>
+      </action>
+    </action>
+    <action>
+      <title value="MCV0 Dose Administered"/>
+      <description value="MCV0 was administered. Check measles routine immunization schedule."/>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/cql-identifier"/>
+          <expression value="MCV0 Dose Administered"/>
+        </expression>
+      </condition>
+    </action>
+  </action>
+</PlanDefinition>

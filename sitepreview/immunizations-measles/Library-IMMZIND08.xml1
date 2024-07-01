@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="IMMZIND08"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">/*
+ * Library: IMMZ.IND.08
+ * Immunization coverage for Measles containing vaccine (Estimated Denominator) 
+ * Compares the administered doses of measles containing vaccines (MCV) with the estimated number of surviving infants (if dose 1) or a country supplied denominator (if dose 2) expressed as a percentage. 
+ * 
+ * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period 
+ * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period
+ * Denominator: Estimated number of surviving infants (for dose 1) and country supplied denominator for dose sequence 2 (see comments)
+ * Denominator Computation: PARAMETER number of surviving infants (if Dose Sequence = 1) or PARAMETER of country supplied denominator (if Dose Sequence = 2)
+ * 
+ * Disaggregation:
+ *   - Dose Sequence (1, 2)
+ *   - Age Group (&lt; 1 year or &gt; 1 year)
+ *   - Geographic Region
+ *   - Administrative Gender (or Biological Sex)
+ * 
+ * References: WHO Immunization Facility Analysis Guide (1), WHO / UNICEF Joint Reporting Form (3 - elements 4240 and 4260 )
+ */
+
+library IMMZIND08
+
+// Start Skeleton CQL
+using FHIR version '4.0.1'
+include FHIRHelpers version '4.0.1'
+include IMMZCommon called IMMZCom
+include IMMZConcepts called IMMZc
+include IMMZConfig called IMMZCon
+include IMMZIndicatorCommon called IMMZIndCom
+include IMMZVaccineLibrary called IMMZvl
+include FHIRCommon called FC
+// End Skeleton CQL
+parameter &quot;Measurement Period&quot; Interval&lt;Date&gt;
+
+context Patient
+
+/*
+ * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period
+ * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.A1.DE9) during reporting period
+ */
+define &quot;measure-population&quot;:
+	exists(IMMZIndCom.&quot;MCV Doses Administered to Patient During Measurement Period&quot;)
+
+/*
+ * Disaggregator: Dose Sequence (1, 2)
+ */
+define &quot;Dose Sequence  Stratifier&quot;:
+	IMMZIndCom.&quot;MCV Doses Administered to Patient During Measurement Period&quot; I
+	return (singleton from I.protocolApplied).doseNumber
+
+/*
+ * Disaggregator: Age Group (&lt;24H of Birth, &lt; 2 weeks)
+ */
+define &quot;Age Group Stratifier&quot;:
+	IMMZIndCom.&quot;Infant By Age Stratifier&quot;
+
+/*
+ * Disaggregator: Geographic Region
+ */
+define &quot;Geographic Region Stratifier&quot;:
+	IMMZIndCom.&quot;By Geographic Region Stratifier&quot;
+
+/*
+ * Disaggregator: Administrative Gender (or Biological Sex)
+ */
+define &quot;Administrative Gender Stratifier&quot;:
+	IMMZIndCom.&quot;By Administrative Gender Stratifier&quot;
+
+/* End of IMMZ.IND.08 */
+</code></pre><p><code>No Content</code> (<code>application/elm+xml</code>)</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://smart.who.int/immunizations-measles/Library/IMMZIND08"/>
+  <version value="0.1.0"/>
+  <name value="IMMZIND08"/>
+  <title value="IMMZIND08"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2024-01-26T13:33:24+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="This library defines population criteria for the IND.08 indicator in the Immunization CPG"/>
+  <content>
+    <contentType value="text/cql"/>
+    <data value="LyoNCiAqIExpYnJhcnk6IElNTVouSU5ELjA4DQogKiBJbW11bml6YXRpb24gY292ZXJhZ2UgZm9yIE1lYXNsZXMgY29udGFpbmluZyB2YWNjaW5lIChFc3RpbWF0ZWQgRGVub21pbmF0b3IpIA0KICogQ29tcGFyZXMgdGhlIGFkbWluaXN0ZXJlZCBkb3NlcyBvZiBtZWFzbGVzIGNvbnRhaW5pbmcgdmFjY2luZXMgKE1DVikgd2l0aCB0aGUgZXN0aW1hdGVkIG51bWJlciBvZiBzdXJ2aXZpbmcgaW5mYW50cyAoaWYgZG9zZSAxKSBvciBhIGNvdW50cnkgc3VwcGxpZWQgZGVub21pbmF0b3IgKGlmIGRvc2UgMikgZXhwcmVzc2VkIGFzIGEgcGVyY2VudGFnZS4gDQogKiANCiAqIE51bWVyYXRvcjogTnVtYmVyIG9mIGFkbWluaXN0cmF0aW9ucyBvZiB2YWNjaW5hdGlvbnMgY29udGFpbmluZyBhIE1lYXNsZXMgY29tcG9uZW50IGR1cmluZyByZXBvcnRpbmcgcGVyaW9kIA0KICogTnVtZXJhdG9yIENvbXB1dGF0aW9uOiBDT1VOVCBpbW11bml6YXRpb24gZXZlbnRzIFdIRVJFIGFkbWluaXN0ZXJlZCBwcm9kdWN0IGlzIGEgTWVhc2xlcyB2YWNjaW5lIChJTU1aLkExLkRFOSkgZHVyaW5nIHJlcG9ydGluZyBwZXJpb2QNCiAqIERlbm9taW5hdG9yOiBFc3RpbWF0ZWQgbnVtYmVyIG9mIHN1cnZpdmluZyBpbmZhbnRzIChmb3IgZG9zZSAxKSBhbmQgY291bnRyeSBzdXBwbGllZCBkZW5vbWluYXRvciBmb3IgZG9zZSBzZXF1ZW5jZSAyIChzZWUgY29tbWVudHMpDQogKiBEZW5vbWluYXRvciBDb21wdXRhdGlvbjogUEFSQU1FVEVSIG51bWJlciBvZiBzdXJ2aXZpbmcgaW5mYW50cyAoaWYgRG9zZSBTZXF1ZW5jZSA9IDEpIG9yIFBBUkFNRVRFUiBvZiBjb3VudHJ5IHN1cHBsaWVkIGRlbm9taW5hdG9yIChpZiBEb3NlIFNlcXVlbmNlID0gMikNCiAqIA0KICogRGlzYWdncmVnYXRpb246DQogKiAgIC0gRG9zZSBTZXF1ZW5jZSAoMSwgMikNCiAqICAgLSBBZ2UgR3JvdXAgKDwgMSB5ZWFyIG9yID4gMSB5ZWFyKQ0KICogICAtIEdlb2dyYXBoaWMgUmVnaW9uDQogKiAgIC0gQWRtaW5pc3RyYXRpdmUgR2VuZGVyIChvciBCaW9sb2dpY2FsIFNleCkNCiAqIA0KICogUmVmZXJlbmNlczogV0hPIEltbXVuaXphdGlvbiBGYWNpbGl0eSBBbmFseXNpcyBHdWlkZSAoMSksIFdITyAvIFVOSUNFRiBKb2ludCBSZXBvcnRpbmcgRm9ybSAoMyAtIGVsZW1lbnRzIDQyNDAgYW5kIDQyNjAgKQ0KICovDQoNCmxpYnJhcnkgSU1NWklORDA4DQoNCi8vIFN0YXJ0IFNrZWxldG9uIENRTA0KdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScNCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnDQppbmNsdWRlIElNTVpDb21tb24gY2FsbGVkIElNTVpDb20NCmluY2x1ZGUgSU1NWkNvbmNlcHRzIGNhbGxlZCBJTU1aYw0KaW5jbHVkZSBJTU1aQ29uZmlnIGNhbGxlZCBJTU1aQ29uDQppbmNsdWRlIElNTVpJbmRpY2F0b3JDb21tb24gY2FsbGVkIElNTVpJbmRDb20NCmluY2x1ZGUgSU1NWlZhY2NpbmVMaWJyYXJ5IGNhbGxlZCBJTU1admwNCmluY2x1ZGUgRkhJUkNvbW1vbiBjYWxsZWQgRkMNCi8vIEVuZCBTa2VsZXRvbiBDUUwNCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlPg0KDQpjb250ZXh0IFBhdGllbnQNCg0KLyoNCiAqIE51bWVyYXRvcjogTnVtYmVyIG9mIGFkbWluaXN0cmF0aW9ucyBvZiB2YWNjaW5hdGlvbnMgY29udGFpbmluZyBhIE1lYXNsZXMgY29tcG9uZW50IGR1cmluZyByZXBvcnRpbmcgcGVyaW9kDQogKiBOdW1lcmF0b3IgQ29tcHV0YXRpb246IENPVU5UIGltbXVuaXphdGlvbiBldmVudHMgV0hFUkUgYWRtaW5pc3RlcmVkIHByb2R1Y3QgaXMgYSBNZWFzbGVzIHZhY2NpbmUgKElNTVouQTEuREU5KSBkdXJpbmcgcmVwb3J0aW5nIHBlcmlvZA0KICovDQpkZWZpbmUgIm1lYXN1cmUtcG9wdWxhdGlvbiI6DQoJZXhpc3RzKElNTVpJbmRDb20uIk1DViBEb3NlcyBBZG1pbmlzdGVyZWQgdG8gUGF0aWVudCBEdXJpbmcgTWVhc3VyZW1lbnQgUGVyaW9kIikNCg0KLyoNCiAqIERpc2FnZ3JlZ2F0b3I6IERvc2UgU2VxdWVuY2UgKDEsIDIpDQogKi8NCmRlZmluZSAiRG9zZSBTZXF1ZW5jZSAgU3RyYXRpZmllciI6DQoJSU1NWkluZENvbS4iTUNWIERvc2VzIEFkbWluaXN0ZXJlZCB0byBQYXRpZW50IER1cmluZyBNZWFzdXJlbWVudCBQZXJpb2QiIEkNCglyZXR1cm4gKHNpbmdsZXRvbiBmcm9tIEkucHJvdG9jb2xBcHBsaWVkKS5kb3NlTnVtYmVyDQoNCi8qDQogKiBEaXNhZ2dyZWdhdG9yOiBBZ2UgR3JvdXAgKDwyNEggb2YgQmlydGgsIDwgMiB3ZWVrcykNCiAqLw0KZGVmaW5lICJBZ2UgR3JvdXAgU3RyYXRpZmllciI6DQoJSU1NWkluZENvbS4iSW5mYW50IEJ5IEFnZSBTdHJhdGlmaWVyIg0KDQovKg0KICogRGlzYWdncmVnYXRvcjogR2VvZ3JhcGhpYyBSZWdpb24NCiAqLw0KZGVmaW5lICJHZW9ncmFwaGljIFJlZ2lvbiBTdHJhdGlmaWVyIjoNCglJTU1aSW5kQ29tLiJCeSBHZW9ncmFwaGljIFJlZ2lvbiBTdHJhdGlmaWVyIg0KDQovKg0KICogRGlzYWdncmVnYXRvcjogQWRtaW5pc3RyYXRpdmUgR2VuZGVyIChvciBCaW9sb2dpY2FsIFNleCkNCiAqLw0KZGVmaW5lICJBZG1pbmlzdHJhdGl2ZSBHZW5kZXIgU3RyYXRpZmllciI6DQoJSU1NWkluZENvbS4iQnkgQWRtaW5pc3RyYXRpdmUgR2VuZGVyIFN0cmF0aWZpZXIiDQoNCi8qIEVuZCBvZiBJTU1aLklORC4wOCAqLw0K"/>
+  </content>
+  <content>
+    <contentType value="application/elm+xml"/>
+  </content>
+</Library>

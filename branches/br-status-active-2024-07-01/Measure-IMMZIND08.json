@@ -1,0 +1,106 @@
+{
+  "resourceType" : "Measure",
+  "id" : "IMMZIND08",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Measure IMMZIND08</b></p><a name=\"IMMZIND08\"> </a><a name=\"hcIMMZIND08\"> </a><a name=\"hcIMMZIND08-en-US\"> </a><p><b>url</b>: <a href=\"Measure-IMMZIND08.html\">Measure IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZIND08</p><p><b>title</b>: IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)</p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2023-10-05</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href=\"http://who.int\">http://who.int</a></p><p><b>description</b>: </p><div><p>IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)</p>\n</div><p><b>library</b>: <a href=\"Library-IMMZIND08Logic.html\">IMMZ.IND.08 Logic</a></p><p><b>scoring</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-scoring continuous-variable}\">Continuous Variable</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.IP</blockquote><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Initial Population</td></tr></table></blockquote><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.MP</blockquote><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population measure-population}\">Measure Population</span></p><p><b>description</b>: Measure Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Measure Population</td></tr></table></blockquote><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.MO</blockquote><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population measure-observation}\">Measure Observation</span></p><p><b>description</b>: Measure Observation</p><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Measure Observation</td></tr></table></blockquote><blockquote><p><b>stratifier</b></p><blockquote><p><b>id</b></p>IMMZ.IND.08.S</blockquote><h3>Criteria</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Stratification</td></tr></table></blockquote></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+    "valueCode" : "boolean"
+  }],
+  "url" : "http://smart.who.int/immunizations-measles/Measure/IMMZIND08",
+  "version" : "0.1.0",
+  "name" : "IMMZIND08",
+  "title" : "IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2023-10-05",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)",
+  "library" : ["http://smart.who.int/immunizations-measles/Library/IMMZIND08Logic"],
+  "scoring" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/measure-scoring",
+      "code" : "continuous-variable",
+      "display" : "Continuous Variable"
+    }]
+  },
+  "group" : [{
+    "population" : [{
+      "id" : "IMMZ.IND.08.IP",
+      "code" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code" : "initial-population",
+          "display" : "Initial Population"
+        }]
+      },
+      "description" : "Initial Population",
+      "criteria" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Initial Population"
+      }
+    },
+    {
+      "id" : "IMMZ.IND.08.MP",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        "valueCode" : "boolean"
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code" : "measure-population",
+          "display" : "Measure Population"
+        }]
+      },
+      "description" : "Measure Population",
+      "criteria" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Measure Population"
+      }
+    },
+    {
+      "id" : "IMMZ.IND.08.MO",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference",
+        "valueString" : "measure-population"
+      },
+      {
+        "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod",
+        "valueCode" : "count"
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code" : "measure-observation"
+        }]
+      },
+      "description" : "Measure Observation",
+      "criteria" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Measure Observation"
+      }
+    }],
+    "stratifier" : [{
+      "id" : "IMMZ.IND.08.S",
+      "criteria" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Stratification"
+      }
+    }]
+  }]
+}

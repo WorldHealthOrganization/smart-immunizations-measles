@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Vaccine-MSDMMRVaxPro"/>
+  <meta>
+    <profile value="http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication Vaccine-MSDMMRVaxPro</b></p><a name="Vaccine-MSDMMRVaxPro"> </a><a name="hcVaccine-MSDMMRVaxPro"> </a><a name="hcVaccine-MSDMMRVaxPro-en-US"> </a><p><b>code</b>: <span title="Codes:{http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts 7680007030014}">M-M-RvaxPRO</span></p></div>
+  </text>
+  <extension url="http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://id.who.int/icd/release/11/mms"/>
+        <code value="XM8L15"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://id.who.int/icd/release/11/mms"/>
+        <code value="XM2340"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"/>
+      <code value="7680007030014"/>
+    </coding>
+  </code>
+</Medication>

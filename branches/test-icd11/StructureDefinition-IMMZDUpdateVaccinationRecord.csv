@@ -1,0 +1,35 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"IMMZDUpdateVaccinationRecord","IMMZDUpdateVaccinationRecord","","","",0,*,"","","","null {[]} {[]}
+","IMMZ.D Update Vaccination Record","Data elements for IMMZ.D Update Vaccination Record.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"IMMZDUpdateVaccinationRecord.immunizatioEventStatus","IMMZDUpdateVaccinationRecord.immunizatioEventStatus","","","",1,1,"","","","code {[]} {[]}
+","The current status of the individual immunization event","The current status of the individual immunization event","","","","","","","","","",,"required","","http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE1VS","",,,,"IMMZDUpdateVaccinationRecord.immunizatioEventStatus",1,1,"",""
+"IMMZDUpdateVaccinationRecord.reasonNotDone","IMMZDUpdateVaccinationRecord.reasonNotDone","","","",0,1,"","","","code {[]} {[]}
+","Reason vaccine was not administered","The reason this immunization event was not performed","","","","","","","","","",,"required","","http://smart.who.int/ig/smart-immunizations-measles/ValueSet/IMMZ.D1.DE5VS","",,,,"IMMZDUpdateVaccinationRecord.reasonNotDone",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineProduct","IMMZDUpdateVaccinationRecord.vaccineProduct","","","",1,1,"","","","Coding {[]} {[]}
+","Vaccine brand","The brand or trade name used to refer to the vaccine received","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineProduct",1,1,"",""
+"IMMZDUpdateVaccinationRecord.liveVaccine","IMMZDUpdateVaccinationRecord.liveVaccine","","","",0,1,"","","","boolean {[]} {[]}
+","Live attenuated vaccine","Uses a living but weakened version of the virus or one that's very similar","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.liveVaccine",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineType","IMMZDUpdateVaccinationRecord.vaccineType","","","",0,1,"","","","Coding {[]} {[]}
+","Vaccine type","Vaccine type/category that was administered or was to be administered. Any vaccine code available in the IMMZ.Z Vaccine Library list of codes applies in this data element","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineType",0,1,"",""
+"IMMZDUpdateVaccinationRecord.dateTime","IMMZDUpdateVaccinationRecord.dateTime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of vaccination","Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.dateTime",1,1,"",""
+"IMMZDUpdateVaccinationRecord.countryOfVaccination","IMMZDUpdateVaccinationRecord.countryOfVaccination","","","",1,1,"","","","Coding {[]} {[]}
+","Country of vaccination","The service delivery country where the vaccine administration occurred","","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/country","",,,,"IMMZDUpdateVaccinationRecord.countryOfVaccination",1,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccinationLocation","IMMZDUpdateVaccinationRecord.vaccinationLocation","","","",0,1,"","","","string {[]} {[]}
+","Vaccination location","The service delivery location where the vaccine administration occurred","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccinationLocation",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineManufacturer","IMMZDUpdateVaccinationRecord.vaccineManufacturer","","","",0,1,"","","","string {[]} {[]}
+","Vaccine manufacturer","The manufacturer of the vaccine product","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineManufacturer",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineLotNumber","IMMZDUpdateVaccinationRecord.vaccineLotNumber","","","",0,1,"","","","string {[]} {[]}
+","Vaccine batch number","Batch number or lot number of vaccine","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineLotNumber",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineMAH","IMMZDUpdateVaccinationRecord.vaccineMAH","","","",0,1,"","","","string {[]} {[]}
+","Vaccine market authorization holder","Name of the market authorization holder of the vaccine received. If market authorization holder is unknown, vaccine manufacturer is REQUIRED","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineMAH",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineExpirationDate","IMMZDUpdateVaccinationRecord.vaccineExpirationDate","","","",0,1,"","","","string {[]} {[]}
+","Expiration date","The expiration date of the vaccine","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineExpirationDate",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineDoseQuantity","IMMZDUpdateVaccinationRecord.vaccineDoseQuantity","","","",0,1,"","","","string {[]} {[]}
+","Dose quantity","The quantity of vaccine product that was administered","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineDoseQuantity",0,1,"",""
+"IMMZDUpdateVaccinationRecord.healthWorker","IMMZDUpdateVaccinationRecord.healthWorker","","","",0,1,"","","","string {[]} {[]}
+","Health worker identifier","The person, organization, or role of the entity that performed the act of giving the vaccine to the client. The implementing system can choose to populate this field using data from a health worker registry or health facility registry","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.healthWorker",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineDoseNumber","IMMZDUpdateVaccinationRecord.vaccineDoseNumber","","","",0,1,"","","","integer {[]} {[]}
+","Dose number","Vaccine dose number including dose number within series","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineDoseNumber",0,1,"",""
+"IMMZDUpdateVaccinationRecord.vaccineTotalDosesInSeries","IMMZDUpdateVaccinationRecord.vaccineTotalDosesInSeries","","","",0,1,"","","","integer {[]} {[]}
+","Total doses in series","The recommended number of doses for immunity according to the national protocol","","","","","","","","","",,,,,"",,,,"IMMZDUpdateVaccinationRecord.vaccineTotalDosesInSeries",0,1,"",""

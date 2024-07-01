@@ -1,0 +1,391 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "t" : [ {
+            "name" : "DecisionID",
+            "value" : "IMMZ.D5.DT.Measles contraindications"
+         }, {
+            "name" : "BusinessRule",
+            "value" : "Check for contraindications before administering the vaccine(s) due"
+         }, {
+            "name" : "Trigger",
+            "value" : "IMMZ.D5 Determine vaccine(s) to be administered based on contraindications"
+         } ],
+         "s" : {
+            "r" : "11",
+            "s" : [ {
+               "value" : [ "/*\n@DecisionID: IMMZ.D5.DT.Measles contraindications\n@BusinessRule: Check for contraindications before administering the vaccine(s) due\t\t\t\t\t\n@Trigger: IMMZ.D5 Determine vaccine(s) to be administered based on contraindications\n*/\n","library IMMZD5DTMeaslesCILogic" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZD5DTMeaslesCILogic",
+         "system" : "http://smart.who.int/immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "8:1-8:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "10:1-10:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://hl7.org/fhir/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "12:1-12:45",
+            "localIdentifier" : "Elements",
+            "path" : "http://smart.who.int/immunizations-measles/IMMZEncounterElements",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZEncounterElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Elements" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "5",
+            "locator" : "14:1-14:31",
+            "name" : "Today",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","parameter ","Today"," default " ]
+                  }, {
+                     "r" : "4",
+                     "s" : [ {
+                        "value" : [ "Today","()" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "4",
+               "locator" : "14:25-14:31",
+               "type" : "Today"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "16:1-16:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "16:1-16:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "16:1-16:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "11",
+            "locator" : "38:1-40:43",
+            "name" : "Measles Vaccination Contraindicated",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "11",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Measles Vaccination Contraindicated\"",":\n  " ]
+                  }, {
+                     "r" : "10",
+                     "s" : [ {
+                        "r" : "7",
+                        "s" : [ {
+                           "r" : "6",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "7",
+                           "s" : [ {
+                              "value" : [ "\"Currently Pregnant\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    or " ]
+                     }, {
+                        "r" : "9",
+                        "s" : [ {
+                           "r" : "8",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "9",
+                           "s" : [ {
+                              "value" : [ "\"Severely Immunosuppressed\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "10",
+               "locator" : "39:3-40:43",
+               "type" : "Or",
+               "operand" : [ {
+                  "localId" : "7",
+                  "locator" : "39:3-39:31",
+                  "name" : "Currently Pregnant",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "9",
+                  "locator" : "40:8-40:43",
+                  "name" : "Severely Immunosuppressed",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "21",
+            "locator" : "33:1-36:43",
+            "name" : "Measles Vaccination Could Be Contraindicated",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "21",
+                  "s" : [ {
+                     "value" : [ "/*\nIMMZ.D5.DT.Measles contraindications\n*/\n","define ","\"Measles Vaccination Could Be Contraindicated\"",":\n  " ]
+                  }, {
+                     "r" : "20",
+                     "s" : [ {
+                        "r" : "17",
+                        "s" : [ {
+                           "r" : "14",
+                           "s" : [ {
+                              "r" : "13",
+                              "s" : [ {
+                                 "value" : [ "Elements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "14",
+                              "s" : [ {
+                                 "value" : [ "\"History Of Anaphylactic Reactions\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    or " ]
+                        }, {
+                           "r" : "16",
+                           "s" : [ {
+                              "r" : "15",
+                              "s" : [ {
+                                 "value" : [ "Elements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "16",
+                              "s" : [ {
+                                 "value" : [ "\"Severe Allergic Reactions\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    or " ]
+                     }, {
+                        "r" : "19",
+                        "s" : [ {
+                           "r" : "18",
+                           "s" : [ {
+                              "value" : [ "Elements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "19",
+                           "s" : [ {
+                              "value" : [ "\"Symptomatic HIV Infection\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "20",
+               "locator" : "34:3-36:43",
+               "type" : "Or",
+               "operand" : [ {
+                  "localId" : "17",
+                  "locator" : "34:3-35:43",
+                  "type" : "Or",
+                  "operand" : [ {
+                     "localId" : "14",
+                     "locator" : "34:3-34:46",
+                     "name" : "History Of Anaphylactic Reactions",
+                     "libraryName" : "Elements",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "16",
+                     "locator" : "35:8-35:43",
+                     "name" : "Severe Allergic Reactions",
+                     "libraryName" : "Elements",
+                     "type" : "ExpressionRef"
+                  } ]
+               }, {
+                  "localId" : "19",
+                  "locator" : "36:8-36:43",
+                  "name" : "Symptomatic HIV Infection",
+                  "libraryName" : "Elements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "24",
+            "locator" : "22:1-24:53",
+            "name" : "MCV Dose Contraindicated",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "24",
+                  "s" : [ {
+                     "value" : [ "/*\nPlanDefinition Applicability Expressions\n*/\n\n","define ","\"MCV Dose Contraindicated\"",":\n  " ]
+                  }, {
+                     "r" : "23",
+                     "s" : [ {
+                        "r" : "12",
+                        "s" : [ {
+                           "value" : [ "\"Measles Vaccination Contraindicated\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    or " ]
+                     }, {
+                        "r" : "22",
+                        "s" : [ {
+                           "value" : [ "\"Measles Vaccination Could Be Contraindicated\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "23",
+               "locator" : "23:3-24:53",
+               "type" : "Or",
+               "operand" : [ {
+                  "localId" : "12",
+                  "locator" : "23:3-23:39",
+                  "name" : "Measles Vaccination Contraindicated",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "22",
+                  "locator" : "24:8-24:53",
+                  "name" : "Measles Vaccination Could Be Contraindicated",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "26",
+            "locator" : "27:1-28:7",
+            "name" : "Contraindication Evaluation of the MCV Dose",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "26",
+                  "s" : [ {
+                     "r" : "25",
+                     "value" : [ "// TODO: Define this\n","define ","\"Contraindication Evaluation of the MCV Dose\"",":\n  ","false" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "25",
+               "locator" : "28:3-28:7",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            }
+         } ]
+      }
+   }
+}

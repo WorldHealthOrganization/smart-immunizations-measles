@@ -1,0 +1,1676 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "115",
+            "s" : [ {
+               "value" : [ "/*\n * Library: IMMZ.IND.Measles\n * Immunization coverage for Measles containing vaccine (Estimated Denominator) \n * Compares the administered doses of measles containing vaccines (MCV) with the estimated number of surviving infants (if dose 1) or a country supplied denominator (if dose 2) expressed as a percentage. \n * \n * Numerator: Number of administrations of vaccinations containing a Measles component during reporting period \n * Numerator Computation: COUNT immunization events WHERE administered product is a Measles vaccine (IMMZ.Z.DE9) during reporting period\n * Denominator: Estimated number of surviving infants (for dose 1) and country supplied denominator for dose sequence 2 (see comments)\n * Denominator Computation: PARAMETER number of surviving infants (if Dose Sequence = 1) or PARAMETER of country supplied denominator (if Dose Sequence = 2)\n * \n * Disaggregation:\n *   - Dose Sequence (1, 2)\n *   - Age Group (< 1 year or > 1 year)\n *   - Geographic Region\n *   - Administrative Gender (or Biological Sex)\n * \n * References: WHO Immunization Facility Analysis Guide (1), WHO / UNICEF Joint Reporting Form (3 - elements 4240 and 4260 )\n */\n","library IMMZINDMeasles" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "IMMZINDMeasles",
+         "system" : "http://smart.who.int/ig/smart-immunizations-measles"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "23:1-23:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "// Start Skeleton CQL\n","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "24:1-24:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://smart.who.int/ig/smart-immunizations-measles/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "25:1-25:33",
+            "localIdentifier" : "IMMZCom",
+            "path" : "http://smart.who.int/ig/smart-immunizations-measles/IMMZCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","IMMZCom" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "26:1-26:33",
+            "localIdentifier" : "IMMZc",
+            "path" : "http://smart.who.int/ig/smart-immunizations-measles/IMMZConcepts",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConcepts" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","IMMZc" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "5",
+            "locator" : "27:1-27:33",
+            "localIdentifier" : "IMMZCon",
+            "path" : "http://smart.who.int/ig/smart-immunizations-measles/IMMZConfig",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","IMMZCon" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "6",
+            "locator" : "28:1-28:45",
+            "localIdentifier" : "IMMZIndCom",
+            "path" : "http://smart.who.int/ig/smart-immunizations-measles/IMMZIndicatorCommon",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "IMMZIndicatorCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","IMMZIndCom" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "12",
+            "locator" : "30:1-30:115",
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "value" : [ "// End Skeleton CQL\n","parameter ","\"Measurement Period\""," " ]
+                  }, {
+                     "r" : "11",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "10",
+                        "s" : [ {
+                           "value" : [ "DateTime" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  }, {
+                     "value" : [ " default " ]
+                  }, {
+                     "r" : "9",
+                     "s" : [ {
+                        "r" : "7",
+                        "value" : [ "Interval[","@2019-03-01T00:00:00.0",", ","@2019-04-01T00:00:00.0"," )" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "9",
+               "locator" : "30:59-30:115",
+               "lowClosed" : true,
+               "highClosed" : false,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "7",
+                  "locator" : "30:68-30:89",
+                  "type" : "DateTime",
+                  "year" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "2019",
+                     "type" : "Literal"
+                  },
+                  "month" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "3",
+                     "type" : "Literal"
+                  },
+                  "day" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "hour" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "minute" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "second" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "millisecond" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  }
+               },
+               "high" : {
+                  "localId" : "8",
+                  "locator" : "30:92-30:113",
+                  "type" : "DateTime",
+                  "year" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "2019",
+                     "type" : "Literal"
+                  },
+                  "month" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "4",
+                     "type" : "Literal"
+                  },
+                  "day" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "hour" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "minute" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "second" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "millisecond" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "11",
+               "locator" : "30:32-30:49",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "10",
+                  "locator" : "30:41-30:48",
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "32:1-32:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "32:1-32:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "32",
+            "locator" : "34:1-38:56",
+            "name" : "getPatientImmunisationMeasles",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "32",
+                  "s" : [ {
+                     "value" : [ "","define  ","getPatientImmunisationMeasles",":\n  " ]
+                  }, {
+                     "r" : "31",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "14",
+                           "s" : [ {
+                              "r" : "13",
+                              "s" : [ {
+                                 "r" : "13",
+                                 "s" : [ {
+                                    "value" : [ "[","Immunization","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","I" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "24",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "24",
+                           "s" : [ {
+                              "r" : "18",
+                              "s" : [ {
+                                 "r" : "16",
+                                 "s" : [ {
+                                    "r" : "15",
+                                    "s" : [ {
+                                       "value" : [ "I" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "16",
+                                    "s" : [ {
+                                       "value" : [ "status" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","="," " ]
+                              }, {
+                                 "r" : "17",
+                                 "s" : [ {
+                                    "value" : [ "'completed'" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n\tand  " ]
+                           }, {
+                              "r" : "23",
+                              "s" : [ {
+                                 "r" : "20",
+                                 "s" : [ {
+                                    "r" : "19",
+                                    "s" : [ {
+                                       "value" : [ "I" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "20",
+                                    "s" : [ {
+                                       "value" : [ "vaccineCode" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " in " ]
+                              }, {
+                                 "r" : "22",
+                                 "s" : [ {
+                                    "r" : "21",
+                                    "s" : [ {
+                                       "value" : [ "IMMZc" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "22",
+                                    "s" : [ {
+                                       "value" : [ "\"MCV Vaccine\"" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "30",
+                        "s" : [ {
+                           "value" : [ "sort by " ]
+                        }, {
+                           "r" : "29",
+                           "s" : [ {
+                              "r" : "28",
+                              "s" : [ {
+                                 "value" : [ "date from " ]
+                              }, {
+                                 "r" : "27",
+                                 "s" : [ {
+                                    "value" : [ "(" ]
+                                 }, {
+                                    "r" : "27",
+                                    "s" : [ {
+                                       "r" : "25",
+                                       "s" : [ {
+                                          "value" : [ "occurrence" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "26",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","dateTime" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " desc" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "31",
+               "locator" : "35:3-38:56",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "14",
+                  "locator" : "35:3-35:18",
+                  "alias" : "I",
+                  "expression" : {
+                     "localId" : "13",
+                     "locator" : "35:3-35:16",
+                     "dataType" : "{http://hl7.org/fhir}Immunization",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Immunization",
+                     "type" : "Retrieve"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "24",
+                  "locator" : "36:5-37:42",
+                  "type" : "And",
+                  "operand" : [ {
+                     "localId" : "18",
+                     "locator" : "36:11-36:32",
+                     "type" : "Equal",
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "localId" : "16",
+                           "locator" : "36:11-36:18",
+                           "path" : "status",
+                           "scope" : "I",
+                           "type" : "Property"
+                        } ]
+                     }, {
+                        "localId" : "17",
+                        "locator" : "36:22-36:32",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "completed",
+                        "type" : "Literal"
+                     } ]
+                  }, {
+                     "localId" : "23",
+                     "locator" : "37:7-37:42",
+                     "type" : "InValueSet",
+                     "code" : {
+                        "name" : "ToConcept",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "localId" : "20",
+                           "locator" : "37:7-37:19",
+                           "path" : "vaccineCode",
+                           "scope" : "I",
+                           "type" : "Property"
+                        } ]
+                     },
+                     "valueset" : {
+                        "localId" : "22",
+                        "locator" : "37:24-37:42",
+                        "name" : "MCV Vaccine",
+                        "libraryName" : "IMMZc"
+                     }
+                  } ]
+               },
+               "sort" : {
+                  "localId" : "30",
+                  "locator" : "38:5-38:56",
+                  "by" : [ {
+                     "localId" : "29",
+                     "locator" : "38:13-38:56",
+                     "direction" : "desc",
+                     "type" : "ByExpression",
+                     "expression" : {
+                        "localId" : "28",
+                        "locator" : "38:13-38:51",
+                        "type" : "DateFrom",
+                        "operand" : {
+                           "name" : "ToDateTime",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "operand" : [ {
+                              "localId" : "27",
+                              "locator" : "38:23-38:51",
+                              "strict" : false,
+                              "type" : "As",
+                              "operand" : {
+                                 "localId" : "25",
+                                 "locator" : "38:24-38:33",
+                                 "name" : "occurrence",
+                                 "type" : "IdentifierRef"
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "26",
+                                 "locator" : "38:38-38:50",
+                                 "name" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        }
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "57",
+            "locator" : "40:1-43:53",
+            "name" : "getFirstDose",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "57",
+                  "s" : [ {
+                     "value" : [ "","define  ","getFirstDose",":\n  " ]
+                  }, {
+                     "r" : "56",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "34",
+                           "s" : [ {
+                              "r" : "33",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "getPatientImmunisationMeasles" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","I" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "49",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "49",
+                           "s" : [ {
+                              "r" : "47",
+                              "s" : [ {
+                                 "value" : [ "Coalesce","(" ]
+                              }, {
+                                 "r" : "45",
+                                 "s" : [ {
+                                    "r" : "43",
+                                    "s" : [ {
+                                       "r" : "42",
+                                       "s" : [ {
+                                          "r" : "41",
+                                          "s" : [ {
+                                             "value" : [ "First","(" ]
+                                          }, {
+                                             "r" : "40",
+                                             "s" : [ {
+                                                "s" : [ {
+                                                   "r" : "36",
+                                                   "s" : [ {
+                                                      "r" : "35",
+                                                      "s" : [ {
+                                                         "s" : [ {
+                                                            "value" : [ "I",".","protocolApplied" ]
+                                                         } ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ " ","pa" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " " ]
+                                             }, {
+                                                "r" : "39",
+                                                "s" : [ {
+                                                   "value" : [ "where " ]
+                                                }, {
+                                                   "r" : "39",
+                                                   "s" : [ {
+                                                      "r" : "38",
+                                                      "s" : [ {
+                                                         "r" : "37",
+                                                         "s" : [ {
+                                                            "value" : [ "pa" ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ "." ]
+                                                      }, {
+                                                         "r" : "38",
+                                                         "s" : [ {
+                                                            "value" : [ "doseNumber" ]
+                                                         } ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ " is not null" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ ")" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "42",
+                                          "s" : [ {
+                                             "value" : [ "doseNumber" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "43",
+                                       "s" : [ {
+                                          "value" : [ "value" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " as " ]
+                                 }, {
+                                    "r" : "44",
+                                    "s" : [ {
+                                       "value" : [ "Integer" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "r" : "46",
+                                 "value" : [ ",","1",")" ]
+                              } ]
+                           }, {
+                              "r" : "48",
+                              "value" : [ " ","="," ","1" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " \n\t" ]
+                     }, {
+                        "r" : "55",
+                        "s" : [ {
+                           "value" : [ "sort by " ]
+                        }, {
+                           "r" : "54",
+                           "s" : [ {
+                              "r" : "53",
+                              "s" : [ {
+                                 "value" : [ "date from " ]
+                              }, {
+                                 "r" : "52",
+                                 "s" : [ {
+                                    "value" : [ "(" ]
+                                 }, {
+                                    "r" : "52",
+                                    "s" : [ {
+                                       "r" : "50",
+                                       "s" : [ {
+                                          "value" : [ "occurrence" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "51",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","dateTime" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " desc" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "56",
+               "locator" : "41:3-43:53",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "34",
+                  "locator" : "41:3-41:33",
+                  "alias" : "I",
+                  "expression" : {
+                     "localId" : "33",
+                     "locator" : "41:3-41:31",
+                     "name" : "getPatientImmunisationMeasles",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "49",
+                  "locator" : "42:5-42:113",
+                  "type" : "Equal",
+                  "operand" : [ {
+                     "localId" : "47",
+                     "locator" : "42:11-42:109",
+                     "type" : "Coalesce",
+                     "operand" : [ {
+                        "localId" : "45",
+                        "locator" : "42:20-42:106",
+                        "strict" : false,
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "43",
+                           "locator" : "42:20-42:95",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "42",
+                              "locator" : "42:20-42:89",
+                              "path" : "doseNumber",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "41",
+                                 "locator" : "42:20-42:78",
+                                 "type" : "First",
+                                 "source" : {
+                                    "localId" : "40",
+                                    "locator" : "42:26-42:77",
+                                    "type" : "Query",
+                                    "source" : [ {
+                                       "localId" : "36",
+                                       "locator" : "42:26-42:45",
+                                       "alias" : "pa",
+                                       "expression" : {
+                                          "localId" : "35",
+                                          "locator" : "42:26-42:42",
+                                          "path" : "protocolApplied",
+                                          "scope" : "I",
+                                          "type" : "Property"
+                                       }
+                                    } ],
+                                    "relationship" : [ ],
+                                    "where" : {
+                                       "localId" : "39",
+                                       "locator" : "42:47-42:77",
+                                       "type" : "Not",
+                                       "operand" : {
+                                          "locator" : "42:53-42:77",
+                                          "type" : "IsNull",
+                                          "operand" : {
+                                             "localId" : "38",
+                                             "locator" : "42:53-42:65",
+                                             "path" : "doseNumber",
+                                             "scope" : "pa",
+                                             "type" : "Property"
+                                          }
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "asTypeSpecifier" : {
+                           "localId" : "44",
+                           "locator" : "42:100-42:106",
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "localId" : "46",
+                        "locator" : "42:108",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "value" : "1",
+                        "type" : "Literal"
+                     } ]
+                  }, {
+                     "localId" : "48",
+                     "locator" : "42:113",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  } ]
+               },
+               "sort" : {
+                  "localId" : "55",
+                  "locator" : "43:2-43:53",
+                  "by" : [ {
+                     "localId" : "54",
+                     "locator" : "43:10-43:53",
+                     "direction" : "desc",
+                     "type" : "ByExpression",
+                     "expression" : {
+                        "localId" : "53",
+                        "locator" : "43:10-43:48",
+                        "type" : "DateFrom",
+                        "operand" : {
+                           "name" : "ToDateTime",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "operand" : [ {
+                              "localId" : "52",
+                              "locator" : "43:20-43:48",
+                              "strict" : false,
+                              "type" : "As",
+                              "operand" : {
+                                 "localId" : "50",
+                                 "locator" : "43:21-43:30",
+                                 "name" : "occurrence",
+                                 "type" : "IdentifierRef"
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "51",
+                                 "locator" : "43:35-43:47",
+                                 "name" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        }
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "91",
+            "locator" : "45:1-50:53",
+            "name" : "getSecondDose",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "91",
+                  "s" : [ {
+                     "value" : [ "","define ","getSecondDose",":\n  \t \n  " ]
+                  }, {
+                     "r" : "90",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "59",
+                           "s" : [ {
+                              "r" : "58",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "getPatientImmunisationMeasles" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","I" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n\t " ]
+                     }, {
+                        "r" : "83",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "83",
+                           "s" : [ {
+                              "r" : "74",
+                              "s" : [ {
+                                 "r" : "72",
+                                 "s" : [ {
+                                    "value" : [ "Coalesce","(" ]
+                                 }, {
+                                    "r" : "70",
+                                    "s" : [ {
+                                       "r" : "68",
+                                       "s" : [ {
+                                          "r" : "67",
+                                          "s" : [ {
+                                             "r" : "66",
+                                             "s" : [ {
+                                                "value" : [ "First","(" ]
+                                             }, {
+                                                "r" : "65",
+                                                "s" : [ {
+                                                   "s" : [ {
+                                                      "r" : "61",
+                                                      "s" : [ {
+                                                         "r" : "60",
+                                                         "s" : [ {
+                                                            "s" : [ {
+                                                               "value" : [ "I",".","protocolApplied" ]
+                                                            } ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ " ","pa" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ " " ]
+                                                }, {
+                                                   "r" : "64",
+                                                   "s" : [ {
+                                                      "value" : [ "where " ]
+                                                   }, {
+                                                      "r" : "64",
+                                                      "s" : [ {
+                                                         "r" : "63",
+                                                         "s" : [ {
+                                                            "r" : "62",
+                                                            "s" : [ {
+                                                               "value" : [ "pa" ]
+                                                            } ]
+                                                         }, {
+                                                            "value" : [ "." ]
+                                                         }, {
+                                                            "r" : "63",
+                                                            "s" : [ {
+                                                               "value" : [ "doseNumber" ]
+                                                            } ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ " is not null" ]
+                                                      } ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "67",
+                                             "s" : [ {
+                                                "value" : [ "doseNumber" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "68",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "69",
+                                       "s" : [ {
+                                          "value" : [ "Integer" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "r" : "71",
+                                    "value" : [ ",","1",")" ]
+                                 } ]
+                              }, {
+                                 "r" : "73",
+                                 "value" : [ " ","="," ","2" ]
+                              } ]
+                           }, {
+                              "value" : [ " \n\t or " ]
+                           }, {
+                              "r" : "82",
+                              "s" : [ {
+                                 "value" : [ "(   " ]
+                              }, {
+                                 "r" : "82",
+                                 "s" : [ {
+                                    "r" : "76",
+                                    "s" : [ {
+                                       "r" : "75",
+                                       "s" : [ {
+                                          "value" : [ "I" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "76",
+                                       "s" : [ {
+                                          "value" : [ "occurrence" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "r" : "82",
+                                    "value" : [ " ","after"," " ]
+                                 }, {
+                                    "r" : "81",
+                                    "s" : [ {
+                                       "value" : [ "(" ]
+                                    }, {
+                                       "r" : "81",
+                                       "s" : [ {
+                                          "r" : "79",
+                                          "s" : [ {
+                                             "r" : "78",
+                                             "s" : [ {
+                                                "value" : [ "First","(" ]
+                                             }, {
+                                                "r" : "77",
+                                                "s" : [ {
+                                                   "value" : [ "getFirstDose" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "79",
+                                             "s" : [ {
+                                                "value" : [ "occurrence" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " + " ]
+                                       }, {
+                                          "r" : "80",
+                                          "s" : [ {
+                                             "value" : [ "4 ","weeks" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "  )" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n\t" ]
+                     }, {
+                        "r" : "89",
+                        "s" : [ {
+                           "value" : [ "sort by " ]
+                        }, {
+                           "r" : "88",
+                           "s" : [ {
+                              "r" : "87",
+                              "s" : [ {
+                                 "value" : [ "date from " ]
+                              }, {
+                                 "r" : "86",
+                                 "s" : [ {
+                                    "value" : [ "(" ]
+                                 }, {
+                                    "r" : "86",
+                                    "s" : [ {
+                                       "r" : "84",
+                                       "s" : [ {
+                                          "value" : [ "occurrence" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "85",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","dateTime" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " desc" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "90",
+               "locator" : "47:3-50:53",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "59",
+                  "locator" : "47:3-47:33",
+                  "alias" : "I",
+                  "expression" : {
+                     "localId" : "58",
+                     "locator" : "47:3-47:31",
+                     "name" : "getPatientImmunisationMeasles",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "83",
+                  "locator" : "48:3-49:73",
+                  "type" : "Or",
+                  "operand" : [ {
+                     "localId" : "74",
+                     "locator" : "48:9-48:111",
+                     "type" : "Equal",
+                     "operand" : [ {
+                        "localId" : "72",
+                        "locator" : "48:9-48:107",
+                        "type" : "Coalesce",
+                        "operand" : [ {
+                           "localId" : "70",
+                           "locator" : "48:18-48:104",
+                           "strict" : false,
+                           "type" : "As",
+                           "operand" : {
+                              "localId" : "68",
+                              "locator" : "48:18-48:93",
+                              "path" : "value",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "67",
+                                 "locator" : "48:18-48:87",
+                                 "path" : "doseNumber",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "66",
+                                    "locator" : "48:18-48:76",
+                                    "type" : "First",
+                                    "source" : {
+                                       "localId" : "65",
+                                       "locator" : "48:24-48:75",
+                                       "type" : "Query",
+                                       "source" : [ {
+                                          "localId" : "61",
+                                          "locator" : "48:24-48:43",
+                                          "alias" : "pa",
+                                          "expression" : {
+                                             "localId" : "60",
+                                             "locator" : "48:24-48:40",
+                                             "path" : "protocolApplied",
+                                             "scope" : "I",
+                                             "type" : "Property"
+                                          }
+                                       } ],
+                                       "relationship" : [ ],
+                                       "where" : {
+                                          "localId" : "64",
+                                          "locator" : "48:45-48:75",
+                                          "type" : "Not",
+                                          "operand" : {
+                                             "locator" : "48:51-48:75",
+                                             "type" : "IsNull",
+                                             "operand" : {
+                                                "localId" : "63",
+                                                "locator" : "48:51-48:63",
+                                                "path" : "doseNumber",
+                                                "scope" : "pa",
+                                                "type" : "Property"
+                                             }
+                                          }
+                                       }
+                                    }
+                                 }
+                              }
+                           },
+                           "asTypeSpecifier" : {
+                              "localId" : "69",
+                              "locator" : "48:98-48:104",
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "localId" : "71",
+                           "locator" : "48:106",
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "1",
+                           "type" : "Literal"
+                        } ]
+                     }, {
+                        "localId" : "73",
+                        "locator" : "48:111",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "value" : "2",
+                        "type" : "Literal"
+                     } ]
+                  }, {
+                     "localId" : "82",
+                     "locator" : "49:6-49:73",
+                     "type" : "After",
+                     "operand" : [ {
+                        "name" : "ToDateTime",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "asType" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "As",
+                           "operand" : {
+                              "localId" : "76",
+                              "locator" : "49:10-49:21",
+                              "path" : "occurrence",
+                              "scope" : "I",
+                              "type" : "Property"
+                           }
+                        } ]
+                     }, {
+                        "localId" : "81",
+                        "locator" : "49:29-49:72",
+                        "type" : "Add",
+                        "operand" : [ {
+                           "name" : "ToDateTime",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "operand" : [ {
+                              "asType" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "As",
+                              "operand" : {
+                                 "localId" : "79",
+                                 "locator" : "49:30-49:59",
+                                 "path" : "occurrence",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "78",
+                                    "locator" : "49:30-49:48",
+                                    "type" : "First",
+                                    "source" : {
+                                       "localId" : "77",
+                                       "locator" : "49:36-49:47",
+                                       "name" : "getFirstDose",
+                                       "type" : "ExpressionRef"
+                                    }
+                                 }
+                              }
+                           } ]
+                        }, {
+                           "localId" : "80",
+                           "locator" : "49:63-49:69",
+                           "value" : 4,
+                           "unit" : "weeks",
+                           "type" : "Quantity"
+                        } ]
+                     } ]
+                  } ]
+               },
+               "sort" : {
+                  "localId" : "89",
+                  "locator" : "50:2-50:53",
+                  "by" : [ {
+                     "localId" : "88",
+                     "locator" : "50:10-50:53",
+                     "direction" : "desc",
+                     "type" : "ByExpression",
+                     "expression" : {
+                        "localId" : "87",
+                        "locator" : "50:10-50:48",
+                        "type" : "DateFrom",
+                        "operand" : {
+                           "name" : "ToDateTime",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "operand" : [ {
+                              "localId" : "86",
+                              "locator" : "50:20-50:48",
+                              "strict" : false,
+                              "type" : "As",
+                              "operand" : {
+                                 "localId" : "84",
+                                 "locator" : "50:21-50:30",
+                                 "name" : "occurrence",
+                                 "type" : "IdentifierRef"
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "85",
+                                 "locator" : "50:35-50:47",
+                                 "name" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        }
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "99",
+            "locator" : "56:1-57:65",
+            "name" : "Measure Population 05",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "99",
+                  "s" : [ {
+                     "value" : [ "/*\n * Target population for first dose: Any one over 9 (in high transmission area) or 12 (in low transmission area) months old\n */\n","define ","\"Measure Population 05\"",":\n\t" ]
+                  }, {
+                     "r" : "98",
+                     "s" : [ {
+                        "value" : [ "(" ]
+                     }, {
+                        "r" : "98",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "93",
+                              "s" : [ {
+                                 "r" : "92",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "getFirstDose" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","I" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " " ]
+                        }, {
+                           "r" : "97",
+                           "s" : [ {
+                              "value" : [ "where  " ]
+                           }, {
+                              "r" : "97",
+                              "s" : [ {
+                                 "r" : "95",
+                                 "s" : [ {
+                                    "r" : "94",
+                                    "s" : [ {
+                                       "value" : [ "I" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "95",
+                                    "s" : [ {
+                                       "value" : [ "occurrence" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "r" : "97",
+                                 "value" : [ " ","during"," " ]
+                              }, {
+                                 "r" : "96",
+                                 "s" : [ {
+                                    "value" : [ "\"Measurement Period\"" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "98",
+               "locator" : "57:2-57:65",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "93",
+                  "locator" : "57:3-57:16",
+                  "alias" : "I",
+                  "expression" : {
+                     "localId" : "92",
+                     "locator" : "57:3-57:14",
+                     "name" : "getFirstDose",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "97",
+                  "locator" : "57:18-57:64",
+                  "type" : "In",
+                  "operand" : [ {
+                     "name" : "ToDateTime",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "asType" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "95",
+                           "locator" : "57:25-57:36",
+                           "path" : "occurrence",
+                           "scope" : "I",
+                           "type" : "Property"
+                        }
+                     } ]
+                  }, {
+                     "localId" : "96",
+                     "locator" : "57:45-57:64",
+                     "name" : "Measurement Period",
+                     "type" : "ParameterRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "101",
+            "locator" : "63:1-64:15",
+            "name" : "Initial Population 05",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "101",
+                  "s" : [ {
+                     "value" : [ "/*\n * Numerator for first dose: Anyone having received the first dose\n */\n","define ","\"Initial Population 05\"",":\n\t" ]
+                  }, {
+                     "r" : "100",
+                     "s" : [ {
+                        "value" : [ "(" ]
+                     }, {
+                        "r" : "100",
+                        "s" : [ {
+                           "value" : [ "getFirstDose" ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "100",
+               "locator" : "64:2-64:15",
+               "name" : "getFirstDose",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "103",
+            "locator" : "69:1-70:16",
+            "name" : "Initial Population 40",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "103",
+                  "s" : [ {
+                     "value" : [ "/*\n * Target population for second dose: Any one over 15 months\n */\n","define ","\"Initial Population 40\"",":\n\t" ]
+                  }, {
+                     "r" : "102",
+                     "s" : [ {
+                        "value" : [ "(" ]
+                     }, {
+                        "r" : "102",
+                        "s" : [ {
+                           "value" : [ "getSecondDose" ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "102",
+               "locator" : "70:2-70:16",
+               "name" : "getSecondDose",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "111",
+            "locator" : "75:1-76:68",
+            "name" : "Measure Population 40",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "111",
+                  "s" : [ {
+                     "value" : [ "/*\n * Numerator for second dose: Anyone having received the first dose\n */\n","define ","\"Measure Population 40\"",":\n\t" ]
+                  }, {
+                     "r" : "110",
+                     "s" : [ {
+                        "value" : [ "(" ]
+                     }, {
+                        "r" : "110",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "105",
+                              "s" : [ {
+                                 "r" : "104",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "getSecondDose" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","I" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " " ]
+                        }, {
+                           "r" : "109",
+                           "s" : [ {
+                              "value" : [ "where " ]
+                           }, {
+                              "r" : "109",
+                              "s" : [ {
+                                 "r" : "107",
+                                 "s" : [ {
+                                    "value" : [ "( " ]
+                                 }, {
+                                    "r" : "107",
+                                    "s" : [ {
+                                       "r" : "106",
+                                       "s" : [ {
+                                          "value" : [ "I" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "107",
+                                       "s" : [ {
+                                          "value" : [ "occurrence" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              }, {
+                                 "r" : "109",
+                                 "value" : [ " ","during"," " ]
+                              }, {
+                                 "r" : "108",
+                                 "s" : [ {
+                                    "value" : [ "\"Measurement Period\"" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "110",
+               "locator" : "76:2-76:68",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "105",
+                  "locator" : "76:3-76:17",
+                  "alias" : "I",
+                  "expression" : {
+                     "localId" : "104",
+                     "locator" : "76:3-76:15",
+                     "name" : "getSecondDose",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "109",
+                  "locator" : "76:19-76:67",
+                  "type" : "In",
+                  "operand" : [ {
+                     "name" : "ToDateTime",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "asType" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "107",
+                           "locator" : "76:25-76:39",
+                           "path" : "occurrence",
+                           "scope" : "I",
+                           "type" : "Property"
+                        }
+                     } ]
+                  }, {
+                     "localId" : "108",
+                     "locator" : "76:48-76:67",
+                     "name" : "Measurement Period",
+                     "type" : "ParameterRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "115",
+            "locator" : "82:1-83:22",
+            "name" : "Stratification",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "115",
+                  "s" : [ {
+                     "value" : [ "/*\n * Combined stratifiers\n */\n","define ","\"Stratification\"",":\n\t\t" ]
+                  }, {
+                     "r" : "114",
+                     "s" : [ {
+                        "r" : "113",
+                        "s" : [ {
+                           "r" : "112",
+                           "s" : [ {
+                              "value" : [ "Patient" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "113",
+                           "s" : [ {
+                              "value" : [ "gender" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "114",
+                        "s" : [ {
+                           "value" : [ "value" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "114",
+               "locator" : "83:3-83:22",
+               "path" : "value",
+               "type" : "Property",
+               "source" : {
+                  "localId" : "113",
+                  "locator" : "83:3-83:16",
+                  "path" : "gender",
+                  "type" : "Property",
+                  "source" : {
+                     "localId" : "112",
+                     "locator" : "83:3-83:9",
+                     "name" : "Patient",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         } ]
+      }
+   }
+}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="testscript-example-search"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: TestScript</b><a name="testscript-example-search"> </a><a name="hctestscript-example-search"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource TestScript &quot;testscript-example-search&quot; </p></div><p><b>url</b>: <code>http://smart.who.int/immunizations/TestScript/testscript-smart-immunizations-measles-ind08-d2</code></p><p><b>identifier</b>: <a href="http://terminology.hl7.org/5.4.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:oid:2.16.840.1.113883.4.642.12.3</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: TestScriptExampleSearch</p><p><b>title</b>: TestScript Example Search</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2017-01-18</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: TestScript for Measles IND 08</p><p><b>purpose</b>: Test Measles immmunization indicator 08 - Immunization coverage for Measles containing vaccine (Estimated Denominator)</p><p><b>copyright</b>: © 2024+</p><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>patient-D2</blockquote><p><b>autocreate</b>: true</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href="http://fhir.org/packages/us.nlm.vsac/Patient/D2">Patient/D2: Patient D2</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>measles1-D2</blockquote><p><b>autocreate</b>: true</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href="http://fhir.org/packages/us.nlm.vsac/Immunization/measles1-D2">Immunization/measles1-D2: Patient D2 - first measles immunization</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>measles2-D2</blockquote><p><b>autocreate</b>: true</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href="http://fhir.org/packages/us.nlm.vsac/Immunization/measles2-D2">Immunization/measles2-D2: Patient D2 - second measles immunization</a></p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: femaleCountExpression</p><p><b>description</b>: Evaluate the returned total of females with the expected vaccine coverage</p><p><b>expression</b>: MeasureReport.group.stratifier.where(id='IMMZ.IND.08.S2').stratum.where(value.text='female').population.where(id='IMMZ.IND.08.N').count.toInteger()</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: cqlserverbase</p><p><b>defaultValue</b>: http://localhost:8080/fhir</p><p><b>description</b>: URL for the CQL server</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: expectedCount</p><p><b>defaultValue</b>: 1</p><p><b>description</b>: Expected patient count for mealles immunization indicator 08</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td style="display: none">*</td><td>post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')</td><td>Patient</td><td>POST resources to server.</td><td>json</td><td>true</td><td>patient-D2</td></tr></table><h3>Asserts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style="display: none">*</td><td>Confirm that results was POSTed OK.</td><td>created</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td style="display: none">*</td><td>post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')</td><td>Immunization</td><td>POST resources to server.</td><td>json</td><td>true</td><td>measles1-D2</td></tr></table><h3>Asserts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style="display: none">*</td><td>Confirm that results was POSTed OK.</td><td>created</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td style="display: none">*</td><td>post (Details: http://hl7.org/fhir/restful-interaction code post = 'post', stated as 'null')</td><td>Immunization</td><td>POST resources to server.</td><td>json</td><td>true</td><td>measles2-D2</td></tr></table><h3>Asserts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style="display: none">*</td><td>Confirm that results was POSTed OK.</td><td>created</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>01-Evaluate</blockquote><p><b>name</b>: Evaluate the measure</p><p><b>description</b>: Evaluate the measure.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>ResponseId</b></td><td><b>SourceId</b></td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td>evaluate (Details: http://hl7.org/fhir/restful-interaction code evaluate = 'evaluate', stated as 'null')</td><td>Send the request for the Measure evaluation.</td><td>json</td><td>json</td><td>true</td><td>PatientCreateResponse</td><td>fixture-patient-create</td><td>${cqlserverbase}/Measure/IMMZ.IND.08/$evaluate-measure?periodStart=2000-01-01&amp;periodEnd=2024-12-31</td></tr></table><h3>Asserts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style="display: none">*</td><td>Confirm that the returned HTTP status is 201(Created).</td><td>okay</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style="display: none">*</td><td>Confirm that the returned result evaluates to the expected value</td><td>${femaleCountExpression}=$#{expectedCount}</td><td>false</td></tr></table></blockquote></blockquote></div>
+  </text>
+  <url value="http://smart.who.int/immunizations/TestScript/testscript-smart-immunizations-measles-ind08-d2"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.12.3"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="TestScriptExampleSearch"/>
+  <title value="TestScript Example Search"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2017-01-18"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="TestScript for Measles IND 08"/>
+  <purpose value="Test Measles immmunization indicator 08 - Immunization coverage for Measles containing vaccine (Estimated Denominator)"/>
+  <copyright value="© 2024+"/>
+  <fixture id="patient-D2">
+    <autocreate value="true"/>
+    <autodelete value="false"/>
+    <resource>
+      <reference value="Patient/D2"/>
+      <display value="Patient D2"/>
+    </resource>
+  </fixture>
+  <fixture id="measles1-D2">
+    <autocreate value="true"/>
+    <autodelete value="false"/>
+    <resource>
+      <reference value="Immunization/measles1-D2"/>
+      <display value="Patient D2 - first measles immunization"/>
+    </resource>
+  </fixture>
+  <fixture id="measles2-D2">
+    <autocreate value="true"/>
+    <autodelete value="false"/>
+    <resource>
+      <reference value="Immunization/measles2-D2"/>
+      <display value="Patient D2 - second measles immunization"/>
+    </resource>
+  </fixture>
+  <variable>
+    <name value="femaleCountExpression"/>
+    <description value="Evaluate the returned total of females with the expected vaccine coverage"/>
+    <expression value="MeasureReport.group.stratifier.where(id='IMMZ.IND.08.S2').stratum.where(value.text='female').population.where(id='IMMZ.IND.08.N').count.toInteger()"/>
+  </variable>
+  <variable>
+    <name value="cqlserverbase"/>
+    <defaultValue value="http://localhost:8080/fhir"/>
+    <description value="URL for the CQL server"/>
+  </variable>
+  <variable>
+    <name value="expectedCount"/>
+    <defaultValue value="1"/>
+    <description value="Expected patient count for mealles immunization indicator 08"/>
+  </variable>
+  <setup>
+    <action>
+      <operation>
+        <type>
+          <system value="http://hl7.org/fhir/restful-interaction"/>
+          <code value="post"/>
+        </type>
+        <resource value="Patient"/>
+        <description value="POST resources to server."/>
+        <accept value="json"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="patient-D2"/>
+      </operation>
+      <assert>
+        <description value="Confirm that results was POSTed OK."/>
+        <response value="created"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://hl7.org/fhir/restful-interaction"/>
+          <code value="post"/>
+        </type>
+        <resource value="Immunization"/>
+        <description value="POST resources to server."/>
+        <accept value="json"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="measles1-D2"/>
+      </operation>
+      <assert>
+        <description value="Confirm that results was POSTed OK."/>
+        <response value="created"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://hl7.org/fhir/restful-interaction"/>
+          <code value="post"/>
+        </type>
+        <resource value="Immunization"/>
+        <description value="POST resources to server."/>
+        <accept value="json"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="measles2-D2"/>
+      </operation>
+      <assert>
+        <description value="Confirm that results was POSTed OK."/>
+        <response value="created"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </setup>
+  <test id="01-Evaluate">
+    <name value="Evaluate the measure"/>
+    <description value="Evaluate the measure."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://hl7.org/fhir/restful-interaction"/>
+          <code value="evaluate"/>
+        </type>
+        <description value="Send the request for the Measure evaluation."/>
+        <accept value="json"/>
+        <contentType value="json"/>
+        <encodeRequestUrl value="true"/>
+        <responseId value="PatientCreateResponse"/>
+        <sourceId value="fixture-patient-create"/>
+        <url value="${cqlserverbase}/Measure/IMMZ.IND.08/$evaluate-measure?periodStart=2000-01-01&amp;periodEnd=2024-12-31"/>
+      </operation>
+      <assert>
+        <description value="Confirm that the returned HTTP status is 201(Created)."/>
+        <response value="okay"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned result evaluates to the expected value"/>
+        <expression value="${femaleCountExpression}=$#{expectedCount}"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

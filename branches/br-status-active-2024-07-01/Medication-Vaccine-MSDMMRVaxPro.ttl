@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/immunizations-measles/Medication/Vaccine-MSDMMRVaxPro> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Vaccine-MSDMMRVaxPro"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct"^^xsd:anyURI ;
+       fhir:link <http://smart.who.int/immunizations-measles/StructureDefinition/SGVaccineProduct>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication Vaccine-MSDMMRVaxPro</b></p><a name=\"Vaccine-MSDMMRVaxPro\"> </a><a name=\"hcVaccine-MSDMMRVaxPro\"> </a><a name=\"hcVaccine-MSDMMRVaxPro-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts 7680007030014}\">M-M-RvaxPRO</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://id.who.int/icd/release/11/mms"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XM8L15" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://smart.who.int/immunizations-measles/StructureDefinition/SGMedicationClassification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://id.who.int/icd/release/11/mms"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XM2340" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://smart.who.int/immunizations-measles/CodeSystem/VaccineProducts"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7680007030014" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

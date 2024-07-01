@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Measure xmlns="http://hl7.org/fhir">
+  <id value="IMMZIND12"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Measure IMMZIND12</b></p><a name="IMMZIND12"> </a><a name="hcIMMZIND12"> </a><a name="hcIMMZIND12-en-US"> </a><p><b>url</b>: <a href="Measure-IMMZIND12.html">Measure IMMZ.IND.12 Measles indicator for first dose</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: IMMZIND12</p><p><b>title</b>: IMMZ.IND.12 Measles indicator for first dose</p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2023-10-12</p><p><b>publisher</b>: WHO</p><p><b>contact</b>: WHO: <a href="http://who.int">http://who.int</a></p><p><b>description</b>: </p><div><p>The percentage in the target population who have received one dose of measles and rubella vaccine during reporting period</p>
+</div><h3>RelatedArtifacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Citation</b></td></tr><tr><td style="display: none">*</td><td>Citation</td><td><div><p>WHO Immunization facility analysis guide</p>
+</div></td></tr><tr><td style="display: none">*</td><td>Citation</td><td><div><p>WHO Handbook on immunization data</p>
+</div></td></tr></table><p><b>library</b>: <a href="Library-IMMZIND12Logic.html">IMMZ.IND.12 Logic</a></p><p><b>scoring</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/measure-scoring proportion}">Proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.12.IP</blockquote><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Number in target group</p><h3>Criteria</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Initial Population</td></tr></table></blockquote><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.12.DEN</blockquote><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Number in target group</p><h3>Criteria</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Denominator</td></tr></table></blockquote><blockquote><p><b>population</b></p><blockquote><p><b>id</b></p>IMMZ.IND.12.NUM</blockquote><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Number of measles and rubella doses (1st dose) administered through routine services during reporting period</p><h3>Criteria</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Numerator</td></tr></table></blockquote><blockquote><p><b>stratifier</b></p><blockquote><p><b>id</b></p>IMMZ.IND.12.S</blockquote><h3>Criteria</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Stratification</td></tr></table></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis">
+    <valueCode value="boolean"/>
+  </extension>
+  <url value="http://smart.who.int/immunizations-measles/Measure/IMMZIND12"/>
+  <version value="0.1.0"/>
+  <name value="IMMZIND12"/>
+  <title value="IMMZ.IND.12 Measles indicator for first dose"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2023-10-12"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="The percentage in the target population who have received one dose of measles and rubella vaccine during reporting period"/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="WHO Immunization facility analysis guide"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="WHO Handbook on immunization data"/>
+  </relatedArtifact>
+  <library value="http://smart.who.int/immunizations-measles/Library/IMMZIND12Logic"/>
+  <scoring>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+      <code value="proportion"/>
+      <display value="Proportion"/>
+    </coding>
+  </scoring>
+  <group>
+    <population id="IMMZ.IND.12.IP">
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <description value="Number in target group"/>
+      <criteria>
+        <language value="text/cql-identifier"/>
+        <expression value="Initial Population"/>
+      </criteria>
+    </population>
+    <population id="IMMZ.IND.12.DEN">
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator"/>
+          <display value="Denominator"/>
+        </coding>
+      </code>
+      <description value="Number in target group"/>
+      <criteria>
+        <language value="text/cql-identifier"/>
+        <expression value="Denominator"/>
+      </criteria>
+    </population>
+    <population id="IMMZ.IND.12.NUM">
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+          <display value="Numerator"/>
+        </coding>
+      </code>
+      <description value="Number of measles and rubella doses (1st dose) administered through routine services during reporting period"/>
+      <criteria>
+        <language value="text/cql-identifier"/>
+        <expression value="Numerator"/>
+      </criteria>
+    </population>
+    <stratifier id="IMMZ.IND.12.S">
+      <criteria>
+        <language value="text/cql-identifier"/>
+        <expression value="Stratification"/>
+      </criteria>
+    </stratifier>
+  </group>
+</Measure>

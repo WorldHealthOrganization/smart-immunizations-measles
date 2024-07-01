@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>SMART Immunization Guidelines - Measles -  v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.48"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.48"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b>SMART Immunization Guidelines - Measles</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART, published by WHO. This is not an authorized publication; it is the continuous build for version 0.1.0). This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-immunizations-measles">https://github.com/WorldHealthOrganization/smart-immunizations-measles</a> and changes regularly. See the <a href="http://smart.who.int/ig/smart-immunizations-measles/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ExampleScenario-Scenario1.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ExampleScenario-Scenario1.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ExampleScenario-Scenario1.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">ExampleScenario: SMART Immunization Guidelines - Measles
+
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://smart.who.int/ig/smart-immunizations-measles/ExampleScenario/Scenario1<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://smart.who.int/ig/smart-immunizations-measles/ExampleScenario/Scenario1"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://smart.who.int/ig/smart-immunizations-measles/ExampleScenario/Scenario1|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2023-10-17
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;"></span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+<p>
+<p>Purpose: this serves to demonstrate the comprehensive usage of the SMART Guidelines for Immunization, by applying to a concrete scenario for Measles.</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+<a name="actors"> </a>
+<h4>Actors</h4>
+  <div><table class="table-striped table-bordered"><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a name="a_HCW"> </a>Healthcare Worker</td><td>Person</td><td style="overflow-wrap:break-word"><div><p>Healthcare Worker</p>
+</div></td></tr><tr><td><a name="a_FF"> </a>Form Filler</td><td>System</td><td style="overflow-wrap:break-word"><div><p>Form Filler</p>
+</div></td></tr></table></div>
+
+<a name="diaram"> </a>
+<h4>Diagram</h4>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="321px" preserveAspectRatio="none" style="width:604px;height:321px;background:#FFFFFF;" version="1.1" viewBox="0 0 604 321" width="604px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28" x="289.75" y="27.9951">null</text><rect fill="none" height="88.3984" style="stroke:#000000;stroke-width:1.5;" width="588.5" x="10" y="135.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="86" x2="86" y1="118.5938" y2="240.9922"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="456.5" x2="456.5" y1="118.5938" y2="240.9922"/><a href="#a_HCW" target="_top" title="Healthcare Worker" xlink:actuate="onRequest" xlink:href="#a_HCW" xlink:show="new" xlink:title="Healthcare Worker" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="127" x="20" y="115.292">Healthcare Worker</text></a><ellipse cx="86.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M86.5,58.7969 L86.5,85.7969 M73.5,66.7969 L99.5,66.7969 M86.5,85.7969 L73.5,100.7969 M86.5,85.7969 L99.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><a href="#a_HCW" target="_top" title="Healthcare Worker" xlink:actuate="onRequest" xlink:href="#a_HCW" xlink:show="new" xlink:title="Healthcare Worker" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="127" x="20" y="252.9873">Healthcare Worker</text></a><ellipse cx="86.5" cy="264.7891" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M86.5,272.7891 L86.5,299.7891 M73.5,280.7891 L99.5,280.7891 M86.5,299.7891 L73.5,314.7891 M86.5,299.7891 L99.5,314.7891 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="414.5" y="87.2969"/><a href="#a_FF" target="_top" title="Form Filler" xlink:actuate="onRequest" xlink:href="#a_FF" xlink:show="new" xlink:title="Form Filler" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="70" x="421.5" y="107.292">Form Filler</text></a><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="414.5" y="239.9922"/><a href="#a_FF" target="_top" title="Form Filler" xlink:actuate="onRequest" xlink:href="#a_FF" xlink:show="new" xlink:title="Form Filler" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="70" x="421.5" y="259.9873">Form Filler</text></a><path d="M10,135.5938 L298,135.5938 L298,142.7266 L288,152.7266 L10,152.7266 L10,135.5938 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="88.3984" style="stroke:#000000;stroke-width:1.5;" width="588.5" x="10" y="135.5938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="238" x="25" y="148.6606">Measles Immunization Guideline</text><a href="#p_1" target="_top" title="This scenario demonstrates the process of triggering guidance defined by the SMART guidelines." xlink:actuate="onRequest" xlink:href="#p_1" xlink:show="new" xlink:title="This scenario demonstrates the process of triggering guidance defined by the SMART guidelines." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" text-decoration="underline" textLength="44" x="313" y="147.8042">details</text></a><polygon fill="#181818" points="444.5,169.8594,454.5,173.8594,444.5,177.8594,448.5,173.8594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="86.5" x2="450.5" y1="173.8594" y2="173.8594"/><a href="#s_1.1" target="_top" title="#s_1.1" xlink:actuate="onRequest" xlink:href="#s_1.1" xlink:show="new" xlink:title="#s_1.1" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="139" x="93.5" y="168.7935">Gather patient details</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="232.5" y="168.7935">FF -&gt; FF:</text><a href="#s_1.2" target="_top" title="#s_1.2" xlink:actuate="onRequest" xlink:href="#s_1.2" xlink:show="new" xlink:title="#s_1.2" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="78" x="292.5" y="168.7935">Extract data</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="370.5" y="168.7935">activate FF</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="456.5" x2="498.5" y1="207.9922" y2="207.9922"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="498.5" x2="498.5" y1="207.9922" y2="220.9922"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="451.5" x2="498.5" y1="220.9922" y2="220.9922"/><polygon fill="#181818" points="461.5,216.9922,451.5,220.9922,461.5,224.9922,457.5,220.9922" style="stroke:#181818;stroke-width:1.0;"/><a href="#s_1.2" target="_top" title="#s_1.2" xlink:actuate="onRequest" xlink:href="#s_1.2" xlink:show="new" xlink:title="#s_1.2" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="59" x="463.5" y="202.9263">response</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="526.5" y="202.9263">(</text><a href="#i_IMMZCQuestionnaireResponse1" target="_top" title="#i_IMMZCQuestionnaireResponse1" xlink:actuate="onRequest" xlink:href="#i_IMMZCQuestionnaireResponse1" xlink:show="new" xlink:title="#i_IMMZCQuestionnaireResponse1" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="50" x="531.5" y="202.9263">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="581.5" y="202.9263">)</text><!--SRC=[PP11ImCn48Nl-HL3lUZ1mdhq84WnRGyzM0i5IrZ6tUbsC9iiawnOI_-xiwL8gRTayhqtxsN5sHE4tdjZiCfHOBJPt60vcwmFCqAVTnKAmJhA9yaH_esS6m4cKDnqA9ahxZ3aiucr1nkb1SlU3-gBorbdhJ6DnBw31M7ob63UjdtW7ymS0qnxhibp852_hYmEgnqdI1K558vGKnj3oe9PXNb7q4ciA2M8MyZ2JKF2eO56NJ1KfFnMlMhus9_ejyNpSdLwFUr8uwCI6TadvumsWlid3VWux4vbCIvWYYeJw3GSQSa_sDehz05UlZLMfGncT4vF_AKfXxu3V4qBfKwRa7DmgqCkvul5--IrfpHyGq0MMfwHGjVlVSJQkJjJqwKpXThy0W00]--></g></svg>
+
+<a name="processes"> </a>
+<h4>Processes</h4>
+  <div><div><a name="p_1"> </a><b>Process: Measles Immunization Guideline</b><div><p>This scenario demonstrates the process of triggering guidance defined by the SMART guidelines.</p>
+</div><p><b><i>Pre-conditions:</i></b></p><div><p>Unvaccinated patient enters facility</p>
+</div><p><b><i>Post-conditions:</i></b></p><div><p>Patient is vaccinated and records are updated.</p>
+</div><table style="width:100%" class="table-striped table-bordered"><tr><th>Step</th><th>Name</th><th>Description</th><th>Initator</th><th>Receiver</th><th>Request</th><th>Response</th></tr><tr><td><a name="s_1.1"> </a>1</td><td>Gather patient details</td><td/><td><a href="#a_HCW" title="Healthcare Worker">Healthcare Worker</a></td><td><a href="#a_FF" title="Form Filler">Form Filler</a></td><td/><td/></tr><tr><td><a name="s_1.2"> </a>2</td><td>Extract data</td><td/><td><a href="#a_FF" title="Form Filler">Form Filler</a></td><td><a href="#a_FF" title="Form Filler">Form Filler</a></td><td/><td><a href="#i_IMMZCQuestionnaireResponse1" title="Client registry details.">Client registry details</a></td></tr></table></div></div>
+
+<a name="instances"> </a>
+<h4>Instances</h4>
+  <div><table class="table-striped table-bordered"><tr><th>Name</th><th>Type</th><th>Content</th><th>Description</th></tr><tr><td><a name="i_IMMZCQuestionnaireResponse1"> </a>Client registry details</td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td><td/><td><div><p>Client registry details.</p>
+</div></td></tr></table></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package who.fhir.smart-immunizations-measles#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 17, 2023 08:11+0000">2023-10-17</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/ig/smart-immunizations-measles/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

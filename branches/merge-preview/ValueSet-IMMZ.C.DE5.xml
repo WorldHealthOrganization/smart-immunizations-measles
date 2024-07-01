@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="IMMZ.C.DE5"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-IMMZConcepts.html"><code>http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-IMMZConcepts.html#IMMZConcepts-C.46DE6">C.DE6</a></td><td>Male</td><td>Client's biological sex is male</td></tr><tr><td><a href="CodeSystem-IMMZConcepts.html#IMMZConcepts-C.46DE7">C.DE7</a></td><td>Female</td><td>Client's biological sex is female</td></tr><tr><td><a href="CodeSystem-IMMZConcepts.html#IMMZConcepts-C.46DE8">C.DE8</a></td><td>Biological sex not specified</td><td>Client's biological sex is not specified</td></tr><tr><td><a href="CodeSystem-IMMZConcepts.html#IMMZConcepts-C.46DE9">C.DE9</a></td><td>Intersex</td><td>Client's biological sex is intersex</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/immunizations-measles/ValueSet/IMMZ.C.DE5"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ_C_DE5"/>
+  <title value="IMMZ.C.DE5 ValueSet for Sex"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-06-07T12:26:37+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet for Sex for IMMZ.C.DE5."/>
+  <compose>
+    <include>
+      <system value="http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts"/>
+      <concept>
+        <code value="C.DE6"/>
+        <display value="Male"/>
+      </concept>
+      <concept>
+        <code value="C.DE7"/>
+        <display value="Female"/>
+      </concept>
+      <concept>
+        <code value="C.DE8"/>
+        <display value="Biological sex not specified"/>
+      </concept>
+      <concept>
+        <code value="C.DE9"/>
+        <display value="Intersex"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
